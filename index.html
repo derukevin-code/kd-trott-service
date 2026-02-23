@@ -1,397 +1,97 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Atelier Volt – Montage pneus/chambres à air & nettoyage de trottinettes électriques. Service local (Theux / région). Rapide, transparent." />
-  <title>Atelier Volt – Trottinettes électriques</title>
-  <style>
-    :root{
-      --bg:#0b0f17;
-      --card:#121a2a;
-      --text:#e7eefc;
-      --muted:#a7b4d6;
-      --accent:#5eead4;
-      --accent2:#60a5fa;
-      --border:rgba(255,255,255,.10);
-      --shadow:0 10px 30px rgba(0,0,0,.35);
-      --radius:18px;
-      --max:1080px;
-      --pad:18px;
-      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:var(--font);
-      background:
-        radial-gradient(900px 500px at 10% 10%, rgba(96,165,250,.16), transparent 60%),
-        radial-gradient(800px 500px at 90% 20%, rgba(94,234,212,.14), transparent 55%),
-        radial-gradient(800px 600px at 50% 100%, rgba(94,234,212,.08), transparent 60%),
-        var(--bg);
-      color:var(--text);
-      line-height:1.35;
-    }
-    a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:22px 16px 56px;}
-    .topbar{
-      position:sticky; top:0; z-index:10;
-      backdrop-filter: blur(10px);
-      background: rgba(11,15,23,.70);
-      border-bottom: 1px solid var(--border);
-    }
-    .topbar .wrap{padding:14px 16px}
-    .brand{
-      display:flex; align-items:center; gap:12px;
-    }
-    .logo{
-      width:44px; height:44px; border-radius:14px;
-      background: linear-gradient(135deg, var(--accent2), var(--accent));
-      box-shadow: var(--shadow);
-      flex:0 0 auto;
-    }
-    .brand h1{
-      font-size:18px; margin:0;
-      letter-spacing:.2px;
-    }
-    .brand .sub{font-size:12px; color:var(--muted); margin-top:2px}
-    .ctaRow{
-      display:flex; gap:10px; flex-wrap:wrap;
-      margin-left:auto;
-    }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:10px;
-      padding:11px 14px;
-      border-radius:14px;
-      border: 1px solid var(--border);
-      background: rgba(18,26,42,.65);
-      color: var(--text);
-      text-decoration:none;
-      box-shadow: 0 10px 22px rgba(0,0,0,.22);
-      font-weight:600;
-      font-size:14px;
-      min-height:42px;
-    }
-    .btn.primary{
-      background: linear-gradient(135deg, rgba(96,165,250,.95), rgba(94,234,212,.92));
-      color:#071018;
-      border: none;
-    }
-    .hero{
-      padding:22px 0 6px;
-      display:grid;
-      grid-template-columns: 1.3fr .9fr;
-      gap:16px;
-      align-items:start;
-    }
-    @media (max-width: 860px){
-      .hero{grid-template-columns:1fr; padding-top:16px}
-      .ctaRow{margin-left:0}
-      .topbar .wrap{display:flex; align-items:center; gap:12px; justify-content:space-between}
-    }
-    .card{
-      background: rgba(18,26,42,.70);
-      border:1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: var(--pad);
-    }
-    .hero h2{
-      margin:0 0 8px;
-      font-size:28px;
-      letter-spacing:.2px;
-    }
-    .hero p{margin:0 0 12px; color:var(--muted)}
-    .pillRow{display:flex; flex-wrap:wrap; gap:10px; margin-top:10px}
-    .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:8px 10px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background: rgba(11,15,23,.35);
-      color: var(--text);
-      font-size:13px;
-    }
-    .grid{
-      display:grid; gap:14px;
-      grid-template-columns: repeat(3, 1fr);
-      margin-top:14px;
-    }
-    @media (max-width: 860px){ .grid{grid-template-columns:1fr} }
-    .kpi h3{margin:0 0 6px; font-size:14px; color:var(--muted); font-weight:600}
-    .kpi .big{font-size:18px; font-weight:800}
-    .section{margin-top:18px}
-    .section h3{margin:0 0 10px; font-size:16px}
-    .list{margin:0; padding-left:18px; color:var(--muted)}
-    .list li{margin:6px 0}
-    .prices{
-      display:grid; gap:12px;
-      grid-template-columns: repeat(3, 1fr);
-      margin-top:10px;
-    }
-    @media (max-width: 860px){ .prices{grid-template-columns:1fr} }
-    .priceBox h4{margin:0 0 6px; font-size:14px; color:var(--muted)}
-    .priceBox .amt{font-size:26px; font-weight:900; margin:0 0 6px}
-    .small{font-size:12px; color:var(--muted)}
-    .warn{
-      border:1px solid rgba(251,113,133,.30);
-      background: rgba(251,113,133,.08);
-    }
-    .ok{
-      border:1px solid rgba(52,211,153,.25);
-      background: rgba(52,211,153,.08);
-    }
-    .formGrid{
-      display:grid; grid-template-columns: 1fr 1fr; gap:12px;
-      margin-top:10px;
-    }
-    @media (max-width: 860px){ .formGrid{grid-template-columns:1fr} }
-    label{font-size:12px; color:var(--muted); display:block; margin:0 0 6px}
-    input, select, textarea{
-      width:100%;
-      padding:12px 12px;
-      border-radius:14px;
-      border:1px solid var(--border);
-      background: rgba(11,15,23,.35);
-      color: var(--text);
-      outline:none;
-      font-family: var(--font);
-      font-size:14px;
-    }
-    textarea{min-height:110px; resize:vertical}
-    .actions{
-      display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;
-    }
-    footer{
-      margin-top:18px;
-      color: var(--muted);
-      font-size:12px;
-    }
-    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atelier Volt - Réparation trottinettes</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 40px 20px;
+    background: #111827;
+}
+
+h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.section {
+    padding: 40px 20px;
+}
+
+img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.card {
+    background: #1f2937;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 12px;
+}
+
+button {
+    background: #10b981;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+footer {
+    padding: 20px;
+    font-size: 14px;
+    color: #9ca3af;
+}
+</style>
 </head>
 
 <body>
-  <div class="topbar">
-    <div class="wrap" style="display:flex; align-items:center; gap:14px;">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div>
-          <h1>Atelier Volt</h1>
-          <div class="sub">Trottinettes électriques • Service local (Theux / région)</div>
-        </div>
-      </div>
 
-      <div class="ctaRow">
-        <a class="btn primary" href="#rdv">Prendre rendez-vous</a>
-        <a class="btn" href="tel:+32495656186">Appeler</a>
-      </div>
-    </div>
-  </div>
+<header>
+<h1>Atelier Volt</h1>
+<p>Remplacement de pneus & entretien trottinettes électriques</p>
+</header>
 
-  <main class="wrap">
-    <section class="hero">
-      <div class="card">
-        <h2>Montage pneus / chambres à air + nettoyage</h2>
-        <p>
-          Service simple et efficace pour éviter les galères : montage propre, contrôle pression,
-          et remise au propre de ta trottinette.
-        </p>
+<div class="section">
+<img src="20260223_150017.jpg" alt="Remplacement pneu trottinette">
+</div>
 
-        <div class="pillRow">
-          <div class="pill">✅ Client apporte son pneu / chambre</div>
-          <div class="pill">✅ Intervention rapide (sur dispo)</div>
-          <div class="pill">✅ Transparent sur le prix</div>
-        </div>
+<div class="section">
+<div class="card">
+<h2>Services</h2>
+<p>• Remplacement pneus (le client fournit le pneu)</p>
+<p>• Entretien général</p>
+<p>• Nettoyage complet</p>
+<p><strong>Pas d'intervention électrique</strong></p>
+</div>
+</div>
 
-        <div class="grid">
-          <div class="card kpi">
-            <h3>Zone</h3>
-            <div class="big">Theux / région</div>
-            <div class="small">À convenir selon distance</div>
-          </div>
-          <div class="card kpi">
-            <h3>Contact</h3>
-            <div class="big mono">+32 495 65 61 86</div>
-            <div class="small mono">Derukevin@gmail.com</div>
-          </div>
-          <div class="card kpi ok">
-            <h3>Spécialité</h3>
-            <div class="big">Pneus & entretien léger</div>
-            <div class="small">Sans électricité / batterie</div>
-          </div>
-        </div>
-      </div>
+<div class="section">
+<div class="card">
+<h2>Contact</h2>
+<p>Email : derukevin@gmail.com</p>
+</div>
+</div>
 
-      <aside class="card warn">
-        <h3 style="margin:0 0 8px;">Important</h3>
-        <ul class="list">
-          <li><strong>Pas d’intervention sur l’électrique</strong> (contrôleurs, câblage, batterie).</li>
-          <li><strong>Je n’ouvre pas le deck</strong> (pas de démontage batterie).</li>
-          <li><strong>Je ne prends pas les freins</strong> (réglages/plaquettes/purge non).</li>
-          <li>Si un point sécurité me semble risqué, je te le dis avant.</li>
-        </ul>
-        <div class="small" style="margin-top:10px;">
-          Objectif : rester sur ce que je fais proprement et sans prise de risque.
-        </div>
-      </aside>
-    </section>
+<footer>
+© 2026 Atelier Volt
+</footer>
 
-    <section class="section card" id="services">
-      <h3>Services</h3>
-      <div class="prices">
-        <div class="card priceBox">
-          <h4>Nettoyage</h4>
-          <div class="amt">25€</div>
-          <ul class="list">
-            <li>Extérieur complet (cadre + roues)</li>
-            <li>Finitions + conseils d’entretien</li>
-            <li>Sans démontage électrique</li>
-          </ul>
-        </div>
-
-        <div class="card priceBox">
-          <h4>Pneus / chambres</h4>
-          <div class="amt">35–60€</div>
-          <ul class="list">
-            <li>Montage pneu / chambre</li>
-            <li>Contrôle pression + vérif rapide</li>
-            <li><strong>Pneu/chambre fournis par le client</strong></li>
-          </ul>
-          <div class="small" style="margin-top:8px;">
-            Le prix dépend surtout du modèle et de la difficulté (jante, accès, etc.).
-          </div>
-        </div>
-
-        <div class="card priceBox">
-          <h4>Entretien mécanique léger</h4>
-          <div class="amt">10–25€</div>
-          <ul class="list">
-            <li>Contrôle visserie / jeu direction (visuel)</li>
-            <li>Réglage guidon / potence (si accessible)</li>
-            <li>Conseils usure pneus & sécurité</li>
-          </ul>
-          <div class="small" style="margin-top:8px;">
-            Pas de freins, pas d’ouverture deck, pas d’électronique.
-          </div>
-        </div>
-      </div>
-
-      <div class="small" style="margin-top:12px;">
-        * Pièces (pneu/chambre) apportées par toi. Si tu n’es pas sûr de la taille, envoie une photo du pneu (marquage).
-      </div>
-    </section>
-
-    <section class="section card" id="comment">
-      <h3>Comment ça se passe</h3>
-      <ol class="list">
-        <li>Tu m’envoies le <strong>modèle</strong> + une <strong>photo du pneu</strong> (taille) + le problème.</li>
-        <li>Je te réponds avec un <strong>prix clair</strong> et un créneau possible.</li>
-        <li>Intervention et contrôle rapide (pression + vérif visuelle).</li>
-        <li>Je te donne des <strong>conseils</strong> pour éviter que ça recommence.</li>
-      </ol>
-    </section>
-
-    <section class="section card" id="rdv">
-      <h3>Prendre rendez-vous</h3>
-      <div class="small">Remplis le formulaire : ça ouvre ton mail avec le message déjà prêt.</div>
-
-      <div class="formGrid">
-        <div>
-          <label for="nom">Nom</label>
-          <input id="nom" placeholder="Ton nom" />
-        </div>
-        <div>
-          <label for="tel">Téléphone (optionnel)</label>
-          <input id="tel" placeholder="+32 ..." />
-        </div>
-        <div>
-          <label for="modele">Modèle trottinette</label>
-          <input id="modele" placeholder="Ex : Xiaomi, Dualtron, Teverun..." />
-        </div>
-        <div>
-          <label for="service">Service</label>
-          <select id="service">
-            <option>Changement pneu / chambre (client apporte le pneu)</option>
-            <option>Nettoyage</option>
-            <option>Entretien mécanique léger (sans freins / sans deck)</option>
-            <option>Je ne sais pas → je décris</option>
-          </select>
-        </div>
-      </div>
-
-      <div style="margin-top:12px;">
-        <label for="msg">Message</label>
-        <textarea id="msg" placeholder="Décris le problème + si possible la taille du pneu (photo du marquage)."></textarea>
-      </div>
-
-      <div class="actions">
-        <a class="btn primary" id="sendMail" href="#">Envoyer la demande</a>
-        <button class="btn" id="copyBtn" type="button">Copier le message</button>
-        <a class="btn" href="mailto:Derukevin@gmail.com">Mail direct</a>
-        <a class="btn" href="tel:+32495656186">Appeler</a>
-      </div>
-
-      <footer>
-        Email : <span class="mono">Derukevin@gmail.com</span> • Tél : <span class="mono">+32 495 65 61 86</span><br/>
-        © <span id="y"></span> Atelier Volt
-      </footer>
-    </section>
-  </main>
-
-  <script>
-    const email = "Derukevin@gmail.com";
-    const phone = "+32 495 65 61 86";
-
-    const $ = (id) => document.getElementById(id);
-
-    function buildText(){
-      const nom = $("nom").value.trim() || "Client";
-      const tel = $("tel").value.trim();
-      const modele = $("modele").value.trim() || "(modèle non précisé)";
-      const service = $("service").value;
-      const msg = $("msg").value.trim() || "(message non précisé)";
-
-      return [
-        `Bonjour,`,
-        ``,
-        `Je souhaite un rendez-vous chez Atelier Volt.`,
-        ``,
-        `Nom : ${nom}`,
-        tel ? `Téléphone : ${tel}` : null,
-        `Modèle : ${modele}`,
-        `Service : ${service}`,
-        ``,
-        `Détails :`,
-        msg,
-        ``,
-        `Merci !`
-      ].filter(Boolean).join("\n");
-    }
-
-    function buildMailto(){
-      const subject = encodeURIComponent("Demande RDV – Atelier Volt");
-      const body = encodeURIComponent(buildText());
-      return `mailto:${encodeURIComponent(email)}?subject=${subject}&body=${body}`;
-    }
-
-    $("sendMail").addEventListener("click", (e) => {
-      e.preventDefault();
-      window.location.href = buildMailto();
-    });
-
-    $("copyBtn").addEventListener("click", async () => {
-      try{
-        await navigator.clipboard.writeText(buildText());
-        $("copyBtn").textContent = "Copié ✅";
-        setTimeout(()=> $("copyBtn").textContent = "Copier le message", 1400);
-      }catch(err){
-        alert("Impossible de copier automatiquement. Tu peux copier manuellement le texte dans ton mail.");
-      }
-    });
-
-    $("y").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
