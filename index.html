@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Réparation et entretien de trottinettes électriques — pneus, freins, nettoyage, diagnostic. Service local, rapide et transparent." />
+  <title>KD Trott Service — Réparation trottinettes électriques</title>
+  <style>
+    :root{
+      --bg:#0b0f17; --card:#121a2a; --text:#e7eefc; --muted:#a7b4d6;
+      --accent:#5eead4; --accent2:#60a5fa; --danger:#fb7185; --ok:#34d399;
+      --border:rgba(255,255,255,.10); --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1080px;
+      --pad:18px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:var(--font); color:var(--text); background:
+      radial-gradient(1200px 700px at 20% -10%, rgba(94,234,212,.18), transparent 60%),
+      radial-gradient(1000px 600px at 90% 0%, rgba(96,165,250,.18), transparent 60%),
+      var(--bg);
+      line-height:1.5;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px}
+    header{
+      position:sticky; top:0; z-index:20;
+      backdrop-filter: blur(10px);
+      background: rgba(11,15,23,.65);
+      border-bottom:1px solid var(--border);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+    }
+    .brand{display:flex; gap:10px; align-items:center; font-weight:700}
+    .logo{
+      width:34px; height:34px; border-radius:12px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: var(--shadow);
+    }
+    .navlinks{display:flex; gap:14px; align-items:center; flex-wrap:wrap}
+    .navlinks a{
+      padding:8px 10px; border-radius:12px; color:var(--muted);
+    }
+    .navlinks a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:11px 14px; border-radius:14px; border:1px solid var(--border);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      box-shadow: 0 6px 18px rgba(0,0,0,.25);
+      cursor:pointer;
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{
+      border:0;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color:#071018;
+      font-weight:700;
+    }
+    .btn.small{padding:9px 12px; border-radius:12px}
+    .hero{
+      padding:46px 0 26px;
+    }
+    .grid{
+      display:grid; gap:18px;
+      grid-template-columns: 1.2fr .8fr;
+      align-items:stretch;
+    }
+    @media (max-width: 900px){
+      .grid{grid-template-columns:1fr}
+      .navlinks{display:none}
+    }
+    .card{
+      background: rgba(18,26,42,.82);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+    h1{margin:0 0 10px; font-size: 38px; letter-spacing:-.6px}
+    @media (max-width: 500px){h1{font-size: 30px}}
+    .lead{color:var(--muted); margin:0 0 18px; font-size: 16px}
+    .badges{display:flex; gap:10px; flex-wrap:wrap; margin:10px 0 16px}
+    .badge{
+      padding:8px 10px; border-radius:999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.05);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .badge strong{color:var(--text)}
+    .cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+    .kpis{display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin-top:14px}
+    .kpi{
+      padding:12px; border-radius:16px; border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+    }
+    .kpi .n{font-weight:800; font-size:18px}
+    .kpi .t{color:var(--muted); font-size:13px}
+    section{padding:14px 0}
+    h2{margin:0 0 10px; font-size: 22px}
+    .muted{color:var(--muted)}
+    .cols{display:grid; gap:18px; grid-template-columns: 1fr 1fr}
+    @media (max-width: 900px){.cols{grid-template-columns:1fr}}
+    .list{display:grid; gap:10px; margin-top:10px}
+    .item{
+      display:flex; gap:12px; align-items:flex-start;
+      padding:12px; border-radius:16px; border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+    }
+    .dot{
+      width:10px; height:10px; border-radius:999px; margin-top:6px;
+      background: var(--accent);
+      box-shadow: 0 0 0 5px rgba(94,234,212,.12);
+      flex: 0 0 auto;
+    }
+    .pricing{display:grid; gap:14px; grid-template-columns: repeat(3, 1fr)}
+    @media (max-width: 900px){.pricing{grid-template-columns:1fr}}
+    .price{
+      padding:16px; border-radius:18px; border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      display:flex; flex-direction:column; gap:10px;
+    }
+    .price .tag{font-weight:800}
+    .price .val{font-size:30px; font-weight:900}
+    .price ul{margin:0; padding-left:18px; color:var(--muted)}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px; border-radius:999px; border:1px solid var(--border);
+      background: rgba(255,255,255,.05); color:var(--muted); font-size:13px;
+    }
+    details{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.04);
+      border-radius: 16px;
+      padding: 12px 14px;
+    }
+    details summary{cursor:pointer; font-weight:700}
+    details p{margin:10px 0 0; color:var(--muted)}
+    .contact{
+      display:grid; gap:12px;
+      grid-template-columns: 1.1fr .9fr;
+      align-items:start;
+    }
+    @media (max-width: 900px){.contact{grid-template-columns:1fr}}
+    label{display:block; color:var(--muted); font-size:13px; margin:10px 0 6px}
+    input, textarea, select{
+      width:100%;
+      padding:12px 12px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background: rgba(11,15,23,.55);
+      color: var(--text);
+      outline:none;
+    }
+    textarea{min-height:110px; resize:vertical}
+    .footer{
+      padding:26px 0 40px; color:var(--muted); font-size:13px;
+      border-top:1px solid var(--border);
+      margin-top:18px;
+    }
+    .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+    .fine{font-size:12px; color:var(--muted)}
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <div class="nav">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            <div>KD Trott Service</div>
+            <div class="fine">Réparation trottinettes électriques • Service local</div>
+          </div>
+        </div>
+
+        <nav class="navlinks" aria-label="Navigation">
+          <a href="#services">Services</a>
+          <a href="#prix">Prix</a>
+          <a href="#avis">Avis</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a class="btn primary small" href="#contact">Prendre rendez-vous</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap hero">
+      <div class="grid">
+        <div class="card">
+          <h1>Réparation & entretien de trottinettes électriques</h1>
+          <p class="lead">
+            Pneus, freins, nettoyage, diagnostic. Travail propre, prix transparents, et communication simple.
+            Service adapté aux clients de proximité.
+          </p>
+
+          <div class="badges">
+            <div class="badge"><strong>Spécialité :</strong> pneus & entretien</div>
+            <div class="badge"><strong>Réponse :</strong> rapide</div>
+            <div class="badge"><strong>Devis :</strong> clair</div>
+          </div>
+
+          <div class="cta">
+            <a class="btn primary" href="#contact">Demander un rendez-vous</a>
+            <a class="btn" href="#prix">Voir les prix</a>
+            <a class="btn" href="#services">Voir les services</a>
+          </div>
+
+          <div class="kpis" aria-label="Indicateurs">
+            <div class="kpi">
+              <div class="n">Travail propre</div>
+              <div class="t">Photos avant/après sur demande</div>
+            </div>
+            <div class="kpi">
+              <div class="n">Prix transparents</div>
+              <div class="t">Pas de surprise, on valide avant</div>
+            </div>
+            <div class="kpi">
+              <div class="n">Local</div>
+              <div class="t">Rendez-vous proche de chez toi</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Infos rapides</h2>
+          <div class="list">
+            <div class="item">
+              <div class="dot"></div>
+              <div>
+                <div><strong>Zone :</strong> Theux / région (à adapter)</div>
+                <div class="muted">Indique ta zone exacte pour éviter les demandes trop loin.</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="dot" style="background:var(--accent2)"></div>
+              <div>
+                <div><strong>Horaires :</strong> sur rendez-vous</div>
+                <div class="muted">Après le travail / week-end selon dispo.</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="dot" style="background:var(--ok)"></div>
+              <div>
+                <div><strong>Paiement :</strong> cash / virement</div>
+                <div class="muted">Facture possible (si statut indép.)</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="dot" style="background:var(--danger)"></div>
+              <div>
+                <div><strong>Important :</strong> seed phrase crypto</div>
+                <div class="muted">Je ne demande jamais tes mots de récupération (anti-arnaque).</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:14px" class="row">
+            <span class="pill">📍 Service local</span>
+            <span class="pill">🧰 Outils adaptés</span>
+            <span class="pill">🧼 Nettoyage soigné</span>
+          </div>
+        </div>
+      </div>
+
+      <section id="services">
+        <div class="cols">
+          <div class="card">
+            <h2>Services</h2>
+            <p class="muted">Choisis un service, ou demande un diagnostic si tu n’es pas sûr.</p>
+            <div class="list">
+              <div class="item"><div class="dot"></div><div><strong>Changement pneu / chambre à air</strong><div class="muted">Montage propre, contrôle pression, vérification rapide.</div></div></div>
+              <div class="item"><div class="dot"></div><div><strong>Réglage freins</strong><div class="muted">Ajustement, test, conseils d’entretien.</div></div></div>
+              <div class="item"><div class="dot"></div><div><strong>Nettoyage complet</strong><div class="muted">Nettoyage cadre / roues, finitions. Sans démontage électrique.</div></div></div>
+              <div class="item"><div class="dot"></div><div><strong>Diagnostic de base</strong><div class="muted">Bruit, jeu, freins, pneus, usure visible. Devis ensuite.</div></div></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>Comment ça se passe</h2>
+            <div class="list">
+              <div class="item">
+                <div class="dot" style="background:var(--accent2)"></div>
+                <div>
+                  <strong>1) Tu envoies 2-3 photos</strong>
+                  <div class="muted">Modèle + problème + taille pneu si possible.</div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="dot" style="background:var(--accent2)"></div>
+                <div>
+                  <strong>2) Je te donne un prix clair</strong>
+                  <div class="muted">Main d’œuvre + pièces (si tu veux que je fournisse).</div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="dot" style="background:var(--accent2)"></div>
+                <div>
+                  <strong>3) Rendez-vous & réparation</strong>
+                  <div class="muted">Test rapide + remise en main propre.</div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="dot" style="background:var(--accent2)"></div>
+                <div>
+                  <strong>4) Conseils d’entretien</strong>
+                  <div class="muted">Pression, freinage, sécurité, durée de vie.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="prix">
+        <div class="card">
+          <h2>Prix indicatifs</h2>
+          <p class="muted">À adapter selon modèle / difficulté. L’objectif : transparent et simple.</p>
+
+          <div class="pricing" style="margin-top:12px">
+            <div class="price">
+              <div class="tag">Nettoyage</div>
+              <div class="val">25€</div>
+              <div class="muted">Nettoyage complet (extérieur)</div>
+              <ul>
+                <li>Cadre + roues</li>
+                <li>Finitions</li>
+                <li>Conseils d’entretien</li>
+              </ul>
+            </div>
+
+            <div class="price">
+              <div class="tag">Freins</div>
+              <div class="val">20–35€</div>
+              <div class="muted">Réglage / contrôle</div>
+              <ul>
+                <li>Réglage</li>
+                <li>Test sécurité</li>
+                <li>Usure plaquettes (visuel)</li>
+              </ul>
+            </div>
+
+            <div class="price">
+              <div class="tag">Pneus</div>
+              <div class="val">35–60€</div>
+              <div class="muted">Changement pneu/chambre</div>
+              <ul>
+                <li>Montage propre</li>
+                <li>Contrôle pression</li>
+                <li>Vérif rapide</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="fine" style="margin-top:12px">
+            * Les pièces (pneu, chambre, plaquettes) peuvent être fournies par toi, ou par moi selon disponibilité.
+          </p>
+        </div>
+      </section>
+
+      <section id="avis">
+        <div class="card">
+          <h2>Avis</h2>
+          <p class="muted">
+            Mets 2–5 avis réels ici dès que tu as tes premiers clients. Les avis font 80% du travail.
+          </p>
+          <div class="cols" style="margin-top:12px">
+            <div class="item">
+              <div class="dot"></div>
+              <div>
+                <strong>“Travail propre et rapide.”</strong>
+                <div class="muted">— Client, modèle (à remplir)</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="dot"></div>
+              <div>
+                <strong>“Prix clair, bonne communication.”</strong>
+                <div class="muted">— Client, date (à remplir)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq">
+        <div class="card">
+          <h2>FAQ</h2>
+          <div class="list" style="margin-top:12px">
+            <details>
+              <summary>Tu te déplaces ?</summary>
+              <p>Par défaut, sur rendez-vous à un point de rencontre local. Déplacement possible selon distance (à préciser).</p>
+            </details>
+            <details>
+              <summary>Je n’ai pas la taille du pneu, je fais comment ?</summary>
+              <p>Envoie une photo du pneu (inscriptions sur le flanc) + modèle de la trottinette.</p>
+            </details>
+            <details>
+              <summary>Tu fais l’électrique / batterie ?</summary>
+              <p>Diagnostic visuel et conseils possibles, mais pas d’intervention lourde sans validation (risque/sécurité).</p>
+            </details>
+            <details>
+              <summary>Et si on n’est pas d’accord sur le prix ?</summary>
+              <p>Je donne un prix avant. Si tu refuses, rien n’est fait.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="card">
+          <h2>Contact / Rendez-vous</h2>
+          <p class="muted">Remplis le formulaire : ça crée un message prêt à envoyer (email). Tu peux aussi mettre WhatsApp.</p>
+
+          <div class="contact" style="margin-top:10px">
+            <form id="contactForm">
+              <label for="name">Nom</label>
+              <input id="name" name="name" placeholder="Kevin" required />
+
+              <label for="phone">Téléphone (optionnel)</label>
+              <input id="phone" name="phone" placeholder="+32 ..." />
+
+              <label for="model">Modèle trottinette</label>
+              <input id="model" name="model" placeholder="Xiaomi / Teverun / ..." required />
+
+              <label for="service">Service</label>
+              <select id="service" name="service" required>
+                <option value="Changement pneu">Changement pneu / chambre</option>
+                <option value="Réglage freins">Réglage freins</option>
+                <option value="Nettoyage complet">Nettoyage complet</option>
+                <option value="Diagnostic">Diagnostic</option>
+              </select>
+
+              <label for="msg">Message</label>
+              <textarea id="msg" name="msg" placeholder="Décris le problème + si possible la taille du pneu."></textarea>
+
+              <div class="row" style="margin-top:12px">
+                <button type="submit" class="btn primary">Envoyer</button>
+                <button type="button" class="btn" id="copyBtn">Copier le message</button>
+              </div>
+
+              <p class="fine" style="margin-top:10px">
+                Email actuel (à modifier si besoin) : <strong id="targetEmail">derukevin@gmail.com</strong>
+              </p>
+            </form>
+
+            <div>
+              <div class="item">
+                <div class="dot"></div>
+                <div>
+                  <strong>Coordonnées</strong>
+                  <div class="muted">
+                    Email : derukevin@gmail.com<br/>
+                    Zone : Theux / région (à adapter)<br/>
+                    Sur rendez-vous
+                  </div>
+                </div>
+              </div>
+
+              <div class="item" style="margin-top:12px">
+                <div class="dot" style="background:var(--accent2)"></div>
+                <div>
+                  <strong>Astuce crédibilité</strong>
+                  <div class="muted">
+                    Mets un lien Google Maps + 5 avis clients.<br/>
+                    Ajoute 3 photos “avant/après”.
+                  </div>
+                </div>
+              </div>
+
+              <div class="item" style="margin-top:12px">
+                <div class="dot" style="background:var(--ok)"></div>
+                <div>
+                  <strong>Réseaux</strong>
+                  <div class="muted">
+                    Instagram/TikTok : poste 2 vidéos par semaine (montage pneu propre).
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="wrap footer">
+      <div class="row" style="justify-content:space-between">
+        <div>© <span id="year"></span> KD Trott Service</div>
+        <div class="fine">Site vitrine — à personnaliser (ville, prix, photos, horaires)</div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Personnalise ici
+    const EMAIL = "derukevin@gmail.com"; // <-- change si tu veux
+    document.getElementById("targetEmail").textContent = EMAIL;
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function buildMessage(data){
+      const lines = [
+        "Bonjour,",
+        "",
+        "Je souhaite un rendez-vous pour : " + data.service,
+        "Modèle : " + data.model,
+        data.phone ? ("Téléphone : " + data.phone) : "",
+        "",
+        "Détails :",
+        data.msg || "(pas de détails)",
+        "",
+        "Merci,",
+        data.name
+      ].filter(Boolean);
+      return lines.join("\n");
+    }
+
+    document.getElementById("contactForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = {
+        name: document.getElementById("name").value.trim(),
+        phone: document.getElementById("phone").value.trim(),
+        model: document.getElementById("model").value.trim(),
+        service: document.getElementById("service").value,
+        msg: document.getElementById("msg").value.trim(),
+      };
+
+      const subject = encodeURIComponent("Rendez-vous — " + data.service + " — " + data.model);
+      const body = encodeURIComponent(buildMessage(data));
+      window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+    });
+
+    document.getElementById("copyBtn").addEventListener("click", async () => {
+      const data = {
+        name: document.getElementById("name").value.trim() || "(Nom)",
+        phone: document.getElementById("phone").value.trim(),
+        model: document.getElementById("model").value.trim() || "(Modèle)",
+        service: document.getElementById("service").value,
+        msg: document.getElementById("msg").value.trim(),
+      };
+      const text = buildMessage(data);
+      try{
+        await navigator.clipboard.writeText(text);
+        alert("Message copié.");
+      }catch{
+        alert("Impossible de copier automatiquement. Sélectionne et copie manuellement.");
+      }
+    });
+  </script>
+</body>
+</html>
