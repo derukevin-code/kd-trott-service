@@ -24,6 +24,12 @@ h1 {
     font-size: 32px;
 }
 
+.subtitle {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #cbd5e1;
+}
+
 .section {
     padding: 40px 20px;
 }
@@ -52,9 +58,14 @@ ul {
     line-height: 1.8;
 }
 
-.highlight {
+.price {
     font-weight: bold;
     color: #10b981;
+}
+
+.warning {
+    color: #f87171;
+    font-weight: bold;
 }
 
 footer {
@@ -69,7 +80,7 @@ footer {
 
 <header>
 <h1>Atelier Volt</h1>
-<p>Montage de pneus & nettoyage trottinettes électriques</p>
+<p class="subtitle">Montage pneus & nettoyage trottinettes électriques</p>
 </header>
 
 <div class="section">
@@ -78,33 +89,31 @@ footer {
 
 <div class="section">
 <div class="card">
-<h2>Service principal</h2>
+<h2>Montage pneus (main d'œuvre)</h2>
+
 <ul>
-<li>✔ Montage / Remplacement pneu avant ou arrière</li>
-<li>✔ Montage chambre à air</li>
-<li>✔ Le client fournit le pneu ou la chambre à air</li>
+<li class="price">1 roue (avant ou arrière) : 40 €</li>
+<li class="price">2 roues : 70 €</li>
+<li class="price">Chambre à air : 30 €</li>
 </ul>
 
-<p class="highlight">⚠ Je ne fournis pas les pièces</p>
-<p class="highlight">⚠ Aucune intervention électrique</p>
-<p class="highlight">⚠ Aucun démontage du deck</p>
+<p class="warning">✔ Le client fournit le pneu ou la chambre à air</p>
+<p class="warning">✖ Aucune intervention électrique</p>
+<p class="warning">✖ Aucun démontage batterie / deck</p>
+<p class="warning">✖ Pas de freins</p>
 
-<h3>Tarifs</h3>
-<ul>
-<li>• 1 pneu : 40 €</li>
-<li>• 2 pneus : 70 €</li>
-<li>• Chambre à air seule : 25 €</li>
-</ul>
 </div>
 </div>
 
 <div class="section">
 <div class="card">
-<h2>Option nettoyage</h2>
+<h2>Nettoyage extérieur</h2>
+
 <ul>
-<li>• Nettoyage extérieur complet : 20 €</li>
-<li>• Nettoyage + montage pneu : 15 €</li>
+<li class="price">Nettoyage complet extérieur : 20 €</li>
+<li class="price">Pack montage + nettoyage : 55 €</li>
 </ul>
+
 <p>Nettoyage esthétique uniquement (pas d'ouverture électronique).</p>
 </div>
 </div>
@@ -113,9 +122,9 @@ footer {
 <div class="card">
 <h2>Important</h2>
 <ul>
-<li>• Travail sérieux et propre</li>
-<li>• Sur rendez-vous</li>
-<li>• Dépôt et reprise sur place</li>
+<li>Travail sérieux et propre</li>
+<li>Sur rendez-vous uniquement</li>
+<li>Dépôt et reprise sur place</li>
 </ul>
 </div>
 </div>
