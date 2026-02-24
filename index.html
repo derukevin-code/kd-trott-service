@@ -1,269 +1,119 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atelier Volt — Réparation trottinettes électriques</title>
-  <meta name="description" content="Montage de pneus, check-up sécurité et nettoyage visuel de trottinettes électriques à Theux. Intervention sous 24 à 48 heures sur rendez-vous." />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ElectroRide — Réparation trottinettes électriques à Theux</title>
+<meta name="description" content="ElectroRide - Réparation de trottinettes électriques à Theux. Montage de pneus, check-up sécurité et nettoyage visuel. Intervention rapide sur rendez-vous." />
 
-  <style>
-    * { box-sizing: border-box; }
+<style>
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background-color:#0f172a;
+color:white;
+text-align:center;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #081121;
-      color: #fff;
-      text-align: center;
-    }
+header{
+padding:30px 20px 20px;
+}
 
-    .container {
-      max-width: 430px;
-      margin: 0 auto;
-      padding: 14px 10px 28px;
-    }
+h1{
+margin:0 0 10px;
+color:#22c55e;
+}
 
-    h1 {
-      margin: 10px 0 6px;
-      font-size: 30px;
-      font-weight: 700;
-    }
+.subtitle{
+color:#cbd5e1;
+margin-bottom:6px;
+}
 
-    .subtitle {
-      margin: 2px 0;
-      color: #d1d5db;
-      font-size: 15px;
-    }
+img{
+max-width:92%;
+margin:15px auto;
+display:block;
+border-radius:12px;
+}
 
-    .location {
-      color: #22c55e;
-      font-weight: 700;
-      margin-top: 4px;
-      font-size: 15px;
-    }
+section{
+background-color:#16213e;
+margin:20px;
+padding:20px;
+border-radius:12px;
+}
 
-    .top-list {
-      margin: 8px 0 4px;
-      color: #e5e7eb;
-      font-size: 14px;
-      line-height: 1.5;
-    }
+h2{
+color:#22c55e;
+}
 
-    .delay {
-      margin: 8px 0 4px;
-      font-weight: 700;
-      font-size: 16px;
-    }
+.price{
+color:#22c55e;
+font-weight:bold;
+}
 
-    .delay-note {
-      margin: 0 0 10px;
-      color: #cbd5e1;
-      font-size: 13px;
-    }
-
-    .main-photo {
-      width: 100%;
-      border-radius: 14px;
-      margin: 10px 0 12px;
-      display: block;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: #0f172a;
-      min-height: 160px;
-      object-fit: cover;
-    }
-
-    .card {
-      background: #10203d;
-      border-radius: 14px;
-      margin: 10px 0;
-      padding: 12px 10px;
-      text-align: left;
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-
-    .card h2 {
-      text-align: center;
-      margin: 0 0 10px;
-      color: #4ade80;
-      font-size: 17px;
-      line-height: 1.2;
-    }
-
-    .inner-box {
-      background: rgba(255,255,255,0.04);
-      border-radius: 10px;
-      padding: 9px 10px;
-      margin-bottom: 8px;
-      line-height: 1.45;
-      color: #f3f4f6;
-      font-size: 14px;
-    }
-
-    .inner-box strong {
-      color: #fff;
-    }
-
-    ul {
-      margin: 7px 0 0;
-      padding-left: 18px;
-      line-height: 1.45;
-      color: #f3f4f6;
-      font-size: 14px;
-    }
-
-    li { margin-bottom: 5px; }
-
-    .small {
-      margin: 7px 0 0;
-      color: #cbd5e1;
-      font-size: 12px;
-      line-height: 1.35;
-    }
-
-    .important {
-      border: 1px solid rgba(239,68,68,0.7);
-      background: rgba(127,29,29,0.12);
-    }
-
-    .important h2 { color: #f87171; }
-
-    .contact h2 { color: #22d3ee; }
-
-    .contact p {
-      margin: 6px 0;
-      text-align: center;
-      font-size: 15px;
-    }
-
-    .contact a {
-      color: #4ade80;
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    .footer {
-      margin-top: 8px;
-      color: #9ca3af;
-      font-size: 11px;
-    }
-
-    @media (max-width: 360px) {
-      h1 { font-size: 27px; }
-      .card h2 { font-size: 16px; }
-    }
-  </style>
+footer{
+padding:20px;
+font-size:13px;
+color:#94a3b8;
+}
+</style>
 </head>
+
 <body>
-  <div class="container">
 
-    <h1>Atelier Volt</h1>
+<header>
+<h1>⚡ ElectroRide</h1>
+<div class="subtitle">Réparation de trottinettes électriques à Theux</div>
+<div>📍 Theux (Belgique)</div>
+<div>Service rapide — Travail soigné — Sur rendez-vous</div>
+</header>
 
-    <p class="subtitle">Réparation de trottinettes électriques à Theux</p>
-    <p class="location">📍 Atelier situé à Theux (Belgique)</p>
+<img src="photo.jpg" alt="Réparation trottinette ElectroRide Theux">
 
-    <div class="top-list">
-      ✔ Service rapide<br>
-      ✔ Travail soigné<br>
-      ✔ Uniquement sur rendez-vous
-    </div>
+<section>
+<h2>Pourquoi choisir ElectroRide ?</h2>
+<p>✔ Spécialisé trottinettes électriques</p>
+<p>✔ Intervention locale à Theux</p>
+<p>✔ Tarifs clairs</p>
+<p>✔ Travail propre et soigné</p>
+</section>
 
-    <p class="delay">Intervention sous 24 à 48 heures</p>
-    <p class="delay-note">(selon disponibilité)</p>
+<section>
+<h2>Montage de pneus (main-d’œuvre)</h2>
+<p>Le client apporte le pneu / la chambre à air</p>
+<p class="price">Chambre à air : 35 €</p>
+<p class="price">Tubeless : 40 €</p>
+<p class="price">Pneu plein : 45 €</p>
+</section>
 
-    <!-- Photo réelle trouvée dans ton dépôt -->
-    <img class="main-photo" src="20260223_150017.jpg" alt="Réparation trottinette électrique à Theux"
-         onerror="this.style.display='none';document.getElementById('photoFallback').style.display='block';" />
+<section>
+<h2>Check-up sécurité</h2>
+<p class="price">Contrôle + resserrage : 15 €</p>
+</section>
 
-    <div id="photoFallback" class="inner-box" style="display:none; text-align:center; margin-top:8px;">
-      Photo introuvable.<br>
-      Vérifie que le fichier <strong>20260223_150017.jpg</strong> est bien dans le dépôt.
-    </div>
+<section>
+<h2>Nettoyage extérieur</h2>
+<p class="price">Nettoyage simple : 15 €</p>
+<p class="price">Nettoyage + check-up : 25 €</p>
+</section>
 
-    <section class="card">
-      <h2>Pourquoi choisir Atelier Volt ?</h2>
-      <ul>
-        <li>Spécialisé en trottinettes électriques</li>
-        <li>Intervention locale à Theux et alentours</li>
-        <li>Tarifs clairs et transparents</li>
-        <li>Travail propre et soigné</li>
-      </ul>
-    </section>
+<section>
+<h2>Important</h2>
+<p>• Service uniquement sur rendez-vous</p>
+<p>• Pas d'intervention électrique interne</p>
+</section>
 
-    <section class="card">
-      <h2>Montage de pneus (main-d’œuvre)</h2>
+<section>
+<h2>Contact</h2>
+<p>Téléphone : 0495 65 61 86</p>
+<p>Email : Derukevin@gmail.com</p>
+</section>
 
-      <div class="inner-box">
-        <strong>Tarifs main-d’œuvre uniquement (pièces non incluses)</strong><br>
-        <strong>Le client apporte le pneu / la chambre à air</strong><br><br>
+<footer>
+© 2026 ElectroRide — Réparation trottinettes électriques à Theux
+</footer>
 
-        Chambre à air : <strong>35 €</strong><br>
-        Tubeless : <strong>40 €</strong><br>
-        Pneu plein : <strong>45 €</strong>
-      </div>
-
-      <ul>
-        <li>Démontage et remontage de la roue</li>
-        <li>Remplacement du pneu (chambre à air / tubeless / pneu plein)</li>
-        <li>Contrôle du sens de rotation, de la pression (si applicable) et du serrage</li>
-      </ul>
-
-      <p class="small">
-        Supplément possible en cas de vis abîmées ou d’accès difficile.<br>
-        Pièces non incluses sauf accord préalable.
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>Check-up sécurité</h2>
-
-      <div class="inner-box">
-        Contrôle + resserrage des vis accessibles : <strong>15 €</strong>
-      </div>
-
-      <ul>
-        <li>Vérification du serrage général</li>
-        <li>Contrôle des freins (réglage simple si possible)</li>
-        <li>Vérification de l’état des pneus</li>
-        <li>Contrôle de l’éclairage</li>
-      </ul>
-
-      <p class="small">Pas de purge de freins hydrauliques ni d’intervention interne complexe.</p>
-    </section>
-
-    <section class="card">
-      <h2>Nettoyage extérieur (visuel)</h2>
-
-      <div class="inner-box">
-        Nettoyage extérieur : <strong>15 €</strong><br>
-        Nettoyage + check-up : <strong>25 €</strong>
-      </div>
-
-      <ul>
-        <li>Nettoyage du cadre et du deck (surface)</li>
-        <li>Nettoyage des roues (extérieur)</li>
-        <li>Finition propre et soignée</li>
-      </ul>
-
-      <p class="small">Nettoyage uniquement extérieur. Pas d’ouverture du deck ni des moteurs.</p>
-    </section>
-
-    <section class="card important">
-      <h2>Important</h2>
-      <ul>
-        <li>Service uniquement sur rendez-vous</li>
-        <li>Merci d’indiquer la marque et le modèle (photo conseillée)</li>
-        <li>Pas d’intervention sur batterie, contrôleur ou câblage électrique</li>
-        <li>Zone desservie : Theux, Verviers, Spa, Pepinster</li>
-      </ul>
-    </section>
-
-    <section class="card contact">
-      <h2>Contact</h2>
-      <p>Téléphone : <a href="tel:+32495656186">0495 65 61 86</a></p>
-      <p>Email : <a href="mailto:Derukevin@gmail.com">Derukevin@gmail.com</a></p>
-    </section>
-
-    <p class="footer">© Atelier Volt | Réparation trottinette électrique à Theux</p>
-  </div>
 </body>
 </html>
