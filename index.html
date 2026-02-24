@@ -1,75 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atelier Volt — Réparation trottinettes électriques</title>
+  <meta name="description" content="Montage de pneus, check-up sécurité et nettoyage visuel de trottinettes électriques à Theux. Intervention sous 24 à 48 heures sur rendez-vous." />
 
-# Atelier Volt
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0b1220;
+      color: #ffffff;
+      text-align: center;
+    }
 
-Réparation de trottinettes électriques à Theux
+    .container {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 16px 12px 30px;
+    }
 
-Atelier situé à Theux (Belgique)
+    h1 {
+      margin: 10px 0 8px;
+      font-size: 30px;
+      font-weight: 700;
+    }
 
-✔ Service rapide  
-✔ Travail soigné  
-✔ Uniquement sur rendez-vous
+    .subtitle {
+      color: #d1d5db;
+      margin: 4px 0;
+      font-size: 15px;
+    }
 
-Intervention sous 24 à 48 heures (selon disponibilité)
+    .highlight {
+      color: #22c55e;
+      font-weight: bold;
+    }
 
-![Réparation trottinette électrique à Theux](photo-trottinette.jpg)
+    .delay {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 17px;
+    }
 
-## Pourquoi choisir Atelier Volt ?
+    img {
+      width: 100%;
+      border-radius: 14px;
+      margin: 14px 0;
+      display: block;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
 
-- Spécialisé trottinettes électriques
-- Intervention locale à Theux et alentours
-- Tarifs clairs et transparents
-- Travail propre et soigné
-- Service sérieux sur rendez-vous
+    .card {
+      background: #13203a;
+      border-radius: 14px;
+      padding: 14px 12px;
+      margin: 12px 0;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.05);
+      text-align: left;
+    }
 
-## Montage de pneus (main-d’œuvre)
+    .card h2 {
+      margin: 0 0 10px;
+      text-align: center;
+      color: #4ade80;
+      font-size: 18px;
+    }
 
-**Tarifs main-d’œuvre uniquement (pièces non incluses)**  
-**Le client apporte le pneu / la chambre à air**
+    .prices {
+      background: rgba(255,255,255,0.04);
+      border-radius: 10px;
+      padding: 10px;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
 
-Chambre à air : **35 €**  
-Tubeless : **40 €**  
-Pneu plein : **45 €**
+    .small-note {
+      font-size: 13px;
+      color: #d1d5db;
+      margin-top: 6px;
+    }
 
-- Démontage et remontage de la roue
-- Remplacement du pneu (chambre à air / tubeless / pneu plein)
-- Contrôle du sens de rotation, de la pression (si applicable) et du serrage
+    ul {
+      margin: 8px 0 0 0;
+      padding-left: 18px;
+      line-height: 1.45;
+    }
 
-Supplément possible en cas de vis abîmées ou d’accès difficile.  
-Pièces non incluses sauf accord préalable.
+    li {
+      margin-bottom: 6px;
+    }
 
-## Check-up sécurité
+    .important {
+      border: 1px solid #ef4444;
+      background: rgba(239, 68, 68, 0.08);
+    }
 
-Contrôle + resserrage des vis accessibles : **15 €**
+    .important h2 {
+      color: #f87171;
+    }
 
-- Vérification du serrage général
-- Contrôle des freins (réglage simple si possible)
-- Vérification de l’état des pneus
-- Contrôle de l’éclairage
+    .contact {
+      text-align: center;
+    }
 
-Pas de purge de freins hydrauliques ni d’intervention interne complexe.
+    .contact a {
+      color: #22c55e;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-## Nettoyage extérieur (visuel)
+    .contact p {
+      margin: 8px 0;
+    }
 
-Nettoyage extérieur : **15 €**  
-Nettoyage + check-up : **25 €**
+    .footer {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #cbd5e1;
+      text-align: center;
+    }
 
-- Nettoyage du cadre et du deck (surface)
-- Nettoyage des roues (extérieur)
-- Finition propre et soignée
+    .top-badges {
+      margin: 8px 0 4px;
+      line-height: 1.6;
+      color: #e5e7eb;
+      font-size: 14px;
+    }
 
-Nettoyage uniquement extérieur. Pas d’ouverture du deck ni des moteurs.
+    .top-badges span {
+      display: inline-block;
+      margin: 0 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
 
-## Important
+    <h1>Atelier Volt</h1>
 
-- Service uniquement sur rendez-vous
-- Merci d’indiquer la marque et le modèle (photo conseillée)
-- Pas d’intervention sur batterie, contrôleur ou câblage électrique
-- Zone desservie : Theux, Verviers, Spa, Pepinster
-- Paiement en espèces ou accord préalable
+    <p class="subtitle">Réparation de trottinettes électriques à Theux</p>
+    <p class="subtitle"><span class="highlight">📍 Atelier situé à Theux (Belgique)</span></p>
 
-## Contact
+    <div class="top-badges">
+      <span>✔ Service rapide</span><br>
+      <span>✔ Travail soigné</span><br>
+      <span>✔ Uniquement sur rendez-vous</span>
+    </div>
 
-Téléphone : **0495 65 61 86**  
-Email : **Derukevin@gmail.com**
+    <p class="delay">Intervention sous 24 à 48 heures<br><span class="small-note">(selon disponibilité)</span></p>
 
-© Atelier Volt | Réparation trottinette électrique à Theux
+    <!-- Garde exactement le même nom de photo que dans ton ancien code -->
+    <img src="photo-trottinette.jpg" alt="Réparation trottinette électrique à Theux" />
+
+    <section class="card">
+      <h2>Pourquoi choisir Atelier Volt ?</h2>
+      <ul>
+        <li>Spécialisé trottinettes électriques</li>
+        <li>Intervention locale à Theux et alentours</li>
+        <li>Tarifs clairs et transparents</li>
+        <li>Travail propre et soigné</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Montage de pneus (main-d’œuvre)</h2>
+
+      <div class="prices">
+        <strong>Tarifs main-d’œuvre uniquement (pièces non incluses)</strong><br>
+        <strong>Le client apporte le pneu / la chambre à air</strong><br><br>
+
+        Chambre à air : <strong>35 €</strong><br>
+        Tubeless : <strong>40 €</strong><br>
+        Pneu plein : <strong>45 €</strong>
+      </div>
+
+      <ul>
+        <li>Démontage et remontage de la roue</li>
+        <li>Remplacement du pneu (chambre à air / tubeless / pneu plein)</li>
+        <li>Contrôle du sens de rotation, de la pression (si applicable) et du serrage</li>
+      </ul>
+
+      <p class="small-note">
+        Supplément possible en cas de vis abîmées ou d’accès difficile.<br>
+        Pièces non incluses sauf accord préalable.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Check-up sécurité</h2>
+
+      <div class="prices">
+        Contrôle + resserrage des vis accessibles : <strong>15 €</strong>
+      </div>
+
+      <ul>
+        <li>Vérification du serrage général</li>
+        <li>Contrôle des freins (réglage simple si possible)</li>
+        <li>Vérification de l’état des pneus</li>
+        <li>Contrôle de l’éclairage</li>
+      </ul>
+
+      <p class="small-note">
+        Pas de purge de freins hydrauliques ni d’intervention interne complexe.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Nettoyage extérieur (visuel)</h2>
+
+      <div class="prices">
+        Nettoyage extérieur : <strong>15 €</strong><br>
+        Nettoyage + check-up : <strong>25 €</strong>
+      </div>
+
+      <ul>
+        <li>Nettoyage du cadre et du deck (surface)</li>
+        <li>Nettoyage des roues (extérieur)</li>
+        <li>Finition propre et soignée</li>
+      </ul>
+
+      <p class="small-note">
+        Nettoyage uniquement extérieur. Pas d’ouverture du deck ni des moteurs.
+      </p>
+    </section>
+
+    <section class="card important">
+      <h2>Important</h2>
+      <ul>
+        <li>Service uniquement sur rendez-vous</li>
+        <li>Merci d’indiquer la marque et le modèle (photo conseillée)</li>
+        <li>Pas d’intervention sur batterie, contrôleur ou câblage électrique</li>
+        <li>Zone desservie : Theux, Verviers, Spa, Pepinster</li>
+      </ul>
+    </section>
+
+    <section class="card contact">
+      <h2>Contact</h2>
+      <p>Téléphone : <a href="tel:+32495656186">0495 65 61 86</a></p>
+      <p>Email : <a href="mailto:Derukevin@gmail.com">Derukevin@gmail.com</a></p>
+    </section>
+
+    <p class="footer">© Atelier Volt | Réparation trottinette électrique à Theux</p>
+  </div>
+</body>
+</html>
