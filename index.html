@@ -2,131 +2,377 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ElectroRide — Réparation trottinettes électriques à Theux</title>
-<meta name="description" content="ElectroRide - Réparation mécanique de trottinettes électriques à Theux. Montage pneus, réglages, check-up sécurité et entretien extérieur.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ElectroRide — Réparation trottinettes électriques à Theux</title>
+  <meta name="description" content="ElectroRide : réparation mécanique de trottinettes électriques à Theux. Montage de pneus, check-up sécurité, nettoyage extérieur. Uniquement sur rendez-vous." />
 
-<style>
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#0f172a;
-color:white;
-text-align:center;
-}
+  <style>
+    :root{
+      --bg1:#0b1220;
+      --bg2:#0f1b35;
+      --card:#121f3d;
+      --card2:#0f1a33;
+      --text:#e9eefc;
+      --muted:#b7c3e6;
+      --accent:#4ade80; /* vert */
+      --accent2:#22c55e;
+      --shadow: 0 16px 40px rgba(0,0,0,.35);
+      --radius: 20px;
+      --maxw: 760px;
+    }
 
-header{
-padding:30px 15px;
-}
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 50% -200px, #1d2f5e 0%, transparent 60%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      min-height:100vh;
+    }
 
-.logo{
-font-size:30px;
-}
+    .wrap{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 22px 14px 40px;
+    }
 
-h1{
-color:#22c55e;
-margin:10px 0;
-font-size:28px;
-}
+    header{
+      text-align:center;
+      padding: 14px 10px 8px;
+    }
 
-.subtitle{
-color:#cbd5e1;
-}
+    .brand{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:10px;
+      margin-top: 6px;
+    }
 
-.section{
-background:#16213e;
-margin:20px;
-padding:22px;
-border-radius:16px;
-}
+    .logo{
+      font-size: 30px;
+      line-height: 1;
+      filter: drop-shadow(0 8px 14px rgba(0,0,0,.35));
+    }
 
-h2{
-color:#22c55e;
-margin-bottom:15px;
-}
+    h1{
+      margin:0;
+      font-size: 40px;
+      letter-spacing:.2px;
+      color: var(--accent);
+      text-shadow: 0 10px 22px rgba(0,0,0,.35);
+    }
 
-.price{
-color:#22c55e;
-font-weight:bold;
-}
+    .tagline{
+      margin: 10px 0 0;
+      font-size: 18px;
+      color: var(--text);
+      opacity:.95;
+    }
 
-img{
-width:90%;
-max-width:520px;
-border-radius:18px;
-margin-top:20px;
-}
+    .sub{
+      margin: 8px 0 0;
+      font-size: 15px;
+      color: var(--muted);
+    }
 
-footer{
-margin-top:40px;
-padding:15px;
-font-size:12px;
-color:#94a3b8;
-}
-</style>
+    .pillbar{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:center;
+      margin: 14px auto 0;
+    }
+    .pill{
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.10);
+      padding: 8px 12px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 13px;
+      backdrop-filter: blur(6px);
+    }
+    .pill b{ color: var(--text); font-weight: 700; }
+
+    .hero{
+      margin: 18px auto 0;
+      width: min(100%, 640px);
+      border-radius: var(--radius);
+      overflow:hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.15);
+    }
+    .hero img{
+      display:block;
+      width:100%;
+      height:auto;
+    }
+
+    .grid{
+      margin-top: 18px;
+      display:grid;
+      gap: 14px;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: var(--radius);
+      padding: 18px 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h2{
+      margin: 0 0 10px;
+      font-size: 26px;
+      color: var(--accent);
+      text-align:center;
+    }
+
+    .card h3{
+      margin: 0 0 8px;
+      font-size: 20px;
+      color: var(--accent);
+      text-align:center;
+    }
+
+    .list{
+      margin: 10px auto 0;
+      max-width: 560px;
+      padding: 0;
+      list-style:none;
+      color: var(--text);
+      line-height: 1.5;
+      font-size: 16px;
+    }
+    .list li{
+      padding: 7px 0;
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+    .tick{ color: var(--text); opacity:.95; }
+    .tick::before{
+      content:"✔";
+      color: var(--text);
+      font-weight: 800;
+      display:inline-block;
+      transform: translateY(1px);
+      width: 18px;
+    }
+
+    .prices{
+      margin: 10px auto 0;
+      max-width: 520px;
+      text-align:center;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .priceLine{
+      margin: 10px 0;
+      font-size: 17px;
+      color: var(--text);
+    }
+    .priceLine b{
+      color: var(--accent);
+      font-size: 18px;
+    }
+    .note{
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--muted);
+      text-align:center;
+      opacity:.95;
+    }
+
+    .danger{
+      text-align:center;
+      margin: 10px auto 0;
+      max-width: 560px;
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .danger .small{
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      opacity:.95;
+    }
+    .danger ul{
+      list-style:none;
+      padding:0;
+      margin: 12px 0 0;
+    }
+    .danger li{
+      padding: 8px 0;
+      color: var(--text);
+    }
+    .dash::before{
+      content:"— ";
+      color: var(--muted);
+    }
+
+    .contact{
+      text-align:center;
+    }
+    .contact p{
+      margin: 8px 0 0;
+      color: var(--muted);
+    }
+
+    .btnRow{
+      margin-top: 14px;
+      display:flex;
+      justify-content:center;
+      gap: 10px;
+      flex-wrap:wrap;
+    }
+    a.btn{
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 11px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      font-weight: 700;
+      min-width: 170px;
+      box-shadow: 0 12px 26px rgba(0,0,0,.28);
+    }
+    a.btn:hover{ filter: brightness(1.05); }
+    a.btn.primary{
+      background: linear-gradient(180deg, rgba(34,197,94,.25), rgba(34,197,94,.10));
+      border-color: rgba(34,197,94,.45);
+    }
+
+    footer{
+      text-align:center;
+      margin-top: 18px;
+      color: rgba(233,238,252,.55);
+      font-size: 12px;
+    }
+
+    @media (max-width:420px){
+      h1{ font-size: 34px; }
+      .tagline{ font-size: 16px; }
+      .card h2{ font-size: 24px; }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">🛴⚡</div>
+        <h1>ElectroRide</h1>
+      </div>
 
-<header>
-<div class="logo">🛴⚡</div>
-<h1>ElectroRide</h1>
-<div class="subtitle">Réparation mécanique de trottinettes électriques à Theux</div>
-<div class="subtitle">Service rapide — Travail soigné — Sur rendez-vous</div>
-</header>
+      <div class="tagline">Réparation <b>mécanique</b> de trottinettes électriques à Theux</div>
+      <div class="sub">Service rapide — Travail soigné — <b>Sur rendez-vous</b></div>
 
-<img src="20260223_150017.jpg" alt="ElectroRide réparation trottinette Theux">
+      <div class="pillbar" role="list">
+        <div class="pill" role="listitem">📍 <b>Theux</b></div>
+        <div class="pill" role="listitem">🛠️ Pneus / check-up / nettoyage</div>
+        <div class="pill" role="listitem">⏱️ Réponse rapide (selon dispo)</div>
+      </div>
 
-<div class="section">
-<h2>Pourquoi choisir ElectroRide ?</h2>
-<p>✔ Spécialisé trottinettes électriques</p>
-<p>✔ Intervention locale à Theux</p>
-<p>✔ Tarifs clairs et transparents</p>
-<p>✔ Travail propre et sérieux</p>
-</div>
+      <!-- IMPORTANT : remplace le nom du fichier si besoin par EXACTEMENT celui présent dans ton repo GitHub -->
+      <div class="hero">
+        <img src="20260223_150017.jpg" alt="Trottinette électrique — intervention mécanique" />
+      </div>
+    </header>
 
-<div class="section">
-<h2>Montage de pneus (main-d'œuvre)</h2>
-<p>Le client apporte le pneu ou la chambre à air</p>
-<p class="price">Chambre à air : 35 €</p>
-<p class="price">Tubeless : 40 €</p>
-<p class="price">Pneu plein : 45 €</p>
-</div>
+    <main class="grid">
+      <section class="card">
+        <h2>Pourquoi choisir ElectroRide ?</h2>
+        <ul class="list">
+          <li class="tick">Spécialisé trottinettes électriques</li>
+          <li class="tick">Intervention locale à Theux</li>
+          <li class="tick">Tarifs clairs et transparents</li>
+          <li class="tick">Travail propre et sérieux</li>
+        </ul>
+      </section>
 
-<div class="section">
-<h2>Check-up sécurité</h2>
-<p class="price">Contrôle + resserrage général : 15 €</p>
-<p>
-• Vérification des serrages (guidon, potence, roues)<br>
-• Contrôle pression et état des pneus<br>
-• Vérification éclairage<br>
-• Ajustement simple des freins si nécessaire (réglage câble / alignement)
-</p>
-<p style="color:#cbd5e1;font-size:14px;margin-top:10px;">
-*Réglages mécaniques simples uniquement. Pas de purge hydraulique.
-</p>
-</div>
+      <section class="card">
+        <h2>Montage de pneus (main-d’œuvre)</h2>
+        <div class="prices">Le client apporte le pneu / la chambre à air</div>
 
-<div class="section">
-<h2>Important</h2>
-<p>• Service uniquement sur rendez-vous</p>
-<p>• Interventions mécaniques extérieures uniquement</p>
-<p>Je ne réalise pas :</p>
-<p>— Purge de freins hydrauliques</p>
-<p>— Interventions électriques ou câblage interne</p>
-<p>— Diagnostic / réparation batterie ou contrôleur</p>
-</div>
+        <div class="priceLine"><b>Chambre à air</b> : 35 €</div>
+        <div class="priceLine"><b>Tubeless</b> : 40 €</div>
+        <div class="priceLine"><b>Pneu plein</b> : 45 €</div>
 
-<div class="section">
-<h2>Contact</h2>
-<p>Téléphone : 0495 65 61 86</p>
-<p>Email : Derukevin@gmail.com</p>
-</div>
+        <div class="note">
+          *Main-d’œuvre uniquement (pièces non incluses).<br/>
+          Si démontage difficile / accès compliqué : prix ajusté après accord.
+        </div>
+      </section>
 
-<footer>
-© 2026 ElectroRide — Réparation mécanique trottinettes électriques à Theux
-</footer>
+      <section class="card">
+        <h2>Check-up sécurité</h2>
+        <h3>Contrôle + resserrage général : 15 €</h3>
 
+        <ul class="list">
+          <li class="tick">Vérification des serrages (guidon, potence, roues)</li>
+          <li class="tick">Contrôle pression & état des pneus</li>
+          <li class="tick">Vérification éclairage</li>
+          <li class="tick">Ajustement simple des freins si nécessaire (réglage câble / alignement)</li>
+        </ul>
+
+        <div class="note">
+          *Réglages mécaniques simples uniquement. Pas de purge hydraulique.
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Nettoyage extérieur</h2>
+        <div class="priceLine"><b>Nettoyage simple</b> : 15 €</div>
+        <div class="priceLine"><b>Nettoyage + check-up</b> : 25 €</div>
+        <div class="note">
+          Nettoyage visuel extérieur : cadre / deck / roues (surface).<br/>
+          Pas d’intervention interne.
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Important</h2>
+        <div class="danger">
+          <div>• Service uniquement sur rendez-vous</div>
+          <div>• Interventions mécaniques extérieures uniquement</div>
+
+          <div class="small">Je ne réalise pas :</div>
+          <ul>
+            <li class="dash">Purge de freins hydrauliques</li>
+            <li class="dash">Interventions électriques ou câblage interne</li>
+            <li class="dash">Diagnostic / réparation batterie ou contrôleur</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card contact">
+        <h2>Contact</h2>
+        <p><b>Téléphone</b> : 0495 65 61 86</p>
+        <p><b>Email</b> : Derukevin@gmail.com</p>
+
+        <div class="btnRow">
+          <a class="btn primary" href="tel:+32495656186">📞 Appeler</a>
+          <a class="btn" href="mailto:Derukevin@gmail.com?subject=ElectroRide%20-%20Demande%20de%20rendez-vous">✉️ Email</a>
+        </div>
+
+        <div class="note">Merci d’indiquer la marque et le modèle lors de la prise de contact.</div>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 ElectroRide — Réparation mécanique de trottinettes électriques à Theux
+    </footer>
+  </div>
 </body>
 </html>
