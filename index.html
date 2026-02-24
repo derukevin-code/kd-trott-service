@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,132 +8,149 @@
   <meta name="description" content="Montage de pneus, check-up sécurité et nettoyage visuel de trottinettes électriques à Theux. Intervention sous 24 à 48 heures sur rendez-vous." />
 
   <style>
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #0b1220;
-      color: #ffffff;
+      background: #081121;
+      color: #fff;
       text-align: center;
     }
 
     .container {
-      max-width: 420px;
+      max-width: 430px;
       margin: 0 auto;
-      padding: 16px 12px 30px;
+      padding: 14px 10px 28px;
     }
 
     h1 {
-      margin: 10px 0 8px;
+      margin: 10px 0 6px;
       font-size: 30px;
       font-weight: 700;
     }
 
     .subtitle {
+      margin: 2px 0;
       color: #d1d5db;
-      margin: 4px 0;
       font-size: 15px;
     }
 
-    .highlight {
+    .location {
       color: #22c55e;
-      font-weight: bold;
+      font-weight: 700;
+      margin-top: 4px;
+      font-size: 15px;
     }
 
-    .delay {
-      margin-top: 10px;
-      font-weight: bold;
-      font-size: 17px;
-    }
-
-    img {
-      width: 100%;
-      border-radius: 14px;
-      margin: 14px 0;
-      display: block;
-      object-fit: cover;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .card {
-      background: #13203a;
-      border-radius: 14px;
-      padding: 14px 12px;
-      margin: 12px 0;
-      box-shadow: 0 0 0 1px rgba(255,255,255,0.05);
-      text-align: left;
-    }
-
-    .card h2 {
-      margin: 0 0 10px;
-      text-align: center;
-      color: #4ade80;
-      font-size: 18px;
-    }
-
-    .prices {
-      background: rgba(255,255,255,0.04);
-      border-radius: 10px;
-      padding: 10px;
-      margin-bottom: 10px;
+    .top-list {
+      margin: 8px 0 4px;
+      color: #e5e7eb;
+      font-size: 14px;
       line-height: 1.5;
     }
 
-    .small-note {
-      font-size: 13px;
-      color: #d1d5db;
-      margin-top: 6px;
-    }
-
-    ul {
-      margin: 8px 0 0 0;
-      padding-left: 18px;
-      line-height: 1.45;
-    }
-
-    li {
-      margin-bottom: 6px;
-    }
-
-    .important {
-      border: 1px solid #ef4444;
-      background: rgba(239, 68, 68, 0.08);
-    }
-
-    .important h2 {
-      color: #f87171;
-    }
-
-    .contact {
-      text-align: center;
-    }
-
-    .contact a {
-      color: #22c55e;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .contact p {
-      margin: 8px 0;
-    }
-
-    .footer {
-      margin-top: 10px;
-      font-size: 12px;
-      color: #cbd5e1;
-      text-align: center;
-    }
-
-    .top-badges {
+    .delay {
       margin: 8px 0 4px;
-      line-height: 1.6;
-      color: #e5e7eb;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .delay-note {
+      margin: 0 0 10px;
+      color: #cbd5e1;
+      font-size: 13px;
+    }
+
+    .main-photo {
+      width: 100%;
+      border-radius: 14px;
+      margin: 10px 0 12px;
+      display: block;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: #0f172a;
+      min-height: 160px;
+      object-fit: cover;
+    }
+
+    .card {
+      background: #10203d;
+      border-radius: 14px;
+      margin: 10px 0;
+      padding: 12px 10px;
+      text-align: left;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .card h2 {
+      text-align: center;
+      margin: 0 0 10px;
+      color: #4ade80;
+      font-size: 17px;
+      line-height: 1.2;
+    }
+
+    .inner-box {
+      background: rgba(255,255,255,0.04);
+      border-radius: 10px;
+      padding: 9px 10px;
+      margin-bottom: 8px;
+      line-height: 1.45;
+      color: #f3f4f6;
       font-size: 14px;
     }
 
-    .top-badges span {
-      display: inline-block;
-      margin: 0 4px;
+    .inner-box strong {
+      color: #fff;
+    }
+
+    ul {
+      margin: 7px 0 0;
+      padding-left: 18px;
+      line-height: 1.45;
+      color: #f3f4f6;
+      font-size: 14px;
+    }
+
+    li { margin-bottom: 5px; }
+
+    .small {
+      margin: 7px 0 0;
+      color: #cbd5e1;
+      font-size: 12px;
+      line-height: 1.35;
+    }
+
+    .important {
+      border: 1px solid rgba(239,68,68,0.7);
+      background: rgba(127,29,29,0.12);
+    }
+
+    .important h2 { color: #f87171; }
+
+    .contact h2 { color: #22d3ee; }
+
+    .contact p {
+      margin: 6px 0;
+      text-align: center;
+      font-size: 15px;
+    }
+
+    .contact a {
+      color: #4ade80;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .footer {
+      margin-top: 8px;
+      color: #9ca3af;
+      font-size: 11px;
+    }
+
+    @media (max-width: 360px) {
+      h1 { font-size: 27px; }
+      .card h2 { font-size: 16px; }
     }
   </style>
 </head>
@@ -142,18 +160,25 @@
     <h1>Atelier Volt</h1>
 
     <p class="subtitle">Réparation de trottinettes électriques à Theux</p>
-    <p class="subtitle"><span class="highlight">📍 Atelier situé à Theux (Belgique)</span></p>
+    <p class="location">📍 Atelier situé à Theux (Belgique)</p>
 
-    <div class="top-badges">
-      <span>✔ Service rapide</span><br>
-      <span>✔ Travail soigné</span><br>
-      <span>✔ Uniquement sur rendez-vous</span>
+    <div class="top-list">
+      ✔ Service rapide<br>
+      ✔ Travail soigné<br>
+      ✔ Uniquement sur rendez-vous
     </div>
 
-    <p class="delay">Intervention sous 24 à 48 heures<br><span class="small-note">(selon disponibilité)</span></p>
+    <p class="delay">Intervention sous 24 à 48 heures</p>
+    <p class="delay-note">(selon disponibilité)</p>
 
-    <!-- Garde exactement le même nom de photo que dans ton ancien code -->
-    <img src="photo-trottinette.jpg" alt="Réparation trottinette électrique à Theux" />
+    <!-- IMPORTANT : remplace "photo-trottinette.jpg" par le nom EXACT de ta photo dans GitHub -->
+    <img class="main-photo" src="photo-trottinette.jpg" alt="Réparation trottinette électrique à Theux"
+         onerror="this.style.display='none';document.getElementById('photoFallback').style.display='block';" />
+
+    <div id="photoFallback" class="inner-box" style="display:none; text-align:center; margin-top:8px;">
+      Photo introuvable.<br>
+      Remplace <strong>photo-trottinette.jpg</strong> par le nom exact de ton image dans le code.
+    </div>
 
     <section class="card">
       <h2>Pourquoi choisir Atelier Volt ?</h2>
@@ -168,7 +193,7 @@
     <section class="card">
       <h2>Montage de pneus (main-d’œuvre)</h2>
 
-      <div class="prices">
+      <div class="inner-box">
         <strong>Tarifs main-d’œuvre uniquement (pièces non incluses)</strong><br>
         <strong>Le client apporte le pneu / la chambre à air</strong><br><br>
 
@@ -183,7 +208,7 @@
         <li>Contrôle du sens de rotation, de la pression (si applicable) et du serrage</li>
       </ul>
 
-      <p class="small-note">
+      <p class="small">
         Supplément possible en cas de vis abîmées ou d’accès difficile.<br>
         Pièces non incluses sauf accord préalable.
       </p>
@@ -192,7 +217,7 @@
     <section class="card">
       <h2>Check-up sécurité</h2>
 
-      <div class="prices">
+      <div class="inner-box">
         Contrôle + resserrage des vis accessibles : <strong>15 €</strong>
       </div>
 
@@ -203,15 +228,13 @@
         <li>Contrôle de l’éclairage</li>
       </ul>
 
-      <p class="small-note">
-        Pas de purge de freins hydrauliques ni d’intervention interne complexe.
-      </p>
+      <p class="small">Pas de purge de freins hydrauliques ni d’intervention interne complexe.</p>
     </section>
 
     <section class="card">
       <h2>Nettoyage extérieur (visuel)</h2>
 
-      <div class="prices">
+      <div class="inner-box">
         Nettoyage extérieur : <strong>15 €</strong><br>
         Nettoyage + check-up : <strong>25 €</strong>
       </div>
@@ -222,9 +245,7 @@
         <li>Finition propre et soignée</li>
       </ul>
 
-      <p class="small-note">
-        Nettoyage uniquement extérieur. Pas d’ouverture du deck ni des moteurs.
-      </p>
+      <p class="small">Nettoyage uniquement extérieur. Pas d’ouverture du deck ni des moteurs.</p>
     </section>
 
     <section class="card important">
