@@ -1,268 +1,265 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ElectroRide — Réparation trottinettes électriques à Theux</title>
-  <meta name="description" content="ElectroRide : réparation mécanique de trottinettes électriques à Theux. Montage de pneus, check-up sécurité, nettoyage extérieur. Uniquement sur rendez-vous." />
+  <meta name="description" content="ElectroRide : réparation mécanique de trottinettes électriques à Theux. Montage de pneus, check-up sécurité, nettoyage extérieur. Sur rendez-vous." />
 
   <style>
     :root{
-      --bg1:#0b1220;
-      --bg2:#0f1b35;
-      --card:#121f3d;
-      --card2:#0f1a33;
-      --text:#e9eefc;
-      --muted:#b7c3e6;
-      --accent:#4ade80; /* vert */
-      --accent2:#22c55e;
-      --shadow: 0 16px 40px rgba(0,0,0,.35);
-      --radius: 20px;
-      --maxw: 760px;
+      --bg:#0b1220;
+      --panel:#121e35;
+      --panel2:#0f1a30;
+      --text:#e8edf7;
+      --muted:#b7c3dd;
+      --accent:#4ad17a;
+      --accent2:#ffd24a;
+      --shadow:0 18px 40px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:900px;
     }
 
-    *{ box-sizing:border-box; }
+    *{box-sizing:border-box}
     body{
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(900px 500px at 50% -100px, rgba(74,209,122,.18), transparent 55%),
+                  radial-gradient(900px 600px at 90% 10%, rgba(255,210,74,.10), transparent 55%),
+                  var(--bg);
       color:var(--text);
-      background:
-        radial-gradient(1200px 700px at 50% -200px, #1d2f5e 0%, transparent 60%),
-        linear-gradient(180deg, var(--bg1), var(--bg2));
-      min-height:100vh;
+      line-height:1.35;
     }
 
     .wrap{
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 22px 14px 40px;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:22px 16px 44px;
     }
 
     header{
       text-align:center;
-      padding: 14px 10px 8px;
+      padding:20px 10px 10px;
     }
 
-    .brand{
+    .brandline{
       display:flex;
-      justify-content:center;
       align-items:center;
+      justify-content:center;
       gap:10px;
-      margin-top: 6px;
+      margin:0 0 8px;
     }
 
     .logo{
-      font-size: 30px;
-      line-height: 1;
+      font-size:28px;
+      line-height:1;
       filter: drop-shadow(0 8px 14px rgba(0,0,0,.35));
     }
 
     h1{
       margin:0;
-      font-size: 40px;
+      font-size:42px;
       letter-spacing:.2px;
-      color: var(--accent);
-      text-shadow: 0 10px 22px rgba(0,0,0,.35);
+      color:var(--accent);
+      text-shadow:0 10px 25px rgba(0,0,0,.35);
     }
 
-    .tagline{
-      margin: 10px 0 0;
-      font-size: 18px;
-      color: var(--text);
-      opacity:.95;
+    .subtitle{
+      margin:6px 0 0;
+      font-size:16px;
+      color:var(--muted);
     }
 
-    .sub{
-      margin: 8px 0 0;
-      font-size: 15px;
-      color: var(--muted);
-    }
-
-    .pillbar{
+    .pillrow{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
       justify-content:center;
-      margin: 14px auto 0;
+      margin:14px 0 0;
     }
+
     .pill{
       background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.10);
-      padding: 8px 12px;
-      border-radius: 999px;
-      color: var(--muted);
-      font-size: 13px;
+      border:1px solid rgba(255,255,255,.10);
+      padding:8px 12px;
+      border-radius:999px;
+      color:var(--text);
+      font-size:13px;
+      box-shadow: 0 10px 20px rgba(0,0,0,.20);
       backdrop-filter: blur(6px);
     }
-    .pill b{ color: var(--text); font-weight: 700; }
 
     .hero{
-      margin: 18px auto 0;
-      width: min(100%, 640px);
-      border-radius: var(--radius);
-      overflow:hidden;
-      box-shadow: var(--shadow);
+      margin:18px auto 6px;
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
       border: 1px solid rgba(255,255,255,.10);
-      background: rgba(0,0,0,.15);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
     }
+
     .hero img{
       display:block;
       width:100%;
       height:auto;
+      max-height:520px;
+      object-fit:cover;
     }
 
     .grid{
-      margin-top: 18px;
       display:grid;
-      gap: 14px;
+      grid-template-columns:1fr;
+      gap:14px;
+      margin-top:14px;
     }
 
     .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
-      border: 1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(18,30,53,.92), rgba(15,26,48,.92));
+      border:1px solid rgba(255,255,255,.10);
       border-radius: var(--radius);
-      padding: 18px 16px;
+      padding:16px 16px 14px;
       box-shadow: var(--shadow);
     }
 
     .card h2{
-      margin: 0 0 10px;
-      font-size: 26px;
-      color: var(--accent);
+      margin:0 0 10px;
+      font-size:22px;
+      color:var(--accent);
       text-align:center;
     }
 
-    .card h3{
-      margin: 0 0 8px;
-      font-size: 20px;
-      color: var(--accent);
+    .card p{
+      margin:8px 0;
+      color:var(--muted);
       text-align:center;
     }
 
-    .list{
-      margin: 10px auto 0;
-      max-width: 560px;
-      padding: 0;
+    ul{
+      margin:10px 0 0;
+      padding:0;
       list-style:none;
-      color: var(--text);
-      line-height: 1.5;
-      font-size: 16px;
     }
-    .list li{
-      padding: 7px 0;
+
+    li{
       display:flex;
       gap:10px;
       align-items:flex-start;
+      padding:7px 0;
+      color:var(--text);
     }
-    .tick{ color: var(--text); opacity:.95; }
-    .tick::before{
-      content:"✔";
-      color: var(--text);
-      font-weight: 800;
-      display:inline-block;
-      transform: translateY(1px);
-      width: 18px;
+
+    li .check{
+      color:var(--accent);
+      font-weight:700;
+      margin-top:1px;
     }
 
     .prices{
-      margin: 10px auto 0;
-      max-width: 520px;
-      text-align:center;
-      color: var(--muted);
-      font-size: 15px;
-    }
-    .priceLine{
-      margin: 10px 0;
-      font-size: 17px;
-      color: var(--text);
-    }
-    .priceLine b{
-      color: var(--accent);
-      font-size: 18px;
-    }
-    .note{
-      margin-top: 10px;
-      font-size: 13px;
-      color: var(--muted);
-      text-align:center;
-      opacity:.95;
+      margin-top:10px;
+      display:grid;
+      gap:8px;
     }
 
-    .danger{
-      text-align:center;
-      margin: 10px auto 0;
-      max-width: 560px;
-      color: var(--text);
-      line-height: 1.55;
-    }
-    .danger .small{
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 13px;
-      opacity:.95;
-    }
-    .danger ul{
-      list-style:none;
-      padding:0;
-      margin: 12px 0 0;
-    }
-    .danger li{
-      padding: 8px 0;
-      color: var(--text);
-    }
-    .dash::before{
-      content:"— ";
-      color: var(--muted);
-    }
-
-    .contact{
-      text-align:center;
-    }
-    .contact p{
-      margin: 8px 0 0;
-      color: var(--muted);
-    }
-
-    .btnRow{
-      margin-top: 14px;
+    .price{
       display:flex;
-      justify-content:center;
-      gap: 10px;
-      flex-wrap:wrap;
+      justify-content:space-between;
+      gap:12px;
+      padding:10px 12px;
+      background: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:14px;
     }
-    a.btn{
-      text-decoration:none;
+
+    .price b{
+      color:var(--text);
+      font-weight:700;
+    }
+
+    .price span{
+      color:var(--accent);
+      font-weight:800;
+    }
+
+    .note{
+      margin-top:10px;
+      font-size:13px;
+      color:var(--muted);
+      text-align:left;
+      background: rgba(0,0,0,.18);
+      border:1px solid rgba(255,255,255,.08);
+      padding:10px 12px;
+      border-radius:14px;
+    }
+
+    .warning{
+      border-left:4px solid var(--accent2);
+    }
+
+    .important{
+      text-align:center;
+    }
+
+    .important .small{
+      margin-top:8px;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:center;
+      margin-top:12px;
+    }
+
+    .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
       gap:10px;
-      padding: 11px 14px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,.14);
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.10);
       background: rgba(255,255,255,.06);
-      color: var(--text);
-      font-weight: 700;
-      min-width: 170px;
-      box-shadow: 0 12px 26px rgba(0,0,0,.28);
+      color:var(--text);
+      text-decoration:none;
+      font-weight:700;
+      min-width:160px;
+      box-shadow: 0 14px 26px rgba(0,0,0,.25);
     }
-    a.btn:hover{ filter: brightness(1.05); }
-    a.btn.primary{
-      background: linear-gradient(180deg, rgba(34,197,94,.25), rgba(34,197,94,.10));
-      border-color: rgba(34,197,94,.45);
+
+    .btn.primary{
+      background: linear-gradient(180deg, rgba(74,209,122,.22), rgba(74,209,122,.12));
+      border-color: rgba(74,209,122,.35);
+    }
+
+    .btn:hover{
+      transform: translateY(-1px);
+      transition: .12s ease;
     }
 
     footer{
       text-align:center;
-      margin-top: 18px;
-      color: rgba(233,238,252,.55);
-      font-size: 12px;
+      margin-top:16px;
+      color:rgba(183,195,221,.75);
+      font-size:12px;
     }
 
-    @media (max-width:420px){
-      h1{ font-size: 34px; }
-      .tagline{ font-size: 16px; }
-      .card h2{ font-size: 24px; }
+    .divider{
+      height:1px;
+      background: rgba(255,255,255,.10);
+      margin:12px 0;
+      border-radius:999px;
+    }
+
+    @media (min-width: 820px){
+      .grid{
+        grid-template-columns:1fr 1fr;
+      }
+      .card.full{
+        grid-column:1 / -1;
+      }
     }
   </style>
 </head>
@@ -270,105 +267,130 @@
 <body>
   <div class="wrap">
     <header>
-      <div class="brand">
-        <div class="logo" aria-hidden="true">🛴⚡</div>
-        <h1>ElectroRide</h1>
+      <div class="brandline">
+        <div class="logo" aria-hidden="true">🛴</div>
+        <div class="logo" aria-hidden="true">⚡</div>
       </div>
+      <h1>ElectroRide</h1>
+      <div class="subtitle">Réparation <b>mécanique</b> de trottinettes électriques à Theux</div>
 
-      <div class="tagline">Réparation <b>mécanique</b> de trottinettes électriques à Theux</div>
-      <div class="sub">Service rapide — Travail soigné — <b>Sur rendez-vous</b></div>
-
-      <div class="pillbar" role="list">
-        <div class="pill" role="listitem">📍 <b>Theux</b></div>
-        <div class="pill" role="listitem">🛠️ Pneus / check-up / nettoyage</div>
-        <div class="pill" role="listitem">⏱️ Réponse rapide (selon dispo)</div>
-      </div>
-
-      <!-- IMPORTANT : remplace le nom du fichier si besoin par EXACTEMENT celui présent dans ton repo GitHub -->
-      <div class="hero">
-        <img src="20260223_150017.jpg" alt="Trottinette électrique — intervention mécanique" />
+      <div class="pillrow">
+        <div class="pill">⚙️ Montage de pneus</div>
+        <div class="pill">✅ Check-up sécurité</div>
+        <div class="pill">🧼 Nettoyage extérieur</div>
+        <div class="pill">📅 Sur rendez-vous</div>
       </div>
     </header>
 
-    <main class="grid">
+    <!-- PHOTO -->
+    <div class="hero">
+      <!-- IMPORTANT : remplace le nom du fichier par le nom EXACT dans ton GitHub -->
+      <img src="20260223_150017.jpg" alt="Trottinette en atelier (photo de présentation)" />
+    </div>
+
+    <div class="grid">
+      <!-- POURQUOI -->
       <section class="card">
         <h2>Pourquoi choisir ElectroRide ?</h2>
-        <ul class="list">
-          <li class="tick">Spécialisé trottinettes électriques</li>
-          <li class="tick">Intervention locale à Theux</li>
-          <li class="tick">Tarifs clairs et transparents</li>
-          <li class="tick">Travail propre et sérieux</li>
+        <ul>
+          <li><span class="check">✔</span><span>Spécialisé trottinettes électriques</span></li>
+          <li><span class="check">✔</span><span>Intervention locale à Theux</span></li>
+          <li><span class="check">✔</span><span>Tarifs clairs et transparents</span></li>
+          <li><span class="check">✔</span><span>Travail propre et soigné</span></li>
         </ul>
       </section>
 
+      <!-- PNEUS -->
       <section class="card">
         <h2>Montage de pneus (main-d’œuvre)</h2>
-        <div class="prices">Le client apporte le pneu / la chambre à air</div>
+        <p>Le client apporte le pneu / la chambre à air</p>
 
-        <div class="priceLine"><b>Chambre à air</b> : 35 €</div>
-        <div class="priceLine"><b>Tubeless</b> : 40 €</div>
-        <div class="priceLine"><b>Pneu plein</b> : 45 €</div>
+        <div class="prices">
+          <div class="price"><b>Chambre à air</b><span>35 €</span></div>
+          <div class="price"><b>Tubeless</b><span>40 €</span></div>
+          <div class="price"><b>Pneu plein</b><span>45 €</span></div>
+        </div>
 
-        <div class="note">
-          *Main-d’œuvre uniquement (pièces non incluses).<br/>
-          Si démontage difficile / accès compliqué : prix ajusté après accord.
+        <div class="note warning">
+          Main-d’œuvre uniquement — pièces non incluses.<br />
+          Si montage difficile / accès compliqué : accord préalable avant intervention.
         </div>
       </section>
 
+      <!-- CHECK-UP -->
       <section class="card">
         <h2>Check-up sécurité</h2>
-        <h3>Contrôle + resserrage général : 15 €</h3>
+        <p><b>Contrôle + resserrage général : <span style="color:var(--accent)">15 €</span></b></p>
+        <ul>
+          <li><span class="check">✔</span><span>Vérification des serrages (guidon, potence, roues)</span></li>
+          <li><span class="check">✔</span><span>Contrôle pression & état des pneus</span></li>
+          <li><span class="check">✔</span><span>Vérification éclairage</span></li>
+          <li><span class="check">✔</span><span>Ajustement simple des freins si nécessaire (réglage câble / alignement)</span></li>
+        </ul>
+        <div class="note">
+          Réglages mécaniques simples uniquement. Pas de purge hydraulique.
+        </div>
+      </section>
 
-        <ul class="list">
-          <li class="tick">Vérification des serrages (guidon, potence, roues)</li>
-          <li class="tick">Contrôle pression & état des pneus</li>
-          <li class="tick">Vérification éclairage</li>
-          <li class="tick">Ajustement simple des freins si nécessaire (réglage câble / alignement)</li>
+      <!-- NETTOYAGE -->
+      <section class="card">
+        <h2>Nettoyage extérieur (visuel)</h2>
+        <div class="prices">
+          <div class="price"><b>Nettoyage simple</b><span>15 €</span></div>
+          <div class="price"><b>Nettoyage + check-up</b><span>25 €</span></div>
+        </div>
+        <div class="note">
+          Nettoyage extérieur uniquement (cadre / deck / surfaces accessibles).<br />
+          Pas de démontage interne.
+        </div>
+      </section>
+
+      <!-- IMPORTANT -->
+      <section class="card full important">
+        <h2>Important</h2>
+        <div class="divider"></div>
+
+        <ul style="max-width:720px;margin:0 auto;">
+          <li><span class="check">•</span><span>Service uniquement sur rendez-vous</span></li>
+          <li><span class="check">•</span><span>Interventions mécaniques extérieures uniquement</span></li>
         </ul>
 
-        <div class="note">
-          *Réglages mécaniques simples uniquement. Pas de purge hydraulique.
+        <div class="divider"></div>
+
+        <p style="margin:0 0 8px;color:var(--muted);">
+          Pour des raisons de sécurité, je ne prends pas en charge :
+        </p>
+
+        <ul style="max-width:720px;margin:0 auto;">
+          <li><span class="check">—</span><span>Purge de freins hydrauliques</span></li>
+          <li><span class="check">—</span><span>Interventions électriques / câblage interne</span></li>
+          <li><span class="check">—</span><span>Diagnostic / réparation batterie ou contrôleur</span></li>
+        </ul>
+
+        <div class="note warning" style="max-width:720px;margin:12px auto 0;">
+          Merci d’indiquer la marque et le modèle lors de la prise de contact (photo conseillée).
         </div>
       </section>
 
-      <section class="card">
-        <h2>Nettoyage extérieur</h2>
-        <div class="priceLine"><b>Nettoyage simple</b> : 15 €</div>
-        <div class="priceLine"><b>Nettoyage + check-up</b> : 25 €</div>
-        <div class="note">
-          Nettoyage visuel extérieur : cadre / deck / roues (surface).<br/>
-          Pas d’intervention interne.
-        </div>
-      </section>
-
-      <section class="card">
-        <h2>Important</h2>
-        <div class="danger">
-          <div>• Service uniquement sur rendez-vous</div>
-          <div>• Interventions mécaniques extérieures uniquement</div>
-
-          <div class="small">Je ne réalise pas :</div>
-          <ul>
-            <li class="dash">Purge de freins hydrauliques</li>
-            <li class="dash">Interventions électriques ou câblage interne</li>
-            <li class="dash">Diagnostic / réparation batterie ou contrôleur</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="card contact">
+      <!-- CONTACT -->
+      <section class="card full">
         <h2>Contact</h2>
-        <p><b>Téléphone</b> : 0495 65 61 86</p>
-        <p><b>Email</b> : Derukevin@gmail.com</p>
+        <p style="margin-top:6px">
+          Téléphone : <b>0495 65 61 86</b><br />
+          Email : <b>Derukevin@gmail.com</b>
+        </p>
 
-        <div class="btnRow">
-          <a class="btn primary" href="tel:+32495656186">📞 Appeler</a>
-          <a class="btn" href="mailto:Derukevin@gmail.com?subject=ElectroRide%20-%20Demande%20de%20rendez-vous">✉️ Email</a>
+        <div class="actions">
+          <a class="btn primary" href="tel:+32495656186" aria-label="Appeler ElectroRide">
+            📞 Appeler
+          </a>
+          <a class="btn" href="mailto:Derukevin@gmail.com?subject=Demande%20de%20rendez-vous%20%E2%80%94%20ElectroRide&body=Bonjour%2C%0A%0AMarque%20%2F%20Mod%C3%A8le%20%3A%0AProbl%C3%A8me%20%3A%0ADisponibilit%C3%A9s%20%3A%0A%0AMerci%20!"
+             aria-label="Envoyer un email à ElectroRide">
+            ✉️ Email
+          </a>
         </div>
-
-        <div class="note">Merci d’indiquer la marque et le modèle lors de la prise de contact.</div>
       </section>
-    </main>
+    </div>
 
     <footer>
       © 2026 ElectroRide — Réparation mécanique de trottinettes électriques à Theux
