@@ -8,38 +8,46 @@
 
   <style>
     :root{
-      --bg:#0b1220;
-      --panel:#121e35;
-      --panel2:#0f1a30;
-      --text:#e8edf7;
-      --muted:#b7c3dd;
-      --accent:#4ad17a;
-      --accent2:#ffd24a;
-      --shadow:0 18px 40px rgba(0,0,0,.35);
-      --radius:18px;
-      --max:900px;
+      --bg1:#0b1222;
+      --bg2:#0a162b;
+      --card:#101f3a;
+      --card2:#0f1b33;
+      --text:#e9eefc;
+      --muted:#a8b5d6;
+      --accent:#4ade80;    /* vert */
+      --accent2:#22c55e;   /* vert plus fort */
+      --warning:#fbbf24;   /* jaune */
+      --line:rgba(255,255,255,.08);
+      --shadow: 0 14px 40px rgba(0,0,0,.45);
+      --radius: 18px;
+      --max: 820px;
     }
 
-    *{box-sizing:border-box}
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
     body{
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: radial-gradient(900px 500px at 50% -100px, rgba(74,209,122,.18), transparent 55%),
-                  radial-gradient(900px 600px at 90% 10%, rgba(255,210,74,.10), transparent 55%),
-                  var(--bg);
       color:var(--text);
-      line-height:1.35;
+      background:
+        radial-gradient(1200px 600px at 20% 0%, rgba(34,197,94,.18), transparent 60%),
+        radial-gradient(900px 500px at 90% 10%, rgba(251,191,36,.12), transparent 55%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
+    a{ color: inherit; text-decoration:none; }
     .wrap{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:22px 16px 44px;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 22px 14px 28px;
     }
 
-    header{
+    /* Top header */
+    .hero{
       text-align:center;
-      padding:20px 10px 10px;
+      padding: 8px 0 10px;
     }
 
     .brandline{
@@ -47,354 +55,452 @@
       align-items:center;
       justify-content:center;
       gap:10px;
-      margin:0 0 8px;
-    }
-
-    .logo{
-      font-size:28px;
-      line-height:1;
-      filter: drop-shadow(0 8px 14px rgba(0,0,0,.35));
-    }
-
-    h1{
-      margin:0;
-      font-size:42px;
-      letter-spacing:.2px;
-      color:var(--accent);
-      text-shadow:0 10px 25px rgba(0,0,0,.35);
-    }
-
-    .subtitle{
-      margin:6px 0 0;
-      font-size:16px;
-      color:var(--muted);
-    }
-
-    .pillrow{
-      display:flex;
+      margin: 6px 0 8px;
       flex-wrap:wrap;
-      gap:10px;
-      justify-content:center;
-      margin:14px 0 0;
     }
 
-    .pill{
-      background: rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.10);
-      padding:8px 12px;
-      border-radius:999px;
-      color:var(--text);
-      font-size:13px;
-      box-shadow: 0 10px 20px rgba(0,0,0,.20);
-      backdrop-filter: blur(6px);
-    }
-
-    .hero{
-      margin:18px auto 6px;
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      border: 1px solid rgba(255,255,255,.10);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-
-    .hero img{
-      display:block;
-      width:100%;
-      height:auto;
-      max-height:520px;
-      object-fit:cover;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:14px;
-      margin-top:14px;
-    }
-
-    .card{
-      background: linear-gradient(180deg, rgba(18,30,53,.92), rgba(15,26,48,.92));
-      border:1px solid rgba(255,255,255,.10);
-      border-radius: var(--radius);
-      padding:16px 16px 14px;
-      box-shadow: var(--shadow);
-    }
-
-    .card h2{
-      margin:0 0 10px;
-      font-size:22px;
-      color:var(--accent);
-      text-align:center;
-    }
-
-    .card p{
-      margin:8px 0;
-      color:var(--muted);
-      text-align:center;
-    }
-
-    ul{
-      margin:10px 0 0;
-      padding:0;
-      list-style:none;
-    }
-
-    li{
-      display:flex;
-      gap:10px;
-      align-items:flex-start;
-      padding:7px 0;
-      color:var(--text);
-    }
-
-    li .check{
-      color:var(--accent);
-      font-weight:700;
-      margin-top:1px;
-    }
-
-    .prices{
-      margin-top:10px;
-      display:grid;
-      gap:8px;
-    }
-
-    .price{
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      padding:10px 12px;
-      background: rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:14px;
-    }
-
-    .price b{
-      color:var(--text);
-      font-weight:700;
-    }
-
-    .price span{
-      color:var(--accent);
-      font-weight:800;
-    }
-
-    .note{
-      margin-top:10px;
-      font-size:13px;
-      color:var(--muted);
-      text-align:left;
-      background: rgba(0,0,0,.18);
-      border:1px solid rgba(255,255,255,.08);
-      padding:10px 12px;
-      border-radius:14px;
-    }
-
-    .warning{
-      border-left:4px solid var(--accent2);
-    }
-
-    .important{
-      text-align:center;
-    }
-
-    .important .small{
-      margin-top:8px;
-      font-size:13px;
-      color:var(--muted);
-    }
-
-    .actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      justify-content:center;
-      margin-top:12px;
-    }
-
-    .btn{
+    .logoBadge{
       display:inline-flex;
       align-items:center;
       justify-content:center;
+      width:42px;
+      height:42px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, rgba(34,197,94,.18), rgba(34,197,94,.06));
+      border: 1px solid rgba(34,197,94,.25);
+      box-shadow: 0 10px 26px rgba(0,0,0,.35);
+      font-size: 22px;
+    }
+
+    .brand{
+      font-weight: 900;
+      font-size: 42px;
+      letter-spacing: .2px;
+      line-height:1;
+      margin:0;
+      color: var(--accent);
+      text-shadow: 0 0 18px rgba(74,222,128,.12);
+    }
+
+    .tagline{
+      margin: 0 auto;
+      max-width: 44ch;
+      color: var(--muted);
+      font-size: 15.5px;
+      line-height: 1.5;
+    }
+
+    .metaPills{
+      display:flex;
       gap:10px;
-      padding:12px 14px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.06);
-      color:var(--text);
-      text-decoration:none;
-      font-weight:700;
-      min-width:160px;
-      box-shadow: 0 14px 26px rgba(0,0,0,.25);
+      justify-content:center;
+      flex-wrap:wrap;
+      margin: 14px 0 0;
     }
 
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--line);
+      color: rgba(233,238,252,.92);
+      font-size: 13.5px;
+      box-shadow: 0 10px 26px rgba(0,0,0,.25);
+    }
+    .pill b{ color: var(--text); }
+    .dot{
+      width:8px;height:8px;border-radius:50%;
+      background: var(--accent2);
+      box-shadow: 0 0 0 4px rgba(34,197,94,.14);
+    }
+
+    /* Image card */
+    .photoCard{
+      margin: 18px auto 18px;
+      border-radius: var(--radius);
+      overflow:hidden;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      box-shadow: var(--shadow);
+    }
+    .photoCard img{
+      display:block;
+      width:100%;
+      height:auto;
+    }
+    .photoCaption{
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: 12.8px;
+      border-top: 1px solid var(--line);
+      text-align:left;
+    }
+
+    /* Sections */
+    .grid{
+      display:grid;
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.02));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px 16px 14px;
+    }
+
+    .card h2{
+      margin: 2px 0 10px;
+      font-size: 22px;
+      line-height:1.2;
+      color: var(--accent);
+      letter-spacing: .2px;
+    }
+
+    .sub{
+      margin: -4px 0 12px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height:1.5;
+    }
+
+    .list{
+      margin: 0;
+      padding: 0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+    }
+    .list li{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      color: rgba(233,238,252,.95);
+      line-height: 1.45;
+      font-size: 15px;
+    }
+    .check{
+      width:22px;
+      height:22px;
+      border-radius: 7px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(34,197,94,.14);
+      border: 1px solid rgba(34,197,94,.28);
+      flex: 0 0 22px;
+      margin-top: 1px;
+      font-size: 14px;
+      color: var(--accent);
+    }
+
+    /* Price table */
+    .prices{
+      display:grid;
+      gap:10px;
+      margin-top: 10px;
+    }
+    .row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding: 12px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--line);
+    }
+    .row .left{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+    }
+    .row .name{
+      font-weight: 700;
+      font-size: 15.5px;
+    }
+    .row .hint{
+      color: var(--muted);
+      font-size: 12.8px;
+    }
+    .row .price{
+      font-weight: 900;
+      font-size: 16px;
+      color: var(--accent);
+      letter-spacing: .2px;
+    }
+
+    .note{
+      margin-top: 10px;
+      padding: 12px 12px;
+      border-radius: 14px;
+      background: rgba(251,191,36,.08);
+      border: 1px solid rgba(251,191,36,.25);
+      color: rgba(233,238,252,.92);
+      font-size: 13.2px;
+      line-height: 1.45;
+    }
+    .note b{ color: var(--warning); }
+
+    /* Important (limits) */
+    .limits{
+      margin-top: 10px;
+      padding: 12px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--line);
+    }
+    .limits .title{
+      font-weight: 900;
+      letter-spacing:.2px;
+      margin-bottom: 8px;
+    }
+    .limits ul{
+      margin:0;
+      padding-left: 18px;
+      display:grid;
+      gap:8px;
+      color: rgba(233,238,252,.92);
+      line-height: 1.45;
+      font-size: 14.2px;
+    }
+
+    /* Contact */
+    .contactBox{
+      display:grid;
+      gap:10px;
+      margin-top: 8px;
+    }
+    .contactLine{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      padding: 12px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--line);
+      font-size: 14.5px;
+      color: rgba(233,238,252,.92);
+    }
+    .contactLine span{ color: var(--muted); }
+    .contactLine b{ color: var(--text); }
+
+    .ctaRow{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .btn{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 13px 12px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      font-weight: 800;
+      letter-spacing:.2px;
+      box-shadow: 0 12px 28px rgba(0,0,0,.25);
+      user-select:none;
+    }
     .btn.primary{
-      background: linear-gradient(180deg, rgba(74,209,122,.22), rgba(74,209,122,.12));
-      border-color: rgba(74,209,122,.35);
+      background: linear-gradient(180deg, rgba(34,197,94,.22), rgba(34,197,94,.08));
+      border: 1px solid rgba(34,197,94,.32);
+      color: var(--text);
     }
+    .btn:hover{ transform: translateY(-1px); }
+    .btn:active{ transform: translateY(0px); }
 
-    .btn:hover{
-      transform: translateY(-1px);
-      transition: .12s ease;
-    }
-
-    footer{
+    .footer{
+      margin-top: 18px;
       text-align:center;
-      margin-top:16px;
-      color:rgba(183,195,221,.75);
-      font-size:12px;
+      color: rgba(168,181,214,.8);
+      font-size: 12.5px;
+      line-height: 1.5;
     }
 
-    .divider{
-      height:1px;
-      background: rgba(255,255,255,.10);
-      margin:12px 0;
-      border-radius:999px;
-    }
-
-    @media (min-width: 820px){
-      .grid{
-        grid-template-columns:1fr 1fr;
-      }
-      .card.full{
-        grid-column:1 / -1;
-      }
+    /* Small screens tweaks */
+    @media (max-width: 420px){
+      .brand{ font-size: 38px; }
+      .ctaRow{ grid-template-columns: 1fr; }
+      .wrap{ padding: 18px 12px 26px; }
     }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <header>
+  <main class="wrap">
+    <header class="hero">
       <div class="brandline">
-        <div class="logo" aria-hidden="true">🛴</div>
-        <div class="logo" aria-hidden="true">⚡</div>
+        <div class="logoBadge" aria-hidden="true">🛴</div>
+        <h1 class="brand">ElectroRide</h1>
+        <div class="logoBadge" aria-hidden="true">⚡</div>
       </div>
-      <h1>ElectroRide</h1>
-      <div class="subtitle">Réparation <b>mécanique</b> de trottinettes électriques à Theux</div>
 
-      <div class="pillrow">
-        <div class="pill">⚙️ Montage de pneus</div>
-        <div class="pill">✅ Check-up sécurité</div>
-        <div class="pill">🧼 Nettoyage extérieur</div>
-        <div class="pill">📅 Sur rendez-vous</div>
+      <p class="tagline">
+        Réparation <b>mécanique</b> de trottinettes électriques à <b>Theux</b>.<br />
+        Travail soigné, tarifs clairs, uniquement sur rendez-vous.
+      </p>
+
+      <div class="metaPills" role="list">
+        <div class="pill" role="listitem"><span class="dot" aria-hidden="true"></span><b>Sur rendez-vous</b></div>
+        <div class="pill" role="listitem">📍 <b>Theux</b></div>
+        <div class="pill" role="listitem">⏱️ Réponse rapide</div>
       </div>
     </header>
 
-    <!-- PHOTO -->
-    <div class="hero">
-      <!-- IMPORTANT : remplace le nom du fichier par le nom EXACT dans ton GitHub -->
-      <img src="20260223_150017.jpg" alt="Trottinette en atelier (photo de présentation)" />
-    </div>
+    <!-- PHOTO
+      IMPORTANT :
+      - Mets ici le NOM EXACT de ta photo (le fichier .jpg dans ton repo).
+      - Ex: "20260223_150017.jpg"
+    -->
+    <section class="photoCard" aria-label="Photo">
+      <img src="20260223_150017.jpg" alt="Trottinette en réparation (photo de démonstration ElectroRide)" />
+      <div class="photoCaption">Exemple de réparation : montage pneu / contrôle après remontage.</div>
+    </section>
 
-    <div class="grid">
-      <!-- POURQUOI -->
-      <section class="card">
+    <section class="grid" aria-label="Services">
+      <article class="card">
         <h2>Pourquoi choisir ElectroRide ?</h2>
-        <ul>
-          <li><span class="check">✔</span><span>Spécialisé trottinettes électriques</span></li>
-          <li><span class="check">✔</span><span>Intervention locale à Theux</span></li>
-          <li><span class="check">✔</span><span>Tarifs clairs et transparents</span></li>
-          <li><span class="check">✔</span><span>Travail propre et soigné</span></li>
+        <ul class="list">
+          <li><span class="check">✓</span><span>Spécialisé trottinettes électriques (mécanique)</span></li>
+          <li><span class="check">✓</span><span>Intervention locale à Theux — service sérieux</span></li>
+          <li><span class="check">✓</span><span>Tarifs clairs et transparents</span></li>
+          <li><span class="check">✓</span><span>Travail propre et soigné</span></li>
         </ul>
-      </section>
+      </article>
 
-      <!-- PNEUS -->
-      <section class="card">
+      <article class="card">
         <h2>Montage de pneus (main-d’œuvre)</h2>
-        <p>Le client apporte le pneu / la chambre à air</p>
+        <p class="sub">Le client apporte le pneu / la chambre à air (pièces non incluses).</p>
 
         <div class="prices">
-          <div class="price"><b>Chambre à air</b><span>35 €</span></div>
-          <div class="price"><b>Tubeless</b><span>40 €</span></div>
-          <div class="price"><b>Pneu plein</b><span>45 €</span></div>
+          <div class="row">
+            <div class="left">
+              <div class="name">Chambre à air</div>
+              <div class="hint">Démontage + remontage</div>
+            </div>
+            <div class="price">35 €</div>
+          </div>
+
+          <div class="row">
+            <div class="left">
+              <div class="name">Tubeless</div>
+              <div class="hint">Montage + vérification étanchéité</div>
+            </div>
+            <div class="price">40 €</div>
+          </div>
+
+          <div class="row">
+            <div class="left">
+              <div class="name">Pneu plein</div>
+              <div class="hint">Montage (peut être plus long)</div>
+            </div>
+            <div class="price">45 €</div>
+          </div>
         </div>
 
-        <div class="note warning">
-          Main-d’œuvre uniquement — pièces non incluses.<br />
-          Si montage difficile / accès compliqué : accord préalable avant intervention.
+        <div class="note">
+          <b>À savoir :</b> si le montage est particulièrement difficile (roue très compacte, pneu très dur, accès compliqué),
+          je te le dis avant de continuer.
         </div>
-      </section>
+      </article>
 
-      <!-- CHECK-UP -->
-      <section class="card">
+      <article class="card">
         <h2>Check-up sécurité</h2>
-        <p><b>Contrôle + resserrage général : <span style="color:var(--accent)">15 €</span></b></p>
-        <ul>
-          <li><span class="check">✔</span><span>Vérification des serrages (guidon, potence, roues)</span></li>
-          <li><span class="check">✔</span><span>Contrôle pression & état des pneus</span></li>
-          <li><span class="check">✔</span><span>Vérification éclairage</span></li>
-          <li><span class="check">✔</span><span>Ajustement simple des freins si nécessaire (réglage câble / alignement)</span></li>
-        </ul>
-        <div class="note">
-          Réglages mécaniques simples uniquement. Pas de purge hydraulique.
-        </div>
-      </section>
+        <p class="sub"><b>Contrôle + resserrage général :</b> 15 €</p>
 
-      <!-- NETTOYAGE -->
-      <section class="card">
+        <ul class="list">
+          <li><span class="check">✓</span><span>Vérification des serrages (guidon, potence, roues)</span></li>
+          <li><span class="check">✓</span><span>Contrôle pression + état des pneus</span></li>
+          <li><span class="check">✓</span><span>Vérification de l’éclairage</span></li>
+          <li><span class="check">✓</span><span>Ajustement simple des freins si nécessaire (réglage câble / alignement)</span></li>
+        </ul>
+
+        <p class="sub" style="margin-top:10px;">
+          *Réglages mécaniques simples uniquement. <b>Pas</b> de purge hydraulique.
+        </p>
+      </article>
+
+      <article class="card">
         <h2>Nettoyage extérieur (visuel)</h2>
+
         <div class="prices">
-          <div class="price"><b>Nettoyage simple</b><span>15 €</span></div>
-          <div class="price"><b>Nettoyage + check-up</b><span>25 €</span></div>
-        </div>
-        <div class="note">
-          Nettoyage extérieur uniquement (cadre / deck / surfaces accessibles).<br />
-          Pas de démontage interne.
-        </div>
-      </section>
+          <div class="row">
+            <div class="left">
+              <div class="name">Nettoyage simple</div>
+              <div class="hint">Cadre / deck (surface) + essuyage</div>
+            </div>
+            <div class="price">15 €</div>
+          </div>
 
-      <!-- IMPORTANT -->
-      <section class="card full important">
+          <div class="row">
+            <div class="left">
+              <div class="name">Nettoyage + check-up</div>
+              <div class="hint">Nettoyage + contrôle sécurité</div>
+            </div>
+            <div class="price">25 €</div>
+          </div>
+        </div>
+
+        <p class="sub" style="margin-top:10px;">
+          Nettoyage <b>extérieur uniquement</b>. Pas d’ouverture interne.
+        </p>
+      </article>
+
+      <article class="card">
         <h2>Important</h2>
-        <div class="divider"></div>
+        <p class="sub">Service uniquement sur rendez-vous. Interventions mécaniques extérieures uniquement.</p>
 
-        <ul style="max-width:720px;margin:0 auto;">
-          <li><span class="check">•</span><span>Service uniquement sur rendez-vous</span></li>
-          <li><span class="check">•</span><span>Interventions mécaniques extérieures uniquement</span></li>
-        </ul>
-
-        <div class="divider"></div>
-
-        <p style="margin:0 0 8px;color:var(--muted);">
-          Pour des raisons de sécurité, je ne prends pas en charge :
-        </p>
-
-        <ul style="max-width:720px;margin:0 auto;">
-          <li><span class="check">—</span><span>Purge de freins hydrauliques</span></li>
-          <li><span class="check">—</span><span>Interventions électriques / câblage interne</span></li>
-          <li><span class="check">—</span><span>Diagnostic / réparation batterie ou contrôleur</span></li>
-        </ul>
-
-        <div class="note warning" style="max-width:720px;margin:12px auto 0;">
-          Merci d’indiquer la marque et le modèle lors de la prise de contact (photo conseillée).
+        <div class="limits">
+          <div class="title">Je ne réalise pas :</div>
+          <ul>
+            <li>Purge de freins hydrauliques</li>
+            <li>Interventions électriques / câblage interne</li>
+            <li>Diagnostic / réparation batterie ou contrôleur</li>
+          </ul>
         </div>
-      </section>
 
-      <!-- CONTACT -->
-      <section class="card full">
+        <div class="note" style="margin-top:12px;">
+          <b>Merci d’indiquer</b> la marque + le modèle lors de la prise de contact (photo conseillée).
+        </div>
+      </article>
+
+      <article class="card">
         <h2>Contact</h2>
-        <p style="margin-top:6px">
-          Téléphone : <b>0495 65 61 86</b><br />
-          Email : <b>Derukevin@gmail.com</b>
-        </p>
 
-        <div class="actions">
-          <a class="btn primary" href="tel:+32495656186" aria-label="Appeler ElectroRide">
-            📞 Appeler
-          </a>
-          <a class="btn" href="mailto:Derukevin@gmail.com?subject=Demande%20de%20rendez-vous%20%E2%80%94%20ElectroRide&body=Bonjour%2C%0A%0AMarque%20%2F%20Mod%C3%A8le%20%3A%0AProbl%C3%A8me%20%3A%0ADisponibilit%C3%A9s%20%3A%0A%0AMerci%20!"
-             aria-label="Envoyer un email à ElectroRide">
-            ✉️ Email
-          </a>
+        <div class="contactBox">
+          <div class="contactLine">
+            <span>Téléphone</span>
+            <b>0495 65 61 86</b>
+          </div>
+          <div class="contactLine">
+            <span>Email</span>
+            <b>Derukevin@gmail.com</b>
+          </div>
+
+          <div class="ctaRow">
+            <a class="btn primary" href="tel:+32495656186" aria-label="Appeler ElectroRide">
+              📞 Appeler
+            </a>
+            <a class="btn" href="mailto:Derukevin@gmail.com?subject=ElectroRide%20-%20Demande%20de%20rendez-vous" aria-label="Envoyer un email à ElectroRide">
+              ✉️ Email
+            </a>
+          </div>
         </div>
-      </section>
-    </div>
+      </article>
+    </section>
 
-    <footer>
+    <footer class="footer">
       © 2026 ElectroRide — Réparation mécanique de trottinettes électriques à Theux
     </footer>
-  </div>
+  </main>
 </body>
 </html>
