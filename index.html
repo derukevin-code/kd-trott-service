@@ -6,21 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ElectroRide — Réparation trottinettes électriques à Theux</title>
   <meta name="description" content="ElectroRide : réparation mécanique de trottinettes électriques à Theux. Montage de pneus, check-up sécurité, nettoyage extérieur. Dépôt sur rendez-vous. Délai annoncé (souvent sous 24–48h selon charge)." />
+  <meta name="theme-color" content="#0b1222" />
 
   <style>
     :root{
       --bg1:#0b1222;
       --bg2:#0a162b;
-      --card:#101f3a;
-      --text:#e9eefc;
-      --muted:#a8b5d6;
+
+      --cardA: rgba(255,255,255,.05);
+      --cardB: rgba(255,255,255,.025);
+
+      --text:#eaf0ff;
+      --muted:#a9b7da;
+
       --accent:#4ade80;
       --accent2:#22c55e;
+
       --warning:#fbbf24;
-      --line:rgba(255,255,255,.08);
-      --shadow: 0 14px 40px rgba(0,0,0,.45);
+      --danger:#fb7185;
+
+      --line: rgba(255,255,255,.09);
+
+      --shadow: 0 18px 55px rgba(0,0,0,.45);
+      --shadow2: 0 10px 28px rgba(0,0,0,.28);
+
       --radius: 18px;
-      --max: 820px;
+      --radius2: 14px;
+
+      --max: 860px;
     }
 
     *{ box-sizing:border-box; }
@@ -30,20 +43,24 @@
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color:var(--text);
       background:
-        radial-gradient(1200px 600px at 20% 0%, rgba(34,197,94,.18), transparent 60%),
-        radial-gradient(900px 500px at 90% 10%, rgba(251,191,36,.12), transparent 55%),
+        radial-gradient(1200px 700px at 20% 0%, rgba(34,197,94,.18), transparent 60%),
+        radial-gradient(900px 520px at 90% 10%, rgba(251,191,36,.12), transparent 55%),
+        radial-gradient(800px 500px at 50% 100%, rgba(59,130,246,.10), transparent 60%),
         linear-gradient(180deg, var(--bg1), var(--bg2));
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
 
     a{ color: inherit; text-decoration:none; }
+    img{ max-width:100%; height:auto; display:block; }
+
     .wrap{
       max-width: var(--max);
       margin: 0 auto;
-      padding: 22px 14px 28px;
+      padding: 22px 14px 30px;
     }
 
+    /* HERO */
     .hero{
       text-align:center;
       padding: 8px 0 10px;
@@ -62,31 +79,56 @@
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      width:42px;
-      height:42px;
+      width:44px;
+      height:44px;
       border-radius: 14px;
       background: linear-gradient(180deg, rgba(34,197,94,.18), rgba(34,197,94,.06));
-      border: 1px solid rgba(34,197,94,.25);
+      border: 1px solid rgba(34,197,94,.28);
       box-shadow: 0 10px 26px rgba(0,0,0,.35);
       font-size: 22px;
+      user-select:none;
     }
 
     .brand{
-      font-weight: 900;
-      font-size: 42px;
+      font-weight: 950;
+      font-size: 44px;
       letter-spacing: .2px;
       line-height:1;
       margin:0;
       color: var(--accent);
-      text-shadow: 0 0 18px rgba(74,222,128,.12);
+      text-shadow: 0 0 22px rgba(74,222,128,.14);
     }
 
     .tagline{
       margin: 0 auto;
-      max-width: 56ch;
+      max-width: 60ch;
       color: var(--muted);
-      font-size: 15.5px;
-      line-height: 1.5;
+      font-size: 15.8px;
+      line-height: 1.55;
+    }
+
+    .heroValue{
+      margin: 12px auto 0;
+      max-width: 60ch;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow2);
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+      font-size: 13.8px;
+      color: rgba(234,240,255,.92);
+    }
+    .heroValue b{ color: var(--text); }
+    .spark{
+      width:9px;height:9px;border-radius:50%;
+      background: var(--accent2);
+      box-shadow: 0 0 0 4px rgba(34,197,94,.14);
+      flex: 0 0 9px;
     }
 
     .metaPills{
@@ -94,7 +136,7 @@
       gap:10px;
       justify-content:center;
       flex-wrap:wrap;
-      margin: 14px 0 0;
+      margin: 12px 0 0;
     }
 
     .pill{
@@ -103,24 +145,72 @@
       gap:8px;
       padding: 10px 12px;
       border-radius: 999px;
-      background: rgba(255,255,255,.04);
+      background: rgba(255,255,255,.035);
       border: 1px solid var(--line);
-      color: rgba(233,238,252,.92);
+      color: rgba(234,240,255,.92);
       font-size: 13.5px;
-      box-shadow: 0 10px 26px rgba(0,0,0,.25);
+      box-shadow: 0 10px 24px rgba(0,0,0,.22);
+      user-select:none;
     }
     .pill b{ color: var(--text); }
-    .dot{
-      width:8px;height:8px;border-radius:50%;
-      background: var(--accent2);
-      box-shadow: 0 0 0 4px rgba(34,197,94,.14);
-    }
 
-    .howItWorks{
+    /* Sticky CTA (mobile-first) */
+    .stickyCta{
+      position: sticky;
+      top: 10px;
+      z-index: 50;
       margin: 14px auto 0;
       max-width: var(--max);
+      border-radius: 999px;
+      background: rgba(10,22,43,.72);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,.10);
+      box-shadow: 0 18px 50px rgba(0,0,0,.35);
+      padding: 10px;
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 12px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      font-weight: 850;
+      letter-spacing:.2px;
+      box-shadow: 0 12px 26px rgba(0,0,0,.20);
+      user-select:none;
+      transition: transform .12s ease, filter .12s ease;
+      min-width: 150px;
+    }
+    .btn.primary{
+      background: linear-gradient(180deg, rgba(34,197,94,.26), rgba(34,197,94,.10));
+      border: 1px solid rgba(34,197,94,.38);
+    }
+    .btn:active{ transform: translateY(1px); }
+    .btn:hover{ filter: brightness(1.06); }
+
+    .divider{
+      height: 1px;
+      background: rgba(255,255,255,.08);
+      margin: 18px 0;
+      border-radius: 999px;
+    }
+
+    /* How it works */
+    .howItWorks{
+      margin: 16px auto 0;
+      max-width: var(--max);
       border-radius: var(--radius);
-      border: 1px solid rgba(34,197,94,.22);
+      border: 1px solid rgba(34,197,94,.24);
       background: linear-gradient(180deg, rgba(34,197,94,.10), rgba(255,255,255,.02));
       box-shadow: 0 12px 30px rgba(0,0,0,.28);
       padding: 14px 14px 12px;
@@ -137,10 +227,10 @@
       padding:0;
       list-style:none;
       display:grid;
-      gap:8px;
-      color: rgba(233,238,252,.95);
-      font-size: 14.5px;
-      line-height:1.45;
+      gap:10px;
+      color: rgba(234,240,255,.95);
+      font-size: 14.6px;
+      line-height:1.5;
     }
     .steps li{
       display:flex;
@@ -148,57 +238,37 @@
       align-items:flex-start;
     }
     .num{
-      width:22px;height:22px;
-      border-radius: 8px;
+      width:24px;height:24px;
+      border-radius: 9px;
       display:inline-flex;
       align-items:center;
       justify-content:center;
       background: rgba(34,197,94,.14);
-      border: 1px solid rgba(34,197,94,.28);
+      border: 1px solid rgba(34,197,94,.30);
       color: var(--accent);
-      font-weight:900;
-      flex:0 0 22px;
+      font-weight:950;
+      flex:0 0 24px;
       margin-top: 1px;
       font-size: 13px;
     }
     .howItWorks .small{
       margin:10px 0 0;
       color: var(--muted);
-      font-size: 12.8px;
-      line-height:1.45;
-      border-top: 1px solid var(--line);
+      font-size: 12.9px;
+      line-height:1.5;
+      border-top: 1px solid rgba(255,255,255,.08);
       padding-top: 10px;
     }
 
-    .photoCard{
-      margin: 18px auto 18px;
-      border-radius: var(--radius);
-      overflow:hidden;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      box-shadow: var(--shadow);
-    }
-    .photoCard img{
-      display:block;
-      width:100%;
-      height:auto;
-    }
-    .photoCaption{
-      padding: 10px 12px;
-      color: var(--muted);
-      font-size: 12.8px;
-      border-top: 1px solid var(--line);
-      text-align:left;
-    }
-
+    /* Cards grid */
     .grid{
       display:grid;
       gap: 14px;
-      margin-top: 12px;
+      margin-top: 10px;
     }
 
     .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.02));
+      background: linear-gradient(180deg, var(--cardA), var(--cardB));
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
@@ -216,8 +286,8 @@
     .sub{
       margin: -4px 0 12px;
       color: var(--muted);
-      font-size: 14px;
-      line-height:1.5;
+      font-size: 14.2px;
+      line-height:1.55;
     }
 
     .list{
@@ -231,8 +301,8 @@
       display:flex;
       gap:10px;
       align-items:flex-start;
-      color: rgba(233,238,252,.95);
-      line-height: 1.45;
+      color: rgba(234,240,255,.95);
+      line-height: 1.5;
       font-size: 15px;
     }
     .check{
@@ -250,6 +320,24 @@
       color: var(--accent);
     }
 
+    /* Photo */
+    .photoCard{
+      margin: 16px auto 18px;
+      border-radius: var(--radius);
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      box-shadow: var(--shadow);
+    }
+    .photoCaption{
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: 12.9px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      text-align:left;
+    }
+
+    /* Price rows (more premium + clearer) */
     .prices{
       display:grid;
       gap:10px;
@@ -260,64 +348,97 @@
       align-items:center;
       justify-content:space-between;
       padding: 12px 12px;
-      border-radius: 14px;
+      border-radius: var(--radius2);
       background: rgba(255,255,255,.03);
-      border: 1px solid var(--line);
+      border: 1px solid rgba(255,255,255,.10);
+      box-shadow: 0 10px 22px rgba(0,0,0,.18);
     }
     .row .left{
       display:flex;
       flex-direction:column;
       gap:2px;
+      padding-right: 10px;
     }
     .row .name{
-      font-weight: 700;
-      font-size: 15.5px;
+      font-weight: 850;
+      font-size: 15.6px;
     }
     .row .hint{
       color: var(--muted);
-      font-size: 12.8px;
+      font-size: 12.9px;
     }
     .row .price{
-      font-weight: 900;
-      font-size: 16px;
+      font-weight: 950;
+      font-size: 18px;
       color: var(--accent);
       letter-spacing: .2px;
+      white-space:nowrap;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      font-weight: 900;
+      border: 1px solid rgba(34,197,94,.30);
+      background: rgba(34,197,94,.10);
+      color: rgba(234,240,255,.95);
+      margin-top: 6px;
+      width: fit-content;
     }
 
     .note{
       margin-top: 10px;
       padding: 12px 12px;
-      border-radius: 14px;
+      border-radius: var(--radius2);
       background: rgba(251,191,36,.08);
       border: 1px solid rgba(251,191,36,.25);
-      color: rgba(233,238,252,.92);
-      font-size: 13.2px;
-      line-height: 1.45;
+      color: rgba(234,240,255,.92);
+      font-size: 13.3px;
+      line-height: 1.5;
     }
     .note b{ color: var(--warning); }
+
+    /* Important box – stronger separation */
+    .alert{
+      margin-top: 10px;
+      padding: 12px 12px;
+      border-radius: var(--radius2);
+      background: rgba(251,113,133,.07);
+      border: 1px solid rgba(251,113,133,.22);
+      color: rgba(234,240,255,.92);
+      font-size: 13.3px;
+      line-height: 1.5;
+    }
+    .alert b{ color: var(--danger); }
 
     .limits{
       margin-top: 10px;
       padding: 12px 12px;
-      border-radius: 14px;
+      border-radius: var(--radius2);
       background: rgba(255,255,255,.03);
-      border: 1px solid var(--line);
+      border: 1px solid rgba(255,255,255,.10);
     }
     .limits .title{
-      font-weight: 900;
+      font-weight: 950;
       letter-spacing:.2px;
       margin-bottom: 8px;
+      color: rgba(234,240,255,.98);
     }
     .limits ul{
       margin:0;
       padding-left: 18px;
       display:grid;
       gap:8px;
-      color: rgba(233,238,252,.92);
-      line-height: 1.45;
-      font-size: 14.2px;
+      color: rgba(234,240,255,.92);
+      line-height: 1.5;
+      font-size: 14.3px;
     }
 
+    /* Contact */
     .contactBox{
       display:grid;
       gap:10px;
@@ -328,11 +449,11 @@
       justify-content:space-between;
       gap:10px;
       padding: 12px 12px;
-      border-radius: 14px;
+      border-radius: var(--radius2);
       background: rgba(255,255,255,.03);
-      border: 1px solid var(--line);
-      font-size: 14.5px;
-      color: rgba(233,238,252,.92);
+      border: 1px solid rgba(255,255,255,.10);
+      font-size: 14.7px;
+      color: rgba(234,240,255,.92);
     }
     .contactLine span{ color: var(--muted); }
     .contactLine b{ color: var(--text); }
@@ -343,42 +464,27 @@
       gap: 10px;
       margin-top: 10px;
     }
-    .btn{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding: 13px 12px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      color: var(--text);
-      font-weight: 800;
-      letter-spacing:.2px;
-      box-shadow: 0 12px 28px rgba(0,0,0,.25);
-      user-select:none;
-      transition: transform .12s ease;
-    }
-    .btn.primary{
-      background: linear-gradient(180deg, rgba(34,197,94,.22), rgba(34,197,94,.08));
-      border: 1px solid rgba(34,197,94,.32);
-      color: var(--text);
-    }
-    .btn:hover{ transform: translateY(-1px); }
-    .btn:active{ transform: translateY(0px); }
+    .ctaRow .btn{ border-radius: 14px; min-width: unset; }
 
     .footer{
       margin-top: 18px;
       text-align:center;
-      color: rgba(168,181,214,.8);
-      font-size: 12.5px;
-      line-height: 1.5;
+      color: rgba(169,183,218,.82);
+      font-size: 12.6px;
+      line-height: 1.55;
+    }
+
+    /* Accessibility: focus */
+    .btn:focus-visible{
+      outline: 3px solid rgba(74,222,128,.45);
+      outline-offset: 3px;
     }
 
     @media (max-width: 420px){
-      .brand{ font-size: 38px; }
+      .brand{ font-size: 40px; }
       .ctaRow{ grid-template-columns: 1fr; }
-      .wrap{ padding: 18px 12px 26px; }
+      .wrap{ padding: 18px 12px 28px; }
+      .btn{ width: 100%; }
     }
   </style>
 </head>
@@ -397,171 +503,33 @@
         Dépôt <b>sur rendez-vous</b> — délai annoncé (souvent <b>sous 24–48h</b> selon charge).
       </p>
 
-      <div class="metaPills" role="list">
-        <div class="pill" role="listitem"><span class="dot" aria-hidden="true"></span><b>Dépôt sur rendez-vous</b></div>
-        <div class="pill" role="listitem">⏱️ <b>Délai annoncé</b></div>
-        <div class="pill" role="listitem">📍 <b>Theux</b></div>
+      <div class="heroValue" aria-label="Engagements">
+        <span class="spark" aria-hidden="true"></span>
+        <span><b>Tarifs clairs</b></span>
+        <span>•</span>
+        <span><b>Travail propre</b></span>
+        <span>•</span>
+        <span><b>Prix annoncé avant intervention</b></span>
       </div>
+
+      <div class="metaPills" role="list">
+        <div class="pill" role="listitem">📍 <b>Theux</b></div>
+        <div class="pill" role="listitem"><span class="spark" aria-hidden="true"></span><b>Dépôt sur rendez-vous</b></div>
+        <div class="pill" role="listitem">⏱️ <b>Délai annoncé</b></div>
+      </div>
+
+      <!-- Sticky CTA: visible when scrolling, increases conversions -->
+      <nav class="stickyCta" aria-label="Actions rapides">
+        <a class="btn primary"
+           href="mailto:derukevin@gmail.com?subject=ElectroRide%20-%20Demande%20de%20rendez-vous&body=Bonjour%2C%0A%0AMarque%20%2F%20mod%C3%A8le%20%3A%20%0AService%20souhait%C3%A9%20%3A%20%0ADisponibilit%C3%A9%20pour%20d%C3%A9p%C3%B4t%20%3A%20%0A%0AMerci%2C"
+           aria-label="Envoyer un email à ElectroRide">
+          ✉️ Email
+        </a>
+        <a class="btn" href="tel:+32495656186" aria-label="Appeler ElectroRide">
+          📞 Appeler
+        </a>
+      </nav>
 
       <section class="howItWorks" aria-label="Comment ça marche">
         <h2>Comment ça marche ?</h2>
         <ul class="steps">
-          <li><span class="num">1</span><span><b>Contact</b> : envoie marque + modèle (photo conseillée) + ce que tu veux faire.</span></li>
-          <li><span class="num">2</span><span><b>Rendez-vous</b> : on fixe une heure de dépôt.</span></li>
-          <li><span class="num">3</span><span><b>Intervention</b> : montage / contrôle, puis je confirme quand c’est prêt.</span></li>
-          <li><span class="num">4</span><span><b>Retrait</b> : tu récupères la trottinette (sur rendez-vous).</span></li>
-        </ul>
-        <div class="small">
-          Le prix est annoncé <b>avant</b> intervention. Délai indicatif : souvent <b>sous 24–48h</b> selon charge et difficulté.
-        </div>
-      </section>
-    </header>
-
-    <!-- IMPORTANT: si ton image est dans un dossier "images", remplace par: images/20260223_150017.jpg -->
-    <section class="photoCard" aria-label="Photo">
-      <img src="20260223_150017.jpg" alt="Trottinette en réparation (photo de démonstration ElectroRide)" />
-      <div class="photoCaption">Exemple : montage pneu / contrôle après remontage.</div>
-    </section>
-
-    <section class="grid" aria-label="Services">
-      <article class="card">
-        <h2>Pourquoi choisir ElectroRide ?</h2>
-        <ul class="list">
-          <li><span class="check">✓</span><span>Spécialisé trottinettes électriques (mécanique)</span></li>
-          <li><span class="check">✓</span><span>Dépôt sur rendez-vous — délai annoncé</span></li>
-          <li><span class="check">✓</span><span>Tarifs clairs et transparents</span></li>
-          <li><span class="check">✓</span><span>Travail propre et soigné</span></li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h2>Montage de pneus (main-d’œuvre)</h2>
-        <p class="sub">Le client apporte le pneu / la chambre à air (pièces non incluses).</p>
-
-        <div class="prices">
-          <div class="row">
-            <div class="left">
-              <div class="name">Chambre à air</div>
-              <div class="hint">Démontage + remontage</div>
-            </div>
-            <div class="price">35 €</div>
-          </div>
-
-          <div class="row">
-            <div class="left">
-              <div class="name">Tubeless</div>
-              <div class="hint">Montage + vérification étanchéité</div>
-            </div>
-            <div class="price">40 €</div>
-          </div>
-
-          <div class="row">
-            <div class="left">
-              <div class="name">Pneu plein</div>
-              <div class="hint">Montage (peut être plus long)</div>
-            </div>
-            <div class="price">45 €</div>
-          </div>
-        </div>
-
-        <div class="note">
-          <b>À savoir :</b> si le montage est particulièrement difficile (roue très compacte, pneu très dur, accès compliqué),
-          je te le dis <b>avant</b> de continuer.
-        </div>
-      </article>
-
-      <article class="card">
-        <h2>Check-up sécurité</h2>
-        <p class="sub"><b>Contrôle + resserrage général :</b> 15 €</p>
-
-        <ul class="list">
-          <li><span class="check">✓</span><span>Vérification des serrages (guidon, potence, roues)</span></li>
-          <li><span class="check">✓</span><span>Contrôle pression + état des pneus</span></li>
-          <li><span class="check">✓</span><span>Vérification de l’éclairage</span></li>
-          <li><span class="check">✓</span><span>Ajustement simple des freins si nécessaire (réglage câble / alignement)</span></li>
-        </ul>
-
-        <p class="sub" style="margin-top:10px;">
-          *Réglages mécaniques simples uniquement. <b>Pas</b> de purge hydraulique.
-        </p>
-      </article>
-
-      <article class="card">
-        <h2>Nettoyage extérieur (visuel)</h2>
-
-        <div class="prices">
-          <div class="row">
-            <div class="left">
-              <div class="name">Nettoyage simple</div>
-              <div class="hint">Cadre / deck (surface) + essuyage</div>
-            </div>
-            <div class="price">15 €</div>
-          </div>
-
-          <div class="row">
-            <div class="left">
-              <div class="name">Nettoyage + check-up</div>
-              <div class="hint">Nettoyage + contrôle sécurité</div>
-            </div>
-            <div class="price">25 €</div>
-          </div>
-        </div>
-
-        <p class="sub" style="margin-top:10px;">
-          Nettoyage <b>extérieur uniquement</b>. Pas d’ouverture interne.
-        </p>
-      </article>
-
-      <article class="card">
-        <h2>Important</h2>
-        <p class="sub">Service uniquement sur rendez-vous. Interventions mécaniques extérieures uniquement.</p>
-
-        <div class="limits">
-          <div class="title">Je ne réalise pas :</div>
-          <ul>
-            <li>Purge de freins hydrauliques</li>
-            <li>Interventions électriques / câblage interne</li>
-            <li>Diagnostic / réparation batterie ou contrôleur</li>
-          </ul>
-        </div>
-
-        <div class="note" style="margin-top:12px;">
-          <b>Merci d’indiquer</b> la marque + le modèle lors de la prise de contact (photo conseillée).<br />
-          <b>Pièces non fournies</b> (pneu / chambre à air).
-        </div>
-      </article>
-
-      <article class="card">
-        <h2>Contact</h2>
-        <p class="sub"><b>Contact prioritaire par email</b> (réponse dès que possible).</p>
-
-        <div class="contactBox">
-          <div class="contactLine">
-            <span>Email</span>
-            <b>derukevin@gmail.com</b>
-          </div>
-          <div class="contactLine">
-            <span>Téléphone</span>
-            <b>0495 65 61 86</b>
-          </div>
-
-          <div class="ctaRow">
-            <a class="btn primary"
-               href="mailto:derukevin@gmail.com?subject=ElectroRide%20-%20Demande%20de%20rendez-vous&body=Bonjour%2C%0A%0AMarque%20%2F%20mod%C3%A8le%20%3A%20%0AService%20souhait%C3%A9%20%3A%20%0ADisponibilit%C3%A9%20pour%20d%C3%A9p%C3%B4t%20%3A%20%0A%0AMerci%2C"
-               aria-label="Envoyer un email à ElectroRide">
-              ✉️ Email
-            </a>
-            <a class="btn" href="tel:+32495656186" aria-label="Appeler ElectroRide">
-              📞 Appeler
-            </a>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <footer class="footer">
-      © 2026 ElectroRide — Réparation mécanique de trottinettes électriques à Theux
-    </footer>
-  </main>
-</body>
-</html>
