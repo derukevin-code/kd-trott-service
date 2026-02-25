@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ElectroRide — Réparation trottinettes électriques à Theux</title>
-  <meta name="description" content="ElectroRide : réparation mécanique de trottinettes électriques à Theux. Montage de pneus, check-up sécurité, nettoyage extérieur. Sur rendez-vous." />
+  <meta name="description" content="ElectroRide : réparation mécanique de trottinettes électriques à Theux. Montage de pneus, check-up sécurité, nettoyage extérieur. Dépôt sur rendez-vous, prêt sous 24h (selon charge)." />
 
   <style>
     :root{
@@ -14,9 +15,9 @@
       --card2:#0f1b33;
       --text:#e9eefc;
       --muted:#a8b5d6;
-      --accent:#4ade80;    /* vert */
-      --accent2:#22c55e;   /* vert plus fort */
-      --warning:#fbbf24;   /* jaune */
+      --accent:#4ade80;
+      --accent2:#22c55e;
+      --warning:#fbbf24;
       --line:rgba(255,255,255,.08);
       --shadow: 0 14px 40px rgba(0,0,0,.45);
       --radius: 18px;
@@ -44,7 +45,6 @@
       padding: 22px 14px 28px;
     }
 
-    /* Top header */
     .hero{
       text-align:center;
       padding: 8px 0 10px;
@@ -84,7 +84,7 @@
 
     .tagline{
       margin: 0 auto;
-      max-width: 44ch;
+      max-width: 52ch;
       color: var(--muted);
       font-size: 15.5px;
       line-height: 1.5;
@@ -117,7 +117,61 @@
       box-shadow: 0 0 0 4px rgba(34,197,94,.14);
     }
 
-    /* Image card */
+    /* NEW: Bandeau "comment ça marche" */
+    .howItWorks{
+      margin: 14px auto 0;
+      max-width: var(--max);
+      border-radius: var(--radius);
+      border: 1px solid rgba(34,197,94,.22);
+      background: linear-gradient(180deg, rgba(34,197,94,.10), rgba(255,255,255,.02));
+      box-shadow: 0 12px 30px rgba(0,0,0,.28);
+      padding: 14px 14px 12px;
+      text-align:left;
+    }
+    .howItWorks h2{
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: var(--accent);
+      letter-spacing:.2px;
+    }
+    .steps{
+      margin:0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:8px;
+      color: rgba(233,238,252,.95);
+      font-size: 14.5px;
+      line-height:1.45;
+    }
+    .steps li{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+    .num{
+      width:22px;height:22px;
+      border-radius: 8px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(34,197,94,.14);
+      border: 1px solid rgba(34,197,94,.28);
+      color: var(--accent);
+      font-weight:900;
+      flex:0 0 22px;
+      margin-top: 1px;
+      font-size: 13px;
+    }
+    .howItWorks .small{
+      margin:10px 0 0;
+      color: var(--muted);
+      font-size: 12.8px;
+      line-height:1.45;
+      border-top: 1px solid var(--line);
+      padding-top: 10px;
+    }
+
     .photoCard{
       margin: 18px auto 18px;
       border-radius: var(--radius);
@@ -139,7 +193,6 @@
       text-align:left;
     }
 
-    /* Sections */
     .grid{
       display:grid;
       gap: 14px;
@@ -199,7 +252,6 @@
       color: var(--accent);
     }
 
-    /* Price table */
     .prices{
       display:grid;
       gap:10px;
@@ -246,7 +298,6 @@
     }
     .note b{ color: var(--warning); }
 
-    /* Important (limits) */
     .limits{
       margin-top: 10px;
       padding: 12px 12px;
@@ -269,7 +320,6 @@
       font-size: 14.2px;
     }
 
-    /* Contact */
     .contactBox{
       display:grid;
       gap:10px;
@@ -326,7 +376,6 @@
       line-height: 1.5;
     }
 
-    /* Small screens tweaks */
     @media (max-width: 420px){
       .brand{ font-size: 38px; }
       .ctaRow{ grid-template-columns: 1fr; }
@@ -346,24 +395,33 @@
 
       <p class="tagline">
         Réparation <b>mécanique</b> de trottinettes électriques à <b>Theux</b>.<br />
-        Travail soigné, tarifs clairs, uniquement sur rendez-vous.
+        Dépôt <b>sur rendez-vous</b> — intervention généralement <b>le jour même</b> ou <b>sous 24h</b> (selon charge).
       </p>
 
       <div class="metaPills" role="list">
-        <div class="pill" role="listitem"><span class="dot" aria-hidden="true"></span><b>Sur rendez-vous</b></div>
+        <div class="pill" role="listitem"><span class="dot" aria-hidden="true"></span><b>Dépôt sur rendez-vous</b></div>
+        <div class="pill" role="listitem">⏱️ <b>Prêt sous 24h</b></div>
         <div class="pill" role="listitem">📍 <b>Theux</b></div>
-        <div class="pill" role="listitem">⏱️ Réponse rapide</div>
       </div>
+
+      <!-- NEW: Comment ça marche -->
+      <section class="howItWorks" aria-label="Comment ça marche">
+        <h2>Comment ça marche ?</h2>
+        <ul class="steps">
+          <li><span class="num">1</span><span><b>Rendez-vous</b> : tu m’envoies marque + modèle (photo si possible).</span></li>
+          <li><span class="num">2</span><span><b>Dépôt</b> : tu déposes la trottinette à l’heure convenue.</span></li>
+          <li><span class="num">3</span><span><b>Intervention</b> : montage / contrôle, puis je te confirme quand c’est prêt.</span></li>
+          <li><span class="num">4</span><span><b>Retrait</b> : tu reviens récupérer la trottinette (sur rendez-vous).</span></li>
+        </ul>
+        <div class="small">
+          Délai indicatif : <b>le jour même</b> ou <b>sous 24h</b> selon la charge et la difficulté. Le prix est annoncé <b>avant</b> intervention.
+        </div>
+      </section>
     </header>
 
-    <!-- PHOTO
-      IMPORTANT :
-      - Mets ici le NOM EXACT de ta photo (le fichier .jpg dans ton repo).
-      - Ex: "20260223_150017.jpg"
-    -->
     <section class="photoCard" aria-label="Photo">
       <img src="20260223_150017.jpg" alt="Trottinette en réparation (photo de démonstration ElectroRide)" />
-      <div class="photoCaption">Exemple de réparation : montage pneu / contrôle après remontage.</div>
+      <div class="photoCaption">Exemple : montage pneu / contrôle après remontage.</div>
     </section>
 
     <section class="grid" aria-label="Services">
@@ -371,7 +429,7 @@
         <h2>Pourquoi choisir ElectroRide ?</h2>
         <ul class="list">
           <li><span class="check">✓</span><span>Spécialisé trottinettes électriques (mécanique)</span></li>
-          <li><span class="check">✓</span><span>Intervention locale à Theux — service sérieux</span></li>
+          <li><span class="check">✓</span><span>Dépôt sur rendez-vous — délai annoncé</span></li>
           <li><span class="check">✓</span><span>Tarifs clairs et transparents</span></li>
           <li><span class="check">✓</span><span>Travail propre et soigné</span></li>
         </ul>
@@ -409,7 +467,7 @@
 
         <div class="note">
           <b>À savoir :</b> si le montage est particulièrement difficile (roue très compacte, pneu très dur, accès compliqué),
-          je te le dis avant de continuer.
+          je te le dis <b>avant</b> de continuer.
         </div>
       </article>
 
