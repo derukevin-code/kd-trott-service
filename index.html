@@ -5,14 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ElectroRide — Réparation trottinettes électriques à Theux</title>
-  <meta name="description" content="ElectroRide : réparation mécanique de trottinettes électriques à Theux. Montage de pneus, check-up sécurité, nettoyage extérieur. Dépôt sur rendez-vous, prêt sous 24h (selon charge)." />
+  <meta name="description" content="ElectroRide : réparation mécanique de trottinettes électriques à Theux. Montage de pneus, check-up sécurité, nettoyage extérieur. Dépôt sur rendez-vous. Délai annoncé (souvent sous 24–48h selon charge)." />
 
   <style>
     :root{
       --bg1:#0b1222;
       --bg2:#0a162b;
       --card:#101f3a;
-      --card2:#0f1b33;
       --text:#e9eefc;
       --muted:#a8b5d6;
       --accent:#4ade80;
@@ -84,7 +83,7 @@
 
     .tagline{
       margin: 0 auto;
-      max-width: 52ch;
+      max-width: 56ch;
       color: var(--muted);
       font-size: 15.5px;
       line-height: 1.5;
@@ -117,7 +116,6 @@
       box-shadow: 0 0 0 4px rgba(34,197,94,.14);
     }
 
-    /* NEW: Bandeau "comment ça marche" */
     .howItWorks{
       margin: 14px auto 0;
       max-width: var(--max);
@@ -359,6 +357,7 @@
       letter-spacing:.2px;
       box-shadow: 0 12px 28px rgba(0,0,0,.25);
       user-select:none;
+      transition: transform .12s ease;
     }
     .btn.primary{
       background: linear-gradient(180deg, rgba(34,197,94,.22), rgba(34,197,94,.08));
@@ -395,30 +394,30 @@
 
       <p class="tagline">
         Réparation <b>mécanique</b> de trottinettes électriques à <b>Theux</b>.<br />
-        Dépôt <b>sur rendez-vous</b> — intervention généralement <b>le jour même</b> ou <b>sous 24h</b> (selon charge).
+        Dépôt <b>sur rendez-vous</b> — délai annoncé (souvent <b>sous 24–48h</b> selon charge).
       </p>
 
       <div class="metaPills" role="list">
         <div class="pill" role="listitem"><span class="dot" aria-hidden="true"></span><b>Dépôt sur rendez-vous</b></div>
-        <div class="pill" role="listitem">⏱️ <b>Prêt sous 24h</b></div>
+        <div class="pill" role="listitem">⏱️ <b>Délai annoncé</b></div>
         <div class="pill" role="listitem">📍 <b>Theux</b></div>
       </div>
 
-      <!-- NEW: Comment ça marche -->
       <section class="howItWorks" aria-label="Comment ça marche">
         <h2>Comment ça marche ?</h2>
         <ul class="steps">
-          <li><span class="num">1</span><span><b>Rendez-vous</b> : tu m’envoies marque + modèle (photo si possible).</span></li>
-          <li><span class="num">2</span><span><b>Dépôt</b> : tu déposes la trottinette à l’heure convenue.</span></li>
-          <li><span class="num">3</span><span><b>Intervention</b> : montage / contrôle, puis je te confirme quand c’est prêt.</span></li>
-          <li><span class="num">4</span><span><b>Retrait</b> : tu reviens récupérer la trottinette (sur rendez-vous).</span></li>
+          <li><span class="num">1</span><span><b>Contact</b> : envoie marque + modèle (photo conseillée) + ce que tu veux faire.</span></li>
+          <li><span class="num">2</span><span><b>Rendez-vous</b> : on fixe une heure de dépôt.</span></li>
+          <li><span class="num">3</span><span><b>Intervention</b> : montage / contrôle, puis je confirme quand c’est prêt.</span></li>
+          <li><span class="num">4</span><span><b>Retrait</b> : tu récupères la trottinette (sur rendez-vous).</span></li>
         </ul>
         <div class="small">
-          Délai indicatif : <b>le jour même</b> ou <b>sous 24h</b> selon la charge et la difficulté. Le prix est annoncé <b>avant</b> intervention.
+          Le prix est annoncé <b>avant</b> intervention. Délai indicatif : souvent <b>sous 24–48h</b> selon charge et difficulté.
         </div>
       </section>
     </header>
 
+    <!-- IMPORTANT: si ton image est dans un dossier "images", remplace par: images/20260223_150017.jpg -->
     <section class="photoCard" aria-label="Photo">
       <img src="20260223_150017.jpg" alt="Trottinette en réparation (photo de démonstration ElectroRide)" />
       <div class="photoCaption">Exemple : montage pneu / contrôle après remontage.</div>
@@ -527,29 +526,33 @@
         </div>
 
         <div class="note" style="margin-top:12px;">
-          <b>Merci d’indiquer</b> la marque + le modèle lors de la prise de contact (photo conseillée).
+          <b>Merci d’indiquer</b> la marque + le modèle lors de la prise de contact (photo conseillée).<br />
+          <b>Pièces non fournies</b> (pneu / chambre à air).
         </div>
       </article>
 
       <article class="card">
         <h2>Contact</h2>
+        <p class="sub"><b>Contact prioritaire par email</b> (réponse dès que possible).</p>
 
         <div class="contactBox">
+          <div class="contactLine">
+            <span>Email</span>
+            <b>derukevin@gmail.com</b>
+          </div>
           <div class="contactLine">
             <span>Téléphone</span>
             <b>0495 65 61 86</b>
           </div>
-          <div class="contactLine">
-            <span>Email</span>
-            <b>Derukevin@gmail.com</b>
-          </div>
 
           <div class="ctaRow">
-            <a class="btn primary" href="tel:+32495656186" aria-label="Appeler ElectroRide">
-              📞 Appeler
-            </a>
-            <a class="btn" href="mailto:Derukevin@gmail.com?subject=ElectroRide%20-%20Demande%20de%20rendez-vous" aria-label="Envoyer un email à ElectroRide">
+            <a class="btn primary"
+               href="mailto:derukevin@gmail.com?subject=ElectroRide%20-%20Demande%20de%20rendez-vous&body=Bonjour%2C%0A%0AMarque%20%2F%20mod%C3%A8le%20%3A%20%0AService%20souhait%C3%A9%20%3A%20%0ADisponibilit%C3%A9%20pour%20d%C3%A9p%C3%B4t%20%3A%20%0A%0AMerci%2C"
+               aria-label="Envoyer un email à ElectroRide">
               ✉️ Email
+            </a>
+            <a class="btn" href="tel:+32495656186" aria-label="Appeler ElectroRide">
+              📞 Appeler
             </a>
           </div>
         </div>
