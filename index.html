@@ -7,6 +7,14 @@
   <meta name="description" content="ElectroRide : réparation mécanique de trottinettes électriques à Theux. Montage de pneus, check-up sécurité, nettoyage extérieur. Dépôt sur rendez-vous. Délai annoncé (souvent sous 24–48h selon charge)." />
   <meta name="theme-color" content="#0b1222" />
 
+  <!-- Open Graph (partage Facebook/WhatsApp) -->
+  <meta property="og:title" content="ElectroRide — Réparation trottinettes électriques à Theux" />
+  <meta property="og:description" content="Montage pneus (chambre à air / tubeless / pneu plein), check-up sécurité, nettoyage visuel. Dépôt sur rendez-vous." />
+  <meta property="og:type" content="website" />
+  <!-- Optionnel : si tu as un logo plus tard
+  <meta property="og:image" content="https://ton-site/logo.png" />
+  -->
+
   <style>
     :root{
       --bg1:#0b1222;
@@ -58,6 +66,27 @@
       padding: 22px 14px 30px;
     }
 
+    /* Skip link accessibilité */
+    .skip{
+      position:absolute;
+      left:-999px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+    }
+    .skip:focus{
+      left:14px;
+      top:14px;
+      width:auto;
+      height:auto;
+      padding:10px 12px;
+      border-radius: 12px;
+      background: rgba(10,22,43,.85);
+      border: 1px solid rgba(255,255,255,.14);
+      z-index: 9999;
+    }
+
     .hero{
       text-align:center;
       padding: 8px 0 10px;
@@ -106,7 +135,7 @@
 
     .heroValue{
       margin: 12px auto 0;
-      max-width: 60ch;
+      max-width: 66ch;
       padding: 10px 12px;
       border-radius: 999px;
       background: rgba(255,255,255,.04);
@@ -336,6 +365,55 @@
       text-align:left;
     }
 
+    /* Nouveauté : bandeau de confiance */
+    .trustBar{
+      margin: 0 auto 14px;
+      max-width: var(--max);
+      border-radius: var(--radius);
+      padding: 12px 12px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.10);
+      box-shadow: 0 12px 26px rgba(0,0,0,.20);
+      display:grid;
+      gap:10px;
+    }
+    .trustBar .items{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+    }
+    .trustItem{
+      padding: 10px 10px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.02);
+      border: 1px solid rgba(255,255,255,.08);
+      color: rgba(234,240,255,.92);
+      font-size: 13.5px;
+      line-height:1.4;
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+    .trustIcon{
+      width:22px;height:22px;
+      border-radius: 7px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(59,130,246,.10);
+      border: 1px solid rgba(59,130,246,.22);
+      flex: 0 0 22px;
+      margin-top: 1px;
+      font-size: 13px;
+    }
+    .trustBar .small{
+      color: var(--muted);
+      font-size: 12.8px;
+      line-height: 1.5;
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 10px;
+    }
+
     .prices{
       display:grid;
       gap:10px;
@@ -465,6 +543,30 @@
       width:100%;
     }
 
+    /* Nouveauté : mini FAQ (SEO + rassurance) */
+    details.faq{
+      margin-top: 10px;
+      border-radius: var(--radius2);
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.10);
+      padding: 10px 12px;
+      box-shadow: 0 10px 22px rgba(0,0,0,.16);
+    }
+    details.faq summary{
+      cursor:pointer;
+      font-weight: 900;
+      color: rgba(234,240,255,.96);
+      list-style:none;
+    }
+    details.faq summary::-webkit-details-marker{ display:none; }
+    details.faq p{
+      margin: 10px 0 0;
+      color: rgba(234,240,255,.92);
+      line-height:1.55;
+      font-size: 13.8px;
+    }
+    .faq small{ color: var(--muted); }
+
     .footer{
       margin-top: 18px;
       text-align:center;
@@ -473,6 +575,9 @@
       line-height: 1.55;
     }
 
+    @media (max-width: 520px){
+      .trustBar .items{ grid-template-columns: 1fr; }
+    }
     @media (max-width: 420px){
       .brand{ font-size: 40px; }
       .ctaRow{ grid-template-columns: 1fr; }
@@ -480,10 +585,31 @@
       .btn{ width: 100%; }
     }
   </style>
+
+  <!-- JSON-LD LocalBusiness (SEO Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ElectroRide",
+    "description": "Réparation mécanique de trottinettes électriques à Theux : montage pneus, check-up sécurité, nettoyage extérieur. Dépôt sur rendez-vous.",
+    "areaServed": "Theux, Belgique",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Theux",
+      "addressCountry": "BE"
+    },
+    "telephone": "+32495656186",
+    "email": "derukevin@gmail.com",
+    "url": "https://derukevin-code.github.io/kd-trott-service/"
+  }
+  </script>
 </head>
 
 <body>
-  <main class="wrap">
+  <a class="skip" href="#contenu">Aller au contenu</a>
+
+  <main class="wrap" id="contenu">
     <header class="hero">
       <div class="brandline">
         <div class="logoBadge" aria-hidden="true">🛴</div>
@@ -520,6 +646,13 @@
         <a class="btn" href="tel:+32495656186" aria-label="Appeler ElectroRide">
           📞 Appeler
         </a>
+        <!-- Bonus : WhatsApp (si tu veux). Change le numéro si besoin. -->
+        <a class="btn"
+           href="https://wa.me/32495656186?text=Bonjour%20ElectroRide%2C%20j%E2%80%99aimerais%20un%20rendez-vous.%20Marque%20%2F%20mod%C3%A8le%20%3A%20____%20%7C%20Service%20%3A%20____"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Contacter ElectroRide sur WhatsApp">
+          💬 WhatsApp
+        </a>
       </nav>
 
       <section class="howItWorks" aria-label="Comment ça marche">
@@ -538,6 +671,31 @@
 
     <div class="divider" aria-hidden="true"></div>
 
+    <!-- Nouveauté : bandeau "confiance" + texte rassurant -->
+    <section class="trustBar" aria-label="Infos importantes">
+      <div class="items">
+        <div class="trustItem">
+          <span class="trustIcon" aria-hidden="true">🧾</span>
+          <div><b>Prix annoncé avant</b><br /><small>Tu valides avant que je continue.</small></div>
+        </div>
+        <div class="trustItem">
+          <span class="trustIcon" aria-hidden="true">🧼</span>
+          <div><b>Travail propre</b><br /><small>Remontage soigné + contrôle final.</small></div>
+        </div>
+        <div class="trustItem">
+          <span class="trustIcon" aria-hidden="true">📸</span>
+          <div><b>Photo conseillée</b><br /><small>Marque + modèle + photo = plus rapide.</small></div>
+        </div>
+        <div class="trustItem">
+          <span class="trustIcon" aria-hidden="true">🕒</span>
+          <div><b>Sur rendez-vous</b><br /><small>Dépôt / retrait planifiés.</small></div>
+        </div>
+      </div>
+      <div class="small">
+        <b>Zone :</b> Theux et alentours (Spa, Pepinster, Verviers…) — selon rendez-vous.
+      </div>
+    </section>
+
     <section class="photoCard" aria-label="Photo">
       <img src="20260223_150017.jpg" alt="Trottinette en réparation (photo de démonstration ElectroRide)" loading="lazy" />
       <div class="photoCaption">Exemple : montage pneu / contrôle après remontage.</div>
@@ -552,6 +710,19 @@
           <li><span class="check">✓</span><span>Tarifs clairs et transparents</span></li>
           <li><span class="check">✓</span><span>Travail propre et soigné</span></li>
         </ul>
+
+        <!-- Nouveauté : mini FAQ (SEO + rassurance) -->
+        <details class="faq">
+          <summary>FAQ — Questions rapides</summary>
+          <p><b>Tu fournis les pneus / chambres à air ?</b><br />
+          Non. Le client apporte les pièces (pneu, chambre à air). Je m’occupe de la <b>main-d’œuvre</b> et du montage.</p>
+
+          <p><b>Tu fais l’électricité / batterie ?</b><br />
+          Non. Je fais uniquement la <b>mécanique extérieure</b> (pneus, serrages, réglages simples).</p>
+
+          <p><b>Combien de temps ?</b><br />
+          Souvent <b>24–48h</b> selon charge et difficulté (annoncé à l’avance).</p>
+        </details>
       </article>
 
       <article class="card">
@@ -663,11 +834,11 @@
         <div class="contactBox">
           <div class="contactLine">
             <span>Email</span>
-            <b>derukevin@gmail.com</b>
+            <b><a href="mailto:derukevin@gmail.com">derukevin@gmail.com</a></b>
           </div>
           <div class="contactLine">
             <span>Téléphone</span>
-            <b>0495 65 61 86</b>
+            <b><a href="tel:+32495656186">0495 65 61 86</a></b>
           </div>
 
           <div class="ctaRow">
@@ -680,12 +851,19 @@
               📞 Appeler
             </a>
           </div>
+
+          <!-- Bonus : lien Google (à remplacer quand tu as ton lien exact “Laisser un avis”) -->
+          <div class="note">
+            <b>Avis Google :</b> dès que tu as ton lien “Laisser un avis”, colle-le ici pour que les clients puissent laisser un avis facilement.
+          </div>
         </div>
       </article>
     </section>
 
     <footer class="footer">
       © 2026 ElectroRide — Réparation mécanique de trottinettes électriques à Theux
+      <br />
+      <span style="color: rgba(169,183,218,.72);">Dépôt sur rendez-vous • Tarifs annoncés avant intervention</span>
     </footer>
   </main>
 </body>
