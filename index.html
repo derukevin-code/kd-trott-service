@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -362,25 +363,44 @@
       text-align:left;
     }
 
-    /* AJOUT: badges AVANT / APRÈS */
-    .photoWrap{ position: relative; }
-    .cornerBadge{
-      position:absolute;
-      top:10px;
+    /* NOUVEAU : Avant / Après */
+    .baHeader{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding: 12px 12px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.02);
+    }
+    .baHeader .title{
+      font-weight: 950;
+      letter-spacing:.2px;
+      color: rgba(234,240,255,.98);
+    }
+    .baPills{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+    .baPill{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
       padding: 6px 10px;
       border-radius: 999px;
-      font-size: 12.8px;
-      font-weight: 950;
-      color: #fff;
-      letter-spacing: .2px;
-      border: 1px solid rgba(255,255,255,.22);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      box-shadow: 0 10px 22px rgba(0,0,0,.22);
-      user-select:none;
+      font-size: 12.2px;
+      font-weight: 900;
+      border: 1px solid rgba(34,197,94,.30);
+      background: rgba(34,197,94,.10);
+      color: rgba(234,240,255,.95);
+      white-space:nowrap;
     }
-    .cornerBadge.before{ left:10px; background: rgba(251,113,133,.86); }
-    .cornerBadge.after{ right:10px; background: rgba(34,197,94,.88); }
+    .baPill.alt{
+      border: 1px solid rgba(59,130,246,.28);
+      background: rgba(59,130,246,.10);
+    }
 
     /* Bandeau de confiance + Zone (Theux seulement) */
     .trustBar{
@@ -511,7 +531,6 @@
       padding: 12px 12px;
       border-radius: var(--radius2);
       background: rgba(255,255,255,.03);
-      border: 1px solid rgba(255,255,255,.10);
       border: 1px solid rgba(255,255,255,.10);
     }
     .limits .title{
@@ -706,18 +725,28 @@
       </div>
     </section>
 
-    <!-- NOUVELLE PHOTO + BADGES AVANT/APRÈS -->
+    <!-- NOUVEAU : AVANT / APRÈS -->
     <section class="photoCard" aria-label="Avant après montage pneu">
-      <div class="photoWrap">
-        <span class="cornerBadge before">AVANT</span>
-        <span class="cornerBadge after">APRÈS</span>
-        <img src="file_00000000b5bc720ab49a3aa47abc831.png" alt="Avant après montage pneu trottinette" loading="lazy" />
+      <div class="baHeader">
+        <div class="title">AVANT / APRÈS — Montage de pneus</div>
+        <div class="baPills" aria-hidden="true">
+          <span class="baPill">Avant</span>
+          <span class="baPill alt">Après</span>
+          <span class="baPill">Montage</span>
+        </div>
       </div>
+
+      <!-- IMPORTANT : nom EXACT du fichier uploadé -->
+      <img
+        src="file_00000000b5bc720ab49a3aaf47abc831.png"
+        alt="Avant après : montage pneu trottinette (exemple réel)"
+        loading="lazy"
+      />
       <div class="photoCaption">Avant / Après — Montage de pneus (exemple réel).</div>
     </section>
 
-    <!-- ANCIENNE PHOTO (on la garde en exemple atelier) -->
-    <section class="photoCard" aria-label="Photo atelier">
+    <!-- PHOTO ATELIER (déjà existante) -->
+    <section class="photoCard" aria-label="Photo">
       <img src="20260223_150017.jpg" alt="Trottinette en réparation (photo de démonstration ElectroRide)" loading="lazy" />
       <div class="photoCaption">Exemple atelier : montage pneu / contrôle après remontage.</div>
     </section>
