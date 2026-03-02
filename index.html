@@ -12,8 +12,13 @@
   <meta property="og:description" content="Montage pneus (chambre à air / tubeless / pneu plein), check-up sécurité, nettoyage visuel. Dépôt sur rendez-vous à Theux." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://derukevin-code.github.io/kd-trott-service/" />
-  <!-- Image de partage (logo) -->
   <meta property="og:image" content="https://derukevin-code.github.io/kd-trott-service/file_00000000e988720a9d6597291676d817.png" />
+
+  <!-- Twitter Cards (optionnel mais utile) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ElectroRide — Réparation trottinettes électriques à Theux" />
+  <meta name="twitter:description" content="Montage pneus, check-up sécurité, nettoyage visuel. Dépôt sur rendez-vous à Theux." />
+  <meta name="twitter:image" content="https://derukevin-code.github.io/kd-trott-service/file_00000000e988720a9d6597291676d817.png" />
 
   <style>
     :root{
@@ -66,6 +71,7 @@
       padding: 22px 14px 30px;
     }
 
+    /* Skip link accessibilité */
     .skip{
       position:absolute;
       left:-999px;
@@ -91,7 +97,7 @@
       padding: 8px 0 10px;
     }
 
-    /* ✅ nouveau : logo image + titre alignés proprement */
+    /* ✅ LOGO IMAGE + TITRE (corrigé) */
     .brandTop{
       display:flex;
       align-items:center;
@@ -177,6 +183,7 @@
     }
     .pill b{ color: var(--text); }
 
+    /* Sticky CTA */
     .stickyCta{
       position: sticky;
       top: 10px;
@@ -360,6 +367,7 @@
       text-align:left;
     }
 
+    /* Bandeau de confiance + Zone (Theux seulement) */
     .trustBar{
       margin: 0 auto 14px;
       max-width: var(--max);
@@ -558,7 +566,6 @@
       line-height:1.55;
       font-size: 13.8px;
     }
-    .faq small{ color: var(--muted); }
 
     .footer{
       margin-top: 18px;
@@ -580,6 +587,7 @@
     }
   </style>
 
+  <!-- JSON-LD LocalBusiness (SEO Google) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -594,7 +602,8 @@
     },
     "telephone": "+32495656186",
     "email": "derukevin@gmail.com",
-    "url": "https://derukevin-code.github.io/kd-trott-service/"
+    "url": "https://derukevin-code.github.io/kd-trott-service/",
+    "image": "https://derukevin-code.github.io/kd-trott-service/file_00000000e988720a9d6597291676d817.png"
   }
   </script>
 </head>
@@ -605,9 +614,13 @@
   <main class="wrap" id="contenu">
     <header class="hero">
 
-      <!-- ✅ LOGO + TITRE -->
+      <!-- ✅ LOGO CORRECT (ton fichier GitHub) -->
       <div class="brandTop">
-        <img class="brandLogo" src="file_00000000e988720a9d6597291676d817.png?v=5" alt="Logo ElectroRide" />
+        <img class="brandLogo"
+             src="file_00000000e988720a9d6597291676d817.png?v=7"
+             alt="Logo ElectroRide"
+             loading="eager"
+             decoding="async" />
         <h1 class="brand">ElectroRide</h1>
       </div>
 
@@ -633,10 +646,13 @@
 
       <nav class="stickyCta" aria-label="Actions rapides">
         <a class="btn primary"
-           href="mailto:derukevin@gmail.com?subject=ElectroRide%20-%20Demande%20de%20rendez-vous&body=Bonjour%2C%0A%0AMarque%20%2F%20mod%C3%A8le%20%3A%20%0AService%20souhait%C3%A9%20%3A%20%0ADisponibilit%C3%A9%20pour%20d%C3%A9p%C3%B4t%20%3A%20%0A%0AMerci%2C">
+           href="mailto:derukevin@gmail.com?subject=ElectroRide%20-%20Demande%20de%20rendez-vous&body=Bonjour%2C%0A%0AMarque%20%2F%20mod%C3%A8le%20%3A%20%0AService%20souhait%C3%A9%20%3A%20%0ADisponibilit%C3%A9%20pour%20d%C3%A9p%C3%B4t%20%3A%20%0A%0AMerci%2C"
+           aria-label="Envoyer un email à ElectroRide">
           ✉️ Email
         </a>
-        <a class="btn" href="tel:+32495656186">📞 Appeler</a>
+        <a class="btn" href="tel:+32495656186" aria-label="Appeler ElectroRide">
+          📞 Appeler
+        </a>
       </nav>
 
       <section class="howItWorks" aria-label="Comment ça marche">
@@ -655,6 +671,7 @@
 
     <div class="divider" aria-hidden="true"></div>
 
+    <!-- Bandeau confiance + Zone (Theux uniquement) -->
     <section class="trustBar" aria-label="Infos importantes">
       <div class="items">
         <div class="trustItem">
@@ -687,7 +704,7 @@
 
     <!-- Photo 2 : Avant / Après -->
     <section class="photoCard" aria-label="Avant / Après montage de pneu">
-      <img src="file_00000000b5bc720ab49a3aaf47abc831.png?v=5" alt="Avant / Après — Montage de pneu (ElectroRide)" loading="lazy" />
+      <img src="file_00000000b5bc720ab49a3aaf47abc831.png?v=7" alt="Avant / Après — Montage de pneu (ElectroRide)" loading="lazy" />
       <div class="photoCaption"><b>AVANT / APRÈS — Montage de pneu</b> • Photos réelles • Exemple de résultat après montage.</div>
     </section>
 
@@ -832,10 +849,13 @@
 
           <div class="ctaRow">
             <a class="btn primary"
-               href="mailto:derukevin@gmail.com?subject=ElectroRide%20-%20Demande%20de%20rendez-vous&body=Bonjour%2C%0A%0AMarque%20%2F%20mod%C3%A8le%20%3A%20%0AService%20souhait%C3%A9%20%3A%20%0ADisponibilit%C3%A9%20pour%20d%C3%A9p%C3%B4t%20%3A%20%0A%0AMerci%2C">
+               href="mailto:derukevin@gmail.com?subject=ElectroRide%20-%20Demande%20de%20rendez-vous&body=Bonjour%2C%0A%0AMarque%20%2F%20mod%C3%A8le%20%3A%20%0AService%20souhait%C3%A9%20%3A%20%0ADisponibilit%C3%A9%20pour%20d%C3%A9p%C3%B4t%20%3A%20%0AMerci%2C"
+               aria-label="Envoyer un email à ElectroRide">
               ✉️ Email
             </a>
-            <a class="btn" href="tel:+32495656186">📞 Appeler</a>
+            <a class="btn" href="tel:+32495656186" aria-label="Appeler ElectroRide">
+              📞 Appeler
+            </a>
           </div>
 
           <div class="note">
