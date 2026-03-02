@@ -11,10 +11,6 @@
   <meta property="og:title" content="ElectroRide — Réparation trottinettes électriques à Theux" />
   <meta property="og:description" content="Montage pneus (chambre à air / tubeless / pneu plein), check-up sécurité, nettoyage visuel. Dépôt sur rendez-vous à Theux." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://derukevin-code.github.io/kd-trott-service/" />
-  <!-- Image de partage : AVANT/APRÈS (à changer si besoin) -->
-  <meta property="og:image" content="https://derukevin-code.github.io/kd-trott-service/file_00000000b5bc720ab49a3aaf47abc831.png" />
-  <meta property="og:image:alt" content="Avant / Après — montage pneu trottinette" />
 
   <style>
     :root{
@@ -35,8 +31,8 @@
 
       --line: rgba(255,255,255,.10);
 
-      --shadow: 0 16px 46px rgba(0,0,0,.42);
-      --shadow2: 0 10px 26px rgba(0,0,0,.24);
+      --shadow: 0 18px 55px rgba(0,0,0,.45);
+      --shadow2: 0 10px 28px rgba(0,0,0,.28);
 
       --radius: 18px;
       --radius2: 14px;
@@ -131,7 +127,7 @@
       max-width: 60ch;
       color: var(--muted);
       font-size: 15.8px;
-      line-height: 1.6;
+      line-height: 1.55;
     }
 
     .heroValue{
@@ -261,7 +257,7 @@
       gap:10px;
       color: rgba(234,240,255,.95);
       font-size: 14.6px;
-      line-height:1.55;
+      line-height:1.5;
     }
     .steps li{
       display:flex;
@@ -286,7 +282,7 @@
       margin:10px 0 0;
       color: var(--muted);
       font-size: 12.9px;
-      line-height: 1.55;
+      line-height: 1.5;
       border-top: 1px solid rgba(255,255,255,.08);
       padding-top: 10px;
     }
@@ -316,8 +312,8 @@
     .sub{
       margin: -4px 0 12px;
       color: var(--muted);
-      font-size: 14.4px;
-      line-height:1.6;
+      font-size: 14.2px;
+      line-height:1.55;
     }
 
     .list{
@@ -332,7 +328,7 @@
       gap:10px;
       align-items:flex-start;
       color: rgba(234,240,255,.95);
-      line-height: 1.55;
+      line-height: 1.5;
       font-size: 15px;
     }
     .check{
@@ -348,6 +344,22 @@
       margin-top: 1px;
       font-size: 14px;
       color: var(--accent);
+    }
+
+    .photoCard{
+      margin: 16px auto 18px;
+      border-radius: var(--radius);
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      box-shadow: var(--shadow);
+    }
+    .photoCaption{
+      padding: 10px 12px;
+      color: var(--muted);
+      font-size: 12.9px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      text-align:left;
     }
 
     /* Bandeau de confiance + Zone (Theux seulement) */
@@ -394,84 +406,9 @@
     .trustBar .small{
       color: var(--muted);
       font-size: 12.8px;
-      line-height: 1.55;
+      line-height: 1.5;
       border-top: 1px solid rgba(255,255,255,.08);
       padding-top: 10px;
-    }
-
-    /* Photos */
-    .photoCard{
-      margin: 16px auto 18px;
-      border-radius: var(--radius);
-      overflow:hidden;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-      box-shadow: var(--shadow);
-    }
-    .photoCaption{
-      padding: 10px 12px;
-      color: var(--muted);
-      font-size: 12.9px;
-      border-top: 1px solid rgba(255,255,255,.08);
-      text-align:left;
-      line-height: 1.55;
-    }
-
-    /* AVANT/APRÈS */
-    .beforeAfterHead{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-      padding: 12px 12px;
-    }
-    .beforeAfterTitle{
-      font-weight: 950;
-      letter-spacing:.2px;
-      margin:0;
-      color: var(--accent);
-      font-size: 16.5px;
-    }
-    .badges{
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-    .chip{
-      display:inline-flex;
-      align-items:center;
-      gap:6px;
-      padding: 7px 10px;
-      border-radius: 999px;
-      font-size: 12.2px;
-      font-weight: 900;
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-      color: rgba(234,240,255,.92);
-      user-select:none;
-      white-space:nowrap;
-    }
-    .chip.green{
-      border-color: rgba(34,197,94,.30);
-      background: rgba(34,197,94,.10);
-    }
-    .chip.gray{
-      border-color: rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-    }
-    .beforeAfterImageWrap{
-      overflow:hidden;
-    }
-    .beforeAfterImageWrap img{
-      width:100%;
-      aspect-ratio: 16/10;
-      object-fit: cover;
-      transform: translateZ(0);
-      transition: transform .25s ease;
-    }
-    @media (hover:hover){
-      .beforeAfterImageWrap:hover img{ transform: scale(1.015); }
     }
 
     .prices{
@@ -502,7 +439,6 @@
     .row .hint{
       color: var(--muted);
       font-size: 12.9px;
-      line-height: 1.35;
     }
     .row .price{
       font-weight: 950;
@@ -534,7 +470,7 @@
       border: 1px solid rgba(251,191,36,.25);
       color: rgba(234,240,255,.92);
       font-size: 13.3px;
-      line-height: 1.55;
+      line-height: 1.5;
     }
     .note b{ color: var(--warning); }
 
@@ -546,7 +482,7 @@
       border: 1px solid rgba(251,113,133,.22);
       color: rgba(234,240,255,.92);
       font-size: 13.3px;
-      line-height: 1.55;
+      line-height: 1.5;
     }
     .alert b{ color: var(--danger); }
 
@@ -569,7 +505,7 @@
       display:grid;
       gap:8px;
       color: rgba(234,240,255,.92);
-      line-height: 1.55;
+      line-height: 1.5;
       font-size: 14.3px;
     }
 
@@ -622,7 +558,7 @@
     details.faq p{
       margin: 10px 0 0;
       color: rgba(234,240,255,.92);
-      line-height:1.6;
+      line-height:1.55;
       font-size: 13.8px;
     }
     .faq small{ color: var(--muted); }
@@ -632,13 +568,11 @@
       text-align:center;
       color: rgba(169,183,218,.82);
       font-size: 12.6px;
-      line-height: 1.6;
+      line-height: 1.55;
     }
 
     @media (max-width: 520px){
       .trustBar .items{ grid-template-columns: 1fr; }
-      .beforeAfterHead{ flex-direction:column; align-items:flex-start; }
-      .badges{ justify-content:flex-start; }
     }
     @media (max-width: 420px){
       .brand{ font-size: 40px; }
@@ -751,31 +685,17 @@
       </div>
     </section>
 
-    <!-- AVANT / APRÈS -->
-    <section class="photoCard" aria-label="Avant après montage pneu">
-      <div class="beforeAfterHead">
-        <h2 class="beforeAfterTitle">AVANT / APRÈS — Montage de pneu</h2>
-        <div class="badges" aria-label="Badges">
-          <span class="chip gray">📷 Photos réelles</span>
-          <span class="chip green">🛠️ Montage</span>
-        </div>
-      </div>
-
-      <div class="beforeAfterImageWrap">
-        <img src="file_00000000b5bc720ab49a3aaf47abc831.png"
-             alt="Avant après : pneu usé puis pneu monté après intervention"
-             loading="lazy" />
-      </div>
-
-      <div class="photoCaption">
-        Exemple de résultat après montage. <b>Prix annoncé avant</b> intervention. Si difficulté anormale (roue compacte / pneu très dur), je te préviens avant de continuer.
-      </div>
+    <!-- Photo existante (si tu veux la garder) -->
+    <section class="photoCard" aria-label="Photo">
+      <img src="20260223_150017.jpg" alt="Trottinette en réparation (photo de démonstration ElectroRide)" loading="lazy" />
+      <div class="photoCaption">Exemple : montage pneu / contrôle après remontage.</div>
     </section>
 
-    <!-- Photo atelier (exemple) -->
-    <section class="photoCard" aria-label="Photo atelier">
-      <img src="20260223_150017.jpg" alt="Trottinette en réparation (photo de démonstration ElectroRide)" loading="lazy" />
-      <div class="photoCaption">Exemple : contrôle après remontage / intervention mécanique extérieure.</div>
+    <!-- AVANT / APRÈS (ta nouvelle photo uploadée) -->
+    <!-- IMPORTANT : remplace le src ci-dessous par le NOM EXACT du fichier que tu vois dans GitHub -->
+    <section class="photoCard" aria-label="Avant / Après montage de pneu">
+      <img src="file_00000000b5bc720ab49a3aaf47abc831.png" alt="Avant / Après — Montage de pneu (ElectroRide)" loading="lazy" />
+      <div class="photoCaption"><b>AVANT / APRÈS — Montage de pneu</b> • Photos réelles • Exemple de résultat après montage.</div>
     </section>
 
     <section class="grid" aria-label="Services">
@@ -833,8 +753,8 @@
         </div>
 
         <div class="note">
-          <b>À savoir :</b> si le montage est particulièrement difficile (roue très compacte, pneu très dur, accès compliqué),
-          je te le dis <b>avant</b> de continuer (supplément uniquement si tu valides).
+          <b>Transparence :</b> prix annoncé <b>avant</b> de commencer. Si le montage est particulièrement difficile
+          (roue compacte / pneu très dur), je te préviens <b>avant</b> de continuer.
         </div>
       </article>
 
@@ -899,7 +819,7 @@
         </div>
 
         <div class="alert" style="margin-top:12px;">
-          <b>Info :</b> je confirme le prix <b>avant</b> intervention. Si la difficulté est anormale, je te préviens avant de continuer.
+          <b>Info :</b> je confirme le prix <b>avant</b> intervention. Si je vois une difficulté particulière, je te préviens avant de continuer.
         </div>
       </article>
 
@@ -928,9 +848,17 @@
             </a>
           </div>
 
+          <!-- ✅ CORRECTION ICI : texte client-friendly (plus "interne") -->
           <div class="note">
-            <b>Avis Google :</b> dès que tu as ton lien “Laisser un avis”, colle-le ici pour que les clients puissent laisser un avis facilement.
+            <b>⭐ Avis Google :</b> si tu es content du service, un avis aide énormément ElectroRide.
           </div>
+
+          <!-- OPTION : quand tu as ton lien Google "Laisser un avis", dé-commente cette ligne et remplace l'URL -->
+          <!--
+          <a class="btn" href="https://TON-LIEN-GOOGLE-AVIS" target="_blank" rel="noopener noreferrer">
+            ⭐ Laisser un avis Google
+          </a>
+          -->
         </div>
       </article>
     </section>
