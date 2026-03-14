@@ -4,70 +4,85 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ElectroRide — Réparation trottinettes électriques à Theux</title>
-  <meta name="description" content="ElectroRide : réparation mécanique de trottinettes électriques à Theux. Montage de pneus, check-up sécurité, nettoyage extérieur. Dépôt sur rendez-vous. Délai annoncé (souvent sous 24–48h selon charge)." />
+  <meta
+    name="description"
+    content="ElectroRide : réparation mécanique de trottinettes électriques à Theux. Montage de pneus, check-up sécurité, nettoyage extérieur. Dépôt sur rendez-vous. Délai annoncé selon charge."
+  />
   <meta name="theme-color" content="#0b1222" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="ElectroRide — Réparation trottinettes électriques à Theux" />
-  <meta property="og:description" content="Montage pneus (chambre à air / tubeless / pneu plein), check-up sécurité, nettoyage extérieur. Dépôt sur rendez-vous à Theux." />
+  <meta
+    property="og:description"
+    content="Montage pneus, check-up sécurité, nettoyage extérieur. Dépôt sur rendez-vous à Theux."
+  />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://derukevin-code.github.io/kd-trott-service/" />
-  <meta property="og:image" content="https://derukevin-code.github.io/kd-trott-service/file_00000000e988720a9d6597291676d817.png" />
+  <meta
+    property="og:image"
+    content="https://derukevin-code.github.io/kd-trott-service/file_00000000e988720a9d6597291676d817.png"
+  />
 
-  <!-- Twitter Cards -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ElectroRide — Réparation trottinettes électriques à Theux" />
-  <meta name="twitter:description" content="Montage pneus, check-up sécurité, nettoyage extérieur. Dépôt sur rendez-vous à Theux." />
-  <meta name="twitter:image" content="https://derukevin-code.github.io/kd-trott-service/file_00000000e988720a9d6597291676d817.png" />
+  <meta
+    name="twitter:description"
+    content="Montage pneus, check-up sécurité, nettoyage extérieur. Dépôt sur rendez-vous à Theux."
+  />
+  <meta
+    name="twitter:image"
+    content="https://derukevin-code.github.io/kd-trott-service/file_00000000e988720a9d6597291676d817.png"
+  />
 
   <style>
     :root{
       --bg1:#0b1222;
       --bg2:#0a162b;
-      --cardA: rgba(255,255,255,.05);
-      --cardB: rgba(255,255,255,.025);
+      --cardA:rgba(255,255,255,.05);
+      --cardB:rgba(255,255,255,.025);
       --text:#eaf0ff;
-      --muted:#a9b7da;
+      --muted:#b7c2de;
       --accent:#4ade80;
       --accent2:#22c55e;
       --warning:#fbbf24;
       --danger:#fb7185;
-      --line: rgba(255,255,255,.10);
-      --shadow: 0 18px 55px rgba(0,0,0,.45);
-      --shadow2: 0 10px 28px rgba(0,0,0,.28);
-      --radius: 18px;
-      --radius2: 14px;
-      --max: 860px;
+      --line:rgba(255,255,255,.10);
+      --shadow:0 18px 55px rgba(0,0,0,.45);
+      --shadow2:0 10px 28px rgba(0,0,0,.28);
+      --radius:18px;
+      --radius2:14px;
+      --max:860px;
     }
 
     *{ box-sizing:border-box; }
     html,body{ height:100%; }
+
     body{
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       color:var(--text);
       background:
         radial-gradient(1200px 700px at 20% 0%, rgba(34,197,94,.18), transparent 60%),
         radial-gradient(900px 520px at 90% 10%, rgba(251,191,36,.12), transparent 55%),
         radial-gradient(800px 500px at 50% 100%, rgba(59,130,246,.10), transparent 60%),
         linear-gradient(180deg, var(--bg1), var(--bg2));
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
     }
 
-    a{ color: inherit; text-decoration:none; }
+    a{ color:inherit; text-decoration:none; }
     img{ max-width:100%; height:auto; display:block; }
 
     .wrap{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 22px 14px 30px;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:22px 14px 30px;
     }
 
     .skip{
       position:absolute;
       left:-999px;
-      top:auto;
       width:1px;
       height:1px;
       overflow:hidden;
@@ -78,15 +93,15 @@
       width:auto;
       height:auto;
       padding:10px 12px;
-      border-radius: 12px;
-      background: rgba(10,22,43,.85);
-      border: 1px solid rgba(255,255,255,.14);
-      z-index: 9999;
+      border-radius:12px;
+      background:rgba(10,22,43,.88);
+      border:1px solid rgba(255,255,255,.14);
+      z-index:9999;
     }
 
     .hero{
       text-align:center;
-      padding: 8px 0 10px;
+      padding:8px 0 10px;
     }
 
     .brandTop{
@@ -95,60 +110,64 @@
       justify-content:center;
       gap:14px;
       flex-wrap:wrap;
-      margin: 6px 0 8px;
+      margin:6px 0 8px;
     }
+
     .brandLogo{
       width:64px;
       height:64px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-      box-shadow: 0 12px 28px rgba(0,0,0,.30);
-      object-fit: contain;
-      padding: 6px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.03);
+      box-shadow:0 12px 28px rgba(0,0,0,.30);
+      object-fit:contain;
+      padding:6px;
     }
 
     .brand{
-      font-weight: 950;
-      font-size: 44px;
-      letter-spacing: .2px;
-      line-height:1;
       margin:0;
-      color: var(--accent);
-      text-shadow: 0 0 22px rgba(74,222,128,.14);
+      font-weight:950;
+      font-size:44px;
+      line-height:1;
+      letter-spacing:.2px;
+      color:var(--accent);
+      text-shadow:0 0 22px rgba(74,222,128,.14);
     }
 
     .tagline{
-      margin: 0 auto;
-      max-width: 60ch;
-      color: var(--muted);
-      font-size: 15.8px;
-      line-height: 1.55;
+      margin:0 auto;
+      max-width:60ch;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.6;
     }
 
     .heroValue{
-      margin: 12px auto 0;
-      max-width: 66ch;
-      padding: 10px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.04);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow2);
+      margin:12px auto 0;
+      max-width:68ch;
+      padding:10px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow2);
       display:inline-flex;
       gap:10px;
       align-items:center;
       justify-content:center;
       flex-wrap:wrap;
-      font-size: 13.8px;
-      color: rgba(234,240,255,.92);
+      font-size:14px;
+      color:rgba(234,240,255,.92);
     }
-    .heroValue b{ color: var(--text); }
+
+    .heroValue b{ color:var(--text); }
 
     .spark{
-      width:9px;height:9px;border-radius:50%;
-      background: var(--accent2);
-      box-shadow: 0 0 0 4px rgba(34,197,94,.14);
-      flex: 0 0 9px;
+      width:9px;
+      height:9px;
+      border-radius:50%;
+      background:var(--accent2);
+      box-shadow:0 0 0 4px rgba(34,197,94,.14);
+      flex:0 0 9px;
     }
 
     .metaPills{
@@ -156,37 +175,37 @@
       gap:10px;
       justify-content:center;
       flex-wrap:wrap;
-      margin: 12px 0 0;
+      margin:12px 0 0;
     }
 
     .pill{
       display:inline-flex;
       align-items:center;
       gap:8px;
-      padding: 10px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.035);
-      border: 1px solid var(--line);
-      color: rgba(234,240,255,.92);
-      font-size: 13.5px;
-      box-shadow: 0 10px 24px rgba(0,0,0,.22);
-      user-select:none;
+      padding:10px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.035);
+      border:1px solid var(--line);
+      color:rgba(234,240,255,.92);
+      font-size:13.8px;
+      box-shadow:0 10px 24px rgba(0,0,0,.22);
     }
-    .pill b{ color: var(--text); }
+
+    .pill b{ color:var(--text); }
 
     .stickyCta{
-      position: sticky;
-      top: 10px;
-      z-index: 50;
-      margin: 14px auto 0;
-      max-width: var(--max);
-      border-radius: 999px;
-      background: rgba(10,22,43,.72);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,.10);
-      box-shadow: 0 18px 50px rgba(0,0,0,.35);
-      padding: 10px;
+      position:sticky;
+      top:10px;
+      z-index:50;
+      margin:14px auto 0;
+      max-width:var(--max);
+      border-radius:999px;
+      background:rgba(10,22,43,.72);
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:0 18px 50px rgba(0,0,0,.35);
+      padding:10px;
       display:flex;
       gap:10px;
       justify-content:center;
@@ -198,400 +217,438 @@
       align-items:center;
       justify-content:center;
       gap:10px;
-      padding: 12px 14px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      color: var(--text);
-      font-weight: 850;
+      padding:12px 14px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      font-weight:850;
       letter-spacing:.2px;
-      box-shadow: 0 12px 26px rgba(0,0,0,.20);
-      user-select:none;
-      transition: transform .12s ease, filter .12s ease;
-      min-width: 150px;
+      box-shadow:0 12px 26px rgba(0,0,0,.20);
+      transition:transform .12s ease, filter .12s ease;
+      min-width:150px;
     }
+
     .btn.primary{
-      background: linear-gradient(180deg, rgba(34,197,94,.26), rgba(34,197,94,.10));
-      border: 1px solid rgba(34,197,94,.38);
+      background:linear-gradient(180deg, rgba(34,197,94,.26), rgba(34,197,94,.10));
+      border:1px solid rgba(34,197,94,.38);
     }
-    .btn:active{ transform: translateY(1px); }
-    .btn:hover{ filter: brightness(1.06); }
+
+    .btn:hover{ filter:brightness(1.06); }
+    .btn:active{ transform:translateY(1px); }
     .btn:focus-visible{
-      outline: 3px solid rgba(74,222,128,.45);
-      outline-offset: 3px;
+      outline:3px solid rgba(74,222,128,.45);
+      outline-offset:3px;
     }
 
     .divider{
-      height: 1px;
-      background: rgba(255,255,255,.08);
-      margin: 18px 0;
-      border-radius: 999px;
+      height:1px;
+      background:rgba(255,255,255,.08);
+      margin:18px 0;
+      border-radius:999px;
     }
 
     .howItWorks{
-      margin: 16px auto 0;
-      max-width: var(--max);
-      border-radius: var(--radius);
-      border: 1px solid rgba(34,197,94,.24);
-      background: linear-gradient(180deg, rgba(34,197,94,.10), rgba(255,255,255,.02));
-      box-shadow: 0 12px 30px rgba(0,0,0,.28);
-      padding: 14px 14px 12px;
+      margin:16px auto 0;
+      max-width:var(--max);
+      border-radius:var(--radius);
+      border:1px solid rgba(34,197,94,.24);
+      background:linear-gradient(180deg, rgba(34,197,94,.10), rgba(255,255,255,.02));
+      box-shadow:0 12px 30px rgba(0,0,0,.28);
+      padding:14px 14px 12px;
       text-align:left;
     }
+
     .howItWorks h2{
-      margin: 0 0 8px;
-      font-size: 18px;
-      color: var(--accent);
+      margin:0 0 8px;
+      font-size:18px;
+      color:var(--accent);
       letter-spacing:.2px;
     }
+
     .steps{
       margin:0;
       padding:0;
       list-style:none;
       display:grid;
       gap:10px;
-      color: rgba(234,240,255,.95);
-      font-size: 14.6px;
-      line-height:1.5;
+      color:rgba(234,240,255,.95);
+      font-size:15px;
+      line-height:1.55;
     }
+
     .steps li{
       display:flex;
       gap:10px;
       align-items:flex-start;
     }
+
     .num{
-      width:24px;height:24px;
-      border-radius: 9px;
+      width:24px;
+      height:24px;
+      border-radius:9px;
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      background: rgba(34,197,94,.14);
-      border: 1px solid rgba(34,197,94,.30);
-      color: var(--accent);
+      background:rgba(34,197,94,.14);
+      border:1px solid rgba(34,197,94,.30);
+      color:var(--accent);
       font-weight:950;
       flex:0 0 24px;
-      margin-top: 1px;
-      font-size: 13px;
+      margin-top:1px;
+      font-size:13px;
     }
+
     .howItWorks .small{
       margin:10px 0 0;
-      color: var(--muted);
-      font-size: 12.9px;
-      line-height: 1.5;
-      border-top: 1px solid rgba(255,255,255,.08);
-      padding-top: 10px;
+      color:var(--muted);
+      font-size:13.5px;
+      line-height:1.55;
+      border-top:1px solid rgba(255,255,255,.08);
+      padding-top:10px;
+    }
+
+    .trustBar{
+      margin:0 auto 14px;
+      max-width:var(--max);
+      border-radius:var(--radius);
+      padding:12px;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:0 12px 26px rgba(0,0,0,.20);
+      display:grid;
+      gap:10px;
+    }
+
+    .trustBar .items{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+    }
+
+    .trustItem{
+      padding:10px;
+      border-radius:14px;
+      background:rgba(255,255,255,.02);
+      border:1px solid rgba(255,255,255,.08);
+      color:rgba(234,240,255,.92);
+      font-size:13.8px;
+      line-height:1.45;
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+
+    .trustIcon{
+      width:22px;
+      height:22px;
+      border-radius:7px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background:rgba(59,130,246,.10);
+      border:1px solid rgba(59,130,246,.22);
+      flex:0 0 22px;
+      margin-top:1px;
+      font-size:13px;
+    }
+
+    .trustBar .small{
+      color:var(--muted);
+      font-size:13.1px;
+      line-height:1.55;
+      border-top:1px solid rgba(255,255,255,.08);
+      padding-top:10px;
+    }
+
+    .photoCard{
+      margin:16px auto 18px;
+      border-radius:var(--radius);
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.03);
+      box-shadow:var(--shadow);
+    }
+
+    .photoCaption{
+      padding:10px 12px;
+      color:var(--muted);
+      font-size:13.2px;
+      line-height:1.55;
+      border-top:1px solid rgba(255,255,255,.08);
+      text-align:left;
     }
 
     .grid{
       display:grid;
-      gap: 14px;
-      margin-top: 10px;
+      gap:14px;
+      margin-top:10px;
     }
 
     .card{
-      background: linear-gradient(180deg, var(--cardA), var(--cardB));
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 16px 16px 14px;
+      background:linear-gradient(180deg, var(--cardA), var(--cardB));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:16px 16px 14px;
     }
 
     .card h2{
-      margin: 2px 0 10px;
-      font-size: 22px;
+      margin:2px 0 10px;
+      font-size:22px;
       line-height:1.2;
-      color: var(--accent);
-      letter-spacing: .2px;
+      color:var(--accent);
+      letter-spacing:.2px;
     }
 
     .sub{
-      margin: -4px 0 12px;
-      color: var(--muted);
-      font-size: 14.2px;
-      line-height:1.55;
+      margin:-4px 0 12px;
+      color:var(--muted);
+      font-size:14.8px;
+      line-height:1.6;
     }
 
     .list{
-      margin: 0;
-      padding: 0;
+      margin:0;
+      padding:0;
       list-style:none;
       display:grid;
       gap:10px;
     }
+
     .list li{
       display:flex;
       gap:10px;
       align-items:flex-start;
-      color: rgba(234,240,255,.95);
-      line-height: 1.5;
-      font-size: 15px;
+      color:rgba(234,240,255,.95);
+      line-height:1.55;
+      font-size:15px;
     }
+
     .check{
       width:22px;
       height:22px;
-      border-radius: 7px;
+      border-radius:7px;
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      background: rgba(34,197,94,.14);
-      border: 1px solid rgba(34,197,94,.28);
-      flex: 0 0 22px;
-      margin-top: 1px;
-      font-size: 14px;
-      color: var(--accent);
-    }
-
-    .photoCard{
-      margin: 16px auto 18px;
-      border-radius: var(--radius);
-      overflow:hidden;
-      border: 1px solid rgba(255,255,255,.10);
-      background: rgba(255,255,255,.03);
-      box-shadow: var(--shadow);
-    }
-    .photoCaption{
-      padding: 10px 12px;
-      color: var(--muted);
-      font-size: 12.9px;
-      border-top: 1px solid rgba(255,255,255,.08);
-      text-align:left;
-    }
-
-    .trustBar{
-      margin: 0 auto 14px;
-      max-width: var(--max);
-      border-radius: var(--radius);
-      padding: 12px 12px;
-      background: rgba(255,255,255,.03);
-      border: 1px solid rgba(255,255,255,.10);
-      box-shadow: 0 12px 26px rgba(0,0,0,.20);
-      display:grid;
-      gap:10px;
-    }
-    .trustBar .items{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:10px;
-    }
-    .trustItem{
-      padding: 10px 10px;
-      border-radius: 14px;
-      background: rgba(255,255,255,.02);
-      border: 1px solid rgba(255,255,255,.08);
-      color: rgba(234,240,255,.92);
-      font-size: 13.5px;
-      line-height:1.4;
-      display:flex;
-      gap:10px;
-      align-items:flex-start;
-    }
-    .trustIcon{
-      width:22px;height:22px;
-      border-radius: 7px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      background: rgba(59,130,246,.10);
-      border: 1px solid rgba(59,130,246,.22);
-      flex: 0 0 22px;
-      margin-top: 1px;
-      font-size: 13px;
-    }
-    .trustBar .small{
-      color: var(--muted);
-      font-size: 12.8px;
-      line-height: 1.5;
-      border-top: 1px solid rgba(255,255,255,.08);
-      padding-top: 10px;
+      background:rgba(34,197,94,.14);
+      border:1px solid rgba(34,197,94,.28);
+      flex:0 0 22px;
+      margin-top:1px;
+      font-size:14px;
+      color:var(--accent);
     }
 
     .prices{
       display:grid;
       gap:10px;
-      margin-top: 10px;
+      margin-top:10px;
     }
+
     .row{
       display:flex;
       align-items:center;
       justify-content:space-between;
-      padding: 12px 12px;
-      border-radius: var(--radius2);
-      background: rgba(255,255,255,.03);
-      border: 1px solid rgba(255,255,255,.10);
-      box-shadow: 0 10px 22px rgba(0,0,0,.18);
+      padding:12px;
+      border-radius:var(--radius2);
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:0 10px 22px rgba(0,0,0,.18);
     }
+
     .row .left{
       display:flex;
       flex-direction:column;
       gap:2px;
-      padding-right: 10px;
+      padding-right:10px;
     }
+
     .row .name{
-      font-weight: 850;
-      font-size: 15.6px;
+      font-weight:850;
+      font-size:15.8px;
     }
+
     .row .hint{
-      color: var(--muted);
-      font-size: 12.9px;
+      color:var(--muted);
+      font-size:13.2px;
+      line-height:1.45;
     }
+
     .row .price{
-      font-weight: 950;
-      font-size: 18px;
-      color: var(--accent);
-      letter-spacing: .2px;
+      font-weight:950;
+      font-size:18px;
+      color:var(--accent);
+      letter-spacing:.2px;
       white-space:nowrap;
     }
+
     .badge{
       display:inline-flex;
       align-items:center;
       gap:6px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 12.5px;
-      font-weight: 900;
-      border: 1px solid rgba(34,197,94,.30);
-      background: rgba(34,197,94,.10);
-      color: rgba(234,240,255,.95);
-      margin-top: 6px;
-      width: fit-content;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:12.5px;
+      font-weight:900;
+      border:1px solid rgba(34,197,94,.30);
+      background:rgba(34,197,94,.10);
+      color:rgba(234,240,255,.95);
+      margin-top:6px;
+      width:fit-content;
     }
 
     .note{
-      margin-top: 10px;
-      padding: 12px 12px;
-      border-radius: var(--radius2);
-      background: rgba(251,191,36,.08);
-      border: 1px solid rgba(251,191,36,.25);
-      color: rgba(234,240,255,.92);
-      font-size: 13.3px;
-      line-height: 1.5;
+      margin-top:10px;
+      padding:12px;
+      border-radius:var(--radius2);
+      background:rgba(251,191,36,.08);
+      border:1px solid rgba(251,191,36,.25);
+      color:rgba(234,240,255,.92);
+      font-size:13.5px;
+      line-height:1.55;
     }
-    .note b{ color: var(--warning); }
+
+    .note b{ color:var(--warning); }
 
     .alert{
-      margin-top: 10px;
-      padding: 12px 12px;
-      border-radius: var(--radius2);
-      background: rgba(251,113,133,.07);
-      border: 1px solid rgba(251,113,133,.22);
-      color: rgba(234,240,255,.92);
-      font-size: 13.3px;
-      line-height: 1.5;
+      margin-top:10px;
+      padding:12px;
+      border-radius:var(--radius2);
+      background:rgba(251,113,133,.07);
+      border:1px solid rgba(251,113,133,.22);
+      color:rgba(234,240,255,.92);
+      font-size:13.5px;
+      line-height:1.55;
     }
-    .alert b{ color: var(--danger); }
+
+    .alert b{ color:var(--danger); }
 
     .limits{
-      margin-top: 10px;
-      padding: 12px 12px;
-      border-radius: var(--radius2);
-      background: rgba(255,255,255,.03);
-      border: 1px solid rgba(255,255,255,.10);
+      margin-top:10px;
+      padding:12px;
+      border-radius:var(--radius2);
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.10);
     }
+
     .limits .title{
-      font-weight: 950;
+      font-weight:950;
       letter-spacing:.2px;
-      margin-bottom: 8px;
-      color: rgba(234,240,255,.98);
+      margin-bottom:8px;
+      color:rgba(234,240,255,.98);
     }
+
     .limits ul{
       margin:0;
-      padding-left: 18px;
+      padding-left:18px;
       display:grid;
       gap:8px;
-      color: rgba(234,240,255,.92);
-      line-height: 1.5;
-      font-size: 14.3px;
+      color:rgba(234,240,255,.92);
+      line-height:1.55;
+      font-size:14.5px;
     }
 
     .contactBox{
       display:grid;
       gap:10px;
-      margin-top: 8px;
+      margin-top:8px;
     }
+
     .contactLine{
       display:flex;
       justify-content:space-between;
       gap:10px;
-      padding: 12px 12px;
-      border-radius: var(--radius2);
-      background: rgba(255,255,255,.03);
-      border: 1px solid rgba(255,255,255,.10);
-      font-size: 14.7px;
-      color: rgba(234,240,255,.92);
+      padding:12px;
+      border-radius:var(--radius2);
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.10);
+      font-size:14.9px;
+      color:rgba(234,240,255,.92);
     }
-    .contactLine span{ color: var(--muted); }
-    .contactLine b{ color: var(--text); }
+
+    .contactLine span{ color:var(--muted); }
+    .contactLine b{ color:var(--text); }
 
     .ctaRow{
       display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-top: 10px;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      margin-top:10px;
     }
+
     .ctaRow .btn{
-      border-radius: 14px;
-      min-width: unset;
+      border-radius:14px;
+      min-width:unset;
       width:100%;
     }
 
     details.faq{
-      margin-top: 10px;
-      border-radius: var(--radius2);
-      background: rgba(255,255,255,.03);
-      border: 1px solid rgba(255,255,255,.10);
-      padding: 10px 12px;
-      box-shadow: 0 10px 22px rgba(0,0,0,.16);
+      margin-top:10px;
+      border-radius:var(--radius2);
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.10);
+      padding:10px 12px;
+      box-shadow:0 10px 22px rgba(0,0,0,.16);
     }
+
     details.faq summary{
       cursor:pointer;
-      font-weight: 900;
-      color: rgba(234,240,255,.96);
+      font-weight:900;
+      color:rgba(234,240,255,.96);
       list-style:none;
     }
+
     details.faq summary::-webkit-details-marker{ display:none; }
+
     details.faq p{
-      margin: 10px 0 0;
-      color: rgba(234,240,255,.92);
-      line-height:1.55;
-      font-size: 13.8px;
+      margin:10px 0 0;
+      color:rgba(234,240,255,.92);
+      line-height:1.6;
+      font-size:14px;
     }
 
     .footer{
-      margin-top: 18px;
+      margin-top:18px;
       text-align:center;
-      color: rgba(169,183,218,.82);
-      font-size: 12.6px;
-      line-height: 1.55;
+      color:rgba(169,183,218,.82);
+      font-size:12.8px;
+      line-height:1.6;
     }
 
     @media (max-width: 520px){
-      .trustBar .items{ grid-template-columns: 1fr; }
+      .trustBar .items{
+        grid-template-columns:1fr;
+      }
     }
+
     @media (max-width: 420px){
-      .brand{ font-size: 40px; }
-      .ctaRow{ grid-template-columns: 1fr; }
-      .wrap{ padding: 18px 12px 28px; }
-      .btn{ width: 100%; }
+      .brand{ font-size:40px; }
+      .ctaRow{ grid-template-columns:1fr; }
+      .wrap{ padding:18px 12px 28px; }
+      .btn{ width:100%; }
       .brandLogo{ width:56px; height:56px; }
+      .heroValue{ font-size:13.4px; }
+      .tagline{ font-size:15.5px; }
     }
   </style>
 
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "ElectroRide",
-    "description": "Réparation mécanique de trottinettes électriques à Theux : montage pneus, check-up sécurité, nettoyage extérieur. Dépôt sur rendez-vous.",
-    "areaServed": "Theux, Belgique",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Theux",
-      "addressCountry": "BE"
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"ElectroRide",
+    "description":"Réparation mécanique de trottinettes électriques à Theux : montage pneus, check-up sécurité, nettoyage extérieur. Dépôt sur rendez-vous.",
+    "areaServed":"Theux, Belgique",
+    "address":{
+      "@type":"PostalAddress",
+      "addressLocality":"Theux",
+      "addressCountry":"BE"
     },
-    "telephone": "+32495656186",
-    "email": "derukevin@gmail.com",
-    "url": "https://derukevin-code.github.io/kd-trott-service/",
-    "image": "https://derukevin-code.github.io/kd-trott-service/file_00000000e988720a9d6597291676d817.png"
+    "telephone":"+32495656186",
+    "email":"derukevin@gmail.com",
+    "url":"https://derukevin-code.github.io/kd-trott-service/",
+    "image":"https://derukevin-code.github.io/kd-trott-service/file_00000000e988720a9d6597291676d817.png"
   }
   </script>
 </head>
@@ -614,7 +671,7 @@
 
       <p class="tagline">
         Réparation <b>mécanique</b> de trottinettes électriques à <b>Theux</b>.<br />
-        Dépôt <b>sur rendez-vous</b> — délai annoncé (souvent <b>sous 24–48h</b> selon charge).
+        Dépôt <b>sur rendez-vous</b> — délai annoncé selon la charge et la difficulté.
       </p>
 
       <div class="heroValue" aria-label="Engagements">
@@ -633,9 +690,11 @@
       </div>
 
       <nav class="stickyCta" aria-label="Actions rapides">
-        <a class="btn primary"
-           href="mailto:derukevin@gmail.com?subject=ElectroRide%20-%20Demande%20de%20rendez-vous&body=Bonjour%2C%0A%0AMarque%20%2F%20mod%C3%A8le%20%3A%20%0AService%20souhait%C3%A9%20%3A%20%0ADisponibilit%C3%A9%20pour%20d%C3%A9p%C3%B4t%20%3A%20%0A%0AMerci%2C"
-           aria-label="Envoyer un email à ElectroRide">
+        <a
+          class="btn primary"
+          href="mailto:derukevin@gmail.com?subject=ElectroRide%20-%20Demande%20de%20rendez-vous&body=Bonjour%2C%0A%0AMarque%20%2F%20mod%C3%A8le%20%3A%20%0AService%20souhait%C3%A9%20%3A%20%0APhoto%20%28si%20possible%29%20%3A%20%0ADisponibilit%C3%A9%20pour%20d%C3%A9p%C3%B4t%20%3A%20%0A%0AMerci%2C"
+          aria-label="Envoyer un email à ElectroRide"
+        >
           ✉️ Email
         </a>
         <a class="btn" href="tel:+32495656186" aria-label="Appeler ElectroRide">
@@ -646,13 +705,13 @@
       <section class="howItWorks" aria-label="Comment ça marche">
         <h2>Comment ça marche ?</h2>
         <ul class="steps">
-          <li><span class="num">1</span><span><b>Contact</b> : envoie la marque + le modèle (photo conseillée) + le service souhaité.</span></li>
+          <li><span class="num">1</span><span><b>Contact</b> : envoie la marque + le modèle + le service souhaité (photo conseillée).</span></li>
           <li><span class="num">2</span><span><b>Rendez-vous</b> : on fixe une heure de dépôt.</span></li>
-          <li><span class="num">3</span><span><b>Intervention</b> : montage / contrôle, puis je confirme quand c’est prêt.</span></li>
+          <li><span class="num">3</span><span><b>Intervention</b> : montage ou contrôle, puis je confirme quand c’est prêt.</span></li>
           <li><span class="num">4</span><span><b>Retrait</b> : tu récupères la trottinette sur rendez-vous.</span></li>
         </ul>
         <div class="small">
-          Le prix est annoncé <b>avant</b> intervention. Délai indicatif : souvent <b>sous 24–48h</b> selon charge et difficulté.
+          Le prix est annoncé <b>avant</b> intervention. Le délai est donné selon la charge et la difficulté du modèle.
         </div>
       </section>
     </header>
@@ -671,11 +730,11 @@
         </div>
         <div class="trustItem">
           <span class="trustIcon" aria-hidden="true">📸</span>
-          <div><b>Photo conseillée</b><br /><small>Marque + modèle + photo = plus rapide.</small></div>
+          <div><b>Photo conseillée</b><br /><small>Marque + modèle + photo = réponse plus rapide.</small></div>
         </div>
         <div class="trustItem">
           <span class="trustIcon" aria-hidden="true">🕒</span>
-          <div><b>Sur rendez-vous</b><br /><small>Dépôt / retrait planifiés.</small></div>
+          <div><b>Sur rendez-vous</b><br /><small>Dépôt et retrait planifiés.</small></div>
         </div>
       </div>
       <div class="small">
@@ -683,14 +742,24 @@
       </div>
     </section>
 
-    <section class="photoCard" aria-label="Photo">
-      <img src="20260223_150017.jpg" alt="Trottinette en réparation chez ElectroRide" loading="lazy" />
-      <div class="photoCaption">Exemple : montage pneu / contrôle après remontage.</div>
+    <section class="photoCard" aria-label="Photo de réparation">
+      <img
+        src="20260223_150017.jpg"
+        alt="Trottinette en réparation chez ElectroRide"
+        loading="lazy"
+      />
+      <div class="photoCaption">Exemple : montage pneu et contrôle après remontage.</div>
     </section>
 
-    <section class="photoCard" aria-label="Avant / Après montage de pneu">
-      <img src="file_00000000b5bc720ab49a3aaf47abc831.png?v=7" alt="Avant / Après — Montage de pneu ElectroRide" loading="lazy" />
-      <div class="photoCaption"><b>AVANT / APRÈS — Montage de pneu</b> • Photos réelles • Exemple de résultat après intervention.</div>
+    <section class="photoCard" aria-label="Avant après montage de pneu">
+      <img
+        src="file_00000000b5bc720ab49a3aaf47abc831.png?v=7"
+        alt="Avant / Après — Montage de pneu ElectroRide"
+        loading="lazy"
+      />
+      <div class="photoCaption">
+        <b>AVANT / APRÈS — Montage de pneu</b> • Photos réelles • Exemple de résultat après intervention.
+      </div>
     </section>
 
     <section class="grid" aria-label="Services">
@@ -698,27 +767,30 @@
         <h2>Pourquoi choisir ElectroRide ?</h2>
         <ul class="list">
           <li><span class="check">✓</span><span>Spécialisé trottinettes électriques (mécanique)</span></li>
-          <li><span class="check">✓</span><span>Dépôt sur rendez-vous — délai annoncé</span></li>
+          <li><span class="check">✓</span><span>Dépôt sur rendez-vous</span></li>
           <li><span class="check">✓</span><span>Tarifs clairs et transparents</span></li>
           <li><span class="check">✓</span><span>Travail propre et soigné</span></li>
         </ul>
 
         <details class="faq">
           <summary>FAQ — Questions rapides</summary>
-          <p><b>Tu fournis les pneus / chambres à air ?</b><br />
+
+          <p><b>Tu fournis les pneus ou chambres à air ?</b><br />
           Non. Le client apporte les pièces. Je m’occupe de la <b>main-d’œuvre</b> et du montage.</p>
 
-          <p><b>Tu fais l’électricité / batterie ?</b><br />
-          Non. Je fais uniquement la <b>mécanique extérieure</b> : pneus, serrages, réglages simples.</p>
+          <p><b>Tu fais l’électricité ou la batterie ?</b><br />
+          Non. Je fais uniquement la <b>mécanique extérieure</b> : pneus, serrages et réglages simples.</p>
 
-          <p><b>Combien de temps ?</b><br />
-          Souvent <b>24–48h</b> selon charge et difficulté, annoncé à l’avance.</p>
+          <p><b>Le délai est de combien ?</b><br />
+          Il est annoncé selon la charge et la difficulté du modèle.</p>
         </details>
       </article>
 
       <article class="card">
         <h2>Montage de pneus (main-d’œuvre)</h2>
-        <p class="sub">Le client apporte le pneu / la chambre à air. <b>Pièces non incluses.</b></p>
+        <p class="sub">
+          Le client apporte le pneu ou la chambre à air. <b>Pièces non incluses.</b>
+        </p>
 
         <div class="prices">
           <div class="row">
@@ -735,7 +807,7 @@
               <div class="hint">Montage + vérification étanchéité</div>
               <div class="badge">⭐ Le plus demandé</div>
             </div>
-            <div class="price">39,90 €</div>
+            <div class="price">39,50 €</div>
           </div>
 
           <div class="row">
@@ -749,13 +821,13 @@
 
         <div class="note">
           <b>Transparence :</b> prix annoncé <b>avant</b> de commencer. Si le montage est particulièrement difficile
-          (roue compacte, pneu très dur, modèle compliqué), je te préviens <b>avant</b> de continuer.
+          (pneu très dur, roue compacte, modèle compliqué), je te préviens <b>avant</b> de continuer.
         </div>
       </article>
 
       <article class="card">
         <h2>Check-up sécurité</h2>
-        <p class="sub"><b>Contrôle + resserrage général :</b> 14,90 €</p>
+        <p class="sub"><b>Contrôle + resserrage général :</b> 15 €</p>
 
         <ul class="list">
           <li><span class="check">✓</span><span>Vérification des serrages (guidon, potence, roues)</span></li>
@@ -778,7 +850,7 @@
               <div class="name">Nettoyage simple</div>
               <div class="hint">Cadre / deck / essuyage extérieur</div>
             </div>
-            <div class="price">14,90 €</div>
+            <div class="price">15 €</div>
           </div>
 
           <div class="row">
@@ -797,14 +869,16 @@
 
       <article class="card">
         <h2>Important</h2>
-        <p class="sub">Service uniquement sur rendez-vous. Interventions mécaniques extérieures uniquement.</p>
+        <p class="sub">
+          Service uniquement sur rendez-vous. Interventions mécaniques extérieures uniquement.
+        </p>
 
         <div class="limits">
           <div class="title">Je ne réalise pas :</div>
           <ul>
             <li>Purge de freins hydrauliques</li>
             <li>Interventions électriques / câblage interne</li>
-            <li>Diagnostic / réparation batterie ou contrôleur</li>
+            <li>Diagnostic ou réparation batterie / contrôleur</li>
           </ul>
         </div>
 
@@ -827,15 +901,18 @@
             <span>Email</span>
             <b><a href="mailto:derukevin@gmail.com">derukevin@gmail.com</a></b>
           </div>
+
           <div class="contactLine">
             <span>Téléphone</span>
             <b><a href="tel:+32495656186">0495 65 61 86</a></b>
           </div>
 
           <div class="ctaRow">
-            <a class="btn primary"
-               href="mailto:derukevin@gmail.com?subject=ElectroRide%20-%20Demande%20de%20rendez-vous&body=Bonjour%2C%0A%0AMarque%20%2F%20mod%C3%A8le%20%3A%20%0AService%20souhait%C3%A9%20%3A%20%0ADisponibilit%C3%A9%20pour%20d%C3%A9p%C3%B4t%20%3A%20%0A%0AMerci%2C"
-               aria-label="Envoyer un email à ElectroRide">
+            <a
+              class="btn primary"
+              href="mailto:derukevin@gmail.com?subject=ElectroRide%20-%20Demande%20de%20rendez-vous&body=Bonjour%2C%0A%0AMarque%20%2F%20mod%C3%A8le%20%3A%20%0AService%20souhait%C3%A9%20%3A%20%0APhoto%20%28si%20possible%29%20%3A%20%0ADisponibilit%C3%A9%20pour%20d%C3%A9p%C3%B4t%20%3A%20%0A%0AMerci%2C"
+              aria-label="Envoyer un email à ElectroRide"
+            >
               ✉️ Email
             </a>
             <a class="btn" href="tel:+32495656186" aria-label="Appeler ElectroRide">
