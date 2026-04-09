@@ -1,72 +1,57 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ElectroRide — Réparation trottinettes électriques à Theux</title>
-  <meta
-    name="description"
-    content="ElectroRide : réparation mécanique de trottinettes électriques à Theux. Montage de pneus, check-up sécurité, nettoyage extérieur. Dépôt sur rendez-vous."
-  />
+  <meta name="description" content="Réparation mécanique de trottinettes électriques à Theux. Changement de pneus, check-up sécurité, nettoyage extérieur. Prix annoncé avant intervention. Dépôt sur rendez-vous." />
   <meta name="theme-color" content="#0b1222" />
 
   <meta property="og:title" content="ElectroRide — Réparation trottinettes électriques à Theux" />
-  <meta
-    property="og:description"
-    content="Montage pneus, check-up sécurité, nettoyage extérieur. Dépôt sur rendez-vous à Theux."
-  />
+  <meta property="og:description" content="Montage de pneus, check-up sécurité, nettoyage extérieur. Prix annoncé avant intervention. Dépôt sur rendez-vous à Theux." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://derukevin-code.github.io/kd-trott-service/" />
-  <meta
-    property="og:image"
-    content="https://derukevin-code.github.io/kd-trott-service/file_00000000e988720a9d6597291676d817.png"
-  />
+  <meta property="og:image" content="https://derukevin-code.github.io/kd-trott-service/file_00000000e988720a9d6597291676d817.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ElectroRide — Réparation trottinettes électriques à Theux" />
-  <meta
-    name="twitter:description"
-    content="Montage pneus, check-up sécurité, nettoyage extérieur. Dépôt sur rendez-vous à Theux."
-  />
-  <meta
-    name="twitter:image"
-    content="https://derukevin-code.github.io/kd-trott-service/file_00000000e988720a9d6597291676d817.png"
-  />
+  <meta name="twitter:description" content="Montage de pneus, check-up sécurité, nettoyage extérieur. Dépôt sur rendez-vous à Theux." />
+  <meta name="twitter:image" content="https://derukevin-code.github.io/kd-trott-service/file_00000000e988720a9d6597291676d817.png" />
 
   <style>
     :root{
       --bg1:#0b1222;
       --bg2:#0a162b;
-      --cardA:rgba(255,255,255,.05);
-      --cardB:rgba(255,255,255,.025);
+      --cardA: rgba(255,255,255,.05);
+      --cardB: rgba(255,255,255,.025);
       --text:#eaf0ff;
-      --muted:#b7c2de;
+      --muted:#a9b7da;
       --accent:#4ade80;
       --accent2:#22c55e;
       --warning:#fbbf24;
       --danger:#fb7185;
-      --line:rgba(255,255,255,.10);
-      --shadow:0 18px 55px rgba(0,0,0,.45);
-      --shadow2:0 10px 28px rgba(0,0,0,.28);
-      --radius:18px;
-      --radius2:14px;
-      --max:860px;
+      --line: rgba(255,255,255,.10);
+      --shadow: 0 18px 55px rgba(0,0,0,.45);
+      --shadow2: 0 10px 28px rgba(0,0,0,.28);
+      --radius: 18px;
+      --radius2: 14px;
+      --max: 920px;
     }
 
     *{ box-sizing:border-box; }
-    html,body{ height:100%; }
-
+    html{ scroll-behavior:smooth; }
     body{
       margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color:var(--text);
       background:
         radial-gradient(1200px 700px at 20% 0%, rgba(34,197,94,.18), transparent 60%),
         radial-gradient(900px 520px at 90% 10%, rgba(251,191,36,.12), transparent 55%),
         radial-gradient(800px 500px at 50% 100%, rgba(59,130,246,.10), transparent 60%),
         linear-gradient(180deg, var(--bg1), var(--bg2));
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
     a{ color:inherit; text-decoration:none; }
@@ -75,7 +60,7 @@
     .wrap{
       max-width:var(--max);
       margin:0 auto;
-      padding:20px 14px 30px;
+      padding:22px 14px 34px;
     }
 
     .skip{
@@ -92,14 +77,14 @@
       height:auto;
       padding:10px 12px;
       border-radius:12px;
-      background:rgba(10,22,43,.88);
-      border:1px solid rgba(255,255,255,.14);
+      background:rgba(10,22,43,.92);
+      border:1px solid rgba(255,255,255,.18);
       z-index:9999;
     }
 
     .hero{
       text-align:center;
-      padding:8px 0 8px;
+      padding-top:6px;
     }
 
     .brandTop{
@@ -108,12 +93,12 @@
       justify-content:center;
       gap:14px;
       flex-wrap:wrap;
-      margin:6px 0 8px;
+      margin-bottom:10px;
     }
 
     .brandLogo{
-      width:64px;
-      height:64px;
+      width:66px;
+      height:66px;
       border-radius:18px;
       border:1px solid rgba(255,255,255,.10);
       background:rgba(255,255,255,.03);
@@ -125,25 +110,35 @@
     .brand{
       margin:0;
       font-weight:950;
-      font-size:44px;
+      font-size:46px;
       line-height:1;
-      letter-spacing:.2px;
       color:var(--accent);
       text-shadow:0 0 22px rgba(74,222,128,.14);
     }
 
+    .heroTitle{
+      margin:8px auto 10px;
+      max-width:760px;
+      font-size:30px;
+      line-height:1.15;
+      font-weight:950;
+      color:var(--text);
+    }
+
+    .heroTitle .green{ color:var(--accent); }
+
     .tagline{
       margin:0 auto;
-      max-width:58ch;
+      max-width:760px;
       color:var(--muted);
-      font-size:15.8px;
-      line-height:1.55;
+      font-size:16px;
+      line-height:1.6;
     }
 
     .heroValue{
-      margin:12px auto 0;
-      max-width:66ch;
-      padding:10px 12px;
+      margin:16px auto 0;
+      max-width:820px;
+      padding:12px 14px;
       border-radius:999px;
       background:rgba(255,255,255,.04);
       border:1px solid var(--line);
@@ -153,11 +148,9 @@
       align-items:center;
       justify-content:center;
       flex-wrap:wrap;
-      font-size:13.8px;
-      color:rgba(234,240,255,.92);
+      font-size:14px;
+      color:rgba(234,240,255,.94);
     }
-
-    .heroValue b{ color:var(--text); }
 
     .spark{
       width:9px;
@@ -173,7 +166,7 @@
       gap:10px;
       justify-content:center;
       flex-wrap:wrap;
-      margin:12px 0 0;
+      margin:14px 0 0;
     }
 
     .pill{
@@ -185,22 +178,20 @@
       background:rgba(255,255,255,.035);
       border:1px solid var(--line);
       color:rgba(234,240,255,.92);
-      font-size:13.6px;
+      font-size:13.5px;
       box-shadow:0 10px 24px rgba(0,0,0,.22);
     }
-
-    .pill b{ color:var(--text); }
 
     .stickyCta{
       position:sticky;
       top:10px;
       z-index:50;
-      margin:14px auto 0;
+      margin:16px auto 0;
       max-width:var(--max);
       border-radius:999px;
-      background:rgba(10,22,43,.72);
-      backdrop-filter:blur(10px);
-      -webkit-backdrop-filter:blur(10px);
+      background:rgba(10,22,43,.78);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       border:1px solid rgba(255,255,255,.10);
       box-shadow:0 18px 50px rgba(0,0,0,.35);
       padding:10px;
@@ -215,59 +206,28 @@
       align-items:center;
       justify-content:center;
       gap:10px;
-      padding:12px 14px;
+      padding:13px 16px;
       border-radius:999px;
       border:1px solid var(--line);
       background:rgba(255,255,255,.04);
       color:var(--text);
-      font-weight:850;
+      font-weight:900;
       letter-spacing:.2px;
       box-shadow:0 12px 26px rgba(0,0,0,.20);
-      transition:transform .12s ease, filter .12s ease;
-      min-width:150px;
+      min-width:170px;
+      transition: transform .12s ease, filter .12s ease;
     }
 
     .btn.primary{
-      background:linear-gradient(180deg, rgba(34,197,94,.26), rgba(34,197,94,.10));
+      background:linear-gradient(180deg, rgba(34,197,94,.28), rgba(34,197,94,.10));
       border:1px solid rgba(34,197,94,.38);
     }
 
     .btn:hover{ filter:brightness(1.06); }
     .btn:active{ transform:translateY(1px); }
-    .btn:focus-visible{
-      outline:3px solid rgba(74,222,128,.45);
-      outline-offset:3px;
-    }
 
-    .divider{
-      height:1px;
-      background:rgba(255,255,255,.08);
-      margin:18px 0;
-      border-radius:999px;
-    }
-
-    .photoCard{
-      margin:0 auto 18px;
-      border-radius:var(--radius);
-      overflow:hidden;
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(255,255,255,.03);
-      box-shadow:var(--shadow);
-    }
-
-    .photoCaption{
-      padding:10px 12px;
-      color:var(--muted);
-      font-size:13.2px;
-      line-height:1.55;
-      border-top:1px solid rgba(255,255,255,.08);
-      text-align:left;
-    }
-
-    .grid{
-      display:grid;
-      gap:14px;
-      margin-top:10px;
+    .section{
+      margin-top:16px;
     }
 
     .card{
@@ -275,22 +235,32 @@
       border:1px solid var(--line);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
-      padding:16px 16px 14px;
+      padding:18px 16px 16px;
     }
 
     .card h2{
-      margin:2px 0 10px;
-      font-size:22px;
+      margin:0 0 10px;
+      font-size:24px;
       line-height:1.2;
       color:var(--accent);
-      letter-spacing:.2px;
     }
 
     .sub{
-      margin:-4px 0 12px;
+      margin:0 0 12px;
       color:var(--muted);
-      font-size:14.8px;
+      font-size:14.4px;
       line-height:1.6;
+    }
+
+    .grid{
+      display:grid;
+      gap:14px;
+    }
+
+    .grid2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
     }
 
     .list{
@@ -305,9 +275,9 @@
       display:flex;
       gap:10px;
       align-items:flex-start;
-      color:rgba(234,240,255,.95);
       line-height:1.55;
       font-size:15px;
+      color:rgba(234,240,255,.95);
     }
 
     .check{
@@ -321,50 +291,120 @@
       border:1px solid rgba(34,197,94,.28);
       flex:0 0 22px;
       margin-top:1px;
-      font-size:14px;
       color:var(--accent);
+      font-size:14px;
+      font-weight:900;
     }
 
-    .prices{
+    .steps{
       display:grid;
       gap:10px;
-      margin-top:10px;
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+
+    .steps li{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      line-height:1.55;
+      font-size:15px;
+      color:rgba(234,240,255,.95);
+    }
+
+    .num{
+      width:24px;
+      height:24px;
+      border-radius:9px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background:rgba(34,197,94,.14);
+      border:1px solid rgba(34,197,94,.30);
+      color:var(--accent);
+      font-weight:950;
+      flex:0 0 24px;
+      margin-top:1px;
+      font-size:13px;
+    }
+
+    .trustRow{
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:10px;
+    }
+
+    .trustItem{
+      padding:12px;
+      border-radius:14px;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.08);
+      color:rgba(234,240,255,.92);
+      font-size:13.5px;
+      line-height:1.45;
+    }
+
+    .trustItem b{
+      color:var(--text);
+      display:block;
+      margin-bottom:4px;
+    }
+
+    .photoCard{
+      border-radius:var(--radius);
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.03);
+      box-shadow:var(--shadow);
+    }
+
+    .photoCaption{
+      padding:10px 12px;
+      color:var(--muted);
+      font-size:12.9px;
+      border-top:1px solid rgba(255,255,255,.08);
+    }
+
+    .serviceBox{
+      margin-top:12px;
+      display:grid;
+      gap:10px;
     }
 
     .row{
       display:flex;
       align-items:center;
       justify-content:space-between;
-      padding:12px;
-      border-radius:var(--radius2);
+      gap:10px;
+      padding:13px 12px;
+      border-radius:14px;
       background:rgba(255,255,255,.03);
       border:1px solid rgba(255,255,255,.10);
       box-shadow:0 10px 22px rgba(0,0,0,.18);
     }
 
-    .row .left{
+    .left{
       display:flex;
       flex-direction:column;
-      gap:2px;
-      padding-right:10px;
+      gap:3px;
     }
 
-    .row .name{
-      font-weight:850;
+    .name{
+      font-weight:900;
       font-size:15.8px;
     }
 
-    .row .hint{
+    .hint{
       color:var(--muted);
-      font-size:13.2px;
+      font-size:13px;
       line-height:1.45;
     }
 
-    .row .price{
+    .price{
       font-weight:950;
-      font-size:18px;
+      font-size:19px;
       color:var(--accent);
-      letter-spacing:.2px;
       white-space:nowrap;
     }
 
@@ -384,42 +424,50 @@
     }
 
     .note{
-      margin-top:10px;
+      margin-top:12px;
       padding:12px;
-      border-radius:var(--radius2);
+      border-radius:14px;
       background:rgba(251,191,36,.08);
       border:1px solid rgba(251,191,36,.25);
       color:rgba(234,240,255,.92);
-      font-size:13.5px;
+      font-size:13.4px;
       line-height:1.55;
     }
 
     .note b{ color:var(--warning); }
 
     .alert{
-      margin-top:10px;
+      margin-top:12px;
       padding:12px;
-      border-radius:var(--radius2);
+      border-radius:14px;
       background:rgba(251,113,133,.07);
       border:1px solid rgba(251,113,133,.22);
       color:rgba(234,240,255,.92);
-      font-size:13.5px;
+      font-size:13.4px;
       line-height:1.55;
     }
 
-    .alert b{ color:var(--danger); }
+    .boxGreen{
+      margin-top:12px;
+      padding:12px;
+      border-radius:14px;
+      background:rgba(34,197,94,.08);
+      border:1px solid rgba(34,197,94,.20);
+      color:rgba(234,240,255,.94);
+      line-height:1.55;
+      font-size:14px;
+    }
 
     .limits{
-      margin-top:10px;
+      margin-top:12px;
       padding:12px;
-      border-radius:var(--radius2);
+      border-radius:14px;
       background:rgba(255,255,255,.03);
       border:1px solid rgba(255,255,255,.10);
     }
 
     .limits .title{
       font-weight:950;
-      letter-spacing:.2px;
       margin-bottom:8px;
       color:rgba(234,240,255,.98);
     }
@@ -430,8 +478,33 @@
       display:grid;
       gap:8px;
       color:rgba(234,240,255,.92);
+      line-height:1.5;
+      font-size:14.3px;
+    }
+
+    .faq{
+      margin-top:10px;
+      border-radius:14px;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.10);
+      padding:10px 12px;
+      box-shadow:0 10px 22px rgba(0,0,0,.16);
+    }
+
+    .faq summary{
+      cursor:pointer;
+      font-weight:900;
+      color:rgba(234,240,255,.96);
+      list-style:none;
+    }
+
+    .faq summary::-webkit-details-marker{ display:none; }
+
+    .faq p{
+      margin:10px 0 0;
+      color:rgba(234,240,255,.92);
       line-height:1.55;
-      font-size:14.5px;
+      font-size:13.8px;
     }
 
     .contactBox{
@@ -445,10 +518,10 @@
       justify-content:space-between;
       gap:10px;
       padding:12px;
-      border-radius:var(--radius2);
+      border-radius:14px;
       background:rgba(255,255,255,.03);
       border:1px solid rgba(255,255,255,.10);
-      font-size:14.9px;
+      font-size:14.7px;
       color:rgba(234,240,255,.92);
     }
 
@@ -463,34 +536,9 @@
     }
 
     .ctaRow .btn{
+      width:100%;
       border-radius:14px;
       min-width:unset;
-      width:100%;
-    }
-
-    details.faq{
-      margin-top:10px;
-      border-radius:var(--radius2);
-      background:rgba(255,255,255,.03);
-      border:1px solid rgba(255,255,255,.10);
-      padding:10px 12px;
-      box-shadow:0 10px 22px rgba(0,0,0,.16);
-    }
-
-    details.faq summary{
-      cursor:pointer;
-      font-weight:900;
-      color:rgba(234,240,255,.96);
-      list-style:none;
-    }
-
-    details.faq summary::-webkit-details-marker{ display:none; }
-
-    details.faq p{
-      margin:10px 0 0;
-      color:rgba(234,240,255,.92);
-      line-height:1.6;
-      font-size:14px;
     }
 
     .footer{
@@ -501,33 +549,41 @@
       line-height:1.6;
     }
 
-    @media (max-width: 420px){
-      .brand{ font-size:40px; }
+    @media (max-width: 820px){
+      .grid2{ grid-template-columns:1fr; }
+      .trustRow{ grid-template-columns:1fr 1fr; }
+    }
+
+    @media (max-width: 520px){
+      .trustRow{ grid-template-columns:1fr; }
       .ctaRow{ grid-template-columns:1fr; }
-      .wrap{ padding:18px 12px 28px; }
       .btn{ width:100%; }
+    }
+
+    @media (max-width: 420px){
+      .wrap{ padding:18px 12px 28px; }
+      .brand{ font-size:40px; }
+      .heroTitle{ font-size:25px; }
       .brandLogo{ width:56px; height:56px; }
-      .heroValue{ font-size:13.2px; }
-      .tagline{ font-size:15.4px; }
     }
   </style>
 
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"ElectroRide",
-    "description":"Réparation mécanique de trottinettes électriques à Theux : montage pneus, check-up sécurité, nettoyage extérieur. Dépôt sur rendez-vous.",
-    "areaServed":"Theux, Belgique",
-    "address":{
-      "@type":"PostalAddress",
-      "addressLocality":"Theux",
-      "addressCountry":"BE"
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "ElectroRide",
+    "description": "Réparation mécanique de trottinettes électriques à Theux : changement de pneus, check-up sécurité, nettoyage extérieur. Dépôt sur rendez-vous.",
+    "areaServed": "Theux, Belgique",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Theux",
+      "addressCountry": "BE"
     },
-    "telephone":"+32495656186",
-    "email":"derukevin@gmail.com",
-    "url":"https://derukevin-code.github.io/kd-trott-service/",
-    "image":"https://derukevin-code.github.io/kd-trott-service/file_00000000e988720a9d6597291676d817.png"
+    "telephone": "+32495656186",
+    "email": "derukevin@gmail.com",
+    "url": "https://derukevin-code.github.io/kd-trott-service/",
+    "image": "https://derukevin-code.github.io/kd-trott-service/file_00000000e988720a9d6597291676d817.png"
   }
   </script>
 </head>
@@ -538,172 +594,188 @@
   <main class="wrap" id="contenu">
     <header class="hero">
       <div class="brandTop">
-        <img
-          class="brandLogo"
-          src="file_00000000e988720a9d6597291676d817.png?v=7"
-          alt="Logo ElectroRide"
-          loading="eager"
-          decoding="async"
-        />
+        <img class="brandLogo"
+             src="file_00000000e988720a9d6597291676d817.png?v=7"
+             alt="Logo ElectroRide"
+             loading="eager"
+             decoding="async" />
         <h1 class="brand">ElectroRide</h1>
       </div>
 
-      <p class="tagline">
-        Réparation <b>mécanique</b> de trottinettes électriques à <b>Theux</b>.<br />
-        Dépôt <b>sur rendez-vous</b> • prix annoncés avant intervention.
+      <p class="heroTitle">
+        Réparation <span class="green">mécanique</span> de trottinettes électriques à Theux
       </p>
 
-      <div class="heroValue" aria-label="Points forts">
+      <p class="tagline">
+        Changement de pneus, check-up sécurité et nettoyage extérieur.
+        Dépôt <b>sur rendez-vous</b>, prix annoncé <b>avant intervention</b>, délai annoncé à l’avance.
+      </p>
+
+      <div class="heroValue" aria-label="Arguments clés">
         <span class="spark" aria-hidden="true"></span>
-        <span><b>Tarifs clairs</b></span>
+        <span><b>Prix clair avant de commencer</b></span>
         <span>•</span>
-        <span><b>Travail propre</b></span>
+        <span><b>Travail propre et soigné</b></span>
         <span>•</span>
-        <span><b>Contact simple</b></span>
+        <span><b>Spécialisé mécanique trottinettes</b></span>
       </div>
 
       <div class="metaPills" role="list">
         <div class="pill" role="listitem">📍 <b>Theux</b></div>
-        <div class="pill" role="listitem">🛠️ <b>Mécanique uniquement</b></div>
-        <div class="pill" role="listitem">🕒 <b>Sur rendez-vous</b></div>
+        <div class="pill" role="listitem">🕒 <b>Dépôt sur rendez-vous</b></div>
+        <div class="pill" role="listitem">⚙️ <b>Interventions mécaniques uniquement</b></div>
       </div>
 
       <nav class="stickyCta" aria-label="Actions rapides">
-        <a
-          class="btn primary"
-          href="mailto:derukevin@gmail.com?subject=ElectroRide%20-%20Demande%20de%20rendez-vous&body=Bonjour%2C%0A%0AMarque%20%2F%20mod%C3%A8le%20%3A%20%0AService%20souhait%C3%A9%20%3A%20%0APhoto%20%28si%20possible%29%20%3A%20%0ADisponibilit%C3%A9%20pour%20d%C3%A9p%C3%B4t%20%3A%20%0A%0AMerci%2C"
-          aria-label="Envoyer un email à ElectroRide"
-        >
-          ✉️ Email
+        <a class="btn primary"
+           href="mailto:derukevin@gmail.com?subject=ElectroRide%20-%20Demande%20de%20rendez-vous&body=Bonjour%2C%0A%0AMarque%20%2F%20mod%C3%A8le%20%3A%20%0AService%20souhait%C3%A9%20%3A%20%0AProbl%C3%A8me%20rencontr%C3%A9%20%3A%20%0ADisponibilit%C3%A9%20pour%20d%C3%A9p%C3%B4t%20%3A%20%0APhoto%20disponible%20%3A%20oui%20%2F%20non%0A%0AMerci%2C">
+          ✉️ Demander un rendez-vous
         </a>
-        <a class="btn" href="tel:+32495656186" aria-label="Appeler ElectroRide">
+        <a class="btn" href="tel:+32495656186">
           📞 Appeler
         </a>
       </nav>
     </header>
 
-    <div class="divider" aria-hidden="true"></div>
-
-    <section class="photoCard" aria-label="Photo de réparation">
-      <img
-        src="20260223_150017.jpg"
-        alt="Trottinette en réparation chez ElectroRide"
-        loading="lazy"
-      />
-      <div class="photoCaption">Exemple : montage pneu et contrôle après remontage.</div>
-    </section>
-
-    <section class="photoCard" aria-label="Avant après montage de pneu">
-      <img
-        src="file_00000000b5bc720ab49a3aaf47abc831.png?v=7"
-        alt="Avant / Après — Montage de pneu ElectroRide"
-        loading="lazy"
-      />
-      <div class="photoCaption">
-        <b>AVANT / APRÈS — Montage de pneu</b> • Photos réelles • Exemple de résultat après intervention.
+    <section class="section card">
+      <h2>Pourquoi des clients me contactent ?</h2>
+      <div class="trustRow">
+        <div class="trustItem">
+          <b>Prix annoncé avant</b>
+          Pas de surprise : je confirme le tarif avant de continuer.
+        </div>
+        <div class="trustItem">
+          <b>Travail propre</b>
+          Remontage soigné et contrôle visuel après intervention.
+        </div>
+        <div class="trustItem">
+          <b>Contact simple</b>
+          Une photo + la marque + le modèle permettent d’aller plus vite.
+        </div>
+        <div class="trustItem">
+          <b>Service local</b>
+          Dépôt et retrait à Theux, sur rendez-vous.
+        </div>
       </div>
     </section>
 
-    <section class="grid" aria-label="Services">
+    <section class="section grid2">
+      <article class="photoCard">
+        <img src="20260223_150017.jpg" alt="Trottinette en réparation chez ElectroRide" loading="lazy" />
+        <div class="photoCaption">Exemple d’intervention mécanique sur trottinette électrique.</div>
+      </article>
+
+      <article class="photoCard">
+        <img src="file_00000000b5bc720ab49a3aaf47abc831.png?v=7" alt="Avant après montage de pneu ElectroRide" loading="lazy" />
+        <div class="photoCaption">Avant / après réel : exemple de résultat après montage.</div>
+      </article>
+    </section>
+
+    <section class="section grid2">
       <article class="card">
         <h2>Comment ça marche ?</h2>
-        <ul class="list">
-          <li><span class="check">1</span><span>Tu envoies la <b>marque</b>, le <b>modèle</b> et le <b>service souhaité</b> (photo conseillée).</span></li>
-          <li><span class="check">2</span><span>On fixe un <b>rendez-vous</b> pour le dépôt.</span></li>
-          <li><span class="check">3</span><span>Je fais l’intervention et je te préviens quand c’est prêt.</span></li>
-          <li><span class="check">4</span><span>Tu récupères la trottinette sur rendez-vous.</span></li>
+        <ul class="steps">
+          <li><span class="num">1</span><span><b>Tu m’envoies</b> la marque, le modèle et si possible une photo.</span></li>
+          <li><span class="num">2</span><span><b>Je regarde</b> ce qu’il faut faire et je te donne un prix clair avant intervention.</span></li>
+          <li><span class="num">3</span><span><b>On fixe un dépôt</b> sur rendez-vous à Theux.</span></li>
+          <li><span class="num">4</span><span><b>Je t’avertis</b> quand c’est prêt pour le retrait.</span></li>
         </ul>
 
-        <div class="note">
-          <b>Info :</b> le prix est annoncé <b>avant</b> l’intervention. Le délai dépend de la charge et du modèle.
+        <div class="boxGreen">
+          <b>Important :</b> sur une trottinette électrique, un changement de pneu peut être plus compliqué qu’il n’y paraît :
+          moteur dans la roue, câbles fragiles, accès serré, pneu dur à démonter. Le tarif correspond à la
+          <b>main-d’œuvre</b>, au démontage, au remontage et au soin apporté au montage.
         </div>
       </article>
 
       <article class="card">
-        <h2>Pourquoi choisir ElectroRide ?</h2>
+        <h2>Ce que je fais</h2>
         <ul class="list">
-          <li><span class="check">✓</span><span>Spécialisé trottinettes électriques (mécanique)</span></li>
-          <li><span class="check">✓</span><span>Tarifs clairs et transparents</span></li>
-          <li><span class="check">✓</span><span>Travail propre et soigné</span></li>
-          <li><span class="check">✓</span><span>Service local à Theux, sur rendez-vous</span></li>
+          <li><span class="check">✓</span><span>Changement de pneus avec chambre à air</span></li>
+          <li><span class="check">✓</span><span>Montage de pneus tubeless</span></li>
+          <li><span class="check">✓</span><span>Montage de pneus pleins</span></li>
+          <li><span class="check">✓</span><span>Check-up sécurité et resserrage général</span></li>
+          <li><span class="check">✓</span><span>Nettoyage extérieur visuel</span></li>
         </ul>
 
-        <details class="faq">
-          <summary>FAQ — Questions rapides</summary>
-
-          <p><b>Tu fournis les pneus ou chambres à air ?</b><br />
-          Non. Le client apporte les pièces. Je m’occupe de la <b>main-d’œuvre</b> et du montage.</p>
-
-          <p><b>Tu fais l’électricité ou la batterie ?</b><br />
-          Non. Je fais uniquement la <b>mécanique extérieure</b> : pneus, serrages et réglages simples.</p>
-
-          <p><b>Le délai est de combien ?</b><br />
-          Il est annoncé selon la charge et la difficulté du modèle.</p>
-        </details>
-      </article>
-
-      <article class="card">
-        <h2>Montage de pneus (main-d’œuvre)</h2>
-        <p class="sub">
-          Le client apporte le pneu ou la chambre à air. <b>Pièces non incluses.</b>
-        </p>
-
-        <div class="prices">
-          <div class="row">
-            <div class="left">
-              <div class="name">Chambre à air</div>
-              <div class="hint">Démontage + remontage</div>
-            </div>
-            <div class="price">34,90 €</div>
-          </div>
-
-          <div class="row">
-            <div class="left">
-              <div class="name">Tubeless</div>
-              <div class="hint">Montage + vérification étanchéité</div>
-              <div class="badge">⭐ Le plus demandé</div>
-            </div>
-            <div class="price">39,50 €</div>
-          </div>
-
-          <div class="row">
-            <div class="left">
-              <div class="name">Pneu plein</div>
-              <div class="hint">Montage souvent plus long et plus difficile</div>
-            </div>
-            <div class="price">44,90 €</div>
-          </div>
-        </div>
-
-        <div class="note">
-          <b>Transparence :</b> si le montage est particulièrement difficile (pneu très dur, roue compacte, modèle compliqué), je te préviens <b>avant</b> de continuer.
+        <div class="limits">
+          <div class="title">Je ne réalise pas :</div>
+          <ul>
+            <li>Réparation batterie ou contrôleur</li>
+            <li>Travaux de câblage interne</li>
+            <li>Purge de freins hydrauliques</li>
+          </ul>
         </div>
       </article>
+    </section>
 
+    <section class="section card">
+      <h2>Tarifs de main-d’œuvre</h2>
+      <p class="sub">
+        Les pièces ne sont pas incluses. Le client apporte le pneu et/ou la chambre à air.
+        Le prix est confirmé avant intervention.
+      </p>
+
+      <div class="serviceBox">
+        <div class="row">
+          <div class="left">
+            <div class="name">Montage pneu avec chambre à air</div>
+            <div class="hint">Démontage + remontage soigné</div>
+          </div>
+          <div class="price">35 €</div>
+        </div>
+
+        <div class="row">
+          <div class="left">
+            <div class="name">Montage pneu tubeless</div>
+            <div class="hint">Montage + vérification d’étanchéité</div>
+            <div class="badge">⭐ Le plus demandé</div>
+          </div>
+          <div class="price">40 €</div>
+        </div>
+
+        <div class="row">
+          <div class="left">
+            <div class="name">Montage pneu plein</div>
+            <div class="hint">Intervention souvent plus dure et plus longue</div>
+          </div>
+          <div class="price">45 €</div>
+        </div>
+      </div>
+
+      <div class="note">
+        <b>Pourquoi ce prix ?</b> Parce qu’un pneu de trottinette peut demander plus de temps, plus de force
+        et plus de précautions qu’un simple pneu de vélo. Le tarif correspond à la main-d’œuvre, au démontage,
+        au remontage et au soin apporté au montage.
+      </div>
+
+      <div class="alert">
+        <b>Transparence :</b> si je constate une difficulté particulière, je te préviens <b>avant</b> de continuer.
+      </div>
+    </section>
+
+    <section class="section grid2">
       <article class="card">
         <h2>Check-up sécurité</h2>
-        <p class="sub"><b>Contrôle + resserrage général :</b> 15 €</p>
-
+        <p class="sub"><b>15 €</b> — contrôle rapide et resserrage général</p>
         <ul class="list">
-          <li><span class="check">✓</span><span>Vérification des serrages (guidon, potence, roues)</span></li>
-          <li><span class="check">✓</span><span>Contrôle pression + état des pneus</span></li>
+          <li><span class="check">✓</span><span>Vérification des serrages</span></li>
+          <li><span class="check">✓</span><span>Contrôle pression et état des pneus</span></li>
           <li><span class="check">✓</span><span>Vérification de l’éclairage</span></li>
-          <li><span class="check">✓</span><span>Ajustement simple des freins si nécessaire</span></li>
+          <li><span class="check">✓</span><span>Réglage simple des freins mécaniques si nécessaire</span></li>
         </ul>
-
-        <p class="sub" style="margin-top:10px;">
-          *Réglages mécaniques simples uniquement. <b>Pas</b> de purge hydraulique.
-        </p>
+        <div class="note">
+          Réglages simples uniquement. Pas de purge hydraulique.
+        </div>
       </article>
 
       <article class="card">
         <h2>Nettoyage extérieur</h2>
-
-        <div class="prices">
+        <div class="serviceBox">
           <div class="row">
             <div class="left">
               <div class="name">Nettoyage simple</div>
-              <div class="hint">Cadre / deck / essuyage extérieur</div>
+              <div class="hint">Cadre, deck, surface extérieure</div>
             </div>
             <div class="price">15 €</div>
           </div>
@@ -713,79 +785,78 @@
               <div class="name">Nettoyage + check-up</div>
               <div class="hint">Nettoyage extérieur + contrôle sécurité</div>
             </div>
-            <div class="price">24,90 €</div>
+            <div class="price">25 €</div>
           </div>
         </div>
 
-        <p class="sub" style="margin-top:10px;">
-          Nettoyage <b>extérieur uniquement</b>. Pas d’ouverture interne.
-        </p>
-      </article>
-
-      <article class="card">
-        <h2>Important</h2>
-        <p class="sub">
-          Service uniquement sur rendez-vous. Interventions mécaniques extérieures uniquement.
-        </p>
-
-        <div class="limits">
-          <div class="title">Je ne réalise pas :</div>
-          <ul>
-            <li>Purge de freins hydrauliques</li>
-            <li>Interventions électriques / câblage interne</li>
-            <li>Diagnostic ou réparation batterie / contrôleur</li>
-          </ul>
-        </div>
-
-        <div class="note" style="margin-top:12px;">
-          <b>Merci d’indiquer</b> la marque + le modèle lors de la prise de contact (photo conseillée).<br />
-          <b>Pièces non fournies</b> : pneu / chambre à air.
-        </div>
-
-        <div class="alert" style="margin-top:12px;">
-          <b>Info :</b> je confirme le prix <b>avant</b> intervention.
+        <div class="note">
+          Nettoyage extérieur uniquement. Pas d’ouverture interne.
         </div>
       </article>
+    </section>
 
-      <article class="card" id="contact">
-        <h2>Contact</h2>
-        <p class="sub"><b>Contact prioritaire par email</b> (réponse dès que possible).</p>
+    <section class="section card">
+      <h2>Questions fréquentes</h2>
 
-        <div class="contactBox">
-          <div class="contactLine">
-            <span>Email</span>
-            <b><a href="mailto:derukevin@gmail.com">derukevin@gmail.com</a></b>
-          </div>
+      <details class="faq">
+        <summary>Tu fournis les pneus ou les chambres à air ?</summary>
+        <p>Non. Le client apporte les pièces. Je m’occupe de la main-d’œuvre et du montage.</p>
+      </details>
 
-          <div class="contactLine">
-            <span>Téléphone</span>
-            <b><a href="tel:+32495656186">0495 65 61 86</a></b>
-          </div>
+      <details class="faq">
+        <summary>Combien de temps faut-il ?</summary>
+        <p>Souvent 24 à 48h selon la charge et la difficulté. Je l’annonce à l’avance.</p>
+      </details>
 
-          <div class="ctaRow">
-            <a
-              class="btn primary"
-              href="mailto:derukevin@gmail.com?subject=ElectroRide%20-%20Demande%20de%20rendez-vous&body=Bonjour%2C%0A%0AMarque%20%2F%20mod%C3%A8le%20%3A%20%0AService%20souhait%C3%A9%20%3A%20%0APhoto%20%28si%20possible%29%20%3A%20%0ADisponibilit%C3%A9%20pour%20d%C3%A9p%C3%B4t%20%3A%20%0A%0AMerci%2C"
-              aria-label="Envoyer un email à ElectroRide"
-            >
-              ✉️ Email
-            </a>
-            <a class="btn" href="tel:+32495656186" aria-label="Appeler ElectroRide">
-              📞 Appeler
-            </a>
-          </div>
+      <details class="faq">
+        <summary>Tu fais les batteries ou les pannes électriques ?</summary>
+        <p>Non. Je fais uniquement la mécanique extérieure.</p>
+      </details>
 
-          <div class="note">
-            <b>⭐ Avis Google :</b> si tu es content du service, un avis aide énormément ElectroRide.
-          </div>
+      <details class="faq">
+        <summary>Pourquoi envoyer une photo ?</summary>
+        <p>Parce qu’une photo de la trottinette, du pneu ou du problème permet de mieux estimer le travail et d’éviter les mauvaises surprises.</p>
+      </details>
+    </section>
+
+    <section class="section card" id="contact">
+      <h2>Contact</h2>
+      <p class="sub">
+        Pour aller plus vite, envoie directement :
+        <b>marque + modèle + service souhaité + photo si possible</b>.
+      </p>
+
+      <div class="contactBox">
+        <div class="contactLine">
+          <span>Email</span>
+          <b><a href="mailto:derukevin@gmail.com">derukevin@gmail.com</a></b>
         </div>
-      </article>
+
+        <div class="contactLine">
+          <span>Téléphone</span>
+          <b><a href="tel:+32495656186">0495 65 61 86</a></b>
+        </div>
+
+        <div class="ctaRow">
+          <a class="btn primary"
+             href="mailto:derukevin@gmail.com?subject=ElectroRide%20-%20Demande%20de%20rendez-vous&body=Bonjour%2C%0A%0AMarque%20%2F%20mod%C3%A8le%20%3A%20%0AService%20souhait%C3%A9%20%3A%20%0AProbl%C3%A8me%20rencontr%C3%A9%20%3A%20%0ADisponibilit%C3%A9%20pour%20d%C3%A9p%C3%B4t%20%3A%20%0APhoto%20disponible%20%3A%20oui%20%2F%20non%0A%0AMerci%2C">
+            ✉️ Prendre rendez-vous
+          </a>
+          <a class="btn" href="tel:+32495656186">
+            📞 Appeler
+          </a>
+        </div>
+
+        <div class="boxGreen">
+          <b>Conseil :</b> si tu veux une réponse plus rapide, envoie une photo du pneu ou de la trottinette dès le premier message.
+        </div>
+      </div>
     </section>
 
     <footer class="footer">
       © 2026 ElectroRide — Réparation mécanique de trottinettes électriques à Theux
       <br />
-      <span style="color: rgba(169,183,218,.72);">Dépôt sur rendez-vous • Tarifs annoncés avant intervention</span>
+      Dépôt sur rendez-vous • Prix annoncé avant intervention
     </footer>
   </main>
 </body>
