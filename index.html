@@ -20,16 +20,13 @@
   --text:#eef4ff;
   --muted:#b7c3df;
   --green:#41e07b;
-  --green2:#1fc45d;
   --gold:#f8c542;
-  --red:#ff7d93;
   --radius:20px;
   --max:980px;
   --shadow:0 18px 50px rgba(0,0,0,.35);
 }
 
 *{box-sizing:border-box}
-
 html{scroll-behavior:smooth}
 
 body{
@@ -42,15 +39,8 @@ body{
     linear-gradient(180deg,var(--bg),var(--bg2));
 }
 
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-img{
-  max-width:100%;
-  display:block;
-}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
 
 .wrap{
   max-width:var(--max);
@@ -58,10 +48,7 @@ img{
   padding:16px 14px 28px;
 }
 
-.hero{
-  text-align:center;
-  padding-top:8px;
-}
+.hero{text-align:center;padding-top:8px;}
 
 .logo{
   width:72px;
@@ -72,7 +59,6 @@ img{
   background:rgba(255,255,255,.04);
   padding:6px;
   box-shadow:var(--shadow);
-  object-fit:contain;
 }
 
 .brand{
@@ -81,7 +67,6 @@ img{
   line-height:1;
   color:var(--green);
   font-weight:950;
-  text-shadow:0 0 22px rgba(65,224,123,.16);
 }
 
 .hero h2{
@@ -100,9 +85,7 @@ img{
   line-height:1.6;
 }
 
-.highlight{
-  color:var(--green);
-}
+.highlight{color:var(--green)}
 
 .priceStrip{
   display:flex;
@@ -119,7 +102,6 @@ img{
   border:1px solid var(--line);
   font-weight:850;
   font-size:14px;
-  box-shadow:0 10px 24px rgba(0,0,0,.22);
 }
 
 .badges{
@@ -136,7 +118,6 @@ img{
   background:rgba(255,255,255,.035);
   border:1px solid var(--line);
   font-size:13.5px;
-  color:rgba(238,244,255,.94);
 }
 
 .sticky{
@@ -153,7 +134,6 @@ img{
   background:rgba(7,17,31,.80);
   backdrop-filter:blur(10px);
   border:1px solid var(--line);
-  box-shadow:0 18px 50px rgba(0,0,0,.32);
 }
 
 .btn{
@@ -172,18 +152,16 @@ img{
 }
 
 .btn.green{
-  background:linear-gradient(180deg, rgba(65,224,123,.25), rgba(65,224,123,.10));
+  background:rgba(65,224,123,.16);
   border-color:rgba(65,224,123,.35);
 }
 
 .btn.gold{
-  background:linear-gradient(180deg, rgba(248,197,66,.18), rgba(248,197,66,.06));
+  background:rgba(248,197,66,.12);
   border-color:rgba(248,197,66,.30);
 }
 
-.section{
-  margin-top:16px;
-}
+.section{margin-top:16px;}
 
 .card{
   background:linear-gradient(180deg,var(--card),var(--card2));
@@ -197,7 +175,6 @@ img{
   margin:0 0 10px;
   color:var(--green);
   font-size:24px;
-  line-height:1.2;
 }
 
 .sub{
@@ -224,37 +201,30 @@ img{
   border-radius:16px;
   background:rgba(255,255,255,.035);
   border:1px solid var(--line);
-  line-height:1.45;
   font-size:14px;
-  color:rgba(238,244,255,.94);
+  line-height:1.45;
 }
 
 .mini b{
   display:block;
   margin-bottom:5px;
-  color:var(--text);
-  font-size:15px;
 }
 
 .photo{
   border-radius:var(--radius);
   overflow:hidden;
   border:1px solid var(--line);
-  background:rgba(255,255,255,.03);
-  box-shadow:var(--shadow);
 }
 
 .caption{
   padding:10px 12px;
   color:var(--muted);
   font-size:13px;
-  border-top:1px solid rgba(255,255,255,.08);
 }
 
 .row{
   display:flex;
   justify-content:space-between;
-  align-items:center;
   gap:12px;
   padding:14px 13px;
   border-radius:16px;
@@ -277,7 +247,6 @@ img{
 .hint{
   color:var(--muted);
   font-size:13px;
-  line-height:1.45;
 }
 
 .price{
@@ -305,13 +274,8 @@ img{
   border-radius:15px;
   background:rgba(248,197,66,.08);
   border:1px solid rgba(248,197,66,.24);
-  color:rgba(238,244,255,.93);
   font-size:13.8px;
   line-height:1.55;
-}
-
-.note b{
-  color:var(--gold);
 }
 
 .greenbox{
@@ -321,17 +285,15 @@ img{
   background:rgba(65,224,123,.08);
   border:1px solid rgba(65,224,123,.22);
   font-size:14px;
-  line-height:1.55;
 }
 
 .warningbox{
   margin-top:12px;
   padding:12px;
   border-radius:15px;
-  background:rgba(255,125,147,.07);
-  border:1px solid rgba(255,125,147,.20);
+  background:rgba(255,255,255,.03);
+  border:1px solid var(--line);
   font-size:14px;
-  line-height:1.55;
 }
 
 ul.clean{
@@ -345,8 +307,6 @@ ul.clean{
 ul.clean li{
   display:flex;
   gap:10px;
-  align-items:flex-start;
-  color:rgba(238,244,255,.94);
   line-height:1.5;
   font-size:14.5px;
 }
@@ -377,41 +337,27 @@ ul.clean li{
 .faq summary{
   cursor:pointer;
   font-weight:900;
-  list-style:none;
-}
-
-.faq summary::-webkit-details-marker{
-  display:none;
 }
 
 .faq p{
   margin:10px 0 0;
-  color:rgba(238,244,255,.90);
   font-size:13.8px;
   line-height:1.55;
+  color:rgba(238,244,255,.90);
 }
 
 .contactLine{
   display:flex;
   justify-content:space-between;
-  align-items:center;
   gap:12px;
   padding:13px;
   border-radius:16px;
   background:rgba(255,255,255,.035);
   border:1px solid var(--line);
   margin-top:10px;
-  font-size:14.5px;
 }
 
-.contactLine span{
-  color:var(--muted);
-}
-
-.contactLine b{
-  color:var(--text);
-  text-align:right;
-}
+.contactLine span{color:var(--muted)}
 
 .ctaRow{
   display:grid;
@@ -440,61 +386,15 @@ ul.clean li{
 }
 
 @media(max-width:850px){
-  .grid2,.grid3{
-    grid-template-columns:1fr;
-  }
-
-  .ctaRow{
-    grid-template-columns:1fr;
-  }
+  .grid2,.grid3,.ctaRow{grid-template-columns:1fr;}
 }
 
 @media(max-width:520px){
-  .wrap{
-    padding:14px 10px 24px;
-  }
-
-  .brand{
-    font-size:38px;
-  }
-
-  .hero h2{
-    font-size:25px;
-  }
-
-  .btn{
-    width:100%;
-  }
-
-  .row,
-  .contactLine{
-    align-items:flex-start;
-  }
-
-  .price{
-    font-size:18px;
-  }
+  .brand{font-size:38px}
+  .hero h2{font-size:25px}
+  .btn{width:100%}
 }
 </style>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"LocalBusiness",
-  "name":"ElectroRide",
-  "description":"Réparation et montage de pneus pour trottinette électrique à Theux : chambre à air, tubeless, pneu plein, check-up sécurité, nettoyage extérieur et commande de pneus possible.",
-  "areaServed":"Theux, Belgique",
-  "address":{
-    "@type":"PostalAddress",
-    "addressLocality":"Theux",
-    "addressCountry":"BE"
-  },
-  "telephone":"+32495656186",
-  "email":"service.electroride@gmail.com",
-  "url":"https://derukevin-code.github.io/kd-trott-service/",
-  "image":"https://derukevin-code.github.io/kd-trott-service/file_00000000e988720a9d6597291676d817.png"
-}
-</script>
 </head>
 
 <body>
@@ -503,297 +403,255 @@ ul.clean li{
 
 <header class="hero">
 
-  <img
-    class="logo"
-    src="file_00000000e988720a9d6597291676d817.png?v=7"
-    alt="Logo ElectroRide"
-  >
+<img src="file_00000000e988720a9d6597291676d817.png?v=7" class="logo" alt="Logo ElectroRide">
 
-  <h1 class="brand">ElectroRide</h1>
+<h1 class="brand">ElectroRide</h1>
 
-  <h2>
-    Réparation pneus <span class="highlight">trottinette électrique</span> à Theux
-  </h2>
+<h2>Réparation pneus <span class="highlight">trottinette électrique</span> à Theux</h2>
 
-  <p>
-    Montage de pneus avec chambre à air, tubeless ou pneu plein.
-    Check-up sécurité, nettoyage extérieur et possibilité de commander les pièces adaptées.
-    <b>Prix clair avant intervention.</b>
-  </p>
+<p>
+Montage de pneus avec chambre à air, tubeless ou pneu plein.
+Check-up sécurité, nettoyage extérieur et possibilité de commander les pièces adaptées.
+<b>Prix clair avant intervention.</b>
+</p>
 
-  <div class="priceStrip">
-    <div class="priceChip">Chambre à air dès <b>24,99 €</b></div>
-    <div class="priceChip">Tubeless dès <b>29,99 €</b></div>
-    <div class="priceChip">Pneu plein dès <b>39,99 €</b></div>
-  </div>
+<div class="priceStrip">
+<div class="priceChip">Chambre à air dès <b>24,99 €</b></div>
+<div class="priceChip">Tubeless dès <b>29,99 €</b></div>
+<div class="priceChip">Pneu plein dès <b>39,99 €</b></div>
+</div>
 
-  <div class="badges">
-    <div class="badge">📍 Theux</div>
-    <div class="badge">🕒 Sur rendez-vous</div>
-    <div class="badge">⚙️ Mécanique extérieure</div>
-    <div class="badge">💬 Devis clair avant intervention</div>
-  </div>
+<div class="badges">
+<div class="badge">📍 Theux</div>
+<div class="badge">🕒 Sur rendez-vous</div>
+<div class="badge">⚙️ Mécanique extérieure</div>
+<div class="badge">💬 Devis clair</div>
+</div>
 
-  <nav class="sticky">
-    <a class="btn green" href="#contact">✉️ Demander un rendez-vous</a>
-    <a class="btn" href="tel:+32495656186">📞 Appeler</a>
-  </nav>
+<nav class="sticky">
+<a class="btn green" href="#contact">✉️ Demander un rendez-vous</a>
+<a class="btn" href="tel:+32495656186">📞 Appeler</a>
+</nav>
 
 </header>
 
 <section class="section card">
-  <h3>Pourquoi choisir ElectroRide ?</h3>
+<h3>Pourquoi choisir ElectroRide ?</h3>
 
-  <div class="grid3">
-    <div class="mini">
-      <b>Tarifs attractifs</b>
-      Des prix de lancement pensés pour rester très compétitifs, tout en gardant un travail propre.
-    </div>
+<div class="grid3">
 
-    <div class="mini">
-      <b>Travail soigné</b>
-      Démontage, montage et contrôle visuel après intervention, avec précaution sur les câbles et la roue moteur.
-    </div>
+<div class="mini">
+<b>Tarifs attractifs</b>
+Prix étudiés pour rester très compétitifs.
+</div>
 
-    <div class="mini">
-      <b>Service simple</b>
-      Envoyez la marque, le modèle et une photo : je vous réponds plus rapidement avec un prix clair.
-    </div>
-  </div>
+<div class="mini">
+<b>Travail soigné</b>
+Montage propre avec contrôle visuel.
+</div>
+
+<div class="mini">
+<b>Simple et rapide</b>
+Photo + modèle = réponse plus rapide.
+</div>
+
+</div>
 </section>
 
 <section class="section grid2">
 
-  <article class="photo">
-    <img src="20260223_150017.jpg" alt="Trottinette électrique en réparation chez ElectroRide">
-    <div class="caption">Exemple d’intervention mécanique sur trottinette électrique.</div>
-  </article>
+<article class="photo">
+<img src="20260223_150017.jpg" alt="Trottinette en réparation">
+<div class="caption">Exemple d’intervention mécanique.</div>
+</article>
 
-  <article class="photo">
-    <img src="file_00000000b5bc720ab49a3aaf47abc831.png?v=7" alt="Avant après montage de pneu ElectroRide">
-    <div class="caption">Avant / après : exemple de résultat après montage.</div>
-  </article>
-
-</section>
-
-<section class="section grid2">
-
-  <article class="card">
-    <h3>Comment ça fonctionne ?</h3>
-
-    <ul class="clean">
-      <li><span class="check">1</span><span><b>Vous envoyez</b> la marque, le modèle et une photo si possible.</span></li>
-      <li><span class="check">2</span><span><b>J’analyse</b> le type de pneu et la difficulté du montage.</span></li>
-      <li><span class="check">3</span><span><b>Je confirme</b> le prix avant de commencer.</span></li>
-      <li><span class="check">4</span><span><b>Vous déposez</b> la trottinette sur rendez-vous à Theux.</span></li>
-      <li><span class="check">5</span><span><b>Je vous préviens</b> dès que la trottinette est prête.</span></li>
-    </ul>
-
-    <div class="greenbox">
-      <b>Objectif :</b> un service simple, clair et sans mauvaise surprise.
-    </div>
-  </article>
-
-  <article class="card">
-    <h3>Ce que je fais</h3>
-
-    <ul class="clean">
-      <li><span class="check">✓</span><span>Montage pneu avec chambre à air</span></li>
-      <li><span class="check">✓</span><span>Montage pneu tubeless</span></li>
-      <li><span class="check">✓</span><span>Montage pneu plein</span></li>
-      <li><span class="check">✓</span><span>Check-up sécurité et resserrage général</span></li>
-      <li><span class="check">✓</span><span>Nettoyage extérieur</span></li>
-      <li><span class="check">✓</span><span>Commande possible de pneus ou chambres à air</span></li>
-    </ul>
-  </article>
+<article class="photo">
+<img src="file_00000000b5bc720ab49a3aaf47abc831.png?v=7" alt="Avant après pneu">
+<div class="caption">Avant / après réel.</div>
+</article>
 
 </section>
 
 <section class="section card">
-  <h3>Tarifs de main-d’œuvre</h3>
 
-  <p class="sub">
-    Prix de base pour la main-d’œuvre. Les pièces ne sont pas incluses, sauf si une commande est demandée.
-    Le prix final est toujours confirmé avant intervention.
-  </p>
+<h3>Tarifs de main-d’œuvre</h3>
 
-  <div class="row">
-    <div class="left">
-      <div class="name">Montage pneu avec chambre à air</div>
-      <div class="hint">Démontage + remontage soigné</div>
-    </div>
-    <div class="price">dès 24,99 €</div>
-  </div>
+<div class="row">
+<div class="left">
+<div class="name">Montage pneu avec chambre à air</div>
+<div class="hint">Démontage + remontage</div>
+</div>
+<div class="price">dès 24,99 €</div>
+</div>
 
-  <div class="row">
-    <div class="left">
-      <div class="name">Montage pneu tubeless</div>
-      <div class="hint">Montage propre et contrôle visuel</div>
-      <div class="tag">⭐ Le plus demandé</div>
-    </div>
-    <div class="price">dès 29,99 €</div>
-  </div>
+<div class="row">
+<div class="left">
+<div class="name">Montage pneu tubeless</div>
+<div class="hint">Le plus demandé</div>
+<div class="tag">⭐ Recommandé</div>
+</div>
+<div class="price">dès 29,99 €</div>
+</div>
 
-  <div class="row">
-    <div class="left">
-      <div class="name">Montage pneu plein</div>
-      <div class="hint">Souvent plus dur selon le modèle</div>
-    </div>
-    <div class="price">dès 39,99 €</div>
-  </div>
+<div class="row">
+<div class="left">
+<div class="name">Montage pneu plein</div>
+<div class="hint">Selon difficulté</div>
+</div>
+<div class="price">dès 39,99 €</div>
+</div>
 
-  <div class="row">
-    <div class="left">
-      <div class="name">Check-up sécurité</div>
-      <div class="hint">Serrages, pneus, éclairage et contrôle rapide</div>
-    </div>
-    <div class="price">9,99 €</div>
-  </div>
+<div class="row">
+<div class="left">
+<div class="name">Check-up sécurité</div>
+<div class="hint">Contrôle rapide</div>
+</div>
+<div class="price">9,99 €</div>
+</div>
 
-  <div class="row">
-    <div class="left">
-      <div class="name">Nettoyage extérieur simple</div>
-      <div class="hint">Cadre, deck et surfaces extérieures</div>
-    </div>
-    <div class="price">14,99 €</div>
-  </div>
+<div class="row">
+<div class="left">
+<div class="name">Nettoyage extérieur</div>
+<div class="hint">Cadre / deck</div>
+</div>
+<div class="price">14,99 €</div>
+</div>
 
-  <div class="row">
-    <div class="left">
-      <div class="name">Nettoyage extérieur + check-up</div>
-      <div class="hint">Pack conseillé pour repartir proprement</div>
-    </div>
-    <div class="price">19,99 €</div>
-  </div>
+<div class="row">
+<div class="left">
+<div class="name">Nettoyage + check-up</div>
+<div class="hint">Pack conseillé</div>
+</div>
+<div class="price">19,99 €</div>
+</div>
 
-  <div class="note">
-    <b>Important :</b> certains modèles sont plus difficiles à démonter.
-    Si le travail demande plus de précautions, je vous préviens avant de continuer.
-  </div>
+<div class="note">
+<b>Important :</b> certains modèles demandent plus de temps.
+Le prix final est confirmé avant intervention.
+</div>
+
 </section>
 
 <section class="section grid2">
 
-  <article class="card">
-    <h3>Commande de pneus ou chambres à air possible</h3>
+<article class="card">
 
-    <p class="sub">
-      Vous n’avez pas encore le pneu ou la chambre à air ?
-      Je peux rechercher et commander la pièce adaptée à votre trottinette.
-    </p>
+<h3>Commande de pneus ou chambres à air possible</h3>
 
-    <ul class="clean">
-      <li><span class="check">✓</span><span>Pneu avec chambre à air</span></li>
-      <li><span class="check">✓</span><span>Pneu tubeless</span></li>
-      <li><span class="check">✓</span><span>Pneu plein</span></li>
-      <li><span class="check">✓</span><span>Chambre à air adaptée</span></li>
-      <li><span class="check">✓</span><span>Recherche selon marque, modèle et dimension</span></li>
-    </ul>
+<p class="sub">
+Vous n’avez pas la pièce ? Je peux la rechercher et la commander selon votre modèle.
+</p>
 
-    <div class="greenbox">
-      <b>Pratique :</b> vous pouvez simplement me demander de chercher la bonne pièce.
-      Le prix de la pièce est communiqué avant commande.
-    </div>
+<ul class="clean">
+<li><span class="check">✓</span><span>Pneu chambre à air</span></li>
+<li><span class="check">✓</span><span>Pneu tubeless</span></li>
+<li><span class="check">✓</span><span>Pneu plein</span></li>
+<li><span class="check">✓</span><span>Chambre à air</span></li>
+</ul>
 
-    <div class="note">
-      <b>Délai :</b> si une pièce doit être commandée, le délai de 24 à 48h ne commence qu’à partir de la réception du pneu ou de la chambre à air.
-      Le délai total dépend donc du temps de livraison de la pièce.
-    </div>
-  </article>
+<div class="greenbox">
+Le prix de la pièce est communiqué avant commande.
+</div>
 
-  <article class="card">
-    <h3>Ce que je ne réalise pas</h3>
+<div class="note">
+<b>Délai :</b> si une pièce doit être commandée, le délai de 24 à 48h commence après réception de la pièce.
+</div>
 
-    <ul class="clean">
-      <li><span class="check">×</span><span>Réparation batterie</span></li>
-      <li><span class="check">×</span><span>Réparation contrôleur</span></li>
-      <li><span class="check">×</span><span>Travaux de câblage interne</span></li>
-      <li><span class="check">×</span><span>Purge de freins hydrauliques</span></li>
-      <li><span class="check">×</span><span>Diagnostic électronique complet</span></li>
-    </ul>
+</article>
 
-    <div class="warningbox">
-      <b>Spécialisation :</b> ElectroRide se concentre sur la mécanique extérieure et le montage de pneus.
-    </div>
-  </article>
+<article class="card">
+
+<h3>Ce que je ne réalise pas</h3>
+
+<ul class="clean">
+<li><span class="check">×</span><span>Batterie</span></li>
+<li><span class="check">×</span><span>Contrôleur</span></li>
+<li><span class="check">×</span><span>Câblage interne</span></li>
+<li><span class="check">×</span><span>Purge hydraulique</span></li>
+</ul>
+
+<div class="warningbox">
+Spécialisation mécanique extérieure uniquement.
+</div>
+
+</article>
 
 </section>
 
 <section class="section card">
-  <h3>Questions fréquentes</h3>
 
-  <details class="faq">
-    <summary>Est-ce que je dois fournir le pneu ?</summary>
-    <p>Vous pouvez fournir le pneu vous-même. Si vous ne l’avez pas, je peux aussi chercher et commander une pièce adaptée après validation du prix.</p>
-  </details>
+<h3>Questions fréquentes</h3>
 
-  <details class="faq">
-    <summary>Combien de temps faut-il ?</summary>
-    <p>Quand la pièce est déjà disponible, l’intervention est souvent réalisée sous 24 à 48h selon la charge et la difficulté. Si une pièce doit être commandée, ce délai commence seulement après réception de la pièce.</p>
-  </details>
+<details class="faq">
+<summary>Je dois fournir le pneu ?</summary>
+<p>Non. Vous pouvez l’apporter ou me demander de le commander.</p>
+</details>
 
-  <details class="faq">
-    <summary>Pourquoi le prix est marqué “dès” ?</summary>
-    <p>Parce que certains modèles de trottinettes sont plus difficiles à démonter. Le prix est toujours confirmé avant de commencer.</p>
-  </details>
+<details class="faq">
+<summary>Combien de temps faut-il ?</summary>
+<p>Souvent 24 à 48h si la pièce est disponible. Si commande nécessaire, le délai commence à la réception.</p>
+</details>
 
-  <details class="faq">
-    <summary>Faites-vous les pannes électriques ?</summary>
-    <p>Non. Je ne fais pas les batteries, contrôleurs ou pannes électroniques. Je travaille uniquement sur la partie mécanique extérieure.</p>
-  </details>
+<details class="faq">
+<summary>Pourquoi “dès” ?</summary>
+<p>Certains modèles sont plus compliqués à démonter. Le prix est confirmé avant intervention.</p>
+</details>
+
 </section>
 
 <section class="section card" id="contact">
-  <h3>Contact</h3>
 
-  <p class="sub">
-    Pour une réponse plus rapide, envoyez directement :
-    <b>marque + modèle + service souhaité + photo du pneu ou de la trottinette.</b>
-  </p>
+<h3>Contact</h3>
 
-  <div class="contactLine">
-    <span>Email</span>
-    <b><a href="mailto:service.electroride@gmail.com">service.electroride@gmail.com</a></b>
-  </div>
+<p class="sub">
+Envoyez : marque + modèle + photo + service souhaité.
+</p>
 
-  <div class="contactLine">
-    <span>Téléphone</span>
-    <b><a href="tel:+32495656186">0495 65 61 86</a></b>
-  </div>
+<div class="contactLine">
+<span>Email</span>
+<b><a href="mailto:service.electroride@gmail.com">service.electroride@gmail.com</a></b>
+</div>
 
-  <div class="contactLine">
-    <span>N° d’entreprise / TVA</span>
-    <b>BE 1035.368.201</b>
-  </div>
+<div class="contactLine">
+<span>Téléphone</span>
+<b><a href="tel:+32495656186">0495 65 61 86</a></b>
+</div>
 
-  <div class="ctaRow">
-    <a class="btn green"
-       href="mailto:service.electroride@gmail.com?subject=ElectroRide%20-%20Demande%20de%20rendez-vous&body=Bonjour%2C%0A%0AMarque%20%2F%20mod%C3%A8le%20%3A%20%0AService%20souhait%C3%A9%20%3A%20%0AJ%27ai%20d%C3%A9j%C3%A0%20le%20pneu%20%3A%20oui%20%2F%20non%0AJe%20souhaite%20une%20commande%20de%20pi%C3%A8ce%20%3A%20oui%20%2F%20non%0APhoto%20disponible%20%3A%20oui%20%2F%20non%0A%0AMerci.">
-      ✉️ Écrire
-    </a>
+<div class="contactLine">
+<span>TVA</span>
+<b>BE 1035.368.201</b>
+</div>
 
-    <a class="btn" href="tel:+32495656186">
-      📞 Appeler
-    </a>
+<div class="ctaRow">
 
-    <a class="btn gold" href="https://share.google/8i61Yhgsv57keJ0ji" target="_blank" rel="noopener">
-      ⭐ Avis Google
-    </a>
-  </div>
+<a class="btn green"
+href="mailto:service.electroride@gmail.com">
+✉️ Écrire
+</a>
 
-  <div class="greenbox">
-    <b>Conseil :</b> une photo du pneu ou de la trottinette permet souvent de répondre plus vite et d’éviter les erreurs de dimension.
-  </div>
+<a class="btn"
+href="tel:+32495656186">
+📞 Appeler
+</a>
+
+<a class="btn gold"
+href="https://g.page/r/CQYENGk_6sdoEAE/review"
+target="_blank"
+rel="noopener">
+⭐ Laisser un avis Google
+</a>
+
+</div>
+
 </section>
 
 <footer class="footer">
-  ElectroRide • Theux
-  <br>
-  Sur rendez-vous uniquement • 0495 65 61 86
-  <br>
-  TVA : BE 1035.368.201
-  <br>
-  <a href="https://share.google/8i61Yhgsv57keJ0ji" target="_blank" rel="noopener">⭐ Voir / laisser un avis Google</a>
+ElectroRide • Theux<br>
+Sur rendez-vous uniquement<br>
+TVA : BE 1035.368.201<br>
+<a href="https://g.page/r/CQYENGk_6sdoEAE/review" target="_blank">
+⭐ Laisser un avis Google
+</a>
 </footer>
 
 </main>
