@@ -2,476 +2,795 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ElectroRide — Réparation pneus trottinette électrique à Theux</title>
 
-<meta name="description" content="Montage pneus trottinette électrique à Theux. Chambre à air, tubeless, pneu plein, check-up sécurité, nettoyage et commande de pneus. Prix clair avant intervention.">
+<meta name="description" content="Réparation et montage de pneus pour trottinette électrique à Theux : chambre à air, tubeless, pneu plein, check-up sécurité, nettoyage extérieur et commande de pneus possible. Prix clair avant intervention.">
 
-<meta property="og:title" content="ElectroRide — Réparation pneus trottinette électrique à Theux">
-<meta property="og:description" content="Service local à Theux. Prix attractifs, travail soigné, sur rendez-vous.">
-<meta property="og:type" content="website">
+<meta name="theme-color" content="#081120">
 
 <style>
 :root{
---bg:#081120;
---bg2:#0d1c34;
---card:rgba(255,255,255,.05);
---line:rgba(255,255,255,.10);
---text:#eef4ff;
---muted:#b7c3df;
---green:#41e07b;
---gold:#f8c542;
---radius:20px;
---max:980px;
+  --bg:#07111f;
+  --bg2:#0d1c34;
+  --card:rgba(255,255,255,.055);
+  --card2:rgba(255,255,255,.035);
+  --line:rgba(255,255,255,.11);
+  --text:#eef4ff;
+  --muted:#b7c3df;
+  --green:#41e07b;
+  --green2:#1fc45d;
+  --gold:#f8c542;
+  --red:#ff7d93;
+  --radius:20px;
+  --max:980px;
+  --shadow:0 18px 50px rgba(0,0,0,.35);
 }
 
 *{box-sizing:border-box}
+
 html{scroll-behavior:smooth}
 
 body{
-margin:0;
-font-family:Arial,Helvetica,sans-serif;
-background:
-radial-gradient(circle at top left, rgba(65,224,123,.14), transparent 35%),
-linear-gradient(180deg,var(--bg),var(--bg2));
-color:var(--text);
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(900px 500px at 15% 0%, rgba(65,224,123,.16), transparent 60%),
+    radial-gradient(750px 450px at 90% 10%, rgba(74,144,226,.13), transparent 55%),
+    linear-gradient(180deg,var(--bg),var(--bg2));
 }
 
-a{text-decoration:none;color:inherit}
-img{max-width:100%;display:block}
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
 
 .wrap{
-max-width:var(--max);
-margin:auto;
-padding:16px;
+  max-width:var(--max);
+  margin:0 auto;
+  padding:16px 14px 28px;
 }
 
 .hero{
-text-align:center;
-padding:10px 0 0;
+  text-align:center;
+  padding-top:8px;
 }
 
 .logo{
-width:70px;
-height:70px;
-border-radius:18px;
-margin:auto;
-margin-bottom:12px;
-border:1px solid var(--line);
-padding:6px;
-background:rgba(255,255,255,.03);
+  width:72px;
+  height:72px;
+  margin:0 auto 10px;
+  border-radius:18px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.04);
+  padding:6px;
+  box-shadow:var(--shadow);
+  object-fit:contain;
 }
 
 .brand{
-font-size:44px;
-font-weight:900;
-color:var(--green);
-margin:0;
+  margin:0;
+  font-size:44px;
+  line-height:1;
+  color:var(--green);
+  font-weight:950;
+  text-shadow:0 0 22px rgba(65,224,123,.16);
 }
 
 .hero h2{
-font-size:30px;
-margin:12px 0 10px;
-line-height:1.2;
+  max-width:760px;
+  margin:12px auto 10px;
+  font-size:30px;
+  line-height:1.16;
+  font-weight:950;
 }
 
 .hero p{
-max-width:760px;
-margin:auto;
-color:var(--muted);
-line-height:1.6;
-font-size:16px;
+  max-width:760px;
+  margin:0 auto;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.6;
+}
+
+.highlight{
+  color:var(--green);
+}
+
+.priceStrip{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:16px;
+}
+
+.priceChip{
+  padding:10px 14px;
+  border-radius:999px;
+  background:rgba(255,255,255,.04);
+  border:1px solid var(--line);
+  font-weight:850;
+  font-size:14px;
+  box-shadow:0 10px 24px rgba(0,0,0,.22);
 }
 
 .badges{
-display:flex;
-gap:10px;
-justify-content:center;
-flex-wrap:wrap;
-margin-top:16px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:14px;
 }
 
 .badge{
-padding:10px 14px;
-border-radius:999px;
-background:rgba(255,255,255,.04);
-border:1px solid var(--line);
-font-weight:700;
-font-size:14px;
+  padding:10px 13px;
+  border-radius:999px;
+  background:rgba(255,255,255,.035);
+  border:1px solid var(--line);
+  font-size:13.5px;
+  color:rgba(238,244,255,.94);
 }
 
 .sticky{
-position:sticky;
-top:10px;
-z-index:50;
-display:flex;
-gap:10px;
-justify-content:center;
-flex-wrap:wrap;
-margin-top:18px;
-padding:10px;
-background:rgba(8,17,32,.78);
-backdrop-filter:blur(10px);
-border-radius:999px;
-border:1px solid var(--line);
+  position:sticky;
+  top:10px;
+  z-index:50;
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:16px;
+  padding:10px;
+  border-radius:999px;
+  background:rgba(7,17,31,.80);
+  backdrop-filter:blur(10px);
+  border:1px solid var(--line);
+  box-shadow:0 18px 50px rgba(0,0,0,.32);
 }
 
 .btn{
-padding:13px 18px;
-border-radius:999px;
-background:rgba(255,255,255,.05);
-border:1px solid var(--line);
-font-weight:800;
-min-width:180px;
-text-align:center;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  padding:13px 17px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.05);
+  color:var(--text);
+  font-weight:900;
+  min-width:175px;
+  text-align:center;
 }
 
 .btn.green{
-background:rgba(65,224,123,.15);
-border:1px solid rgba(65,224,123,.35);
+  background:linear-gradient(180deg, rgba(65,224,123,.25), rgba(65,224,123,.10));
+  border-color:rgba(65,224,123,.35);
+}
+
+.btn.gold{
+  background:linear-gradient(180deg, rgba(248,197,66,.18), rgba(248,197,66,.06));
+  border-color:rgba(248,197,66,.30);
 }
 
 .section{
-margin-top:18px;
+  margin-top:16px;
 }
 
 .card{
-background:var(--card);
-border:1px solid var(--line);
-border-radius:var(--radius);
-padding:18px;
+  background:linear-gradient(180deg,var(--card),var(--card2));
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:18px 16px;
 }
 
 .card h3{
-margin:0 0 10px;
-font-size:24px;
-color:var(--green);
+  margin:0 0 10px;
+  color:var(--green);
+  font-size:24px;
+  line-height:1.2;
+}
+
+.sub{
+  color:var(--muted);
+  font-size:14.5px;
+  line-height:1.6;
+  margin:0 0 12px;
 }
 
 .grid2{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:14px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
 }
 
 .grid3{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:12px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
 }
 
 .mini{
-padding:14px;
-border-radius:16px;
-background:rgba(255,255,255,.03);
-border:1px solid var(--line);
+  padding:14px;
+  border-radius:16px;
+  background:rgba(255,255,255,.035);
+  border:1px solid var(--line);
+  line-height:1.45;
+  font-size:14px;
+  color:rgba(238,244,255,.94);
 }
 
 .mini b{
-display:block;
-margin-bottom:6px;
-}
-
-.row{
-display:flex;
-justify-content:space-between;
-gap:10px;
-padding:14px;
-border-radius:15px;
-background:rgba(255,255,255,.03);
-border:1px solid var(--line);
-margin-top:10px;
-align-items:center;
-}
-
-.left{
-display:flex;
-flex-direction:column;
-gap:4px;
-}
-
-.price{
-font-size:20px;
-font-weight:900;
-color:var(--green);
-white-space:nowrap;
-}
-
-.small{
-color:var(--muted);
-font-size:13px;
-line-height:1.45;
-}
-
-.note{
-margin-top:12px;
-padding:12px;
-border-radius:15px;
-background:rgba(248,197,66,.08);
-border:1px solid rgba(248,197,66,.22);
-font-size:14px;
-line-height:1.55;
-}
-
-.greenbox{
-margin-top:12px;
-padding:12px;
-border-radius:15px;
-background:rgba(65,224,123,.08);
-border:1px solid rgba(65,224,123,.20);
-font-size:14px;
-line-height:1.55;
-}
-
-ul{
-margin:0;
-padding-left:18px;
-line-height:1.7;
+  display:block;
+  margin-bottom:5px;
+  color:var(--text);
+  font-size:15px;
 }
 
 .photo{
-border-radius:20px;
-overflow:hidden;
-border:1px solid var(--line);
-background:rgba(255,255,255,.03);
+  border-radius:var(--radius);
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.03);
+  box-shadow:var(--shadow);
 }
 
 .caption{
-padding:10px;
-font-size:13px;
-color:var(--muted);
+  padding:10px 12px;
+  color:var(--muted);
+  font-size:13px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+.row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  padding:14px 13px;
+  border-radius:16px;
+  background:rgba(255,255,255,.035);
+  border:1px solid var(--line);
+  margin-top:10px;
+}
+
+.left{
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
+.name{
+  font-weight:950;
+  font-size:15.8px;
+}
+
+.hint{
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.45;
+}
+
+.price{
+  color:var(--green);
+  font-size:20px;
+  font-weight:950;
+  white-space:nowrap;
+}
+
+.tag{
+  display:inline-flex;
+  width:fit-content;
+  margin-top:5px;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(65,224,123,.10);
+  border:1px solid rgba(65,224,123,.25);
+  font-size:12.5px;
+  font-weight:850;
+}
+
+.note{
+  margin-top:12px;
+  padding:12px;
+  border-radius:15px;
+  background:rgba(248,197,66,.08);
+  border:1px solid rgba(248,197,66,.24);
+  color:rgba(238,244,255,.93);
+  font-size:13.8px;
+  line-height:1.55;
+}
+
+.note b{
+  color:var(--gold);
+}
+
+.greenbox{
+  margin-top:12px;
+  padding:12px;
+  border-radius:15px;
+  background:rgba(65,224,123,.08);
+  border:1px solid rgba(65,224,123,.22);
+  font-size:14px;
+  line-height:1.55;
+}
+
+.warningbox{
+  margin-top:12px;
+  padding:12px;
+  border-radius:15px;
+  background:rgba(255,125,147,.07);
+  border:1px solid rgba(255,125,147,.20);
+  font-size:14px;
+  line-height:1.55;
+}
+
+ul.clean{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  gap:10px;
+}
+
+ul.clean li{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  color:rgba(238,244,255,.94);
+  line-height:1.5;
+  font-size:14.5px;
+}
+
+.check{
+  width:22px;
+  height:22px;
+  border-radius:7px;
+  background:rgba(65,224,123,.12);
+  border:1px solid rgba(65,224,123,.25);
+  color:var(--green);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 22px;
+  font-weight:950;
+  font-size:13px;
+}
+
+.faq{
+  margin-top:10px;
+  padding:12px;
+  border-radius:15px;
+  background:rgba(255,255,255,.035);
+  border:1px solid var(--line);
+}
+
+.faq summary{
+  cursor:pointer;
+  font-weight:900;
+  list-style:none;
+}
+
+.faq summary::-webkit-details-marker{
+  display:none;
+}
+
+.faq p{
+  margin:10px 0 0;
+  color:rgba(238,244,255,.90);
+  font-size:13.8px;
+  line-height:1.55;
+}
+
+.contactLine{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  padding:13px;
+  border-radius:16px;
+  background:rgba(255,255,255,.035);
+  border:1px solid var(--line);
+  margin-top:10px;
+  font-size:14.5px;
+}
+
+.contactLine span{
+  color:var(--muted);
+}
+
+.contactLine b{
+  color:var(--text);
+  text-align:right;
+}
+
+.ctaRow{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:10px;
+  margin-top:12px;
+}
+
+.ctaRow .btn{
+  width:100%;
+  min-width:unset;
+  border-radius:15px;
 }
 
 .footer{
-text-align:center;
-margin:22px 0 8px;
-color:var(--muted);
-line-height:1.7;
-font-size:14px;
+  margin-top:20px;
+  text-align:center;
+  color:rgba(183,195,223,.85);
+  font-size:13px;
+  line-height:1.7;
+}
+
+.footer a{
+  color:var(--gold);
+  font-weight:900;
 }
 
 @media(max-width:850px){
-.grid2,.grid3{grid-template-columns:1fr}
+  .grid2,.grid3{
+    grid-template-columns:1fr;
+  }
+
+  .ctaRow{
+    grid-template-columns:1fr;
+  }
 }
 
 @media(max-width:520px){
-.btn{width:100%}
-.brand{font-size:38px}
-.hero h2{font-size:24px}
+  .wrap{
+    padding:14px 10px 24px;
+  }
+
+  .brand{
+    font-size:38px;
+  }
+
+  .hero h2{
+    font-size:25px;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .row,
+  .contactLine{
+    align-items:flex-start;
+  }
+
+  .price{
+    font-size:18px;
+  }
 }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"ElectroRide",
+  "description":"Réparation et montage de pneus pour trottinette électrique à Theux : chambre à air, tubeless, pneu plein, check-up sécurité, nettoyage extérieur et commande de pneus possible.",
+  "areaServed":"Theux, Belgique",
+  "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Theux",
+    "addressCountry":"BE"
+  },
+  "telephone":"+32495656186",
+  "email":"service.electroride@gmail.com",
+  "url":"https://derukevin-code.github.io/kd-trott-service/",
+  "image":"https://derukevin-code.github.io/kd-trott-service/file_00000000e988720a9d6597291676d817.png"
+}
+</script>
 </head>
 
 <body>
 
-<div class="wrap">
+<main class="wrap">
 
 <header class="hero">
 
-<img src="file_00000000e988720a9d6597291676d817.png?v=7" class="logo">
+  <img
+    class="logo"
+    src="file_00000000e988720a9d6597291676d817.png?v=7"
+    alt="Logo ElectroRide"
+  >
 
-<h1 class="brand">ElectroRide</h1>
+  <h1 class="brand">ElectroRide</h1>
 
-<h2>Montage pneus trottinette électrique à Theux</h2>
+  <h2>
+    Réparation pneus <span class="highlight">trottinette électrique</span> à Theux
+  </h2>
 
-<p>
-Chambre à air, tubeless, pneu plein, check-up sécurité, nettoyage extérieur
-et possibilité de commander vos pneus. Prix annoncé avant intervention.
-</p>
+  <p>
+    Montage de pneus avec chambre à air, tubeless ou pneu plein.
+    Check-up sécurité, nettoyage extérieur et possibilité de commander les pièces adaptées.
+    <b>Prix clair avant intervention.</b>
+  </p>
 
-<div class="badges">
-<div class="badge">📍 Theux</div>
-<div class="badge">🕒 Sur rendez-vous</div>
-<div class="badge">⚙️ Service local</div>
-</div>
+  <div class="priceStrip">
+    <div class="priceChip">Chambre à air dès <b>24,99 €</b></div>
+    <div class="priceChip">Tubeless dès <b>29,99 €</b></div>
+    <div class="priceChip">Pneu plein dès <b>39,99 €</b></div>
+  </div>
 
-<div class="sticky">
-<a href="#contact" class="btn green">✉️ Rendez-vous</a>
-<a href="tel:+32495656186" class="btn">📞 Appeler</a>
-</div>
+  <div class="badges">
+    <div class="badge">📍 Theux</div>
+    <div class="badge">🕒 Sur rendez-vous</div>
+    <div class="badge">⚙️ Mécanique extérieure</div>
+    <div class="badge">💬 Devis clair avant intervention</div>
+  </div>
+
+  <nav class="sticky">
+    <a class="btn green" href="#contact">✉️ Demander un rendez-vous</a>
+    <a class="btn" href="tel:+32495656186">📞 Appeler</a>
+  </nav>
 
 </header>
 
 <section class="section card">
-<h3>Pourquoi choisir ElectroRide ?</h3>
+  <h3>Pourquoi choisir ElectroRide ?</h3>
 
-<div class="grid3">
+  <div class="grid3">
+    <div class="mini">
+      <b>Tarifs attractifs</b>
+      Des prix de lancement pensés pour rester très compétitifs, tout en gardant un travail propre.
+    </div>
 
-<div class="mini">
-<b>Prix attractifs</b>
-Tarifs lancement étudiés pour être très compétitifs.
-</div>
+    <div class="mini">
+      <b>Travail soigné</b>
+      Démontage, montage et contrôle visuel après intervention, avec précaution sur les câbles et la roue moteur.
+    </div>
 
-<div class="mini">
-<b>Travail soigné</b>
-Montage propre avec contrôle visuel après intervention.
-</div>
-
-<div class="mini">
-<b>Simple et rapide</b>
-Une photo + modèle = réponse plus rapide.
-</div>
-
-</div>
+    <div class="mini">
+      <b>Service simple</b>
+      Envoyez la marque, le modèle et une photo : je vous réponds plus rapidement avec un prix clair.
+    </div>
+  </div>
 </section>
 
 <section class="section grid2">
 
-<div class="photo">
-<img src="20260223_150017.jpg">
-<div class="caption">Intervention mécanique sur trottinette électrique.</div>
-</div>
+  <article class="photo">
+    <img src="20260223_150017.jpg" alt="Trottinette électrique en réparation chez ElectroRide">
+    <div class="caption">Exemple d’intervention mécanique sur trottinette électrique.</div>
+  </article>
 
-<div class="photo">
-<img src="file_00000000b5bc720ab49a3aaf47abc831.png?v=7">
-<div class="caption">Avant / après réel.</div>
-</div>
+  <article class="photo">
+    <img src="file_00000000b5bc720ab49a3aaf47abc831.png?v=7" alt="Avant après montage de pneu ElectroRide">
+    <div class="caption">Avant / après : exemple de résultat après montage.</div>
+  </article>
+
+</section>
+
+<section class="section grid2">
+
+  <article class="card">
+    <h3>Comment ça fonctionne ?</h3>
+
+    <ul class="clean">
+      <li><span class="check">1</span><span><b>Vous envoyez</b> la marque, le modèle et une photo si possible.</span></li>
+      <li><span class="check">2</span><span><b>J’analyse</b> le type de pneu et la difficulté du montage.</span></li>
+      <li><span class="check">3</span><span><b>Je confirme</b> le prix avant de commencer.</span></li>
+      <li><span class="check">4</span><span><b>Vous déposez</b> la trottinette sur rendez-vous à Theux.</span></li>
+      <li><span class="check">5</span><span><b>Je vous préviens</b> dès que la trottinette est prête.</span></li>
+    </ul>
+
+    <div class="greenbox">
+      <b>Objectif :</b> un service simple, clair et sans mauvaise surprise.
+    </div>
+  </article>
+
+  <article class="card">
+    <h3>Ce que je fais</h3>
+
+    <ul class="clean">
+      <li><span class="check">✓</span><span>Montage pneu avec chambre à air</span></li>
+      <li><span class="check">✓</span><span>Montage pneu tubeless</span></li>
+      <li><span class="check">✓</span><span>Montage pneu plein</span></li>
+      <li><span class="check">✓</span><span>Check-up sécurité et resserrage général</span></li>
+      <li><span class="check">✓</span><span>Nettoyage extérieur</span></li>
+      <li><span class="check">✓</span><span>Commande possible de pneus ou chambres à air</span></li>
+    </ul>
+  </article>
 
 </section>
 
 <section class="section card">
-<h3>Tarifs main-d’œuvre</h3>
+  <h3>Tarifs main-d’œuvre</h3>
 
-<div class="row">
-<div class="left">
-<b>Montage pneu chambre à air</b>
-<div class="small">Démontage + remontage</div>
-</div>
-<div class="price">dès 24,99 €</div>
-</div>
+  <p class="sub">
+    Prix de base pour la main-d’œuvre. Les pièces ne sont pas incluses, sauf si une commande est demandée.
+    Le prix final est toujours confirmé avant intervention.
+  </p>
 
-<div class="row">
-<div class="left">
-<b>Montage pneu tubeless</b>
-<div class="small">Le plus demandé</div>
-</div>
-<div class="price">dès 29,99 €</div>
-</div>
+  <div class="row">
+    <div class="left">
+      <div class="name">Montage pneu avec chambre à air</div>
+      <div class="hint">Démontage + remontage soigné</div>
+    </div>
+    <div class="price">dès 24,99 €</div>
+  </div>
 
-<div class="row">
-<div class="left">
-<b>Montage pneu plein</b>
-<div class="small">Modèles difficiles possibles sur devis</div>
-</div>
-<div class="price">dès 39,99 €</div>
-</div>
+  <div class="row">
+    <div class="left">
+      <div class="name">Montage pneu tubeless</div>
+      <div class="hint">Montage propre et contrôle visuel</div>
+      <div class="tag">⭐ Le plus demandé</div>
+    </div>
+    <div class="price">dès 29,99 €</div>
+  </div>
 
-<div class="row">
-<div class="left">
-<b>Check-up sécurité</b>
-<div class="small">Resserrage + contrôle rapide</div>
-</div>
-<div class="price">9,99 €</div>
-</div>
+  <div class="row">
+    <div class="left">
+      <div class="name">Montage pneu plein</div>
+      <div class="hint">Souvent plus dur selon le modèle</div>
+    </div>
+    <div class="price">dès 39,99 €</div>
+  </div>
 
-<div class="row">
-<div class="left">
-<b>Nettoyage extérieur</b>
-<div class="small">Cadre / deck / surfaces</div>
-</div>
-<div class="price">14,99 €</div>
-</div>
+  <div class="row">
+    <div class="left">
+      <div class="name">Check-up sécurité</div>
+      <div class="hint">Serrages, pneus, éclairage et contrôle rapide</div>
+    </div>
+    <div class="price">9,99 €</div>
+  </div>
 
-<div class="row">
-<div class="left">
-<b>Nettoyage + check-up</b>
-<div class="small">Pack conseillé</div>
-</div>
-<div class="price">19,99 €</div>
-</div>
+  <div class="row">
+    <div class="left">
+      <div class="name">Nettoyage extérieur simple</div>
+      <div class="hint">Cadre, deck et surfaces extérieures</div>
+    </div>
+    <div class="price">14,99 €</div>
+  </div>
 
-<div class="note">
-<b>Important :</b> certains modèles demandent plus de temps ou un démontage complexe.
-Le prix final est confirmé avant intervention.
-</div>
+  <div class="row">
+    <div class="left">
+      <div class="name">Nettoyage extérieur + check-up</div>
+      <div class="hint">Pack conseillé pour repartir proprement</div>
+    </div>
+    <div class="price">19,99 €</div>
+  </div>
 
+  <div class="note">
+    <b>Important :</b> certains modèles sont plus difficiles à démonter.
+    Si le travail demande plus de précautions, je vous préviens avant de continuer.
+  </div>
 </section>
 
 <section class="section grid2">
 
-<div class="card">
-<h3>Je peux aussi commander vos pneus</h3>
+  <article class="card">
+    <h3>Commande de pneus possible</h3>
 
-<ul>
-<li>Pneu chambre à air</li>
-<li>Pneu tubeless</li>
-<li>Pneu plein</li>
-<li>Chambre à air adaptée</li>
-<li>Recherche selon marque / modèle</li>
-</ul>
+    <p class="sub">
+      Vous n’avez pas encore le pneu ou la chambre à air ?
+      Je peux rechercher et commander la pièce adaptée à votre trottinette.
+    </p>
 
-<div class="greenbox">
-Vous déposez la trottinette, je peux m’occuper du reste.
-</div>
+    <ul class="clean">
+      <li><span class="check">✓</span><span>Pneu avec chambre à air</span></li>
+      <li><span class="check">✓</span><span>Pneu tubeless</span></li>
+      <li><span class="check">✓</span><span>Pneu plein</span></li>
+      <li><span class="check">✓</span><span>Chambre à air adaptée</span></li>
+      <li><span class="check">✓</span><span>Recherche selon marque, modèle et dimension</span></li>
+    </ul>
 
-</div>
+    <div class="greenbox">
+      <b>Pratique :</b> vous pouvez simplement déposer la trottinette, et je vous indique le prix de la pièce avant commande.
+    </div>
+  </article>
 
-<div class="card">
-<h3>Ce que je ne fais pas</h3>
+  <article class="card">
+    <h3>Ce que je ne réalise pas</h3>
 
-<ul>
-<li>Batterie</li>
-<li>Contrôleur</li>
-<li>Câblage interne</li>
-<li>Purge hydraulique</li>
-<li>Réparation électronique</li>
-</ul>
+    <ul class="clean">
+      <li><span class="check">×</span><span>Réparation batterie</span></li>
+      <li><span class="check">×</span><span>Réparation contrôleur</span></li>
+      <li><span class="check">×</span><span>Travaux de câblage interne</span></li>
+      <li><span class="check">×</span><span>Purge de freins hydrauliques</span></li>
+      <li><span class="check">×</span><span>Diagnostic électronique complet</span></li>
+    </ul>
 
-<div class="greenbox">
-Spécialisation mécanique extérieure uniquement.
-</div>
+    <div class="warningbox">
+      <b>Spécialisation :</b> ElectroRide se concentre sur la mécanique extérieure et le montage de pneus.
+    </div>
+  </article>
 
-</div>
+</section>
 
+<section class="section card">
+  <h3>Questions fréquentes</h3>
+
+  <details class="faq">
+    <summary>Est-ce que je dois fournir le pneu ?</summary>
+    <p>Vous pouvez fournir le pneu vous-même. Si vous ne l’avez pas, je peux aussi chercher et commander une pièce adaptée après validation du prix.</p>
+  </details>
+
+  <details class="faq">
+    <summary>Combien de temps faut-il ?</summary>
+    <p>Souvent 24 à 48h selon la charge et la difficulté. Le délai est confirmé avant intervention.</p>
+  </details>
+
+  <details class="faq">
+    <summary>Pourquoi le prix est marqué “dès” ?</summary>
+    <p>Parce que certains modèles de trottinettes sont plus difficiles à démonter. Le prix est toujours confirmé avant de commencer.</p>
+  </details>
+
+  <details class="faq">
+    <summary>Faites-vous les pannes électriques ?</summary>
+    <p>Non. Je ne fais pas les batteries, contrôleurs ou pannes électroniques. Je travaille uniquement sur la partie mécanique extérieure.</p>
+  </details>
 </section>
 
 <section class="section card" id="contact">
-<h3>Contact</h3>
+  <h3>Contact</h3>
 
-<p class="small">
-Envoyez directement : marque + modèle + service souhaité + photo si possible.
-</p>
+  <p class="sub">
+    Pour une réponse plus rapide, envoyez directement :
+    <b>marque + modèle + service souhaité + photo du pneu ou de la trottinette.</b>
+  </p>
 
-<div class="row">
-<div class="left">
-<b>Email</b>
-</div>
-<div class="price" style="font-size:15px;">
-<a href="mailto:service.electroride@gmail.com">service.electroride@gmail.com</a>
-</div>
-</div>
+  <div class="contactLine">
+    <span>Email</span>
+    <b><a href="mailto:service.electroride@gmail.com">service.electroride@gmail.com</a></b>
+  </div>
 
-<div class="row">
-<div class="left">
-<b>Téléphone</b>
-</div>
-<div class="price" style="font-size:18px;">
-<a href="tel:+32495656186">0495 65 61 86</a>
-</div>
-</div>
+  <div class="contactLine">
+    <span>Téléphone</span>
+    <b><a href="tel:+32495656186">0495 65 61 86</a></b>
+  </div>
 
-<div class="row">
-<div class="left">
-<b>TVA</b>
-</div>
-<div class="price" style="font-size:16px;">BE 1035.368.201</div>
-</div>
+  <div class="contactLine">
+    <span>N° d’entreprise / TVA</span>
+    <b>BE 1035.368.201</b>
+  </div>
 
-<div class="sticky" style="position:static;margin-top:14px;">
-<a href="mailto:service.electroride@gmail.com" class="btn green">✉️ Écrire</a>
-<a href="tel:+32495656186" class="btn">📞 Appeler</a>
-<a href="https://share.google/8i61Yhgsv57keJ0ji" target="_blank" class="btn">⭐ Avis Google</a>
-</div>
+  <div class="ctaRow">
+    <a class="btn green"
+       href="mailto:service.electroride@gmail.com?subject=ElectroRide%20-%20Demande%20de%20rendez-vous&body=Bonjour%2C%0A%0AMarque%20%2F%20mod%C3%A8le%20%3A%20%0AService%20souhait%C3%A9%20%3A%20%0AJ%27ai%20d%C3%A9j%C3%A0%20le%20pneu%20%3A%20oui%20%2F%20non%0AJe%20souhaite%20une%20commande%20de%20pi%C3%A8ce%20%3A%20oui%20%2F%20non%0APhoto%20disponible%20%3A%20oui%20%2F%20non%0A%0AMerci.">
+      ✉️ Écrire
+    </a>
 
+    <a class="btn" href="tel:+32495656186">
+      📞 Appeler
+    </a>
+
+    <a class="btn gold" href="https://share.google/8i61Yhgsv57keJ0ji" target="_blank" rel="noopener">
+      ⭐ Avis Google
+    </a>
+  </div>
+
+  <div class="greenbox">
+    <b>Conseil :</b> une photo du pneu ou de la trottinette permet souvent de répondre plus vite et d’éviter les erreurs de dimension.
+  </div>
 </section>
 
 <footer class="footer">
-ElectroRide • Theux<br>
-Sur rendez-vous uniquement<br>
-TVA : BE 1035.368.201
+  ElectroRide • Theux
+  <br>
+  Sur rendez-vous uniquement • 0495 65 61 86
+  <br>
+  TVA : BE 1035.368.201
+  <br>
+  <a href="https://share.google/8i61Yhgsv57keJ0ji" target="_blank" rel="noopener">⭐ Voir / laisser un avis Google</a>
 </footer>
 
-</div>
+</main>
 
 </body>
 </html>
