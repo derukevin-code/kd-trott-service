@@ -142,7 +142,7 @@ img{max-width:100%;display:block}
   justify-content:center;
   align-items:center;
   gap:8px;
-  padding:13px 17px;
+  padding:14px 18px;
   border-radius:999px;
   border:1px solid var(--line);
   background:rgba(255,255,255,.05);
@@ -155,6 +155,7 @@ img{max-width:100%;display:block}
 .btn.green{
   background:rgba(65,224,123,.16);
   border-color:rgba(65,224,123,.35);
+  box-shadow:0 0 25px rgba(65,224,123,.14);
 }
 
 .btn.gold{
@@ -220,7 +221,7 @@ img{max-width:100%;display:block}
 
 .photo img{
   width:100%;
-  height:300px;
+  height:280px;
   object-fit:cover;
 }
 
@@ -292,7 +293,7 @@ img{max-width:100%;display:block}
   line-height:1.4;
 }
 
-.confirmed{
+.smallTag{
   display:inline-flex;
   margin-top:8px;
   padding:5px 8px;
@@ -302,6 +303,20 @@ img{max-width:100%;display:block}
   color:var(--green);
   font-size:12px;
   font-weight:850;
+}
+
+details.more{
+  margin-top:12px;
+  padding:12px;
+  border-radius:17px;
+  background:rgba(255,255,255,.03);
+  border:1px solid var(--line);
+}
+
+details.more summary{
+  cursor:pointer;
+  color:var(--gold);
+  font-weight:900;
 }
 
 .note{
@@ -435,7 +450,7 @@ ul.clean li{
   .btn{width:100%}
   .sticky{border-radius:22px}
   .contactLine{flex-direction:column}
-  .photo img{height:240px}
+  .photo img{height:230px}
   .priceCard{padding:12px}
   .price{font-size:17px}
 }
@@ -484,17 +499,17 @@ Chambre à air, tubeless, pneu plein, valve et check-up sécurité.
 
 <div class="grid3">
 <div class="mini">
-<b>Tarifs clairs</b>
-Le prix est annoncé avant intervention.
+<b>Prix clair</b>
+Le tarif est confirmé avant intervention.
 </div>
 
 <div class="mini">
-<b>2 options simples</b>
+<b>Simple</b>
 Vous apportez la pièce ou je fournis la pièce.
 </div>
 
 <div class="mini">
-<b>Travail soigné</b>
+<b>Soigné</b>
 Montage propre avec contrôle visuel.
 </div>
 </div>
@@ -517,7 +532,7 @@ Montage propre avec contrôle visuel.
 <h3>Tarifs ElectroRide</h3>
 
 <p class="sub">
-Les modèles indiqués ci-dessous sont uniquement ceux dont la taille correspond clairement. Pour les autres modèles, une photo du pneu est demandée avant confirmation.
+Prix indicatifs. Le modèle exact et la taille inscrite sur le pneu sont vérifiés avant intervention.
 </p>
 
 <div class="optionBox">
@@ -541,7 +556,7 @@ Les modèles indiqués ci-dessous sont uniquement ceux dont la taille correspond
 <div class="priceTop">
 <div>
 <div class="name">Chambre à air — roue moteur</div>
-<div class="hint">Pose uniquement — démontage plus délicat</div>
+<div class="hint">Pose uniquement</div>
 </div>
 <div class="price">24,99 €</div>
 </div>
@@ -561,7 +576,7 @@ Les modèles indiqués ci-dessous sont uniquement ceux dont la taille correspond
 <div class="priceTop">
 <div>
 <div class="name">Tubeless — roue moteur</div>
-<div class="hint">Pose uniquement — démontage plus délicat</div>
+<div class="hint">Pose uniquement</div>
 </div>
 <div class="price">29,99 €</div>
 </div>
@@ -571,7 +586,7 @@ Les modèles indiqués ci-dessous sont uniquement ceux dont la taille correspond
 <div class="priceTop">
 <div>
 <div class="name">Pneu plein</div>
-<div class="hint">Petites trottinettes uniquement</div>
+<div class="hint">Pose uniquement — selon modèle compatible</div>
 </div>
 <div class="price">29,99 €</div>
 </div>
@@ -580,18 +595,25 @@ Les modèles indiqués ci-dessous sont uniquement ceux dont la taille correspond
 <div class="priceCard">
 <div class="priceTop">
 <div>
-<div class="name">Obus de valve</div>
-<div class="hint">Remplacement simple</div>
+<div class="name">Valve / obus</div>
+<div class="hint">Obus de valve ou valve tubeless</div>
 </div>
-<div class="price">3,99 €</div>
+<div class="price">dès 3,99 €</div>
 </div>
 </div>
+
+</div>
+
+<details class="more">
+<summary>Voir services complémentaires</summary>
+
+<div class="priceGrid">
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
-<div class="name">Valve tubeless</div>
-<div class="hint">Remplacement valve tubeless</div>
+<div class="name">Remplacement valve tubeless</div>
+<div class="hint">Valve tubeless</div>
 </div>
 <div class="price">9,99 €</div>
 </div>
@@ -618,6 +640,7 @@ Les modèles indiqués ci-dessous sont uniquement ceux dont la taille correspond
 </div>
 
 </div>
+</details>
 
 <div class="optionBox">
 <h4>Option B — Pièce fournie + pose</h4>
@@ -630,33 +653,33 @@ Les modèles indiqués ci-dessous sont uniquement ceux dont la taille correspond
 <div class="priceTop">
 <div>
 <div class="name">Chambre à air 8.5x2</div>
-<div class="hint">Xiaomi M365, 1S, Essential, Pro, Pro 2, Mi 3</div>
+<div class="hint">Xiaomi M365 • 1S • Essential • Pro • Pro 2 • Mi 3</div>
 </div>
 <div class="price">29,99 €</div>
 </div>
-<span class="confirmed">Compatibilité vérifiée par taille 8.5x2</span>
+<div class="smallTag">Taille : 8.5x2</div>
 </div>
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
 <div class="name">Chambre à air 10x2.125</div>
-<div class="hint">Ninebot F20, F25, F30, F40</div>
+<div class="hint">Ninebot F20 • F25 • F30 • F40</div>
 </div>
 <div class="price">29,99 €</div>
 </div>
-<span class="confirmed">Compatibilité vérifiée par taille 10x2.125</span>
+<div class="smallTag">Taille : 10x2.125</div>
 </div>
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
 <div class="name">Kit pneu + chambre 10x2.125</div>
-<div class="hint">Ninebot F20, F25, F30, F40</div>
+<div class="hint">Ninebot F20 • F25 • F30 • F40</div>
 </div>
 <div class="price">44,99 €</div>
 </div>
-<span class="confirmed">Compatibilité vérifiée par taille 10x2.125</span>
+<div class="smallTag">Taille : 10x2.125</div>
 </div>
 
 <div class="priceCard">
@@ -667,67 +690,88 @@ Les modèles indiqués ci-dessous sont uniquement ceux dont la taille correspond
 </div>
 <div class="price">49,99 €</div>
 </div>
-<span class="confirmed">Compatibilité vérifiée par taille 60/70-6.5</span>
+<div class="smallTag">Taille : 60/70-6.5</div>
 </div>
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
 <div class="name">Tubeless 90/65-6.5</div>
-<div class="hint">Dualtron Thunder, Zero 11X, Kaabo Wolf Warrior II, Dualtron Ultra, Dualtron Ultra 2, Nami Viper Burn-e</div>
+<div class="hint">Dualtron Thunder • Zero 11X • Kaabo Wolf Warrior • Dualtron Ultra • Nami Burn-e</div>
 </div>
 <div class="price">69,99 €</div>
 </div>
-<span class="confirmed">Compatibilité vérifiée par taille 90/65-6.5</span>
+<div class="smallTag">Taille : 90/65-6.5</div>
 </div>
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
 <div class="name">Pneu plein 8.5x2</div>
-<div class="hint">Xiaomi M365, 1S, Essential, Pro, Pro 2, Mi 3</div>
+<div class="hint">Xiaomi M365 • 1S • Essential • Pro • Pro 2 • Mi 3</div>
 </div>
 <div class="price">49,99 €</div>
 </div>
-<span class="confirmed">Compatibilité vérifiée par taille 8.5x2</span>
+<div class="smallTag">Taille : 8.5x2</div>
 </div>
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
 <div class="name">Pneu plein 10x2.125</div>
-<div class="hint">Ninebot F20, F25, F30, F40</div>
+<div class="hint">Ninebot F20 • F25 • F30 • F40</div>
 </div>
 <div class="price">54,99 €</div>
 </div>
-<span class="confirmed">Compatibilité vérifiée par taille 10x2.125</span>
+<div class="smallTag">Taille : 10x2.125</div>
 </div>
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
 <div class="name">Pneu CST 90/65-6.5</div>
-<div class="hint">Dualtron Thunder, Zero 11X, Kaabo Wolf Warrior II, Dualtron Ultra, Dualtron Ultra 2, Nami Viper Burn-e</div>
+<div class="hint">Dualtron Thunder • Zero 11X • Kaabo Wolf Warrior • Dualtron Ultra • Nami Burn-e</div>
 </div>
 <div class="price">64,99 €</div>
 </div>
-<span class="confirmed">Compatibilité vérifiée par taille 90/65-6.5</span>
+<div class="smallTag">Taille : 90/65-6.5</div>
 </div>
 
 </div>
 
 <div class="note">
-<b>Important :</b> la taille inscrite sur le pneu reste prioritaire. Si le modèle n’est pas dans cette liste, la compatibilité est confirmée uniquement après photo du pneu.
+<b>Important :</b> la taille inscrite sur le pneu reste prioritaire. Une photo du pneu peut être demandée avant confirmation.
 </div>
 
 <div class="warningbox">
-<b>Pneu plein :</b> proposé uniquement pour petites trottinettes comme Xiaomi ou Ninebot. Pas pour grosses roues type Dualtron, Kaabo, Zero 11X ou Nami.
+<b>Pneu plein :</b> disponible selon le modèle, la taille et le type de jante. La compatibilité est confirmée avant intervention.
 </div>
 
 <a class="btn green" href="#contact" style="margin-top:14px;width:100%;">
 ✉️ Demander un rendez-vous
 </a>
 
+</section>
+
+<section class="section card">
+<h3>Comment ça se passe ?</h3>
+
+<div class="grid3">
+<div class="mini">
+<b>1. Envoyez une photo</b>
+Marque, modèle et photo du pneu.
+</div>
+
+<div class="mini">
+<b>2. Prix confirmé</b>
+Le tarif est validé avant intervention.
+</div>
+
+<div class="mini">
+<b>3. Dépôt sur rendez-vous</b>
+Vous déposez la trottinette au créneau prévu.
+</div>
+</div>
 </section>
 
 <section class="section grid2">
@@ -743,7 +787,7 @@ Vous pouvez apporter votre pièce ou choisir la formule tout compris.
 <li><span class="check">✓</span><span>Chambre à air</span></li>
 <li><span class="check">✓</span><span>Pneu + chambre à air</span></li>
 <li><span class="check">✓</span><span>Pneu tubeless</span></li>
-<li><span class="check">✓</span><span>Pneu plein pour petites trottinettes</span></li>
+<li><span class="check">✓</span><span>Pneu plein selon modèle compatible</span></li>
 <li><span class="check">✓</span><span>Valve tubeless / obus de valve</span></li>
 </ul>
 
