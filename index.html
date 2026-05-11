@@ -49,10 +49,7 @@ img{max-width:100%;display:block}
   padding:16px 14px 28px;
 }
 
-.hero{
-  text-align:center;
-  padding-top:8px;
-}
+.hero{text-align:center;padding-top:8px}
 
 .logo{
   width:72px;
@@ -223,7 +220,7 @@ img{max-width:100%;display:block}
 
 .photo img{
   width:100%;
-  height:320px;
+  height:300px;
   object-fit:cover;
 }
 
@@ -295,22 +292,16 @@ img{max-width:100%;display:block}
   line-height:1.4;
 }
 
-details.compat{
+.confirmed{
+  display:inline-flex;
   margin-top:8px;
-}
-
-details.compat summary{
-  cursor:pointer;
-  color:var(--gold);
-  font-size:12.8px;
+  padding:5px 8px;
+  border-radius:999px;
+  background:rgba(65,224,123,.10);
+  border:1px solid rgba(65,224,123,.22);
+  color:var(--green);
+  font-size:12px;
   font-weight:850;
-}
-
-details.compat p{
-  margin:7px 0 0;
-  color:rgba(238,244,255,.86);
-  font-size:12.8px;
-  line-height:1.45;
 }
 
 .note{
@@ -373,9 +364,7 @@ ul.clean li{
   font-size:13px;
 }
 
-.no{
-  color:var(--red);
-}
+.no{color:var(--red)}
 
 .faq{
   margin-top:10px;
@@ -446,7 +435,7 @@ ul.clean li{
   .btn{width:100%}
   .sticky{border-radius:22px}
   .contactLine{flex-direction:column}
-  .photo img{height:250px}
+  .photo img{height:240px}
   .priceCard{padding:12px}
   .price{font-size:17px}
 }
@@ -528,7 +517,7 @@ Montage propre avec contrôle visuel.
 <h3>Tarifs ElectroRide</h3>
 
 <p class="sub">
-Les prix ci-dessous sont indicatifs et confirmés avant intervention selon le modèle exact et la taille inscrite sur le pneu.
+Les modèles indiqués ci-dessous sont uniquement ceux dont la taille correspond clairement. Pour les autres modèles, une photo du pneu est demandée avant confirmation.
 </p>
 
 <div class="optionBox">
@@ -640,207 +629,99 @@ Les prix ci-dessous sont indicatifs et confirmés avant intervention selon le mo
 <div class="priceCard">
 <div class="priceTop">
 <div>
-<div class="name">Chambre à air 8.5"</div>
-<div class="hint">Xiaomi / Ninebot classiques</div>
+<div class="name">Chambre à air 8.5x2</div>
+<div class="hint">Xiaomi M365, 1S, Essential, Pro, Pro 2, Mi 3</div>
 </div>
 <div class="price">29,99 €</div>
 </div>
-<details class="compat">
-<summary>Voir compatibilités</summary>
-<p>Xiaomi M365, 1S, Essential, Pro, Pro 2, Mi 3 — à confirmer selon taille 8.5x2 inscrite sur le pneu.</p>
-</details>
+<span class="confirmed">Compatibilité vérifiée par taille 8.5x2</span>
 </div>
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
 <div class="name">Chambre à air 10x2.125</div>
-<div class="hint">Ninebot série F</div>
+<div class="hint">Ninebot F20, F25, F30, F40</div>
 </div>
 <div class="price">29,99 €</div>
 </div>
-<details class="compat">
-<summary>Voir compatibilités</summary>
-<p>Ninebot F20, F25, F30, F40 — taille courante 10x2.125.</p>
-</details>
-</div>
-
-<div class="priceCard">
-<div class="priceTop">
-<div>
-<div class="name">Chambre à air 10"</div>
-<div class="hint">Kugoo / Kukirin / Zero — selon taille exacte</div>
-</div>
-<div class="price">32,99 €</div>
-</div>
-<details class="compat">
-<summary>Voir compatibilités</summary>
-<p>Kugoo/Kukirin M4, M4 Pro et certains modèles 10 pouces. Taille à vérifier : souvent 10x2.50, 10x3 ou équivalent.</p>
-</details>
-</div>
-
-<div class="priceCard">
-<div class="priceTop">
-<div>
-<div class="name">Chambre à air 11"</div>
-<div class="hint">Grosses trottinettes</div>
-</div>
-<div class="price">33,99 €</div>
-</div>
-<details class="compat">
-<summary>Voir compatibilités</summary>
-<p>Dualtron, Kaabo, Zero 11X, Vsett selon dimension exacte. Vérification obligatoire avant intervention.</p>
-</details>
+<span class="confirmed">Compatibilité vérifiée par taille 10x2.125</span>
 </div>
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
 <div class="name">Kit pneu + chambre 10x2.125</div>
-<div class="hint">Ninebot série F</div>
+<div class="hint">Ninebot F20, F25, F30, F40</div>
 </div>
 <div class="price">44,99 €</div>
 </div>
-<details class="compat">
-<summary>Voir compatibilités</summary>
-<p>Ninebot F20, F25, F30, F40.</p>
-</details>
+<span class="confirmed">Compatibilité vérifiée par taille 10x2.125</span>
 </div>
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
-<div class="name">Kit pneu + chambre 10"</div>
-<div class="hint">Kukirin / Kugoo — selon taille exacte</div>
-</div>
-<div class="price">59,99 €</div>
-</div>
-<details class="compat">
-<summary>Voir compatibilités</summary>
-<p>Kukirin G2 Max, Kugoo/Kukirin M4 Pro, Speedway selon dimension exacte. Vérification obligatoire.</p>
-</details>
-</div>
-
-<div class="priceCard">
-<div class="priceTop">
-<div>
-<div class="name">Tubeless 8.5"</div>
-<div class="hint">Xiaomi compatibles 8.5"</div>
-</div>
-<div class="price">44,99 €</div>
-</div>
-<details class="compat">
-<summary>Voir compatibilités</summary>
-<p>Xiaomi M365, 1S, Essential, Pro, Pro 2 si montage tubeless compatible avec la jante.</p>
-</details>
-</div>
-
-<div class="priceCard">
-<div class="priceTop">
-<div>
-<div class="name">Tubeless 10" standard</div>
-<div class="hint">10 pouces route standard</div>
+<div class="name">Tubeless 60/70-6.5</div>
+<div class="hint">Ninebot Max G30</div>
 </div>
 <div class="price">49,99 €</div>
 </div>
-<details class="compat">
-<summary>Voir compatibilités</summary>
-<p>Ninebot Max G30, certains Kugoo/Kukirin et Zero selon dimension exacte inscrite sur le pneu.</p>
-</details>
+<span class="confirmed">Compatibilité vérifiée par taille 60/70-6.5</span>
 </div>
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
-<div class="name">Tubeless 10" grosse trottinette</div>
-<div class="hint">Gros 10 pouces — à confirmer</div>
-</div>
-<div class="price">64,99 €</div>
-</div>
-<details class="compat">
-<summary>Voir compatibilités</summary>
-<p>Modèles puissants en 10 pouces uniquement. Dualtron Thunder n’est pas placé ici : elle est en 11 pouces.</p>
-</details>
-</div>
-
-<div class="priceCard">
-<div class="priceTop">
-<div>
-<div class="name">Tubeless 11"</div>
-<div class="hint">Dualtron / Kaabo / Vsett</div>
+<div class="name">Tubeless 90/65-6.5</div>
+<div class="hint">Dualtron Thunder, Zero 11X, Kaabo Wolf Warrior II, Dualtron Ultra, Dualtron Ultra 2, Nami Viper Burn-e</div>
 </div>
 <div class="price">69,99 €</div>
 </div>
-<details class="compat">
-<summary>Voir compatibilités</summary>
-<p>Dualtron Thunder, Kaabo Wolf Warrior, Vsett et grosses trottinettes 11 pouces selon taille exacte.</p>
-</details>
+<span class="confirmed">Compatibilité vérifiée par taille 90/65-6.5</span>
 </div>
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
-<div class="name">Pneu plein 8.5"</div>
-<div class="hint">Petites trottinettes</div>
+<div class="name">Pneu plein 8.5x2</div>
+<div class="hint">Xiaomi M365, 1S, Essential, Pro, Pro 2, Mi 3</div>
 </div>
 <div class="price">49,99 €</div>
 </div>
-<details class="compat">
-<summary>Voir compatibilités</summary>
-<p>Xiaomi M365, 1S, Essential et modèles équivalents en 8.5 pouces.</p>
-</details>
+<span class="confirmed">Compatibilité vérifiée par taille 8.5x2</span>
 </div>
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
 <div class="name">Pneu plein 10x2.125</div>
-<div class="hint">Ninebot série F</div>
+<div class="hint">Ninebot F20, F25, F30, F40</div>
 </div>
 <div class="price">54,99 €</div>
 </div>
-<details class="compat">
-<summary>Voir compatibilités</summary>
-<p>Ninebot F20, F30, F40 selon taille exacte.</p>
-</details>
+<span class="confirmed">Compatibilité vérifiée par taille 10x2.125</span>
 </div>
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
-<div class="name">Pneu CST route 10"</div>
-<div class="hint">10 pouces route</div>
-</div>
-<div class="price">59,99 €</div>
-</div>
-<details class="compat">
-<summary>Voir compatibilités</summary>
-<p>Zero 10X, Speedway, Kugoo/Kukirin M4 Pro selon dimension exacte.</p>
-</details>
-</div>
-
-<div class="priceCard">
-<div class="priceTop">
-<div>
-<div class="name">Pneu CST 11"</div>
-<div class="hint">Grosses trottinettes 11 pouces</div>
+<div class="name">Pneu CST 90/65-6.5</div>
+<div class="hint">Dualtron Thunder, Zero 11X, Kaabo Wolf Warrior II, Dualtron Ultra, Dualtron Ultra 2, Nami Viper Burn-e</div>
 </div>
 <div class="price">64,99 €</div>
 </div>
-<details class="compat">
-<summary>Voir compatibilités</summary>
-<p>Wolf Warrior, Dualtron Thunder et modèles 11 pouces compatibles selon taille exacte.</p>
-</details>
+<span class="confirmed">Compatibilité vérifiée par taille 90/65-6.5</span>
 </div>
 
 </div>
 
 <div class="note">
-<b>Important :</b> la taille inscrite sur le pneu reste prioritaire. Certains modèles existent en plusieurs versions.
+<b>Important :</b> la taille inscrite sur le pneu reste prioritaire. Si le modèle n’est pas dans cette liste, la compatibilité est confirmée uniquement après photo du pneu.
 </div>
 
 <div class="warningbox">
-<b>Pneu plein :</b> proposé uniquement pour petites trottinettes comme Xiaomi ou Ninebot. Pas pour grosses roues type Dualtron / Kaabo.
+<b>Pneu plein :</b> proposé uniquement pour petites trottinettes comme Xiaomi ou Ninebot. Pas pour grosses roues type Dualtron, Kaabo, Zero 11X ou Nami.
 </div>
 
 <a class="btn green" href="#contact" style="margin-top:14px;width:100%;">
@@ -908,8 +789,8 @@ Spécialisation mécanique extérieure uniquement.
 </details>
 
 <details class="faq">
-<summary>Vous montez les pneus pleins sur toutes les trottinettes ?</summary>
-<p>Non. Les pneus pleins sont proposés uniquement pour petites trottinettes comme Xiaomi ou Ninebot.</p>
+<summary>Pourquoi demander une photo du pneu ?</summary>
+<p>Parce que certains modèles existent en plusieurs versions. La taille inscrite sur le pneu permet de confirmer la bonne pièce avant intervention.</p>
 </details>
 
 </section>
