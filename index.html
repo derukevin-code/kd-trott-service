@@ -1,5 +1,3 @@
-Oui, tu as raison : j’ai corrigé pour éviter de mettre Dualtron Thunder en 10 pouces. Dans ce code, je l’ai mise uniquement en 11 pouces. Les tarifs viennent de ton fichier : 
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,7 +6,7 @@ Oui, tu as raison : j’ai corrigé pour éviter de mettre Dualtron Thunder en 1
 
 <title>ElectroRide — Réparation pneus trottinette électrique à Theux</title>
 
-<meta name="description" content="Réparation pneus trottinette électrique à Theux : chambre à air, tubeless, pneu plein, valve, check-up sécurité. Pose seule ou pièce fournie + pose. Prix confirmé avant intervention.">
+<meta name="description" content="Réparation pneus trottinette électrique à Theux : chambre à air, tubeless, pneu plein, valve et check-up sécurité. Pose seule ou pièce fournie + pose. Prix confirmé avant intervention.">
 
 <meta name="theme-color" content="#081120">
 
@@ -16,14 +14,15 @@ Oui, tu as raison : j’ai corrigé pour éviter de mettre Dualtron Thunder en 1
 :root{
   --bg:#07111f;
   --bg2:#0d1c34;
-  --card:rgba(255,255,255,.055);
+  --card:rgba(255,255,255,.06);
   --card2:rgba(255,255,255,.035);
-  --line:rgba(255,255,255,.11);
+  --line:rgba(255,255,255,.12);
   --text:#eef4ff;
   --muted:#b7c3df;
   --green:#41e07b;
   --gold:#f8c542;
-  --radius:20px;
+  --red:#ff7373;
+  --radius:22px;
   --max:980px;
   --shadow:0 18px 50px rgba(0,0,0,.35);
 }
@@ -50,7 +49,10 @@ img{max-width:100%;display:block}
   padding:16px 14px 28px;
 }
 
-.hero{text-align:center;padding-top:8px;}
+.hero{
+  text-align:center;
+  padding-top:8px;
+}
 
 .logo{
   width:72px;
@@ -133,7 +135,7 @@ img{max-width:100%;display:block}
   margin-top:16px;
   padding:10px;
   border-radius:999px;
-  background:rgba(7,17,31,.80);
+  background:rgba(7,17,31,.84);
   backdrop-filter:blur(10px);
   border:1px solid var(--line);
 }
@@ -163,7 +165,7 @@ img{max-width:100%;display:block}
   border-color:rgba(248,197,66,.30);
 }
 
-.section{margin-top:16px;}
+.section{margin-top:16px}
 
 .card{
   background:linear-gradient(180deg,var(--card),var(--card2));
@@ -200,7 +202,7 @@ img{max-width:100%;display:block}
 
 .mini{
   padding:14px;
-  border-radius:16px;
+  border-radius:17px;
   background:rgba(255,255,255,.035);
   border:1px solid var(--line);
   font-size:14px;
@@ -216,11 +218,12 @@ img{max-width:100%;display:block}
   border-radius:var(--radius);
   overflow:hidden;
   border:1px solid var(--line);
+  background:rgba(255,255,255,.03);
 }
 
 .photo img{
   width:100%;
-  max-height:420px;
+  height:320px;
   object-fit:cover;
 }
 
@@ -230,54 +233,52 @@ img{max-width:100%;display:block}
   font-size:13px;
 }
 
-.optionHeader{
+.optionBox{
   margin-top:14px;
-  padding:15px;
-  border-radius:18px;
-  background:rgba(65,224,123,.08);
+  padding:16px;
+  border-radius:20px;
+  background:rgba(65,224,123,.07);
   border:1px solid rgba(65,224,123,.22);
 }
 
-.optionHeader h4{
+.optionBox h4{
   margin:0 0 5px;
   color:var(--green);
-  font-size:20px;
+  font-size:21px;
 }
 
-.optionHeader p{
+.optionBox p{
   margin:0;
   color:var(--muted);
   font-size:14px;
   line-height:1.5;
 }
 
-.priceList{
-  margin-top:10px;
+.priceGrid{
+  margin-top:12px;
   display:grid;
-  gap:9px;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
 }
 
-.row{
-  display:grid;
-  grid-template-columns:1fr auto;
-  gap:12px;
-  align-items:center;
-  padding:12px 13px;
-  border-radius:15px;
+.priceCard{
+  padding:13px;
+  border-radius:17px;
   background:rgba(255,255,255,.035);
   border:1px solid var(--line);
 }
 
-.name{
-  font-weight:900;
-  font-size:15px;
+.priceTop{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  align-items:flex-start;
 }
 
-.hint{
-  color:var(--muted);
-  font-size:12.8px;
-  margin-top:3px;
-  line-height:1.35;
+.name{
+  font-weight:950;
+  font-size:15px;
+  line-height:1.25;
 }
 
 .price{
@@ -285,6 +286,31 @@ img{max-width:100%;display:block}
   font-size:18px;
   font-weight:950;
   white-space:nowrap;
+}
+
+.hint{
+  color:var(--muted);
+  font-size:12.8px;
+  margin-top:5px;
+  line-height:1.4;
+}
+
+details.compat{
+  margin-top:8px;
+}
+
+details.compat summary{
+  cursor:pointer;
+  color:var(--gold);
+  font-size:12.8px;
+  font-weight:850;
+}
+
+details.compat p{
+  margin:7px 0 0;
+  color:rgba(238,244,255,.86);
+  font-size:12.8px;
+  line-height:1.45;
 }
 
 .note{
@@ -347,6 +373,10 @@ ul.clean li{
   font-size:13px;
 }
 
+.no{
+  color:var(--red);
+}
+
 .faq{
   margin-top:10px;
   padding:12px;
@@ -407,7 +437,7 @@ ul.clean li{
 }
 
 @media(max-width:850px){
-  .grid2,.grid3,.ctaRow{grid-template-columns:1fr;}
+  .grid2,.grid3,.ctaRow,.priceGrid{grid-template-columns:1fr;}
 }
 
 @media(max-width:520px){
@@ -416,7 +446,8 @@ ul.clean li{
   .btn{width:100%}
   .sticky{border-radius:22px}
   .contactLine{flex-direction:column}
-  .row{padding:11px 12px}
+  .photo img{height:250px}
+  .priceCard{padding:12px}
   .price{font-size:17px}
 }
 </style>
@@ -442,7 +473,7 @@ Chambre à air, tubeless, pneu plein, valve et check-up sécurité.
 <div class="priceStrip">
 <div class="priceChip">Pose seule dès <b>19,99 €</b></div>
 <div class="priceChip">Tout compris dès <b>29,99 €</b></div>
-<div class="priceChip">Prix confirmé avant réparation</div>
+<div class="priceChip">Prix confirmé avant intervention</div>
 </div>
 
 <div class="badges">
@@ -464,12 +495,12 @@ Chambre à air, tubeless, pneu plein, valve et check-up sécurité.
 
 <div class="grid3">
 <div class="mini">
-<b>Tarifs attractifs</b>
-Prix simples et compétitifs.
+<b>Tarifs clairs</b>
+Le prix est annoncé avant intervention.
 </div>
 
 <div class="mini">
-<b>2 options claires</b>
+<b>2 options simples</b>
 Vous apportez la pièce ou je fournis la pièce.
 </div>
 
@@ -497,213 +528,315 @@ Montage propre avec contrôle visuel.
 <h3>Tarifs ElectroRide</h3>
 
 <p class="sub">
-Prix confirmé avant toute intervention. Aucune surprise.
+Les prix ci-dessous sont indicatifs et confirmés avant intervention selon le modèle exact et la taille inscrite sur le pneu.
 </p>
 
-<div class="optionHeader">
+<div class="optionBox">
 <h4>Option A — Pose seule</h4>
-<p>Vous apportez votre pièce, je fais uniquement le montage.</p>
+<p>Vous apportez votre pièce. Je réalise uniquement le montage.</p>
 </div>
 
-<div class="priceList">
+<div class="priceGrid">
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
 <div class="name">Chambre à air — roue simple</div>
 <div class="hint">Pose uniquement</div>
 </div>
 <div class="price">19,99 €</div>
 </div>
+</div>
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
 <div class="name">Chambre à air — roue moteur</div>
 <div class="hint">Pose uniquement — démontage plus délicat</div>
 </div>
 <div class="price">24,99 €</div>
 </div>
+</div>
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
 <div class="name">Tubeless — roue simple</div>
 <div class="hint">Pose uniquement</div>
 </div>
 <div class="price">24,99 €</div>
 </div>
+</div>
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
 <div class="name">Tubeless — roue moteur</div>
 <div class="hint">Pose uniquement — démontage plus délicat</div>
 </div>
 <div class="price">29,99 €</div>
 </div>
+</div>
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
 <div class="name">Pneu plein</div>
 <div class="hint">Petites trottinettes uniquement</div>
 </div>
 <div class="price">29,99 €</div>
 </div>
+</div>
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
-<div class="name">Changement obus de valve</div>
-<div class="hint">Petite intervention</div>
+<div class="name">Obus de valve</div>
+<div class="hint">Remplacement simple</div>
 </div>
 <div class="price">3,99 €</div>
 </div>
+</div>
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
-<div class="name">Remplacement valve tubeless</div>
-<div class="hint">Valve tubeless</div>
+<div class="name">Valve tubeless</div>
+<div class="hint">Remplacement valve tubeless</div>
 </div>
 <div class="price">9,99 €</div>
 </div>
+</div>
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
 <div class="name">Check-up sécurité</div>
 <div class="hint">Contrôle rapide</div>
 </div>
 <div class="price">9,99 €</div>
 </div>
+</div>
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
 <div class="name">Nettoyage + check-up</div>
 <div class="hint">Pack conseillé</div>
 </div>
 <div class="price">17,99 €</div>
 </div>
+</div>
 
 </div>
 
-<div class="optionHeader">
+<div class="optionBox">
 <h4>Option B — Pièce fournie + pose</h4>
 <p>Je fournis la pièce adaptée et je fais le montage. Prix tout compris.</p>
 </div>
 
-<div class="priceList">
+<div class="priceGrid">
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
-<div class="name">Chambre à air Xiaomi / Ninebot 8.5"</div>
-<div class="hint">M365, 1S, Essential, Pro</div>
+<div class="name">Chambre à air 8.5"</div>
+<div class="hint">Xiaomi / Ninebot classiques</div>
 </div>
 <div class="price">29,99 €</div>
 </div>
+<details class="compat">
+<summary>Voir compatibilités</summary>
+<p>Xiaomi M365, 1S, Essential, Pro, Pro 2, Mi 3 — à confirmer selon taille 8.5x2 inscrite sur le pneu.</p>
+</details>
+</div>
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
-<div class="name">Chambre à air Ninebot 10"</div>
-<div class="hint">F20, F25, F30, F40</div>
+<div class="name">Chambre à air 10x2.125</div>
+<div class="hint">Ninebot série F</div>
 </div>
 <div class="price">29,99 €</div>
 </div>
+<details class="compat">
+<summary>Voir compatibilités</summary>
+<p>Ninebot F20, F25, F30, F40 — taille courante 10x2.125.</p>
+</details>
+</div>
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
-<div class="name">Chambre à air Kugoo / Zero 10"</div>
-<div class="hint">M4 Pro, Speedway, Zero 10X</div>
+<div class="name">Chambre à air 10"</div>
+<div class="hint">Kugoo / Kukirin / Zero — selon taille exacte</div>
 </div>
 <div class="price">32,99 €</div>
 </div>
+<details class="compat">
+<summary>Voir compatibilités</summary>
+<p>Kugoo/Kukirin M4, M4 Pro et certains modèles 10 pouces. Taille à vérifier : souvent 10x2.50, 10x3 ou équivalent.</p>
+</details>
+</div>
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
-<div class="name">Chambre à air 11 pouces</div>
-<div class="hint">Dualtron, Kaabo, Zero 11X</div>
+<div class="name">Chambre à air 11"</div>
+<div class="hint">Grosses trottinettes</div>
 </div>
 <div class="price">33,99 €</div>
 </div>
+<details class="compat">
+<summary>Voir compatibilités</summary>
+<p>Dualtron, Kaabo, Zero 11X, Vsett selon dimension exacte. Vérification obligatoire avant intervention.</p>
+</details>
+</div>
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
 <div class="name">Kit pneu + chambre 10x2.125</div>
-<div class="hint">Ninebot F20 / F25 / F30 / F40</div>
+<div class="hint">Ninebot série F</div>
 </div>
 <div class="price">44,99 €</div>
 </div>
+<details class="compat">
+<summary>Voir compatibilités</summary>
+<p>Ninebot F20, F25, F30, F40.</p>
+</details>
+</div>
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
-<div class="name">Kit pneu + chambre 10x2.70</div>
-<div class="hint">Kukirin G2 Max, Speedway</div>
+<div class="name">Kit pneu + chambre 10"</div>
+<div class="hint">Kukirin / Kugoo — selon taille exacte</div>
 </div>
 <div class="price">59,99 €</div>
 </div>
+<details class="compat">
+<summary>Voir compatibilités</summary>
+<p>Kukirin G2 Max, Kugoo/Kukirin M4 Pro, Speedway selon dimension exacte. Vérification obligatoire.</p>
+</details>
+</div>
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
 <div class="name">Tubeless 8.5"</div>
-<div class="hint">Xiaomi M365, 1S, Essential, Pro</div>
+<div class="hint">Xiaomi compatibles 8.5"</div>
 </div>
 <div class="price">44,99 €</div>
 </div>
+<details class="compat">
+<summary>Voir compatibilités</summary>
+<p>Xiaomi M365, 1S, Essential, Pro, Pro 2 si montage tubeless compatible avec la jante.</p>
+</details>
+</div>
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
 <div class="name">Tubeless 10" standard</div>
-<div class="hint">Kugoo, Zero, Ninebot G30</div>
+<div class="hint">10 pouces route standard</div>
 </div>
 <div class="price">49,99 €</div>
 </div>
+<details class="compat">
+<summary>Voir compatibilités</summary>
+<p>Ninebot Max G30, certains Kugoo/Kukirin et Zero selon dimension exacte inscrite sur le pneu.</p>
+</details>
+</div>
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
 <div class="name">Tubeless 10" grosse trottinette</div>
-<div class="hint">Selon modèle exact — à confirmer avant intervention</div>
+<div class="hint">Gros 10 pouces — à confirmer</div>
 </div>
 <div class="price">64,99 €</div>
 </div>
+<details class="compat">
+<summary>Voir compatibilités</summary>
+<p>Modèles puissants en 10 pouces uniquement. Dualtron Thunder n’est pas placé ici : elle est en 11 pouces.</p>
+</details>
+</div>
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
-<div class="name">Tubeless 11 pouces</div>
-<div class="hint">Dualtron Thunder, Kaabo, Vsett, grosses trottinettes compatibles</div>
+<div class="name">Tubeless 11"</div>
+<div class="hint">Dualtron / Kaabo / Vsett</div>
 </div>
 <div class="price">69,99 €</div>
 </div>
+<details class="compat">
+<summary>Voir compatibilités</summary>
+<p>Dualtron Thunder, Kaabo Wolf Warrior, Vsett et grosses trottinettes 11 pouces selon taille exacte.</p>
+</details>
+</div>
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
 <div class="name">Pneu plein 8.5"</div>
-<div class="hint">Xiaomi M365, 1S, Essential</div>
+<div class="hint">Petites trottinettes</div>
 </div>
 <div class="price">49,99 €</div>
 </div>
+<details class="compat">
+<summary>Voir compatibilités</summary>
+<p>Xiaomi M365, 1S, Essential et modèles équivalents en 8.5 pouces.</p>
+</details>
+</div>
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
 <div class="name">Pneu plein 10x2.125</div>
-<div class="hint">Ninebot F20 / F30 / F40</div>
+<div class="hint">Ninebot série F</div>
 </div>
 <div class="price">54,99 €</div>
 </div>
+<details class="compat">
+<summary>Voir compatibilités</summary>
+<p>Ninebot F20, F30, F40 selon taille exacte.</p>
+</details>
+</div>
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
 <div class="name">Pneu CST route 10"</div>
-<div class="hint">Zero 10X, Speedway, Kugoo M4 Pro</div>
+<div class="hint">10 pouces route</div>
 </div>
 <div class="price">59,99 €</div>
 </div>
+<details class="compat">
+<summary>Voir compatibilités</summary>
+<p>Zero 10X, Speedway, Kugoo/Kukirin M4 Pro selon dimension exacte.</p>
+</details>
+</div>
 
-<div class="row">
+<div class="priceCard">
+<div class="priceTop">
 <div>
-<div class="name">Pneu CST 11 pouces</div>
-<div class="hint">Wolf Warrior, Dualtron Thunder</div>
+<div class="name">Pneu CST 11"</div>
+<div class="hint">Grosses trottinettes 11 pouces</div>
 </div>
 <div class="price">64,99 €</div>
+</div>
+<details class="compat">
+<summary>Voir compatibilités</summary>
+<p>Wolf Warrior, Dualtron Thunder et modèles 11 pouces compatibles selon taille exacte.</p>
+</details>
 </div>
 
 </div>
 
 <div class="note">
-<b>Important :</b> les compatibilités dépendent parfois de la version exacte de la trottinette. Le modèle et la taille du pneu sont toujours vérifiés avant intervention.
+<b>Important :</b> la taille inscrite sur le pneu reste prioritaire. Certains modèles existent en plusieurs versions.
 </div>
 
 <div class="warningbox">
@@ -742,10 +875,10 @@ Le prix est confirmé avant intervention.
 <h3>Ce que je ne réalise pas</h3>
 
 <ul class="clean">
-<li><span class="check">×</span><span>Batterie</span></li>
-<li><span class="check">×</span><span>Contrôleur</span></li>
-<li><span class="check">×</span><span>Câblage interne</span></li>
-<li><span class="check">×</span><span>Purge hydraulique</span></li>
+<li><span class="check no">×</span><span>Batterie</span></li>
+<li><span class="check no">×</span><span>Contrôleur</span></li>
+<li><span class="check no">×</span><span>Câblage interne</span></li>
+<li><span class="check no">×</span><span>Purge hydraulique</span></li>
 </ul>
 
 <div class="warningbox">
