@@ -49,7 +49,10 @@ img{max-width:100%;display:block}
   padding:16px 14px 28px;
 }
 
-.hero{text-align:center;padding-top:8px}
+.hero{
+  text-align:center;
+  padding-top:8px;
+}
 
 .logo{
   width:72px;
@@ -86,7 +89,9 @@ img{max-width:100%;display:block}
   line-height:1.6;
 }
 
-.highlight{color:var(--green)}
+.highlight{
+  color:var(--green);
+}
 
 .priceStrip{
   display:flex;
@@ -150,6 +155,7 @@ img{max-width:100%;display:block}
   font-weight:900;
   min-width:175px;
   text-align:center;
+  transition:.2s;
 }
 
 .btn.green{
@@ -158,12 +164,18 @@ img{max-width:100%;display:block}
   box-shadow:0 0 25px rgba(65,224,123,.14);
 }
 
+.btn.green:hover{
+  transform:translateY(-1px);
+}
+
 .btn.gold{
   background:rgba(248,197,66,.12);
   border-color:rgba(248,197,66,.30);
 }
 
-.section{margin-top:16px}
+.section{
+  margin-top:16px;
+}
 
 .card{
   background:linear-gradient(180deg,var(--card),var(--card2));
@@ -256,11 +268,11 @@ img{max-width:100%;display:block}
   margin-top:12px;
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:10px;
+  gap:12px;
 }
 
 .priceCard{
-  padding:13px;
+  padding:15px;
   border-radius:17px;
   background:rgba(255,255,255,.035);
   border:1px solid var(--line);
@@ -281,9 +293,10 @@ img{max-width:100%;display:block}
 
 .price{
   color:var(--green);
-  font-size:18px;
+  font-size:20px;
   font-weight:950;
   white-space:nowrap;
+  text-shadow:0 0 12px rgba(65,224,123,.18);
 }
 
 .hint{
@@ -379,7 +392,9 @@ ul.clean li{
   font-size:13px;
 }
 
-.no{color:var(--red)}
+.no{
+  color:var(--red);
+}
 
 .faq{
   margin-top:10px;
@@ -412,7 +427,9 @@ ul.clean li{
   margin-top:10px;
 }
 
-.contactLine span{color:var(--muted)}
+.contactLine span{
+  color:var(--muted);
+}
 
 .ctaRow{
   display:grid;
@@ -429,9 +446,10 @@ ul.clean li{
 
 .footer{
   margin-top:20px;
+  padding-bottom:25px;
   text-align:center;
   color:rgba(183,195,223,.85);
-  font-size:13px;
+  font-size:12px;
   line-height:1.7;
 }
 
@@ -441,18 +459,47 @@ ul.clean li{
 }
 
 @media(max-width:850px){
-  .grid2,.grid3,.ctaRow,.priceGrid{grid-template-columns:1fr;}
+  .grid2,
+  .grid3,
+  .ctaRow,
+  .priceGrid{
+    grid-template-columns:1fr;
+  }
 }
 
 @media(max-width:520px){
-  .brand{font-size:36px}
-  .hero h2{font-size:24px}
-  .btn{width:100%}
-  .sticky{border-radius:22px}
-  .contactLine{flex-direction:column}
-  .photo img{height:230px}
-  .priceCard{padding:12px}
-  .price{font-size:17px}
+
+  .brand{
+    font-size:36px;
+  }
+
+  .hero h2{
+    font-size:24px;
+  }
+
+  .btn{
+    width:100%;
+  }
+
+  .sticky{
+    border-radius:22px;
+  }
+
+  .contactLine{
+    flex-direction:column;
+  }
+
+  .photo img{
+    height:230px;
+  }
+
+  .priceCard{
+    padding:13px;
+  }
+
+  .price{
+    font-size:18px;
+  }
 }
 </style>
 </head>
@@ -463,15 +510,23 @@ ul.clean li{
 
 <header class="hero">
 
-<img src="file_00000000e988720a9d6597291676d817.png?v=7" class="logo" alt="Logo ElectroRide">
+<img src="file_00000000e988720a9d6597291676d817.png?v=7"
+class="logo"
+alt="Logo ElectroRide">
 
 <h1 class="brand">ElectroRide</h1>
 
-<h2>Réparation pneus <span class="highlight">trottinette électrique</span> à Theux</h2>
+<h2>
+Réparation pneus
+<span class="highlight">trottinette électrique</span>
+à Theux
+</h2>
 
 <p>
 Chambre à air, tubeless, pneu plein, valve et check-up sécurité.
-<span class="highlight"><b>Tu apportes ta pièce, je pose. Ou je m’occupe de tout.</b></span>
+<span class="highlight">
+<b>Tu apportes ta pièce, je pose. Ou je m’occupe de tout.</b>
+</span>
 </p>
 
 <div class="priceStrip">
@@ -488,16 +543,23 @@ Chambre à air, tubeless, pneu plein, valve et check-up sécurité.
 </div>
 
 <nav class="sticky">
-<a class="btn green" href="#contact">✉️ Demander un rendez-vous</a>
-<a class="btn" href="tel:+32495656186">📞 Appeler</a>
+<a class="btn green" href="#contact">
+✉️ Demander un rendez-vous
+</a>
+
+<a class="btn" href="tel:+32495656186">
+📞 Appeler
+</a>
 </nav>
 
 </header>
 
 <section class="section card">
+
 <h3>Pourquoi choisir ElectroRide ?</h3>
 
 <div class="grid3">
+
 <div class="mini">
 <b>Prix clair</b>
 Le tarif est confirmé avant intervention.
@@ -512,19 +574,30 @@ Vous apportez la pièce ou je fournis la pièce.
 <b>Soigné</b>
 Montage propre avec contrôle visuel.
 </div>
+
 </div>
 </section>
 
 <section class="section grid2">
+
 <article class="photo">
-<img src="20260223_150017.jpg" alt="Trottinette en réparation">
-<div class="caption">Exemple d’intervention mécanique.</div>
+<img src="20260223_150017.jpg"
+alt="Trottinette en réparation">
+
+<div class="caption">
+Exemple d’intervention mécanique.
+</div>
 </article>
 
 <article class="photo">
-<img src="file_00000000b5bc720ab49a3aaf47abc831.png?v=7" alt="Avant après pneu">
-<div class="caption">Avant / après réel.</div>
+<img src="file_00000000b5bc720ab49a3aaf47abc831.png?v=7"
+alt="Avant après pneu">
+
+<div class="caption">
+Avant / après réel.
+</div>
 </article>
+
 </section>
 
 <section class="section card">
@@ -537,7 +610,9 @@ Prix indicatifs. Le modèle exact et la taille inscrite sur le pneu sont vérifi
 
 <div class="optionBox">
 <h4>Option A — Pose seule</h4>
-<p>Vous apportez votre pièce. Je réalise uniquement le montage.</p>
+<p>
+Vous apportez votre pièce. Je réalise uniquement le montage.
+</p>
 </div>
 
 <div class="priceGrid">
@@ -644,7 +719,11 @@ Prix indicatifs. Le modèle exact et la taille inscrite sur le pneu sont vérifi
 
 <div class="optionBox">
 <h4>Option B — Pièce fournie + pose</h4>
-<p>Je fournis la pièce adaptée et je fais le montage. Prix tout compris.</p>
+
+<p>
+Je fournis la pièce adaptée et je fais le montage.
+Prix tout compris.
+</p>
 </div>
 
 <div class="priceGrid">
@@ -653,7 +732,9 @@ Prix indicatifs. Le modèle exact et la taille inscrite sur le pneu sont vérifi
 <div class="priceTop">
 <div>
 <div class="name">Chambre à air 8.5x2</div>
-<div class="hint">Xiaomi M365 • 1S • Essential • Pro • Pro 2 • Mi 3</div>
+<div class="hint">
+Xiaomi M365 • 1S • Essential • Pro • Pro 2 • Mi 3
+</div>
 </div>
 <div class="price">29,99 €</div>
 </div>
@@ -664,7 +745,9 @@ Prix indicatifs. Le modèle exact et la taille inscrite sur le pneu sont vérifi
 <div class="priceTop">
 <div>
 <div class="name">Chambre à air 10x2.125</div>
-<div class="hint">Ninebot F20 • F25 • F30 • F40</div>
+<div class="hint">
+Ninebot F20 • F25 • F30 • F40
+</div>
 </div>
 <div class="price">29,99 €</div>
 </div>
@@ -675,7 +758,9 @@ Prix indicatifs. Le modèle exact et la taille inscrite sur le pneu sont vérifi
 <div class="priceTop">
 <div>
 <div class="name">Kit pneu + chambre 10x2.125</div>
-<div class="hint">Ninebot F20 • F25 • F30 • F40</div>
+<div class="hint">
+Ninebot F20 • F25 • F30 • F40
+</div>
 </div>
 <div class="price">44,99 €</div>
 </div>
@@ -686,7 +771,9 @@ Prix indicatifs. Le modèle exact et la taille inscrite sur le pneu sont vérifi
 <div class="priceTop">
 <div>
 <div class="name">Tubeless 60/70-6.5</div>
-<div class="hint">Ninebot Max G30</div>
+<div class="hint">
+Ninebot Max G30
+</div>
 </div>
 <div class="price">49,99 €</div>
 </div>
@@ -697,7 +784,9 @@ Prix indicatifs. Le modèle exact et la taille inscrite sur le pneu sont vérifi
 <div class="priceTop">
 <div>
 <div class="name">Tubeless 90/65-6.5</div>
-<div class="hint">Dualtron Thunder • Zero 11X • Kaabo Wolf Warrior • Dualtron Ultra • Nami Burn-e</div>
+<div class="hint">
+Thunder • Zero 11X • Wolf Warrior • Burn-e
+</div>
 </div>
 <div class="price">69,99 €</div>
 </div>
@@ -708,7 +797,9 @@ Prix indicatifs. Le modèle exact et la taille inscrite sur le pneu sont vérifi
 <div class="priceTop">
 <div>
 <div class="name">Pneu plein 8.5x2</div>
-<div class="hint">Xiaomi M365 • 1S • Essential • Pro • Pro 2 • Mi 3</div>
+<div class="hint">
+Xiaomi M365 • 1S • Essential • Pro • Pro 2 • Mi 3
+</div>
 </div>
 <div class="price">49,99 €</div>
 </div>
@@ -719,7 +810,9 @@ Prix indicatifs. Le modèle exact et la taille inscrite sur le pneu sont vérifi
 <div class="priceTop">
 <div>
 <div class="name">Pneu plein 10x2.125</div>
-<div class="hint">Ninebot F20 • F25 • F30 • F40</div>
+<div class="hint">
+Ninebot F20 • F25 • F30 • F40
+</div>
 </div>
 <div class="price">54,99 €</div>
 </div>
@@ -730,7 +823,9 @@ Prix indicatifs. Le modèle exact et la taille inscrite sur le pneu sont vérifi
 <div class="priceTop">
 <div>
 <div class="name">Pneu CST 90/65-6.5</div>
-<div class="hint">Dualtron Thunder • Zero 11X • Kaabo Wolf Warrior • Dualtron Ultra • Nami Burn-e</div>
+<div class="hint">
+Thunder • Zero 11X • Wolf Warrior • Burn-e
+</div>
 </div>
 <div class="price">64,99 €</div>
 </div>
@@ -739,24 +834,36 @@ Prix indicatifs. Le modèle exact et la taille inscrite sur le pneu sont vérifi
 
 </div>
 
+<div class="note" style="font-style:italic;">
+🔍 Votre modèle n'est pas listé ? Envoyez une photo de votre pneu, je vérifie si j'ai la pièce en stock.
+</div>
+
 <div class="note">
-<b>Important :</b> la taille inscrite sur le pneu reste prioritaire. Une photo du pneu peut être demandée avant confirmation.
+<b>Important :</b>
+la taille inscrite sur le pneu reste prioritaire.
+Une photo du pneu peut être demandée avant confirmation.
 </div>
 
 <div class="warningbox">
-<b>Pneu plein :</b> disponible selon le modèle, la taille et le type de jante. La compatibilité est confirmée avant intervention.
+<b>Pneu plein :</b>
+disponible selon le modèle, la taille et le type de jante.
+La compatibilité est confirmée avant intervention.
 </div>
 
-<a class="btn green" href="#contact" style="margin-top:14px;width:100%;">
+<a class="btn green"
+href="#contact"
+style="margin-top:14px;width:100%;">
 ✉️ Demander un rendez-vous
 </a>
 
 </section>
 
 <section class="section card">
+
 <h3>Comment ça se passe ?</h3>
 
 <div class="grid3">
+
 <div class="mini">
 <b>1. Envoyez une photo</b>
 Marque, modèle et photo du pneu.
@@ -771,12 +878,14 @@ Le tarif est validé avant intervention.
 <b>3. Dépôt sur rendez-vous</b>
 Vous déposez la trottinette au créneau prévu.
 </div>
+
 </div>
 </section>
 
 <section class="section grid2">
 
 <article class="card">
+
 <h3>Pièce fournie ou apportée</h3>
 
 <p class="sub">
@@ -784,31 +893,72 @@ Vous pouvez apporter votre pièce ou choisir la formule tout compris.
 </p>
 
 <ul class="clean">
-<li><span class="check">✓</span><span>Chambre à air</span></li>
-<li><span class="check">✓</span><span>Pneu + chambre à air</span></li>
-<li><span class="check">✓</span><span>Pneu tubeless</span></li>
-<li><span class="check">✓</span><span>Pneu plein selon modèle compatible</span></li>
-<li><span class="check">✓</span><span>Valve tubeless / obus de valve</span></li>
+
+<li>
+<span class="check">✓</span>
+<span>Chambre à air</span>
+</li>
+
+<li>
+<span class="check">✓</span>
+<span>Pneu + chambre à air</span>
+</li>
+
+<li>
+<span class="check">✓</span>
+<span>Pneu tubeless</span>
+</li>
+
+<li>
+<span class="check">✓</span>
+<span>Pneu plein selon modèle compatible</span>
+</li>
+
+<li>
+<span class="check">✓</span>
+<span>Valve tubeless / obus de valve</span>
+</li>
+
 </ul>
 
 <div class="greenbox">
 Le prix est confirmé avant intervention.
 </div>
+
 </article>
 
 <article class="card">
+
 <h3>Ce que je ne réalise pas</h3>
 
 <ul class="clean">
-<li><span class="check no">×</span><span>Batterie</span></li>
-<li><span class="check no">×</span><span>Contrôleur</span></li>
-<li><span class="check no">×</span><span>Câblage interne</span></li>
-<li><span class="check no">×</span><span>Purge hydraulique</span></li>
+
+<li>
+<span class="check no">×</span>
+<span>Batterie</span>
+</li>
+
+<li>
+<span class="check no">×</span>
+<span>Contrôleur</span>
+</li>
+
+<li>
+<span class="check no">×</span>
+<span>Câblage interne</span>
+</li>
+
+<li>
+<span class="check no">×</span>
+<span>Purge hydraulique</span>
+</li>
+
 </ul>
 
 <div class="warningbox">
 Spécialisation mécanique extérieure uniquement.
 </div>
+
 </article>
 
 </section>
@@ -819,22 +969,36 @@ Spécialisation mécanique extérieure uniquement.
 
 <details class="faq">
 <summary>Je dois fournir le pneu ?</summary>
-<p>Non. Vous pouvez apporter votre pièce ou choisir la formule pièce fournie + pose.</p>
+
+<p>
+Non. Vous pouvez apporter votre pièce ou choisir la formule pièce fournie + pose.
+</p>
 </details>
 
 <details class="faq">
 <summary>Pourquoi une roue moteur coûte plus cher ?</summary>
-<p>Une roue avec moteur intégré demande souvent plus de précaution au démontage, notamment à cause du câble moteur et du disque.</p>
+
+<p>
+Une roue avec moteur intégré demande souvent plus de précaution au démontage, notamment à cause du câble moteur et du disque.
+</p>
 </details>
 
 <details class="faq">
 <summary>Le prix peut changer ?</summary>
-<p>Le prix est confirmé avant intervention. Aucune réparation supplémentaire n’est faite sans accord.</p>
+
+<p>
+Le prix est confirmé avant intervention.
+Aucune réparation supplémentaire n’est faite sans accord.
+</p>
 </details>
 
 <details class="faq">
 <summary>Pourquoi demander une photo du pneu ?</summary>
-<p>Parce que certains modèles existent en plusieurs versions. La taille inscrite sur le pneu permet de confirmer la bonne pièce avant intervention.</p>
+
+<p>
+Parce que certains modèles existent en plusieurs versions.
+La taille inscrite sur le pneu permet de confirmer la bonne pièce avant intervention.
+</p>
 </details>
 
 </section>
@@ -844,17 +1008,28 @@ Spécialisation mécanique extérieure uniquement.
 <h3>Contact</h3>
 
 <p class="sub">
-Envoyez : marque + modèle + photo du pneu + service souhaité.
+Envoyez :
+marque + modèle + photo du pneu + service souhaité.
 </p>
 
 <div class="contactLine">
 <span>Email</span>
-<b><a href="mailto:service.electroride@gmail.com">service.electroride@gmail.com</a></b>
+
+<b>
+<a href="mailto:service.electroride@gmail.com">
+service.electroride@gmail.com
+</a>
+</b>
 </div>
 
 <div class="contactLine">
 <span>Téléphone</span>
-<b><a href="tel:+32495656186">0495 65 61 86</a></b>
+
+<b>
+<a href="tel:+32495656186">
+0495 65 61 86
+</a>
+</b>
 </div>
 
 <div class="contactLine">
@@ -864,15 +1039,20 @@ Envoyez : marque + modèle + photo du pneu + service souhaité.
 
 <div class="ctaRow">
 
-<a class="btn green" href="mailto:service.electroride@gmail.com">
+<a class="btn green"
+href="mailto:service.electroride@gmail.com">
 ✉️ Écrire
 </a>
 
-<a class="btn" href="tel:+32495656186">
+<a class="btn"
+href="tel:+32495656186">
 📞 Appeler
 </a>
 
-<a class="btn gold" href="https://g.page/r/CQYENGk_6sdoEAE/review" target="_blank" rel="noopener">
+<a class="btn gold"
+href="https://g.page/r/CQYENGk_6sdoEAE/review"
+target="_blank"
+rel="noopener">
 ⭐ Laisser un avis Google
 </a>
 
@@ -881,12 +1061,16 @@ Envoyez : marque + modèle + photo du pneu + service souhaité.
 </section>
 
 <footer class="footer">
+
 ElectroRide • Theux<br>
 Sur rendez-vous uniquement<br>
 TVA : BE 1035.368.201<br>
-<a href="https://g.page/r/CQYENGk_6sdoEAE/review" target="_blank">
+
+<a href="https://g.page/r/CQYENGk_6sdoEAE/review"
+target="_blank">
 ⭐ Laisser un avis Google
 </a>
+
 </footer>
 
 </main>
