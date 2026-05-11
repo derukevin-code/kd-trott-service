@@ -49,10 +49,7 @@ img{max-width:100%;display:block}
   padding:16px 14px 28px;
 }
 
-.hero{
-  text-align:center;
-  padding-top:8px;
-}
+.hero{text-align:center;padding-top:8px}
 
 .logo{
   width:72px;
@@ -89,9 +86,7 @@ img{max-width:100%;display:block}
   line-height:1.6;
 }
 
-.highlight{
-  color:var(--green);
-}
+.highlight{color:var(--green)}
 
 .priceStrip{
   display:flex;
@@ -164,18 +159,14 @@ img{max-width:100%;display:block}
   box-shadow:0 0 25px rgba(65,224,123,.14);
 }
 
-.btn.green:hover{
-  transform:translateY(-1px);
-}
+.btn.green:hover{transform:translateY(-1px)}
 
 .btn.gold{
   background:rgba(248,197,66,.12);
   border-color:rgba(248,197,66,.30);
 }
 
-.section{
-  margin-top:16px;
-}
+.section{margin-top:16px}
 
 .card{
   background:linear-gradient(180deg,var(--card),var(--card2));
@@ -183,7 +174,10 @@ img{max-width:100%;display:block}
   border-radius:var(--radius);
   box-shadow:var(--shadow);
   padding:18px 16px;
+  transition:.25s;
 }
+
+.card:hover{transform:translateY(-2px)}
 
 .card h3{
   margin:0 0 10px;
@@ -297,6 +291,7 @@ img{max-width:100%;display:block}
   font-size:20px;
   font-weight:950;
   white-space:nowrap;
+  letter-spacing:.3px;
   text-shadow:0 0 12px rgba(65,224,123,.18);
 }
 
@@ -393,9 +388,7 @@ ul.clean li{
   font-size:13px;
 }
 
-.no{
-  color:var(--red);
-}
+.no{color:var(--red)}
 
 .faq{
   margin-top:10px;
@@ -428,9 +421,7 @@ ul.clean li{
   margin-top:10px;
 }
 
-.contactLine span{
-  color:var(--muted);
-}
+.contactLine span{color:var(--muted)}
 
 .ctaRow{
   display:grid;
@@ -460,47 +451,20 @@ ul.clean li{
 }
 
 @media(max-width:850px){
-  .grid2,
-  .grid3,
-  .ctaRow,
-  .priceGrid{
+  .grid2,.grid3,.ctaRow,.priceGrid{
     grid-template-columns:1fr;
   }
 }
 
 @media(max-width:520px){
-
-  .brand{
-    font-size:36px;
-  }
-
-  .hero h2{
-    font-size:24px;
-  }
-
-  .btn{
-    width:100%;
-  }
-
-  .sticky{
-    border-radius:22px;
-  }
-
-  .contactLine{
-    flex-direction:column;
-  }
-
-  .photo img{
-    height:230px;
-  }
-
-  .priceCard{
-    padding:13px;
-  }
-
-  .price{
-    font-size:18px;
-  }
+  .brand{font-size:36px}
+  .hero h2{font-size:24px}
+  .btn{width:100%}
+  .sticky{border-radius:22px}
+  .contactLine{flex-direction:column}
+  .photo img{height:230px}
+  .priceCard{padding:13px}
+  .price{font-size:18px}
 }
 </style>
 </head>
@@ -515,11 +479,7 @@ ul.clean li{
 
 <h1 class="brand">ElectroRide</h1>
 
-<h2>
-Réparation pneus
-<span class="highlight">trottinette électrique</span>
-à Theux
-</h2>
+<h2>Réparation pneus <span class="highlight">trottinette électrique</span> à Theux</h2>
 
 <p>
 Réparation pneus trottinette : chambre à air, tubeless, pneu plein et valves.
@@ -548,6 +508,16 @@ Réparation pneus trottinette : chambre à air, tubeless, pneu plein et valves.
 
 <section class="section card">
 
+<h3>Spécialiste pneus trottinettes</h3>
+
+<div class="greenbox">
+Xiaomi • Ninebot • Dualtron • Kaabo • Nami • Zero • autres modèles sur vérification
+</div>
+
+</section>
+
+<section class="section card">
+
 <h3>Pourquoi choisir ElectroRide ?</h3>
 
 <div class="grid3">
@@ -568,6 +538,7 @@ Montage propre avec contrôle visuel.
 </div>
 
 </div>
+
 </section>
 
 <section class="section grid2">
@@ -589,7 +560,7 @@ Montage propre avec contrôle visuel.
 <h3>Tarifs ElectroRide</h3>
 
 <p class="sub">
-Prix indicatifs. Le modèle exact et la taille inscrite sur le pneu sont vérifiés avant intervention.
+Prix indicatifs selon difficulté et modèle. La taille inscrite sur le pneu reste prioritaire.
 </p>
 
 <div class="optionBox">
@@ -697,6 +668,7 @@ Prix indicatifs. Le modèle exact et la taille inscrite sur le pneu sont vérifi
 </div>
 
 </div>
+
 </details>
 
 <div class="optionBox">
@@ -801,15 +773,11 @@ Prix indicatifs. Le modèle exact et la taille inscrite sur le pneu sont vérifi
 </div>
 
 <div class="note">
-<b>Important :</b>
-la taille inscrite sur le pneu reste prioritaire.
-Une photo du pneu peut être demandée avant confirmation.
+<b>Important :</b> la taille inscrite sur le pneu reste prioritaire. Une photo du pneu peut être demandée avant confirmation.
 </div>
 
 <div class="warningbox">
-<b>Pneu plein :</b>
-disponible selon le modèle, la taille et le type de jante.
-La compatibilité est confirmée avant intervention.
+<b>Pneu plein :</b> disponible selon le modèle, la taille et le type de jante. La compatibilité est confirmée avant intervention.
 </div>
 
 <a class="btn green" href="#contact" style="margin-top:14px;width:100%;">
@@ -840,6 +808,11 @@ Vous déposez la trottinette au créneau prévu.
 </div>
 
 </div>
+
+<div class="greenbox">
+📅 Intervention uniquement sur rendez-vous. Réponse rapide par SMS ou email.
+</div>
+
 </section>
 
 <section class="section grid2">
@@ -882,6 +855,20 @@ Spécialisation mécanique extérieure uniquement.
 </div>
 
 </article>
+
+</section>
+
+<section class="section card">
+
+<h3>Avis et confiance</h3>
+
+<p class="sub">
+Vous avez déjà fait réparer votre trottinette chez ElectroRide ? Votre avis aide les prochains clients à réserver en confiance.
+</p>
+
+<a class="btn gold" href="https://g.page/r/CQYENGk_6sdoEAE/review" target="_blank" rel="noopener" style="width:100%;">
+⭐ Laisser un avis Google
+</a>
 
 </section>
 
@@ -945,7 +932,7 @@ Envoyez : marque + modèle + photo du pneu + service souhaité.
 </a>
 
 <a class="btn gold" href="https://g.page/r/CQYENGk_6sdoEAE/review" target="_blank" rel="noopener">
-⭐ Laisser un avis Google
+⭐ Avis Google
 </a>
 
 </div>
