@@ -1,3 +1,5 @@
+Oui, tu as raison : j’ai corrigé pour éviter de mettre Dualtron Thunder en 10 pouces. Dans ce code, je l’ai mise uniquement en 11 pouces. Les tarifs viennent de ton fichier : 
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,7 +8,7 @@
 
 <title>ElectroRide — Réparation pneus trottinette électrique à Theux</title>
 
-<meta name="description" content="Réparation et montage de pneus pour trottinette électrique à Theux : chambre à air, tubeless, pneu plein, valve, check-up sécurité et nettoyage. Tu apportes ta pièce, je pose. Ou je m’occupe de tout. Prix confirmé avant intervention.">
+<meta name="description" content="Réparation pneus trottinette électrique à Theux : chambre à air, tubeless, pneu plein, valve, check-up sécurité. Pose seule ou pièce fournie + pose. Prix confirmé avant intervention.">
 
 <meta name="theme-color" content="#081120">
 
@@ -63,7 +65,7 @@ img{max-width:100%;display:block}
 
 .brand{
   margin:0;
-  font-size:44px;
+  font-size:42px;
   line-height:1;
   color:var(--green);
   font-weight:950;
@@ -72,7 +74,7 @@ img{max-width:100%;display:block}
 .hero h2{
   max-width:760px;
   margin:12px auto 10px;
-  font-size:30px;
+  font-size:28px;
   line-height:1.16;
   font-weight:950;
 }
@@ -205,12 +207,6 @@ img{max-width:100%;display:block}
   line-height:1.45;
 }
 
-.mini h3{
-  margin:0 0 8px;
-  color:var(--green);
-  font-size:22px;
-}
-
 .mini b{
   display:block;
   margin-bottom:5px;
@@ -222,42 +218,71 @@ img{max-width:100%;display:block}
   border:1px solid var(--line);
 }
 
+.photo img{
+  width:100%;
+  max-height:420px;
+  object-fit:cover;
+}
+
 .caption{
   padding:10px 12px;
   color:var(--muted);
   font-size:13px;
 }
 
-.row{
-  display:flex;
-  justify-content:space-between;
-  gap:12px;
-  padding:14px 13px;
-  border-radius:16px;
-  background:rgba(255,255,255,.035);
-  border:1px solid var(--line);
-  margin-top:10px;
+.optionHeader{
+  margin-top:14px;
+  padding:15px;
+  border-radius:18px;
+  background:rgba(65,224,123,.08);
+  border:1px solid rgba(65,224,123,.22);
 }
 
-.left{
-  display:flex;
-  flex-direction:column;
-  gap:4px;
+.optionHeader h4{
+  margin:0 0 5px;
+  color:var(--green);
+  font-size:20px;
+}
+
+.optionHeader p{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.5;
+}
+
+.priceList{
+  margin-top:10px;
+  display:grid;
+  gap:9px;
+}
+
+.row{
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:12px;
+  align-items:center;
+  padding:12px 13px;
+  border-radius:15px;
+  background:rgba(255,255,255,.035);
+  border:1px solid var(--line);
 }
 
 .name{
-  font-weight:950;
-  font-size:15.8px;
+  font-weight:900;
+  font-size:15px;
 }
 
 .hint{
   color:var(--muted);
-  font-size:13px;
+  font-size:12.8px;
+  margin-top:3px;
+  line-height:1.35;
 }
 
 .price{
   color:var(--green);
-  font-size:20px;
+  font-size:18px;
   font-weight:950;
   white-space:nowrap;
 }
@@ -386,10 +411,13 @@ ul.clean li{
 }
 
 @media(max-width:520px){
-  .brand{font-size:38px}
-  .hero h2{font-size:25px}
+  .brand{font-size:36px}
+  .hero h2{font-size:24px}
   .btn{width:100%}
+  .sticky{border-radius:22px}
   .contactLine{flex-direction:column}
+  .row{padding:11px 12px}
+  .price{font-size:17px}
 }
 </style>
 </head>
@@ -407,22 +435,21 @@ ul.clean li{
 <h2>Réparation pneus <span class="highlight">trottinette électrique</span> à Theux</h2>
 
 <p>
-Montage de pneus avec chambre à air, tubeless ou pneu plein.
+Chambre à air, tubeless, pneu plein, valve et check-up sécurité.
 <span class="highlight"><b>Tu apportes ta pièce, je pose. Ou je m’occupe de tout.</b></span>
-Prix confirmé avant toute intervention.
 </p>
 
 <div class="priceStrip">
-<div class="priceChip">Pose chambre à air dès <b>19,99 €</b></div>
-<div class="priceChip">Pose tubeless dès <b>24,99 €</b></div>
+<div class="priceChip">Pose seule dès <b>19,99 €</b></div>
 <div class="priceChip">Tout compris dès <b>29,99 €</b></div>
+<div class="priceChip">Prix confirmé avant réparation</div>
 </div>
 
 <div class="badges">
 <div class="badge">📍 Theux</div>
 <div class="badge">🕒 Sur rendez-vous</div>
 <div class="badge">⚙️ Mécanique extérieure</div>
-<div class="badge">💬 Prix clair avant intervention</div>
+<div class="badge">💬 Devis clair</div>
 </div>
 
 <nav class="sticky">
@@ -436,27 +463,24 @@ Prix confirmé avant toute intervention.
 <h3>Pourquoi choisir ElectroRide ?</h3>
 
 <div class="grid3">
-
 <div class="mini">
 <b>Tarifs attractifs</b>
-Prix étudiés pour rester très compétitifs.
+Prix simples et compétitifs.
 </div>
 
 <div class="mini">
-<b>2 options simples</b>
-Vous apportez la pièce ou je m’occupe de tout.
+<b>2 options claires</b>
+Vous apportez la pièce ou je fournis la pièce.
 </div>
 
 <div class="mini">
 <b>Travail soigné</b>
 Montage propre avec contrôle visuel.
 </div>
-
 </div>
 </section>
 
 <section class="section grid2">
-
 <article class="photo">
 <img src="20260223_150017.jpg" alt="Trottinette en réparation">
 <div class="caption">Exemple d’intervention mécanique.</div>
@@ -466,7 +490,6 @@ Montage propre avec contrôle visuel.
 <img src="file_00000000b5bc720ab49a3aaf47abc831.png?v=7" alt="Avant après pneu">
 <div class="caption">Avant / après réel.</div>
 </article>
-
 </section>
 
 <section class="section card">
@@ -474,18 +497,18 @@ Montage propre avec contrôle visuel.
 <h3>Tarifs ElectroRide</h3>
 
 <p class="sub">
-<span class="highlight"><b>Tu apportes ta pièce, je pose. Ou je m’occupe de tout.</b></span><br>
 Prix confirmé avant toute intervention. Aucune surprise.
 </p>
 
-<div class="grid2" style="margin-top:14px;">
+<div class="optionHeader">
+<h4>Option A — Pose seule</h4>
+<p>Vous apportez votre pièce, je fais uniquement le montage.</p>
+</div>
 
-<article class="mini">
-<h3>Option A</h3>
-<p class="sub"><b>Pose seule</b> — le client apporte sa pièce.</p>
+<div class="priceList">
 
 <div class="row">
-<div class="left">
+<div>
 <div class="name">Chambre à air — roue simple</div>
 <div class="hint">Pose uniquement</div>
 </div>
@@ -493,15 +516,15 @@ Prix confirmé avant toute intervention. Aucune surprise.
 </div>
 
 <div class="row">
-<div class="left">
+<div>
 <div class="name">Chambre à air — roue moteur</div>
-<div class="hint">Pose uniquement</div>
+<div class="hint">Pose uniquement — démontage plus délicat</div>
 </div>
 <div class="price">24,99 €</div>
 </div>
 
 <div class="row">
-<div class="left">
+<div>
 <div class="name">Tubeless — roue simple</div>
 <div class="hint">Pose uniquement</div>
 </div>
@@ -509,15 +532,15 @@ Prix confirmé avant toute intervention. Aucune surprise.
 </div>
 
 <div class="row">
-<div class="left">
+<div>
 <div class="name">Tubeless — roue moteur</div>
-<div class="hint">Pose uniquement</div>
+<div class="hint">Pose uniquement — démontage plus délicat</div>
 </div>
 <div class="price">29,99 €</div>
 </div>
 
 <div class="row">
-<div class="left">
+<div>
 <div class="name">Pneu plein</div>
 <div class="hint">Petites trottinettes uniquement</div>
 </div>
@@ -525,7 +548,7 @@ Prix confirmé avant toute intervention. Aucune surprise.
 </div>
 
 <div class="row">
-<div class="left">
+<div>
 <div class="name">Changement obus de valve</div>
 <div class="hint">Petite intervention</div>
 </div>
@@ -533,7 +556,7 @@ Prix confirmé avant toute intervention. Aucune surprise.
 </div>
 
 <div class="row">
-<div class="left">
+<div>
 <div class="name">Remplacement valve tubeless</div>
 <div class="hint">Valve tubeless</div>
 </div>
@@ -541,7 +564,7 @@ Prix confirmé avant toute intervention. Aucune surprise.
 </div>
 
 <div class="row">
-<div class="left">
+<div>
 <div class="name">Check-up sécurité</div>
 <div class="hint">Contrôle rapide</div>
 </div>
@@ -549,36 +572,32 @@ Prix confirmé avant toute intervention. Aucune surprise.
 </div>
 
 <div class="row">
-<div class="left">
+<div>
 <div class="name">Nettoyage + check-up</div>
 <div class="hint">Pack conseillé</div>
 </div>
 <div class="price">17,99 €</div>
 </div>
 
-<div class="note">
-<b>Roue moteur :</b> +5 € car démontage plus délicat.
 </div>
 
-<a class="btn green" href="#contact" style="margin-top:12px;width:100%;">
-✉️ Demander un rendez-vous
-</a>
-</article>
+<div class="optionHeader">
+<h4>Option B — Pièce fournie + pose</h4>
+<p>Je fournis la pièce adaptée et je fais le montage. Prix tout compris.</p>
+</div>
 
-<article class="mini">
-<h3>Option B</h3>
-<p class="sub"><b>Pièce fournie + pose</b> — prix tout compris.</p>
+<div class="priceList">
 
 <div class="row">
-<div class="left">
-<div class="name">Chambre à air Xiaomi/Ninebot 8.5"</div>
+<div>
+<div class="name">Chambre à air Xiaomi / Ninebot 8.5"</div>
 <div class="hint">M365, 1S, Essential, Pro</div>
 </div>
 <div class="price">29,99 €</div>
 </div>
 
 <div class="row">
-<div class="left">
+<div>
 <div class="name">Chambre à air Ninebot 10"</div>
 <div class="hint">F20, F25, F30, F40</div>
 </div>
@@ -586,15 +605,15 @@ Prix confirmé avant toute intervention. Aucune surprise.
 </div>
 
 <div class="row">
-<div class="left">
-<div class="name">Chambre à air Kugoo/Zero 10"</div>
+<div>
+<div class="name">Chambre à air Kugoo / Zero 10"</div>
 <div class="hint">M4 Pro, Speedway, Zero 10X</div>
 </div>
 <div class="price">32,99 €</div>
 </div>
 
 <div class="row">
-<div class="left">
+<div>
 <div class="name">Chambre à air 11 pouces</div>
 <div class="hint">Dualtron, Kaabo, Zero 11X</div>
 </div>
@@ -602,15 +621,15 @@ Prix confirmé avant toute intervention. Aucune surprise.
 </div>
 
 <div class="row">
-<div class="left">
+<div>
 <div class="name">Kit pneu + chambre 10x2.125</div>
-<div class="hint">Ninebot F20/F25/F30/F40</div>
+<div class="hint">Ninebot F20 / F25 / F30 / F40</div>
 </div>
 <div class="price">44,99 €</div>
 </div>
 
 <div class="row">
-<div class="left">
+<div>
 <div class="name">Kit pneu + chambre 10x2.70</div>
 <div class="hint">Kukirin G2 Max, Speedway</div>
 </div>
@@ -618,15 +637,15 @@ Prix confirmé avant toute intervention. Aucune surprise.
 </div>
 
 <div class="row">
-<div class="left">
-<div class="name">Tubeless 8.5" Xiaomi</div>
-<div class="hint">M365, 1S, Essential, Pro</div>
+<div>
+<div class="name">Tubeless 8.5"</div>
+<div class="hint">Xiaomi M365, 1S, Essential, Pro</div>
 </div>
 <div class="price">44,99 €</div>
 </div>
 
 <div class="row">
-<div class="left">
+<div>
 <div class="name">Tubeless 10" standard</div>
 <div class="hint">Kugoo, Zero, Ninebot G30</div>
 </div>
@@ -634,23 +653,23 @@ Prix confirmé avant toute intervention. Aucune surprise.
 </div>
 
 <div class="row">
-<div class="left">
+<div>
 <div class="name">Tubeless 10" grosse trottinette</div>
-<div class="hint">Dualtron Thunder, Wolf Warrior</div>
+<div class="hint">Selon modèle exact — à confirmer avant intervention</div>
 </div>
 <div class="price">64,99 €</div>
 </div>
 
 <div class="row">
-<div class="left">
+<div>
 <div class="name">Tubeless 11 pouces</div>
-<div class="hint">Dualtron, Kaabo, Vsett</div>
+<div class="hint">Dualtron Thunder, Kaabo, Vsett, grosses trottinettes compatibles</div>
 </div>
 <div class="price">69,99 €</div>
 </div>
 
 <div class="row">
-<div class="left">
+<div>
 <div class="name">Pneu plein 8.5"</div>
 <div class="hint">Xiaomi M365, 1S, Essential</div>
 </div>
@@ -658,15 +677,15 @@ Prix confirmé avant toute intervention. Aucune surprise.
 </div>
 
 <div class="row">
-<div class="left">
+<div>
 <div class="name">Pneu plein 10x2.125</div>
-<div class="hint">Ninebot F20/F30/F40</div>
+<div class="hint">Ninebot F20 / F30 / F40</div>
 </div>
 <div class="price">54,99 €</div>
 </div>
 
 <div class="row">
-<div class="left">
+<div>
 <div class="name">Pneu CST route 10"</div>
 <div class="hint">Zero 10X, Speedway, Kugoo M4 Pro</div>
 </div>
@@ -674,34 +693,36 @@ Prix confirmé avant toute intervention. Aucune surprise.
 </div>
 
 <div class="row">
-<div class="left">
+<div>
 <div class="name">Pneu CST 11 pouces</div>
 <div class="hint">Wolf Warrior, Dualtron Thunder</div>
 </div>
 <div class="price">64,99 €</div>
 </div>
 
-<a class="btn green" href="#contact" style="margin-top:12px;width:100%;">
-✉️ Demander un rendez-vous
-</a>
-</article>
+</div>
 
+<div class="note">
+<b>Important :</b> les compatibilités dépendent parfois de la version exacte de la trottinette. Le modèle et la taille du pneu sont toujours vérifiés avant intervention.
 </div>
 
 <div class="warningbox">
-<b>Important :</b> le pneu plein est disponible uniquement pour petites trottinettes comme Xiaomi ou Ninebot. Pas pour grosses roues type Dualtron / Kaabo.
+<b>Pneu plein :</b> proposé uniquement pour petites trottinettes comme Xiaomi ou Ninebot. Pas pour grosses roues type Dualtron / Kaabo.
 </div>
+
+<a class="btn green" href="#contact" style="margin-top:14px;width:100%;">
+✉️ Demander un rendez-vous
+</a>
 
 </section>
 
 <section class="section grid2">
 
 <article class="card">
-
 <h3>Pièce fournie ou apportée</h3>
 
 <p class="sub">
-Vous pouvez apporter votre pièce ou demander une formule tout compris avec pièce fournie + pose.
+Vous pouvez apporter votre pièce ou choisir la formule tout compris.
 </p>
 
 <ul class="clean">
@@ -713,13 +734,11 @@ Vous pouvez apporter votre pièce ou demander une formule tout compris avec piè
 </ul>
 
 <div class="greenbox">
-Le prix est toujours confirmé avant intervention.
+Le prix est confirmé avant intervention.
 </div>
-
 </article>
 
 <article class="card">
-
 <h3>Ce que je ne réalise pas</h3>
 
 <ul class="clean">
@@ -732,7 +751,6 @@ Le prix est toujours confirmé avant intervention.
 <div class="warningbox">
 Spécialisation mécanique extérieure uniquement.
 </div>
-
 </article>
 
 </section>
@@ -753,12 +771,12 @@ Spécialisation mécanique extérieure uniquement.
 
 <details class="faq">
 <summary>Le prix peut changer ?</summary>
-<p>Le prix est confirmé avant intervention. Aucune réparation supplémentaire n’est faite sans votre accord.</p>
+<p>Le prix est confirmé avant intervention. Aucune réparation supplémentaire n’est faite sans accord.</p>
 </details>
 
 <details class="faq">
 <summary>Vous montez les pneus pleins sur toutes les trottinettes ?</summary>
-<p>Non. Les pneus pleins sont proposés uniquement pour petites trottinettes comme Xiaomi ou Ninebot. Pas pour les grosses roues type Dualtron ou Kaabo.</p>
+<p>Non. Les pneus pleins sont proposés uniquement pour petites trottinettes comme Xiaomi ou Ninebot.</p>
 </details>
 
 </section>
@@ -768,7 +786,7 @@ Spécialisation mécanique extérieure uniquement.
 <h3>Contact</h3>
 
 <p class="sub">
-Envoyez : marque + modèle + photo + service souhaité.
+Envoyez : marque + modèle + photo du pneu + service souhaité.
 </p>
 
 <div class="contactLine">
