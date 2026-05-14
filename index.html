@@ -20,6 +20,7 @@
   --text:#f2f6ff;
   --muted:#c2cce0;
   --green:#43e47d;
+  --blue:#62a8ff;
   --gold:#f8c542;
   --red:#ff7373;
   --radius:24px;
@@ -304,6 +305,47 @@ img{max-width:100%;display:block}
   line-height:1.55;
 }
 
+.qualityTabs{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+
+.qualityTab{
+  padding:14px;
+  border-radius:18px;
+  background:rgba(255,255,255,.04);
+  border:1px solid var(--line);
+  font-size:14.5px;
+  line-height:1.45;
+}
+
+.qualityTab b{
+  display:block;
+  margin-bottom:5px;
+  font-size:16px;
+}
+
+.qualityTab.eco{
+  border-color:rgba(67,228,125,.28);
+  background:rgba(67,228,125,.075);
+}
+
+.qualityTab.standard{
+  border-color:rgba(98,168,255,.30);
+  background:rgba(98,168,255,.08);
+}
+
+.qualityTab.premium{
+  border-color:rgba(248,197,66,.34);
+  background:rgba(248,197,66,.09);
+}
+
+.qualityTab span{
+  color:var(--muted);
+}
+
 .priceGrid{
   margin-top:12px;
   display:grid;
@@ -316,6 +358,14 @@ img{max-width:100%;display:block}
   border-radius:18px;
   background:rgba(255,255,255,.042);
   border:1px solid var(--line);
+}
+
+.priceCard.standard{
+  border-color:rgba(98,168,255,.26);
+}
+
+.priceCard.premium{
+  border-color:rgba(248,197,66,.34);
 }
 
 .priceTop{
@@ -339,6 +389,9 @@ img{max-width:100%;display:block}
   font-variant-numeric:tabular-nums;
 }
 
+.price.blue{color:var(--blue)}
+.price.gold{color:var(--gold)}
+
 .hint{
   color:var(--muted);
   font-size:13.8px;
@@ -357,6 +410,18 @@ img{max-width:100%;display:block}
   color:var(--green);
   font-size:12.8px;
   font-weight:850;
+}
+
+.smallTag.blue{
+  background:rgba(98,168,255,.10);
+  border-color:rgba(98,168,255,.25);
+  color:var(--blue);
+}
+
+.smallTag.gold{
+  background:rgba(248,197,66,.10);
+  border-color:rgba(248,197,66,.30);
+  color:var(--gold);
 }
 
 details.more{
@@ -474,7 +539,8 @@ ul.clean li{
   .grid2,
   .grid3,
   .ctaRow,
-  .priceGrid{
+  .priceGrid,
+  .qualityTabs{
     grid-template-columns:1fr;
   }
 }
@@ -570,7 +636,7 @@ Intervention sur rendez-vous, avec prix confirmé avant réparation.
 <div class="badges">
 <div class="badge">📍 Theux</div>
 <div class="badge">🕒 Sur rendez-vous</div>
-<div class="badge">⚙️ Mécanique extérieure</div>
+<div class="badge">⚙️ Pneus & mécanique simple</div>
 <div class="badge">💬 Devis clair</div>
 </div>
 
@@ -691,7 +757,7 @@ Le prix exact est confirmé avant intervention.
 <div class="name">Tubeless — roue moteur</div>
 <div class="hint">Pose uniquement</div>
 </div>
-<div class="price">29,99 €</div>
+<div class="price">34,99 €</div>
 </div>
 </div>
 
@@ -760,6 +826,23 @@ Le prix exact est confirmé avant intervention.
 <h4>Option B — Pièce fournie + pose</h4>
 <p>ElectroRide fournit la pièce adaptée et réalise le montage. Prix tout compris.</p>
 <div class="stockTag">✅ Stock sur les tailles les plus demandées, selon disponibilité</div>
+
+<div class="qualityTabs">
+<div class="qualityTab eco">
+<b>🟢 Éco</b>
+<span>Pneus génériques, bon rapport qualité/prix, souvent disponibles en stock.</span>
+</div>
+
+<div class="qualityTab standard">
+<b>🔵 Standard CST</b>
+<span>Pneus CST, marque reconnue, stock selon disponibilité.</span>
+</div>
+
+<div class="qualityTab premium">
+<b>⭐ Premium PMT</b>
+<span>Pneus PMT orientés performance, uniquement sur devis.</span>
+</div>
+</div>
 </div>
 
 <div class="priceGrid">
@@ -818,12 +901,39 @@ Le prix exact est confirmé avant intervention.
 <div class="priceCard">
 <div class="priceTop">
 <div>
-<div class="name">Tubeless 90/65-6.5</div>
-<div class="hint">Thunder • Zero 11X • Wolf Warrior • Burn-e</div>
+<div class="name">Tubeless 90/65-6.5 — Éco</div>
+<div class="hint">Pneu générique + pose — Thunder • Zero 11X • Wolf Warrior • Burn-e</div>
 </div>
 <div class="price">69,99 €</div>
 </div>
-<div class="smallTag">Taille : 90/65-6.5</div>
+<div class="smallTag">🟢 Éco — stock selon disponibilité</div>
+</div>
+
+<div class="priceCard standard">
+<div class="priceTop">
+<div>
+<div class="name">Tubeless 90/65-6.5 — CST</div>
+<div class="hint">Pneu CST + pose — Thunder • Zero 11X • Wolf Warrior • Burn-e</div>
+</div>
+<div class="price blue">84,99 €</div>
+</div>
+<div class="smallTag blue">🔵 Standard CST — stock selon disponibilité</div>
+</div>
+
+<div class="priceCard premium">
+<div class="priceTop">
+<div>
+<div class="name">Tubeless 90/65-6.5 — PMT</div>
+<div class="hint">Pneu premium PMT + pose — uniquement sur devis</div>
+</div>
+<div class="price gold">Sur devis</div>
+</div>
+<div class="smallTag gold">⭐ Premium PMT</div>
+<a class="btn gold"
+href="mailto:service.electroride@gmail.com?subject=Demande%20de%20devis%20PMT%20trottinette"
+style="margin-top:12px;width:100%;min-width:unset;border-radius:15px;">
+Demander un devis
+</a>
 </div>
 
 <div class="priceCard">
@@ -846,17 +956,6 @@ Le prix exact est confirmé avant intervention.
 <div class="price">54,99 €</div>
 </div>
 <div class="smallTag">Taille : 10x2.125</div>
-</div>
-
-<div class="priceCard">
-<div class="priceTop">
-<div>
-<div class="name">Pneu CST 90/65-6.5</div>
-<div class="hint">Thunder • Zero 11X • Wolf Warrior • Burn-e</div>
-</div>
-<div class="price">64,99 €</div>
-</div>
-<div class="smallTag">Taille : 90/65-6.5</div>
 </div>
 
 </div>
@@ -917,7 +1016,7 @@ Vous déposez la trottinette au créneau prévu.
 </div>
 
 <div class="greenbox">
-📅 Intervention uniquement sur rendez-vous. Réponse rapide par SMS ou email.
+📅 Intervention uniquement sur rendez-vous. Réponse rapide par téléphone ou email.
 </div>
 
 </section>
@@ -954,11 +1053,12 @@ Le prix est confirmé avant intervention.
 <li><span class="check no">×</span><span>Batterie</span></li>
 <li><span class="check no">×</span><span>Contrôleur</span></li>
 <li><span class="check no">×</span><span>Câblage interne</span></li>
+<li><span class="check no">×</span><span>Électronique interne</span></li>
 <li><span class="check no">×</span><span>Purge hydraulique</span></li>
 </ul>
 
 <div class="warningbox">
-Spécialisation mécanique extérieure uniquement.
+Spécialisation pneus et mécanique extérieure simple uniquement.
 </div>
 
 </article>
@@ -998,6 +1098,15 @@ style="width:100%;">
 <p>
 Les tailles les plus courantes sont disponibles en stock selon disponibilité.
 Pour les modèles moins fréquents, une commande peut être nécessaire avant intervention.
+</p>
+</details>
+
+<details class="faq">
+<summary>Quelle différence entre Éco, CST et PMT ?</summary>
+<p>
+Éco correspond à un pneu générique avec bon rapport qualité/prix, souvent disponible rapidement.
+CST correspond à une marque plus reconnue, utilisée sur plusieurs modèles de trottinettes, avec une qualité généralement supérieure.
+PMT correspond à une gamme premium orientée performance, disponible uniquement sur devis selon la taille et le modèle.
 </p>
 </details>
 
@@ -1089,7 +1198,7 @@ rel="noopener">
 
 ElectroRide • Theux<br>
 Sur rendez-vous uniquement<br>
-Réponse rapide par SMS ou email<br>
+Réponse rapide par téléphone ou email<br>
 Paiement en espèces ou Payconiq par QR code<br>
 Stock sur tailles courantes selon disponibilité<br>
 Garantie montage chambre à air 7 jours sous conditions<br>
