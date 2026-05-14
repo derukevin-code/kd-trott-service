@@ -6,25 +6,26 @@
 
 <title>ElectroRide — Réparation pneus trottinette électrique à Theux</title>
 
-<meta name="description" content="Réparation pneus trottinette électrique à Theux : chambre à air, tubeless, pneu plein, valve et check-up sécurité. Pose seule ou pièce fournie + pose. Stock immédiat sur tailles courantes. Garantie montage chambre à air 7 jours.">
+<meta name="description" content="Réparation pneus de trottinette électrique à Theux : chambre à air, tubeless, pneu plein, valve et check-up sécurité. Pose seule ou pièce fournie + pose. Sur rendez-vous. Prix confirmé avant intervention.">
 
-<meta name="theme-color" content="#081120">
+<meta name="theme-color" content="#07111f">
 
 <style>
 :root{
-  --bg:#07111f;
-  --bg2:#0d1c34;
-  --card:rgba(255,255,255,.06);
+  --bg:#06101d;
+  --bg2:#0c1b32;
+  --card:rgba(255,255,255,.075);
   --card2:rgba(255,255,255,.035);
-  --line:rgba(255,255,255,.12);
-  --text:#eef4ff;
-  --muted:#b7c3df;
-  --green:#41e07b;
+  --line:rgba(255,255,255,.13);
+  --text:#f2f6ff;
+  --muted:#b9c5dd;
+  --green:#43e47d;
+  --green2:#24bd62;
   --gold:#f8c542;
   --red:#ff7373;
-  --radius:22px;
-  --max:980px;
-  --shadow:0 18px 50px rgba(0,0,0,.35);
+  --radius:24px;
+  --max:1040px;
+  --shadow:0 22px 60px rgba(0,0,0,.42);
 }
 
 *{box-sizing:border-box}
@@ -35,87 +36,84 @@ body{
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   color:var(--text);
   background:
-    radial-gradient(900px 500px at 15% 0%, rgba(65,224,123,.16), transparent 60%),
-    radial-gradient(750px 450px at 90% 10%, rgba(74,144,226,.13), transparent 55%),
+    radial-gradient(850px 460px at 12% -5%, rgba(67,228,125,.18), transparent 62%),
+    radial-gradient(760px 440px at 95% 5%, rgba(65,139,255,.14), transparent 58%),
     linear-gradient(180deg,var(--bg),var(--bg2));
 }
 
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-img{
-  max-width:100%;
-  display:block;
-}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
 
 .wrap{
   max-width:var(--max);
   margin:0 auto;
-  padding:16px 14px 28px;
+  padding:16px 14px 32px;
 }
 
 .hero{
   text-align:center;
-  padding-top:18px;
-  padding-bottom:8px;
+  padding:20px 0 10px;
 }
 
 .logo{
-  width:72px;
-  height:72px;
-  margin:0 auto 10px;
-  border-radius:18px;
+  width:78px;
+  height:78px;
+  margin:0 auto 12px;
+  border-radius:22px;
   border:1px solid var(--line);
-  background:rgba(255,255,255,.04);
-  padding:6px;
+  background:rgba(255,255,255,.05);
+  padding:7px;
   box-shadow:var(--shadow);
 }
 
 .brand{
   margin:0;
-  font-size:42px;
+  font-size:46px;
   line-height:1;
   color:var(--green);
   font-weight:950;
+  letter-spacing:-1.5px;
 }
 
 .hero h2{
-  max-width:760px;
-  margin:16px auto 10px;
-  font-size:28px;
-  line-height:1.16;
+  max-width:820px;
+  margin:18px auto 10px;
+  font-size:34px;
+  line-height:1.12;
   font-weight:950;
+  letter-spacing:-.7px;
 }
 
 .hero p{
-  max-width:760px;
+  max-width:780px;
   margin:0 auto;
   color:var(--muted);
-  font-size:16px;
-  line-height:1.6;
+  font-size:17px;
+  line-height:1.65;
 }
 
-.highlight{
-  color:var(--green);
-}
+.highlight{color:var(--green)}
 
 .priceStrip{
   display:flex;
   justify-content:center;
   gap:10px;
   flex-wrap:wrap;
-  margin-top:16px;
+  margin-top:18px;
 }
 
 .priceChip{
-  padding:10px 14px;
+  padding:11px 15px;
   border-radius:999px;
-  background:rgba(255,255,255,.04);
+  background:rgba(255,255,255,.055);
   border:1px solid var(--line);
   font-weight:850;
   font-size:14px;
+  box-shadow:0 10px 28px rgba(0,0,0,.16);
+}
+
+.priceChip strong{
+  color:var(--green);
 }
 
 .badges{
@@ -127,11 +125,12 @@ img{
 }
 
 .badge{
-  padding:10px 13px;
+  padding:10px 14px;
   border-radius:999px;
   background:rgba(255,255,255,.035);
   border:1px solid var(--line);
   font-size:13.5px;
+  color:rgba(242,246,255,.94);
 }
 
 .sticky{
@@ -142,12 +141,14 @@ img{
   gap:10px;
   justify-content:center;
   flex-wrap:wrap;
-  margin-top:16px;
+  margin:18px auto 0;
   padding:10px;
   border-radius:999px;
-  background:rgba(7,17,31,.84);
-  backdrop-filter:blur(10px);
+  background:rgba(6,16,29,.84);
+  backdrop-filter:blur(12px);
   border:1px solid var(--line);
+  max-width:620px;
+  box-shadow:0 18px 45px rgba(0,0,0,.28);
 }
 
 .btn{
@@ -158,57 +159,51 @@ img{
   padding:15px 24px;
   border-radius:999px;
   border:1px solid var(--line);
-  background:rgba(255,255,255,.05);
+  background:rgba(255,255,255,.055);
   color:var(--text);
   font-weight:900;
   min-width:175px;
   text-align:center;
-  transition:.2s;
+  transition:.2s ease;
+}
+
+.btn:hover{
+  transform:translateY(-1px);
+  border-color:rgba(255,255,255,.24);
 }
 
 .btn.green{
-  background:rgba(65,224,123,.16);
-  border-color:rgba(65,224,123,.35);
-  box-shadow:0 0 25px rgba(65,224,123,.14);
-  font-size:15px;
-}
-
-.btn.green:hover{
-  transform:translateY(-1px);
+  background:linear-gradient(135deg,rgba(67,228,125,.24),rgba(36,189,98,.16));
+  border-color:rgba(67,228,125,.42);
+  box-shadow:0 0 28px rgba(67,228,125,.16);
 }
 
 .btn.gold{
   background:rgba(248,197,66,.12);
-  border-color:rgba(248,197,66,.30);
+  border-color:rgba(248,197,66,.32);
 }
 
-.section{
-  margin-top:16px;
-}
+.section{margin-top:16px}
 
 .card{
   background:linear-gradient(180deg,var(--card),var(--card2));
   border:1px solid var(--line);
   border-radius:var(--radius);
   box-shadow:var(--shadow);
-  padding:18px 16px;
-  transition:.25s;
-}
-
-.card:hover{
-  transform:translateY(-2px);
+  padding:20px 18px;
 }
 
 .card h3{
   margin:0 0 10px;
   color:var(--green);
-  font-size:24px;
+  font-size:25px;
+  letter-spacing:-.3px;
 }
 
 .sub{
   color:var(--muted);
-  font-size:14.5px;
-  line-height:1.6;
+  font-size:14.8px;
+  line-height:1.65;
   margin:0 0 12px;
 }
 
@@ -225,58 +220,101 @@ img{
 }
 
 .mini{
-  padding:14px;
-  border-radius:17px;
-  background:rgba(255,255,255,.035);
+  padding:15px;
+  border-radius:18px;
+  background:rgba(255,255,255,.04);
   border:1px solid var(--line);
   font-size:14px;
-  line-height:1.45;
+  line-height:1.5;
 }
 
 .mini b{
   display:block;
-  margin-bottom:5px;
+  margin-bottom:6px;
+  color:#fff;
 }
 
 .photo{
   border-radius:var(--radius);
   overflow:hidden;
   border:1px solid var(--line);
-  background:rgba(255,255,255,.03);
+  background:rgba(255,255,255,.035);
+  box-shadow:var(--shadow);
 }
 
 .photo img{
   width:100%;
-  height:280px;
+  height:285px;
   object-fit:cover;
 }
 
 .caption{
-  padding:10px 12px;
+  padding:11px 13px;
   color:var(--muted);
   font-size:13px;
 }
 
+.premiumIntro{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:14px;
+}
+
+.greenbox,
+.note,
+.warningbox,
+.guaranteeBox{
+  margin-top:12px;
+  padding:13px;
+  border-radius:16px;
+  font-size:14px;
+  line-height:1.58;
+}
+
+.greenbox{
+  background:rgba(67,228,125,.09);
+  border:1px solid rgba(67,228,125,.24);
+}
+
+.note{
+  background:rgba(248,197,66,.085);
+  border:1px solid rgba(248,197,66,.26);
+}
+
+.warningbox{
+  background:rgba(255,255,255,.035);
+  border:1px solid var(--line);
+}
+
+.guaranteeBox{
+  background:rgba(67,228,125,.10);
+  border:1px solid rgba(67,228,125,.30);
+}
+
+.guaranteeBox b{
+  color:var(--green);
+}
+
 .optionBox{
-  margin-top:14px;
-  padding:16px;
-  border-radius:20px;
-  background:rgba(65,224,123,.07);
-  border:1px solid rgba(65,224,123,.22);
+  margin-top:15px;
+  padding:17px;
+  border-radius:21px;
+  background:rgba(67,228,125,.075);
+  border:1px solid rgba(67,228,125,.24);
 }
 
 .optionBox h4{
-  margin:0 0 5px;
+  margin:0 0 6px;
   color:var(--green);
   font-size:22px;
-  letter-spacing:.3px;
+  letter-spacing:-.2px;
 }
 
 .optionBox p{
   margin:0;
   color:var(--muted);
   font-size:14px;
-  line-height:1.5;
+  line-height:1.55;
 }
 
 .priceGrid{
@@ -288,23 +326,22 @@ img{
 
 .priceCard{
   padding:15px;
-  border-radius:17px;
-  background:rgba(255,255,255,.035);
+  border-radius:18px;
+  background:rgba(255,255,255,.042);
   border:1px solid var(--line);
-  backdrop-filter:blur(6px);
 }
 
 .priceTop{
   display:flex;
   justify-content:space-between;
-  gap:10px;
+  gap:12px;
   align-items:flex-start;
 }
 
 .name{
   font-weight:950;
   font-size:15px;
-  line-height:1.25;
+  line-height:1.28;
 }
 
 .price{
@@ -312,47 +349,40 @@ img{
   font-size:20px;
   font-weight:950;
   white-space:nowrap;
-  letter-spacing:.3px;
-  text-shadow:0 0 12px rgba(65,224,123,.18);
   font-variant-numeric:tabular-nums;
+  text-shadow:0 0 14px rgba(67,228,125,.18);
 }
 
 .hint{
   color:var(--muted);
   font-size:12.8px;
   margin-top:5px;
-  line-height:1.4;
+  line-height:1.42;
 }
 
-.smallTag{
+.smallTag,
+.stockTag{
   display:inline-flex;
-  margin-top:8px;
-  padding:5px 8px;
+  margin-top:9px;
+  padding:6px 9px;
   border-radius:999px;
-  background:rgba(65,224,123,.10);
-  border:1px solid rgba(65,224,123,.22);
+  background:rgba(67,228,125,.10);
+  border:1px solid rgba(67,228,125,.24);
   color:var(--green);
   font-size:12px;
   font-weight:850;
 }
 
 .stockTag{
-  display:inline-flex;
-  margin-top:10px;
-  padding:7px 10px;
-  border-radius:999px;
-  background:rgba(65,224,123,.12);
-  border:1px solid rgba(65,224,123,.28);
-  color:var(--green);
   font-size:12.5px;
   font-weight:900;
 }
 
 details.more{
   margin-top:12px;
-  padding:12px;
-  border-radius:17px;
-  background:rgba(255,255,255,.03);
+  padding:13px;
+  border-radius:18px;
+  background:rgba(255,255,255,.035);
   border:1px solid var(--line);
 }
 
@@ -360,50 +390,6 @@ details.more summary{
   cursor:pointer;
   color:var(--gold);
   font-weight:900;
-}
-
-.note{
-  margin-top:12px;
-  padding:12px;
-  border-radius:15px;
-  background:rgba(248,197,66,.08);
-  border:1px solid rgba(248,197,66,.24);
-  font-size:13.8px;
-  line-height:1.55;
-}
-
-.greenbox{
-  margin-top:12px;
-  padding:12px;
-  border-radius:15px;
-  background:rgba(65,224,123,.08);
-  border:1px solid rgba(65,224,123,.22);
-  font-size:14px;
-  line-height:1.55;
-}
-
-.warningbox{
-  margin-top:12px;
-  padding:12px;
-  border-radius:15px;
-  background:rgba(255,255,255,.03);
-  border:1px solid var(--line);
-  font-size:14px;
-  line-height:1.55;
-}
-
-.guaranteeBox{
-  margin-top:12px;
-  padding:13px;
-  border-radius:15px;
-  background:rgba(65,224,123,.09);
-  border:1px solid rgba(65,224,123,.28);
-  font-size:14px;
-  line-height:1.55;
-}
-
-.guaranteeBox b{
-  color:var(--green);
 }
 
 ul.clean{
@@ -425,8 +411,8 @@ ul.clean li{
   width:22px;
   height:22px;
   border-radius:7px;
-  background:rgba(65,224,123,.12);
-  border:1px solid rgba(65,224,123,.25);
+  background:rgba(67,228,125,.12);
+  border:1px solid rgba(67,228,125,.25);
   color:var(--green);
   display:inline-flex;
   align-items:center;
@@ -436,14 +422,12 @@ ul.clean li{
   font-size:13px;
 }
 
-.no{
-  color:var(--red);
-}
+.no{color:var(--red)}
 
 .faq{
   margin-top:10px;
-  padding:12px;
-  border-radius:15px;
+  padding:13px;
+  border-radius:16px;
   background:rgba(255,255,255,.035);
   border:1px solid var(--line);
 }
@@ -456,17 +440,17 @@ ul.clean li{
 .faq p{
   margin:10px 0 0;
   font-size:13.8px;
-  line-height:1.55;
-  color:rgba(238,244,255,.90);
+  line-height:1.58;
+  color:rgba(242,246,255,.90);
 }
 
 .contactLine{
   display:flex;
   justify-content:space-between;
   gap:12px;
-  padding:13px;
-  border-radius:16px;
-  background:rgba(255,255,255,.035);
+  padding:14px;
+  border-radius:17px;
+  background:rgba(255,255,255,.04);
   border:1px solid var(--line);
   margin-top:10px;
 }
@@ -485,16 +469,16 @@ ul.clean li{
 .ctaRow .btn{
   width:100%;
   min-width:unset;
-  border-radius:15px;
+  border-radius:16px;
 }
 
 .footer{
   margin-top:20px;
   padding-bottom:25px;
   text-align:center;
-  color:rgba(183,195,223,.85);
+  color:rgba(185,197,221,.86);
   font-size:12px;
-  line-height:1.7;
+  line-height:1.75;
 }
 
 .footer a{
@@ -506,19 +490,28 @@ ul.clean li{
   .grid2,
   .grid3,
   .ctaRow,
-  .priceGrid{
+  .priceGrid,
+  .premiumIntro{
     grid-template-columns:1fr;
   }
 }
 
 @media(max-width:520px){
+  .wrap{
+    padding-left:12px;
+    padding-right:12px;
+  }
 
   .brand{
-    font-size:36px;
+    font-size:38px;
   }
 
   .hero h2{
-    font-size:24px;
+    font-size:25px;
+  }
+
+  .hero p{
+    font-size:15.5px;
   }
 
   .btn{
@@ -526,7 +519,7 @@ ul.clean li{
   }
 
   .sticky{
-    border-radius:22px;
+    border-radius:24px;
   }
 
   .contactLine{
@@ -537,12 +530,16 @@ ul.clean li{
     height:230px;
   }
 
-  .priceCard{
-    padding:13px;
+  .priceTop{
+    gap:8px;
   }
 
   .price{
     font-size:18px;
+  }
+
+  .card{
+    padding:18px 15px;
   }
 }
 </style>
@@ -554,31 +551,29 @@ ul.clean li{
 
 <header class="hero">
 
-<img src="file_00000000e988720a9d6597291676d817.png?v=7"
+<img src="file_00000000e988720a9d6597291676d817.png?v=8"
 class="logo"
 alt="Logo ElectroRide">
 
 <h1 class="brand">ElectroRide</h1>
 
 <h2>
-Réparation pneus
-<span class="highlight">trottinette électrique</span>
+Réparation pneus de
+<span class="highlight">trottinettes électriques</span>
 à Theux
 </h2>
 
 <p>
-Réparation pneus trottinette :
-chambre à air, tubeless, pneu plein et valves.
-<span class="highlight">
-<b>Pièce fournie ou apportée.</b>
-</span>
+Chambre à air, pneu tubeless, pneu plein, valve et check-up sécurité.
+Intervention sur rendez-vous, avec prix confirmé avant réparation.
+<span class="highlight"><b>Pièce apportée ou fournie.</b></span>
 </p>
 
 <div class="priceStrip">
-<div class="priceChip">Pose seule dès <b>19,99 €</b></div>
-<div class="priceChip">Tout compris dès <b>29,99 €</b></div>
-<div class="priceChip">Stock immédiat sur tailles courantes</div>
-<div class="priceChip">Prix confirmé avant intervention</div>
+<div class="priceChip">Pose seule dès <strong>19,99 €</strong></div>
+<div class="priceChip">Tout compris dès <strong>29,99 €</strong></div>
+<div class="priceChip">Stock sur tailles courantes</div>
+<div class="priceChip">Prix validé avant intervention</div>
 </div>
 
 <div class="badges">
@@ -589,29 +584,41 @@ chambre à air, tubeless, pneu plein et valves.
 </div>
 
 <nav class="sticky">
-
-<a class="btn green" href="#contact">
-✉️ Demander un rendez-vous
-</a>
-
-<a class="btn" href="tel:+32495656186">
-📞 Appeler
-</a>
-
+<a class="btn green" href="#contact">✉️ Demander un rendez-vous</a>
+<a class="btn" href="tel:+32495656186">📞 Appeler</a>
 </nav>
 
 </header>
 
-<section class="section card">
+<section class="section card premiumIntro">
 
-<h3>Spécialiste pneus trottinettes</h3>
+<div>
+<h3>Un service simple, propre et spécialisé</h3>
+
+<p class="sub">
+ElectroRide se concentre sur les interventions mécaniques courantes des trottinettes électriques :
+principalement les pneus, chambres à air, valves, pneus pleins et contrôles de sécurité.
+</p>
 
 <div class="greenbox">
-Xiaomi • Ninebot • Dualtron • Kaabo • Nami • Zero • autres modèles sur vérification
+✅ Xiaomi • Ninebot • Dualtron • Kaabo • Nami • Zero • autres modèles sur vérification.
 </div>
 
 <div class="greenbox">
-✅ Stock immédiat sur plusieurs tailles courantes : chambres à air, pneus pleins, tubeless et valves selon disponibilité.
+✅ Stock disponible sur plusieurs tailles courantes, selon disponibilité au moment de la demande.
+</div>
+</div>
+
+<div>
+<div class="mini">
+<b>Ce que vous recevez</b>
+Un prix clair, une vérification avant intervention et une réparation adaptée au modèle réel de votre trottinette.
+</div>
+
+<div class="mini" style="margin-top:10px;">
+<b>Important</b>
+La taille inscrite sur le pneu reste toujours prioritaire pour confirmer la bonne pièce.
+</div>
 </div>
 
 </section>
@@ -624,7 +631,7 @@ Xiaomi • Ninebot • Dualtron • Kaabo • Nami • Zero • autres modèles 
 
 <div class="mini">
 <b>Prix clair</b>
-Le tarif est confirmé avant intervention.
+Le tarif est annoncé avant intervention. Aucune réparation supplémentaire sans accord.
 </div>
 
 <div class="mini">
@@ -634,7 +641,7 @@ Les références les plus demandées sont disponibles en priorité.
 
 <div class="mini">
 <b>Montage soigné</b>
-Montage propre avec contrôle visuel.
+Montage propre, contrôle visuel et attention particulière aux roues moteur.
 </div>
 
 </div>
@@ -644,25 +651,13 @@ Montage propre avec contrôle visuel.
 <section class="section grid2">
 
 <article class="photo">
-
-<img src="20260223_150017.jpg"
-alt="Trottinette en réparation">
-
-<div class="caption">
-Exemple d’intervention mécanique.
-</div>
-
+<img src="20260223_150017.jpg" alt="Trottinette électrique en réparation">
+<div class="caption">Exemple d’intervention mécanique sur trottinette électrique.</div>
 </article>
 
 <article class="photo">
-
-<img src="file_00000000b5bc720ab49a3aaf47abc831.png?v=7"
-alt="Avant après pneu">
-
-<div class="caption">
-Avant / après réel.
-</div>
-
+<img src="file_00000000b5bc720ab49a3aaf47abc831.png?v=8" alt="Avant après pneu trottinette">
+<div class="caption">Avant / après réel.</div>
 </article>
 
 </section>
@@ -672,19 +667,13 @@ Avant / après réel.
 <h3>Tarifs ElectroRide</h3>
 
 <p class="sub">
-Prix indicatifs selon difficulté et modèle.
-La taille inscrite sur le pneu reste prioritaire.
+Prix indicatifs selon difficulté, roue simple ou roue moteur, type de pneu et modèle.
+Le prix exact est confirmé avant intervention.
 </p>
 
 <div class="optionBox">
-
 <h4>Option A — Pose seule</h4>
-
-<p>
-Vous apportez votre pièce.
-Je réalise uniquement le montage.
-</p>
-
+<p>Vous apportez votre pièce. ElectroRide réalise uniquement le montage.</p>
 </div>
 
 <div class="priceGrid">
@@ -752,7 +741,6 @@ Je réalise uniquement le montage.
 </div>
 
 <details class="more">
-
 <summary>Voir services complémentaires</summary>
 
 <div class="priceGrid">
@@ -788,20 +776,12 @@ Je réalise uniquement le montage.
 </div>
 
 </div>
-
 </details>
 
 <div class="optionBox">
-
 <h4>Option B — Pièce fournie + pose</h4>
-
-<p>
-Je fournis la pièce adaptée et je fais le montage.
-Prix tout compris.
-</p>
-
-<div class="stockTag">✅ Stock immédiat sur les tailles les plus demandées</div>
-
+<p>ElectroRide fournit la pièce adaptée et réalise le montage. Prix tout compris.</p>
+<div class="stockTag">✅ Stock sur les tailles les plus demandées, selon disponibilité</div>
 </div>
 
 <div class="priceGrid">
@@ -810,9 +790,7 @@ Prix tout compris.
 <div class="priceTop">
 <div>
 <div class="name">Chambre à air 8.5x2</div>
-<div class="hint">
-Xiaomi M365 • 1S • Essential • Pro • Pro 2 • Mi 3
-</div>
+<div class="hint">Xiaomi M365 • 1S • Essential • Pro • Pro 2 • Mi 3</div>
 </div>
 <div class="price">29,99 €</div>
 </div>
@@ -823,9 +801,7 @@ Xiaomi M365 • 1S • Essential • Pro • Pro 2 • Mi 3
 <div class="priceTop">
 <div>
 <div class="name">Chambre à air 10x2.125</div>
-<div class="hint">
-Ninebot F20 • F25 • F30 • F40
-</div>
+<div class="hint">Ninebot F20 • F25 • F30 • F40</div>
 </div>
 <div class="price">29,99 €</div>
 </div>
@@ -836,9 +812,7 @@ Ninebot F20 • F25 • F30 • F40
 <div class="priceTop">
 <div>
 <div class="name">Kit pneu + chambre 10x2.125</div>
-<div class="hint">
-Ninebot F20 • F25 • F30 • F40
-</div>
+<div class="hint">Ninebot F20 • F25 • F30 • F40</div>
 </div>
 <div class="price">44,99 €</div>
 </div>
@@ -849,9 +823,7 @@ Ninebot F20 • F25 • F30 • F40
 <div class="priceTop">
 <div>
 <div class="name">Tubeless 60/70-6.5</div>
-<div class="hint">
-Ninebot Max G30
-</div>
+<div class="hint">Ninebot Max G30</div>
 </div>
 <div class="price">49,99 €</div>
 </div>
@@ -862,9 +834,7 @@ Ninebot Max G30
 <div class="priceTop">
 <div>
 <div class="name">Tubeless 90/65-6.5</div>
-<div class="hint">
-Thunder • Zero 11X • Wolf Warrior • Burn-e
-</div>
+<div class="hint">Thunder • Zero 11X • Wolf Warrior • Burn-e</div>
 </div>
 <div class="price">69,99 €</div>
 </div>
@@ -875,9 +845,7 @@ Thunder • Zero 11X • Wolf Warrior • Burn-e
 <div class="priceTop">
 <div>
 <div class="name">Pneu plein 8.5x2</div>
-<div class="hint">
-Xiaomi M365 • 1S • Essential • Pro • Pro 2 • Mi 3
-</div>
+<div class="hint">Xiaomi M365 • 1S • Essential • Pro • Pro 2 • Mi 3</div>
 </div>
 <div class="price">49,99 €</div>
 </div>
@@ -888,9 +856,7 @@ Xiaomi M365 • 1S • Essential • Pro • Pro 2 • Mi 3
 <div class="priceTop">
 <div>
 <div class="name">Pneu plein 10x2.125</div>
-<div class="hint">
-Ninebot F20 • F25 • F30 • F40
-</div>
+<div class="hint">Ninebot F20 • F25 • F30 • F40</div>
 </div>
 <div class="price">54,99 €</div>
 </div>
@@ -901,9 +867,7 @@ Ninebot F20 • F25 • F30 • F40
 <div class="priceTop">
 <div>
 <div class="name">Pneu CST 90/65-6.5</div>
-<div class="hint">
-Thunder • Zero 11X • Wolf Warrior • Burn-e
-</div>
+<div class="hint">Thunder • Zero 11X • Wolf Warrior • Burn-e</div>
 </div>
 <div class="price">64,99 €</div>
 </div>
@@ -922,30 +886,22 @@ chocs, sous-gonflage, surgonflage ou dommages causés après l’intervention.
 </div>
 
 <div class="note" style="font-style:italic;">
-🔍 Votre modèle n'est pas listé ?
-Envoyez une photo de votre pneu,
-je vérifie si j'ai la pièce en stock.
+🔍 Votre modèle n'est pas listé ? Envoyez une photo de votre pneu, je vérifie si j'ai la pièce en stock.
 </div>
 
 <div class="note">
-<b>Important :</b>
-la taille inscrite sur le pneu reste prioritaire.
+<b>Important :</b> la taille inscrite sur le pneu reste prioritaire.
 Une photo du pneu peut être demandée avant confirmation.
 Stock variable selon modèle et disponibilité.
 </div>
 
 <div class="warningbox">
-<b>Pneu plein :</b>
-disponible selon le modèle, la taille et le type de jante.
+<b>Pneu plein :</b> disponible selon le modèle, la taille et le type de jante.
 La compatibilité est confirmée avant intervention.
 </div>
 
-<a class="btn green"
-href="#contact"
-style="margin-top:14px;width:100%;">
-
+<a class="btn green" href="#contact" style="margin-top:14px;width:100%;">
 ✉️ Demander un rendez-vous
-
 </a>
 
 </section>
@@ -974,8 +930,7 @@ Vous déposez la trottinette au créneau prévu.
 </div>
 
 <div class="greenbox">
-📅 Intervention uniquement sur rendez-vous.
-Réponse rapide par SMS ou email.
+📅 Intervention uniquement sur rendez-vous. Réponse rapide par SMS ou email.
 </div>
 
 </section>
@@ -987,37 +942,15 @@ Réponse rapide par SMS ou email.
 <h3>Pièce fournie ou apportée</h3>
 
 <p class="sub">
-Vous pouvez apporter votre pièce
-ou choisir la formule tout compris.
+Vous pouvez apporter votre pièce ou choisir la formule tout compris.
 </p>
 
 <ul class="clean">
-
-<li>
-<span class="check">✓</span>
-<span>Chambre à air</span>
-</li>
-
-<li>
-<span class="check">✓</span>
-<span>Pneu + chambre à air</span>
-</li>
-
-<li>
-<span class="check">✓</span>
-<span>Pneu tubeless</span>
-</li>
-
-<li>
-<span class="check">✓</span>
-<span>Pneu plein selon modèle compatible</span>
-</li>
-
-<li>
-<span class="check">✓</span>
-<span>Valve tubeless / obus de valve</span>
-</li>
-
+<li><span class="check">✓</span><span>Chambre à air</span></li>
+<li><span class="check">✓</span><span>Pneu + chambre à air</span></li>
+<li><span class="check">✓</span><span>Pneu tubeless</span></li>
+<li><span class="check">✓</span><span>Pneu plein selon modèle compatible</span></li>
+<li><span class="check">✓</span><span>Valve tubeless / obus de valve</span></li>
 </ul>
 
 <div class="greenbox">
@@ -1031,27 +964,10 @@ Le prix est confirmé avant intervention.
 <h3>Ce que je ne réalise pas</h3>
 
 <ul class="clean">
-
-<li>
-<span class="check no">×</span>
-<span>Batterie</span>
-</li>
-
-<li>
-<span class="check no">×</span>
-<span>Contrôleur</span>
-</li>
-
-<li>
-<span class="check no">×</span>
-<span>Câblage interne</span>
-</li>
-
-<li>
-<span class="check no">×</span>
-<span>Purge hydraulique</span>
-</li>
-
+<li><span class="check no">×</span><span>Batterie</span></li>
+<li><span class="check no">×</span><span>Contrôleur</span></li>
+<li><span class="check no">×</span><span>Câblage interne</span></li>
+<li><span class="check no">×</span><span>Purge hydraulique</span></li>
 </ul>
 
 <div class="warningbox">
@@ -1076,9 +992,7 @@ href="https://g.page/r/CQYENGk_6sdoEAE/review"
 target="_blank"
 rel="noopener"
 style="width:100%;">
-
 ⭐ Laisser un avis Google
-
 </a>
 
 </section>
@@ -1088,73 +1002,51 @@ style="width:100%;">
 <h3>Questions fréquentes</h3>
 
 <details class="faq">
-
 <summary>Je dois fournir le pneu ?</summary>
-
 <p>
-Non.
-Vous pouvez apporter votre pièce
-ou choisir la formule pièce fournie + pose.
+Non. Vous pouvez apporter votre pièce ou choisir la formule pièce fournie + pose.
 </p>
-
 </details>
 
 <details class="faq">
-
 <summary>Les pièces sont-elles disponibles directement ?</summary>
-
 <p>
 Les tailles les plus courantes sont disponibles en stock selon disponibilité.
 Pour les modèles moins fréquents, une commande peut être nécessaire avant intervention.
 </p>
-
 </details>
 
 <details class="faq">
-
 <summary>Y a-t-il une garantie sur le montage ?</summary>
-
 <p>
-Oui, uniquement pour les chambres à air :
-en cas de dégonflage lent causé par un pincement lié au montage,
+Oui, uniquement pour les chambres à air : en cas de dégonflage lent causé par un pincement lié au montage,
 le remontage est pris en charge gratuitement dans les 7 jours.
 La garantie ne couvre pas les crevaisons externes, objets pointus, chocs,
 sous-gonflage, surgonflage ou dommages causés après l’intervention.
 </p>
-
 </details>
 
 <details class="faq">
-
 <summary>Pourquoi une roue moteur coûte plus cher ?</summary>
-
 <p>
 Une roue avec moteur intégré demande souvent plus de précaution au démontage,
-notamment à cause du câble moteur et du disque.
+notamment à cause du câble moteur, du disque et de l’accès parfois plus complexe.
 </p>
-
 </details>
 
 <details class="faq">
-
 <summary>Le prix peut changer ?</summary>
-
 <p>
-Le prix est confirmé avant intervention.
-Aucune réparation supplémentaire n’est faite sans accord.
+Le prix est confirmé avant intervention. Aucune réparation supplémentaire n’est faite sans accord.
 </p>
-
 </details>
 
 <details class="faq">
-
 <summary>Pourquoi demander une photo du pneu ?</summary>
-
 <p>
 Parce que certains modèles existent en plusieurs versions.
 La taille inscrite sur le pneu permet de confirmer la bonne pièce avant intervention.
 </p>
-
 </details>
 
 </section>
@@ -1164,65 +1056,44 @@ La taille inscrite sur le pneu permet de confirmer la bonne pièce avant interve
 <h3>Contact</h3>
 
 <p class="sub">
-Envoyez :
-marque + modèle + photo du pneu + service souhaité.
+Envoyez : marque + modèle + photo du pneu + service souhaité.
 </p>
 
 <div class="contactLine">
-
 <span>Email</span>
-
-<b>
-<a href="mailto:service.electroride@gmail.com">
-service.electroride@gmail.com
-</a>
-</b>
-
+<b><a href="mailto:service.electroride@gmail.com">service.electroride@gmail.com</a></b>
 </div>
 
 <div class="contactLine">
-
 <span>Téléphone</span>
-
-<b>
-<a href="tel:+32495656186">
-0495 65 61 86
-</a>
-</b>
-
+<b><a href="tel:+32495656186">0495 65 61 86</a></b>
 </div>
 
 <div class="contactLine">
-
-<span>TVA</span>
-
+<span>N° d’entreprise</span>
 <b>BE 1035.368.201</b>
+</div>
 
+<div class="contactLine">
+<span>TVA</span>
+<b>Non applicable — régime de franchise de la taxe</b>
 </div>
 
 <div class="ctaRow">
 
-<a class="btn green"
-href="mailto:service.electroride@gmail.com">
-
+<a class="btn green" href="mailto:service.electroride@gmail.com">
 ✉️ Écrire
-
 </a>
 
-<a class="btn"
-href="tel:+32495656186">
-
+<a class="btn" href="tel:+32495656186">
 📞 Appeler
-
 </a>
 
 <a class="btn gold"
 href="https://g.page/r/CQYENGk_6sdoEAE/review"
 target="_blank"
 rel="noopener">
-
 ⭐ Avis Google
-
 </a>
 
 </div>
@@ -1234,16 +1105,14 @@ rel="noopener">
 ElectroRide • Theux<br>
 Sur rendez-vous uniquement<br>
 Réponse rapide par SMS ou email<br>
-Paiement cash ou Payconiq par QR code<br>
-Stock immédiat sur tailles courantes selon disponibilité<br>
+Paiement en espèces ou Payconiq par QR code<br>
+Stock sur tailles courantes selon disponibilité<br>
 Garantie montage chambre à air 7 jours sous conditions<br>
-TVA : BE 1035.368.201<br>
+N° d’entreprise : BE 1035.368.201<br>
+TVA non applicable — régime de franchise de la taxe<br>
 
-<a href="https://g.page/r/CQYENGk_6sdoEAE/review"
-target="_blank">
-
+<a href="https://g.page/r/CQYENGk_6sdoEAE/review" target="_blank" rel="noopener">
 ⭐ Laisser un avis Google
-
 </a>
 
 </footer>
