@@ -1,3 +1,5 @@
+Voici le code complet corrigé avec la logique propre : main-d’œuvre séparée, pièce fournie à partir de, et gros modèles sur devis.
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,12 +8,11 @@
 
 <title>ElectroRide — Réparation trottinette électrique à Theux</title>
 
-<meta name="description" content="Réparation de trottinettes électriques à Theux : pneus, chambres à air, tubeless, freins, nettoyage et check-up sécurité. Prix clairs et sur rendez-vous.">
+<meta name="description" content="Réparation de trottinettes électriques à Theux : pneus, chambres à air, tubeless, freins, nettoyage extérieur et check-up sécurité. Prix confirmé avant intervention.">
 
 <meta name="theme-color" content="#07111f">
 
 <style>
-
 :root{
 --bg:#07111f;
 --bg2:#0d1c34;
@@ -21,27 +22,23 @@
 --muted:#bfc9df;
 --green:#43e47d;
 --gold:#f8c542;
+--blue:#63a7ff;
 --radius:24px;
 --shadow:0 18px 45px rgba(0,0,0,.35);
 --max:920px;
 }
 
-*{
-box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
-html{
-scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
 margin:0;
 font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 color:var(--text);
-
 background:
-radial-gradient(circle at top left, rgba(67,228,125,.15), transparent 32%),
-radial-gradient(circle at top right, rgba(98,168,255,.10), transparent 30%),
+radial-gradient(circle at top left,rgba(67,228,125,.15),transparent 32%),
+radial-gradient(circle at top right,rgba(98,168,255,.10),transparent 30%),
 linear-gradient(180deg,var(--bg),var(--bg2));
 }
 
@@ -96,46 +93,28 @@ font-size:16px;
 line-height:1.6;
 }
 
-.highlight{
-color:var(--green);
-}
+.highlight{color:var(--green)}
 
-.priceStrip{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:10px;
-margin-top:16px;
-}
-
-.priceChip{
-padding:11px 14px;
-border-radius:999px;
-background:rgba(255,255,255,.05);
-border:1px solid var(--line);
-font-size:14px;
-font-weight:850;
-}
-
-.priceChip strong{
-color:var(--green);
-}
-
+.priceStrip,
 .badges{
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
 gap:10px;
-margin-top:12px;
+margin-top:14px;
 }
 
+.priceChip,
 .badge{
 padding:10px 14px;
 border-radius:999px;
-background:rgba(255,255,255,.035);
+background:rgba(255,255,255,.045);
 border:1px solid var(--line);
-font-size:13.5px;
+font-size:14px;
+font-weight:800;
 }
+
+.priceChip strong{color:var(--green)}
 
 .sticky{
 position:sticky;
@@ -167,12 +146,10 @@ min-width:170px;
 transition:.2s;
 }
 
-.btn:hover{
-transform:translateY(-1px);
-}
+.btn:hover{transform:translateY(-1px)}
 
 .btn.green{
-background:linear-gradient(135deg, rgba(67,228,125,.22), rgba(67,228,125,.10));
+background:linear-gradient(135deg,rgba(67,228,125,.22),rgba(67,228,125,.10));
 border-color:rgba(67,228,125,.35);
 }
 
@@ -181,14 +158,12 @@ background:rgba(248,197,66,.10);
 border-color:rgba(248,197,66,.26);
 }
 
-.section{
-margin-top:16px;
-}
+.section{margin-top:16px}
 
 .card{
 padding:18px;
 border-radius:var(--radius);
-background:linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.03));
+background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.03));
 border:1px solid var(--line);
 box-shadow:var(--shadow);
 }
@@ -205,11 +180,18 @@ line-height:1.6;
 font-size:15px;
 }
 
-.quickGrid{
+.quickGrid,
+.grid2,
+.priceGrid{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:12px;
-margin-top:12px;
+}
+
+.grid3{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
 }
 
 .quick{
@@ -231,7 +213,8 @@ font-size:24px;
 color:var(--green);
 }
 
-.quick span{
+.quick span,
+.hint{
 display:block;
 margin-top:5px;
 font-size:13px;
@@ -239,17 +222,15 @@ line-height:1.45;
 color:var(--muted);
 }
 
-.grid3{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:12px;
-}
-
-.mini{
+.mini,
+.priceCard{
 padding:15px;
 border-radius:18px;
 background:rgba(255,255,255,.035);
 border:1px solid var(--line);
+}
+
+.mini{
 line-height:1.55;
 font-size:14.5px;
 }
@@ -258,12 +239,6 @@ font-size:14.5px;
 display:block;
 margin-bottom:6px;
 color:#fff;
-}
-
-.grid2{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px;
 }
 
 .photo{
@@ -300,20 +275,6 @@ font-weight:900;
 color:var(--gold);
 }
 
-.priceGrid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px;
-margin-top:12px;
-}
-
-.priceCard{
-padding:15px;
-border-radius:18px;
-background:rgba(255,255,255,.035);
-border:1px solid var(--line);
-}
-
 .priceTop{
 display:flex;
 justify-content:space-between;
@@ -333,12 +294,8 @@ color:var(--green);
 white-space:nowrap;
 }
 
-.hint{
-margin-top:5px;
-font-size:13px;
-line-height:1.45;
-color:var(--muted);
-}
+.price.blue{color:var(--blue)}
+.price.gold{color:var(--gold)}
 
 .note,
 .warning,
@@ -376,9 +333,7 @@ border:1px solid var(--line);
 margin-top:10px;
 }
 
-.contactLine span{
-color:var(--muted);
-}
+.contactLine span{color:var(--muted)}
 
 .footer{
 margin-top:20px;
@@ -395,40 +350,21 @@ font-weight:900;
 }
 
 @media(max-width:850px){
-
 .quickGrid,
 .grid3,
 .grid2,
 .priceGrid{
 grid-template-columns:1fr;
 }
-
 }
 
 @media(max-width:520px){
-
-.brand{
-font-size:38px;
+.brand{font-size:38px}
+.hero h2{font-size:26px}
+.btn{width:100%}
+.sticky{border-radius:24px}
+.contactLine{flex-direction:column}
 }
-
-.hero h2{
-font-size:26px;
-}
-
-.btn{
-width:100%;
-}
-
-.sticky{
-border-radius:24px;
-}
-
-.contactLine{
-flex-direction:column;
-}
-
-}
-
 </style>
 </head>
 
@@ -438,59 +374,35 @@ flex-direction:column;
 
 <header class="hero">
 
-<img src="file_00000000e988720a9d6597291676d817.png?v=9"
-class="logo"
-alt="Logo ElectroRide">
+<img src="file_00000000e988720a9d6597291676d817.png?v=9" class="logo" alt="Logo ElectroRide">
 
 <h1 class="brand">ElectroRide</h1>
 
 <h2>
-Réparation de
-<span class="highlight">trottinettes électriques</span>
-à Theux
+Réparation de <span class="highlight">trottinettes électriques</span> à Theux
 </h2>
 
 <p>
-Pneus, chambres à air, tubeless, freins,
-nettoyage extérieur et check-up sécurité.
+Pneus, chambres à air, tubeless, freins, nettoyage extérieur et check-up sécurité.
 Prix clair avant intervention.
 </p>
 
 <div class="priceStrip">
-
-<div class="priceChip">
-Chambre à air + pose dès <strong>29 €</strong>
-</div>
-
-<div class="priceChip">
-Pneu + chambre dès <strong>45 €</strong>
-</div>
-
-<div class="priceChip">
-Tarifs accessibles
-</div>
-
+<div class="priceChip">Chambre à air + pose dès <strong>30 €</strong></div>
+<div class="priceChip">Pneu + chambre dès <strong>45 €</strong></div>
+<div class="priceChip">Tarifs accessibles</div>
 </div>
 
 <div class="badges">
-
 <div class="badge">📍 Theux</div>
 <div class="badge">🕒 Sur rendez-vous</div>
 <div class="badge">⚙️ Pneus & mécanique simple</div>
 <div class="badge">💬 Prix confirmé avant intervention</div>
-
 </div>
 
 <nav class="sticky">
-
-<a class="btn green" href="#contact">
-✉️ Rendez-vous
-</a>
-
-<a class="btn" href="tel:+32495656186">
-📞 Appeler
-</a>
-
+<a class="btn green" href="#contact">✉️ Rendez-vous</a>
+<a class="btn" href="tel:+32495656186">📞 Appeler</a>
 </nav>
 
 </header>
@@ -503,19 +415,19 @@ Tarifs accessibles
 
 <div class="quick">
 <b>Chambre à air + pose</b>
-<strong>29 €</strong>
-<span>Xiaomi, Ninebot et modèles similaires</span>
+<strong>dès 30 €</strong>
+<span>Pièce compatible + montage</span>
 </div>
 
 <div class="quick">
 <b>Pneu + chambre + pose</b>
-<strong>45 €</strong>
-<span>Pièce compatible fournie</span>
+<strong>dès 45 €</strong>
+<span>Solution complète</span>
 </div>
 
 <div class="quick">
-<b>Tubeless</b>
-<strong>dès 49 €</strong>
+<b>Tubeless + pose</b>
+<strong>dès 55 €</strong>
 <span>Selon taille et modèle</span>
 </div>
 
@@ -528,7 +440,7 @@ Tarifs accessibles
 </div>
 
 <div class="note">
-Les gros modèles comme Dualtron, Kaabo ou Nami peuvent demander un supplément selon la difficulté.
+Les tarifs affichés correspondent aux interventions courantes. Les gros pneus, doubles moteurs ou modèles complexes sont confirmés sur devis.
 </div>
 
 </section>
@@ -561,24 +473,13 @@ Vous déposez la trottinette au créneau prévu.
 <section class="section grid2">
 
 <article class="photo">
-
 <img src="20260223_150017.jpg" alt="Réparation trottinette">
-
-<div class="caption">
-Exemple d’intervention mécanique.
-</div>
-
+<div class="caption">Exemple d’intervention mécanique.</div>
 </article>
 
 <article class="photo">
-
-<img src="file_00000000b5bc720ab49a3aaf47abc831.png?v=9"
-alt="Avant après">
-
-<div class="caption">
-Avant / après réel.
-</div>
-
+<img src="file_00000000b5bc720ab49a3aaf47abc831.png?v=9" alt="Avant après">
+<div class="caption">Avant / après réel.</div>
 </article>
 
 </section>
@@ -588,8 +489,7 @@ Avant / après réel.
 <h3>Tarifs détaillés</h3>
 
 <details>
-
-<summary>Vous apportez votre pièce</summary>
+<summary>Client apporte la pièce — main-d’œuvre uniquement</summary>
 
 <div class="priceGrid">
 
@@ -597,11 +497,19 @@ Avant / après réel.
 <div class="priceTop">
 <div>
 <div class="name">Chambre à air</div>
-<div class="hint">
-Montage uniquement
+<div class="hint">Montage uniquement</div>
+</div>
+<div class="price">25 €</div>
 </div>
 </div>
-<div class="price">20 €</div>
+
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">Pneu + chambre</div>
+<div class="hint">Montage uniquement</div>
+</div>
+<div class="price">35 €</div>
 </div>
 </div>
 
@@ -609,11 +517,9 @@ Montage uniquement
 <div class="priceTop">
 <div>
 <div class="name">Tubeless</div>
-<div class="hint">
-Montage uniquement
+<div class="hint">Montage uniquement</div>
 </div>
-</div>
-<div class="price">dès 25 €</div>
+<div class="price">30 €</div>
 </div>
 </div>
 
@@ -621,11 +527,9 @@ Montage uniquement
 <div class="priceTop">
 <div>
 <div class="name">Pneu plein</div>
-<div class="hint">
-Montage uniquement
+<div class="hint">Montage uniquement</div>
 </div>
-</div>
-<div class="price">dès 30 €</div>
+<div class="price">40 €</div>
 </div>
 </div>
 
@@ -633,9 +537,7 @@ Montage uniquement
 <div class="priceTop">
 <div>
 <div class="name">Valve / obus</div>
-<div class="hint">
-Remplacement simple
-</div>
+<div class="hint">Remplacement simple</div>
 </div>
 <div class="price">dès 5 €</div>
 </div>
@@ -644,36 +546,31 @@ Remplacement simple
 </div>
 
 <div class="note">
-⚙️ Supplément possible sur roue moteur ou gros modèles.
+Supplément possible sur roue moteur, double moteur ou modèle complexe. Prix confirmé avant intervention.
 </div>
 
 </details>
 
 <details>
-
-<summary>Pièce fournie + pose</summary>
+<summary>ElectroRide fournit la pièce + pose</summary>
 
 <div class="priceGrid">
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
-<div class="name">Xiaomi / Ninebot</div>
-<div class="hint">
-Chambre à air + pose
+<div class="name">Chambre à air + pose</div>
+<div class="hint">Xiaomi, Ninebot et modèles courants</div>
 </div>
-</div>
-<div class="price">29 €</div>
+<div class="price">30 €</div>
 </div>
 </div>
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
-<div class="name">Pneu + chambre</div>
-<div class="hint">
-Pièce compatible fournie
-</div>
+<div class="name">Pneu + chambre + pose</div>
+<div class="hint">Pièce compatible sélectionnée</div>
 </div>
 <div class="price">45 €</div>
 </div>
@@ -682,48 +579,52 @@ Pièce compatible fournie
 <div class="priceCard">
 <div class="priceTop">
 <div>
-<div class="name">Tubeless classique</div>
-<div class="hint">
-Ninebot Max G30 et similaires
+<div class="name">Tubeless + pose</div>
+<div class="hint">Selon taille et modèle</div>
 </div>
-</div>
-<div class="price">49 €</div>
+<div class="price">dès 55 €</div>
 </div>
 </div>
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
-<div class="name">Gros modèles</div>
-<div class="hint">
-Dualtron, Kaabo, Nami…
+<div class="name">Pneu plein + pose</div>
+<div class="hint">Selon compatibilité</div>
 </div>
-</div>
-<div class="price">dès 39 €</div>
+<div class="price">dès 60 €</div>
 </div>
 </div>
 
 </div>
 
 <div class="warning">
-Pièces compatibles sélectionnées selon le modèle et l’utilisation.
+Les pièces fournies sont des références compatibles sélectionnées selon le modèle et l’utilisation. CST, PMT ou marque précise : sur devis.
 </div>
 
 </details>
 
 <details>
+<summary>Gros pneus / modèles complexes</summary>
 
-<summary>Freins, nettoyage & entretien</summary>
+<div class="warning">
+Pour Dualtron, Kaabo, Nami, gros pneus, doubles moteurs ou pneus coûtant déjà cher à l’achat : prix sur devis.
+<br><br>
+Principe : prix de la pièce + marge raisonnable + main-d’œuvre confirmée avant intervention.
+</div>
+
+</details>
+
+<details>
+<summary>Freins, nettoyage & check-up</summary>
 
 <div class="priceGrid">
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
-<div class="name">Plaquettes + pose</div>
-<div class="hint">
-Trottinettes classiques
-</div>
+<div class="name">Plaquettes standard + pose</div>
+<div class="hint">Xiaomi, Ninebot, Kugoo…</div>
 </div>
 <div class="price">20 €</div>
 </div>
@@ -733,9 +634,7 @@ Trottinettes classiques
 <div class="priceTop">
 <div>
 <div class="name">Gros étriers</div>
-<div class="hint">
-Dualtron, Kaabo…
-</div>
+<div class="hint">Dualtron, Kaabo, Nami…</div>
 </div>
 <div class="price">25 €</div>
 </div>
@@ -745,9 +644,7 @@ Dualtron, Kaabo…
 <div class="priceTop">
 <div>
 <div class="name">Réglage frein</div>
-<div class="hint">
-Réglage mécanique simple
-</div>
+<div class="hint">Réglage mécanique simple</div>
 </div>
 <div class="price">10 €</div>
 </div>
@@ -757,9 +654,7 @@ Réglage mécanique simple
 <div class="priceTop">
 <div>
 <div class="name">Nettoyage extérieur</div>
-<div class="hint">
-Sans ouverture interne
-</div>
+<div class="hint">Sans ouverture interne</div>
 </div>
 <div class="price">10 €</div>
 </div>
@@ -769,9 +664,7 @@ Sans ouverture interne
 <div class="priceTop">
 <div>
 <div class="name">Check-up sécurité</div>
-<div class="hint">
-Contrôle rapide
-</div>
+<div class="hint">Contrôle rapide</div>
 </div>
 <div class="price">9 €</div>
 </div>
@@ -780,26 +673,7 @@ Contrôle rapide
 </div>
 
 <div class="warning">
-
-⚠️ Freinage simple uniquement :
-plaquettes et réglage mécanique.<br><br>
-
-Pas de purge hydraulique,
-contrôleurs ou électronique interne.
-
-</div>
-
-</details>
-
-<details>
-
-<summary>Pneus CST / premium</summary>
-
-<div class="warning">
-
-CST, PMT ou autre marque spécifique :
-prix confirmé sur devis selon la taille et la disponibilité.
-
+Freinage simple uniquement : plaquettes et réglage mécanique. Pas de purge hydraulique, contrôleur ou électronique interne.
 </div>
 
 </details>
@@ -811,17 +685,11 @@ prix confirmé sur devis selon la taille et la disponibilité.
 <h3>Garantie montage</h3>
 
 <div class="guarantee">
-
-✅ Garantie 7 jours sur le montage chambre à air
-en cas de pincement lié au montage.
-
+Garantie 7 jours sur le montage chambre à air en cas de pincement lié au montage.
 </div>
 
 <div class="warning">
-
-Ne couvre pas les crevaisons externes,
-objets pointus ou dégâts après intervention.
-
+Ne couvre pas les crevaisons externes, objets pointus, sous-gonflage ou dégâts après intervention.
 </div>
 
 </section>
@@ -831,26 +699,17 @@ objets pointus ou dégâts après intervention.
 <h3>Contact</h3>
 
 <p class="sub">
-Envoyez :
-marque + modèle + photo du pneu + service souhaité.
+Envoyez : marque + modèle + photo du pneu + service souhaité.
 </p>
 
 <div class="contactLine">
 <span>Email</span>
-<b>
-<a href="mailto:service.electroride@gmail.com">
-service.electroride@gmail.com
-</a>
-</b>
+<b><a href="mailto:service.electroride@gmail.com">service.electroride@gmail.com</a></b>
 </div>
 
 <div class="contactLine">
 <span>Téléphone</span>
-<b>
-<a href="tel:+32495656186">
-0495 65 61 86
-</a>
-</b>
+<b><a href="tel:+32495656186">0495 65 61 86</a></b>
 </div>
 
 <div class="contactLine">
@@ -865,21 +724,9 @@ service.electroride@gmail.com
 
 <div class="grid3" style="margin-top:12px;">
 
-<a class="btn green"
-href="mailto:service.electroride@gmail.com">
-✉️ Écrire
-</a>
-
-<a class="btn"
-href="tel:+32495656186">
-📞 Appeler
-</a>
-
-<a class="btn gold"
-href="https://g.page/r/CQYENGk_6sdoEAE/review"
-target="_blank">
-⭐ Avis Google
-</a>
+<a class="btn green" href="mailto:service.electroride@gmail.com">✉️ Écrire</a>
+<a class="btn" href="tel:+32495656186">📞 Appeler</a>
+<a class="btn gold" href="https://g.page/r/CQYENGk_6sdoEAE/review" target="_blank">⭐ Avis Google</a>
 
 </div>
 
@@ -893,8 +740,7 @@ Paiement espèces ou Payconiq QR code<br>
 Stock selon disponibilité<br>
 TVA non applicable — régime de franchise<br>
 
-<a href="https://g.page/r/CQYENGk_6sdoEAE/review"
-target="_blank">
+<a href="https://g.page/r/CQYENGk_6sdoEAE/review" target="_blank">
 ⭐ Laisser un avis Google
 </a>
 
