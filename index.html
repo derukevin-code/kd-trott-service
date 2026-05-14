@@ -292,58 +292,30 @@ img{max-width:100%;display:block}
   border:1px solid rgba(67,228,125,.24);
 }
 
+.optionBox.blue{
+  background:rgba(98,168,255,.075);
+  border-color:rgba(98,168,255,.24);
+}
+
+.optionBox.gold{
+  background:rgba(248,197,66,.085);
+  border-color:rgba(248,197,66,.28);
+}
+
 .optionBox h4{
   margin:0 0 6px;
   color:var(--green);
   font-size:22px;
 }
 
+.optionBox.blue h4{color:var(--blue)}
+.optionBox.gold h4{color:var(--gold)}
+
 .optionBox p{
   margin:0;
   color:var(--muted);
   font-size:15px;
   line-height:1.55;
-}
-
-.qualityTabs{
-  margin-top:14px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px;
-}
-
-.qualityTab{
-  padding:14px;
-  border-radius:18px;
-  background:rgba(255,255,255,.04);
-  border:1px solid var(--line);
-  font-size:14.5px;
-  line-height:1.45;
-}
-
-.qualityTab b{
-  display:block;
-  margin-bottom:5px;
-  font-size:16px;
-}
-
-.qualityTab.eco{
-  border-color:rgba(67,228,125,.28);
-  background:rgba(67,228,125,.075);
-}
-
-.qualityTab.standard{
-  border-color:rgba(98,168,255,.30);
-  background:rgba(98,168,255,.08);
-}
-
-.qualityTab.premium{
-  border-color:rgba(248,197,66,.34);
-  background:rgba(248,197,66,.09);
-}
-
-.qualityTab span{
-  color:var(--muted);
 }
 
 .priceGrid{
@@ -539,8 +511,7 @@ ul.clean li{
   .grid2,
   .grid3,
   .ctaRow,
-  .priceGrid,
-  .qualityTabs{
+  .priceGrid{
     grid-template-columns:1fr;
   }
 }
@@ -827,26 +798,17 @@ Le prix exact est confirmé avant intervention.
 </details>
 
 <div class="optionBox">
-<h4>Option B — Pièce fournie + pose</h4>
-<p>ElectroRide fournit la pièce adaptée et réalise le montage. Prix tout compris.</p>
-<div class="stockTag">✅ Stock sur les tailles les plus demandées, selon disponibilité</div>
-
-<div class="qualityTabs">
-<div class="qualityTab eco">
-<b>🟢 Éco</b>
-<span>Pneu générique avec bon rapport qualité/prix. Idéal pour une réparation simple et économique.</span>
+<h4>Option B — Pièce standard fournie + pose</h4>
+<p>
+ElectroRide fournit une pièce compatible avec bon rapport qualité/prix et réalise le montage.
+Les prix affichés correspondent à une pièce standard/générique, selon le stock disponible.
+</p>
+<div class="stockTag">✅ Formule tout compris avec pièce standard</div>
 </div>
 
-<div class="qualityTab standard">
-<b>🔵 Standard CST</b>
-<span>Pneu de marque reconnue, conseillé si disponible dans la bonne taille.</span>
-</div>
-
-<div class="qualityTab premium">
-<b>⭐ Premium PMT</b>
-<span>Gamme orientée performance, proposée uniquement sur devis selon la taille et le modèle.</span>
-</div>
-</div>
+<div class="note">
+<b>À savoir :</b> l’Option B ne correspond pas automatiquement à une marque précise.
+Pour une marque spécifique comme CST, PMT ou autre, voir l’Option C.
 </div>
 
 <div class="priceGrid">
@@ -855,7 +817,7 @@ Le prix exact est confirmé avant intervention.
 <div class="priceTop">
 <div>
 <div class="name">Chambre à air 8.5x2</div>
-<div class="hint">Exemples fréquents : Xiaomi M365, 1S, Essential, Pro, Pro 2 — vérification sur photo du pneu</div>
+<div class="hint">Pièce standard + pose — exemples fréquents : Xiaomi M365, 1S, Essential, Pro, Pro 2</div>
 </div>
 <div class="price">29,99 €</div>
 </div>
@@ -866,7 +828,7 @@ Le prix exact est confirmé avant intervention.
 <div class="priceTop">
 <div>
 <div class="name">Chambre à air 10x2.125</div>
-<div class="hint">Exemples fréquents : Ninebot F20, F30, F40 — vérification sur photo du pneu</div>
+<div class="hint">Pièce standard + pose — exemples fréquents : Ninebot F20, F30, F40</div>
 </div>
 <div class="price">29,99 €</div>
 </div>
@@ -877,7 +839,7 @@ Le prix exact est confirmé avant intervention.
 <div class="priceTop">
 <div>
 <div class="name">Kit pneu + chambre 10x2.125</div>
-<div class="hint">Exemples fréquents : Ninebot F20, F30, F40 — non garanti sans vérification de la taille</div>
+<div class="hint">Pneu standard + chambre + pose — vérification de la taille avant intervention</div>
 </div>
 <div class="price">44,99 €</div>
 </div>
@@ -888,7 +850,7 @@ Le prix exact est confirmé avant intervention.
 <div class="priceTop">
 <div>
 <div class="name">Tubeless 60/70-6.5</div>
-<div class="hint">Exemple fréquent : Ninebot Max G30 — vérification sur photo du pneu</div>
+<div class="hint">Pneu standard + pose — exemple fréquent : Ninebot Max G30</div>
 </div>
 <div class="price">49,99 €</div>
 </div>
@@ -898,53 +860,26 @@ Le prix exact est confirmé avant intervention.
 </div>
 
 <details class="more">
-<summary>Voir plus de tarifs pièce + pose</summary>
+<summary>Voir plus de tarifs pièce standard + pose</summary>
 
 <div class="priceGrid">
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
-<div class="name">Tubeless 90/65-6.5 — Éco</div>
-<div class="hint">Exemples fréquents : Dualtron Thunder, Zero 11X, Wolf Warrior, Burn-e — uniquement si la taille du pneu correspond</div>
+<div class="name">Tubeless 90/65-6.5 — standard</div>
+<div class="hint">Pneu standard/générique + pose — uniquement si la taille correspond</div>
 </div>
 <div class="price">69,99 €</div>
 </div>
-<div class="smallTag">🟢 Éco — stock selon disponibilité</div>
-</div>
-
-<div class="priceCard standard">
-<div class="priceTop">
-<div>
-<div class="name">Tubeless 90/65-6.5 — CST</div>
-<div class="hint">Pneu CST + pose — uniquement après vérification de la taille inscrite sur le pneu</div>
-</div>
-<div class="price blue">84,99 €</div>
-</div>
-<div class="smallTag blue">🔵 Standard CST — stock selon disponibilité</div>
-</div>
-
-<div class="priceCard premium">
-<div class="priceTop">
-<div>
-<div class="name">Tubeless 90/65-6.5 — PMT</div>
-<div class="hint">Pneu premium PMT + pose — uniquement sur devis selon modèle et disponibilité</div>
-</div>
-<div class="price gold">Sur devis</div>
-</div>
-<div class="smallTag gold">⭐ Premium PMT</div>
-<a class="btn gold"
-href="mailto:service.electroride@gmail.com?subject=Demande%20de%20devis%20PMT%20trottinette"
-style="margin-top:12px;width:100%;min-width:unset;border-radius:15px;">
-Demander un devis
-</a>
+<div class="smallTag">Taille : 90/65-6.5</div>
 </div>
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
 <div class="name">Pneu plein 8.5x2</div>
-<div class="hint">Exemples fréquents : Xiaomi M365, 1S, Essential, Pro, Pro 2 — compatibilité confirmée avant montage</div>
+<div class="hint">Pneu standard + pose — compatibilité confirmée avant montage</div>
 </div>
 <div class="price">49,99 €</div>
 </div>
@@ -955,7 +890,7 @@ Demander un devis
 <div class="priceTop">
 <div>
 <div class="name">Pneu plein 10x2.125</div>
-<div class="hint">Exemples fréquents : Ninebot F20, F30, F40 — compatibilité confirmée avant montage</div>
+<div class="hint">Pneu standard + pose — compatibilité confirmée avant montage</div>
 </div>
 <div class="price">54,99 €</div>
 </div>
@@ -965,6 +900,50 @@ Demander un devis
 </div>
 
 </details>
+
+<div class="optionBox gold">
+<h4>Option C — Marque spécifique ou premium</h4>
+<p>
+Vous souhaitez une marque précise comme CST, PMT ou un pneu particulier ?
+Le prix est confirmé sur devis selon la taille, le modèle et la disponibilité.
+</p>
+</div>
+
+<div class="priceGrid">
+
+<div class="priceCard standard">
+<div class="priceTop">
+<div>
+<div class="name">CST 90/65-6.5 + pose</div>
+<div class="hint">Pneu CST + pose — uniquement après vérification de la taille inscrite sur le pneu</div>
+</div>
+<div class="price blue">84,99 €</div>
+</div>
+<div class="smallTag blue">🔵 CST — selon disponibilité</div>
+</div>
+
+<div class="priceCard premium">
+<div class="priceTop">
+<div>
+<div class="name">PMT ou pneu premium</div>
+<div class="hint">Pneu premium + pose — selon modèle, taille et disponibilité</div>
+</div>
+<div class="price gold">Sur devis</div>
+</div>
+<div class="smallTag gold">⭐ Premium / marque spécifique</div>
+<a class="btn gold"
+href="mailto:service.electroride@gmail.com?subject=Demande%20de%20devis%20pneu%20premium%20trottinette"
+style="margin-top:12px;width:100%;min-width:unset;border-radius:15px;">
+Demander un devis
+</a>
+</div>
+
+</div>
+
+<div class="note">
+<b>Important :</b> les modèles affichés sont des exemples fréquents.
+La taille inscrite sur le pneu reste prioritaire et la compatibilité est confirmée avant intervention.
+</div>
 
 <div class="guaranteeBox">
 <b>✅ Garantie montage chambre à air — 7 jours</b><br>
@@ -977,11 +956,6 @@ chocs, sous-gonflage, surgonflage ou dommages causés après l’intervention.
 
 <div class="note" style="font-style:italic;">
 🔍 Votre modèle n'est pas listé ? Envoyez une photo de votre pneu, je vérifie si j'ai la pièce en stock.
-</div>
-
-<div class="note">
-<b>Important :</b> les modèles affichés sont des exemples fréquents.
-La taille inscrite sur le pneu reste prioritaire et la compatibilité est confirmée avant intervention.
 </div>
 
 <div class="warningbox">
@@ -1130,19 +1104,28 @@ style="width:100%;">
 </details>
 
 <details class="faq">
-<summary>Les pièces sont-elles disponibles directement ?</summary>
+<summary>Quelle différence entre Option A, B et C ?</summary>
 <p>
-Les tailles les plus courantes sont disponibles en stock selon disponibilité.
-Pour les modèles moins fréquents, une commande peut être nécessaire avant intervention.
+Option A : vous apportez la pièce et vous payez uniquement la pose.
+Option B : ElectroRide fournit une pièce standard/générique avec bon rapport qualité/prix et réalise le montage.
+Option C : vous demandez une marque précise ou premium comme CST ou PMT, avec prix confirmé sur devis.
 </p>
 </details>
 
 <details class="faq">
-<summary>Quelle différence entre Éco, CST et PMT ?</summary>
+<summary>Les pièces sont-elles disponibles directement ?</summary>
 <p>
-Éco correspond à un pneu générique avec bon rapport qualité/prix, souvent disponible rapidement.
-CST correspond à une marque plus reconnue, intéressante quand elle existe dans la bonne taille.
-PMT correspond à une gamme premium orientée performance, disponible uniquement sur devis selon la taille et le modèle.
+Les tailles les plus courantes sont disponibles en stock selon disponibilité.
+Pour les modèles moins fréquents ou les marques spécifiques, une commande peut être nécessaire avant intervention.
+</p>
+</details>
+
+<details class="faq">
+<summary>Quelle différence entre pièce standard, CST et PMT ?</summary>
+<p>
+Une pièce standard/générique est choisie pour son bon rapport qualité/prix.
+CST est une marque plus reconnue, intéressante quand elle existe dans la bonne taille.
+PMT est une gamme premium orientée performance, disponible uniquement sur devis selon la taille et le modèle.
 </p>
 </details>
 
