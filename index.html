@@ -6,7 +6,7 @@
 
 <title>ElectroRide — Réparation trottinette électrique à Theux</title>
 
-<meta name="description" content="Réparation pneus de trottinette électrique à Theux : chambre à air, tubeless, pneu plein, plaquettes de frein, nettoyage extérieur et check-up sécurité. Prix confirmé avant intervention.">
+<meta name="description" content="Réparation de trottinettes électriques à Theux : pneus, chambres à air, tubeless, pneus pleins, freins, nettoyage extérieur et check-up sécurité. Sur rendez-vous.">
 
 <meta name="theme-color" content="#07111f">
 
@@ -15,17 +15,16 @@
 :root{
 --bg:#07111f;
 --bg2:#0d1c34;
---card:rgba(255,255,255,.06);
+--card:rgba(255,255,255,.055);
 --line:rgba(255,255,255,.12);
 --text:#eef4ff;
 --muted:#bcc7df;
---green:#41e07b;
---gold:#f8c542;
+--green:#42e07d;
+--gold:#f7c546;
 --blue:#63a7ff;
---red:#ff7272;
 --radius:24px;
 --shadow:0 18px 45px rgba(0,0,0,.35);
---max:940px;
+--max:920px;
 }
 
 *{
@@ -42,7 +41,7 @@ font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 color:var(--text);
 
 background:
-radial-gradient(circle at top left, rgba(65,224,123,.14), transparent 32%),
+radial-gradient(circle at top left, rgba(66,224,125,.14), transparent 32%),
 radial-gradient(circle at top right, rgba(99,167,255,.10), transparent 30%),
 linear-gradient(180deg,var(--bg),var(--bg2));
 }
@@ -68,8 +67,8 @@ width:82px;
 height:82px;
 margin:auto;
 margin-bottom:14px;
-border-radius:22px;
 padding:7px;
+border-radius:22px;
 background:rgba(255,255,255,.04);
 border:1px solid var(--line);
 box-shadow:var(--shadow);
@@ -79,23 +78,23 @@ box-shadow:var(--shadow);
 margin:0;
 font-size:44px;
 font-weight:950;
-color:var(--green);
 letter-spacing:-1px;
+color:var(--green);
 }
 
 .hero h2{
-font-size:31px;
-line-height:1.15;
+font-size:30px;
+line-height:1.14;
 margin:14px auto 10px;
-max-width:700px;
+max-width:720px;
 }
 
 .hero p{
 max-width:760px;
 margin:auto;
 color:var(--muted);
-line-height:1.6;
 font-size:16px;
+line-height:1.6;
 }
 
 .highlight{
@@ -144,8 +143,8 @@ position:sticky;
 top:10px;
 z-index:100;
 display:flex;
-gap:10px;
 justify-content:center;
+gap:10px;
 flex-wrap:wrap;
 margin:18px auto 0;
 padding:10px;
@@ -174,13 +173,13 @@ transform:translateY(-1px);
 }
 
 .btn.green{
-background:linear-gradient(135deg, rgba(65,224,123,.22), rgba(65,224,123,.10));
-border-color:rgba(65,224,123,.35);
+background:linear-gradient(135deg, rgba(66,224,125,.22), rgba(66,224,125,.10));
+border-color:rgba(66,224,125,.35);
 }
 
 .btn.gold{
-background:rgba(248,197,66,.10);
-border-color:rgba(248,197,66,.25);
+background:rgba(247,197,70,.10);
+border-color:rgba(247,197,70,.26);
 }
 
 .section{
@@ -188,18 +187,17 @@ margin-top:16px;
 }
 
 .card{
-background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-border:1px solid var(--line);
-border-radius:var(--radius);
 padding:18px;
+border-radius:var(--radius);
+background:linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.03));
+border:1px solid var(--line);
 box-shadow:var(--shadow);
 }
 
 .card h3{
-margin-top:0;
-margin-bottom:10px;
-color:var(--green);
+margin:0 0 10px;
 font-size:24px;
+color:var(--green);
 }
 
 .sub{
@@ -208,10 +206,38 @@ line-height:1.6;
 font-size:15px;
 }
 
-.grid2{
+.quickGrid{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:12px;
+margin-top:12px;
+}
+
+.quick{
+padding:16px;
+border-radius:20px;
+background:rgba(66,224,125,.07);
+border:1px solid rgba(66,224,125,.22);
+}
+
+.quick b{
+display:block;
+margin-bottom:5px;
+font-size:15px;
+}
+
+.quick strong{
+display:block;
+font-size:24px;
+color:var(--green);
+}
+
+.quick span{
+display:block;
+margin-top:5px;
+font-size:13px;
+line-height:1.45;
+color:var(--muted);
 }
 
 .grid3{
@@ -235,111 +261,10 @@ margin-bottom:6px;
 color:#fff;
 }
 
-.quickGrid{
+.grid2{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:12px;
-margin-top:12px;
-}
-
-.quick{
-padding:16px;
-border-radius:20px;
-background:rgba(65,224,123,.08);
-border:1px solid rgba(65,224,123,.24);
-}
-
-.quick b{
-display:block;
-margin-bottom:4px;
-font-size:15px;
-}
-
-.quick strong{
-display:block;
-font-size:25px;
-color:var(--green);
-}
-
-.quick span{
-display:block;
-margin-top:6px;
-font-size:13px;
-line-height:1.45;
-color:var(--muted);
-}
-
-.priceGrid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px;
-margin-top:12px;
-}
-
-.priceCard{
-padding:15px;
-border-radius:18px;
-background:rgba(255,255,255,.035);
-border:1px solid var(--line);
-}
-
-.priceTop{
-display:flex;
-justify-content:space-between;
-gap:10px;
-}
-
-.name{
-font-weight:900;
-font-size:15px;
-line-height:1.3;
-}
-
-.price{
-font-size:20px;
-font-weight:950;
-color:var(--green);
-white-space:nowrap;
-}
-
-.price.gold{
-color:var(--gold);
-}
-
-.price.blue{
-color:var(--blue);
-}
-
-.hint{
-margin-top:5px;
-font-size:13px;
-line-height:1.45;
-color:var(--muted);
-}
-
-.note,
-.warning,
-.guarantee{
-margin-top:12px;
-padding:13px;
-border-radius:16px;
-font-size:14.5px;
-line-height:1.55;
-}
-
-.note{
-background:rgba(248,197,66,.08);
-border:1px solid rgba(248,197,66,.22);
-}
-
-.warning{
-background:rgba(255,255,255,.04);
-border:1px solid var(--line);
-}
-
-.guarantee{
-background:rgba(65,224,123,.08);
-border:1px solid rgba(65,224,123,.24);
 }
 
 .photo{
@@ -376,6 +301,79 @@ font-weight:900;
 color:var(--gold);
 }
 
+.priceGrid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-top:12px;
+}
+
+.priceCard{
+padding:15px;
+border-radius:18px;
+background:rgba(255,255,255,.035);
+border:1px solid var(--line);
+}
+
+.priceTop{
+display:flex;
+justify-content:space-between;
+gap:10px;
+}
+
+.name{
+font-weight:900;
+font-size:15px;
+line-height:1.3;
+}
+
+.price{
+font-size:20px;
+font-weight:950;
+color:var(--green);
+white-space:nowrap;
+}
+
+.price.blue{
+color:var(--blue);
+}
+
+.price.gold{
+color:var(--gold);
+}
+
+.hint{
+margin-top:5px;
+font-size:13px;
+line-height:1.45;
+color:var(--muted);
+}
+
+.note,
+.warning,
+.guarantee{
+margin-top:12px;
+padding:13px;
+border-radius:16px;
+font-size:14.5px;
+line-height:1.55;
+}
+
+.note{
+background:rgba(247,197,70,.08);
+border:1px solid rgba(247,197,70,.22);
+}
+
+.warning{
+background:rgba(255,255,255,.04);
+border:1px solid var(--line);
+}
+
+.guarantee{
+background:rgba(66,224,125,.08);
+border:1px solid rgba(66,224,125,.24);
+}
+
 .contactLine{
 display:flex;
 justify-content:space-between;
@@ -407,9 +405,9 @@ font-weight:900;
 
 @media(max-width:850px){
 
-.grid2,
-.grid3,
 .quickGrid,
+.grid3,
+.grid2,
 .priceGrid{
 grid-template-columns:1fr;
 }
@@ -463,22 +461,22 @@ Réparation de
 
 <p>
 Pneus, chambres à air, tubeless, pneus pleins,
-plaquettes de frein, nettoyage extérieur et check-up sécurité.
-Prix confirmé avant intervention.
+freins, nettoyage extérieur et check-up sécurité.
+Sur rendez-vous avec prix confirmé avant intervention.
 </p>
 
 <div class="priceStrip">
 
 <div class="priceChip">
-Réparation dès <strong>29,99 €</strong>
+Chambre à air + pose dès <strong>29,90 €</strong>
 </div>
 
 <div class="priceChip">
-Pose seule possible
+Pneu + chambre dès <strong>44,90 €</strong>
 </div>
 
 <div class="priceChip">
-Tarifs parmi les plus accessibles
+Tarifs accessibles
 </div>
 
 </div>
@@ -498,7 +496,7 @@ Tarifs parmi les plus accessibles
 <nav class="sticky">
 
 <a class="btn green" href="#contact">
-✉️ Demander un rendez-vous
+✉️ Rendez-vous
 </a>
 
 <a class="btn" href="tel:+32495656186">
@@ -517,57 +515,39 @@ Tarifs parmi les plus accessibles
 
 <div class="quick">
 <b>Chambre à air + pose</b>
-<strong>29,99 €</strong>
+<strong>29,90 €</strong>
 <span>Pièce compatible + montage</span>
 </div>
 
 <div class="quick">
 <b>Pneu + chambre + pose</b>
-<strong>44,99 €</strong>
-<span>Solution économique complète</span>
+<strong>44,90 €</strong>
+<span>Solution complète</span>
 </div>
 
 <div class="quick">
-<b>Tubeless + pose</b>
-<strong>49,99 €</strong>
+<b>Tubeless</b>
+<strong>dès 49 €</strong>
 <span>Selon taille et modèle</span>
 </div>
 
 <div class="quick">
-<b>Pneu plein + pose</b>
-<strong>49,99 €</strong>
-<span>Selon compatibilité</span>
-</div>
-
-<div class="quick">
-<b>Plaquettes standard + pose</b>
-<strong>19,99 €</strong>
-<span>Xiaomi, Ninebot, Kugoo…</span>
-</div>
-
-<div class="quick">
-<b>Plaquettes gros modèle + pose</b>
-<strong>24,99 €</strong>
-<span>Dualtron, Kaabo, Nami…</span>
+<b>Freins</b>
+<strong>dès 20 €</strong>
+<span>Plaquettes + réglage simple</span>
 </div>
 
 <div class="quick">
 <b>Nettoyage extérieur</b>
-<strong>9,99 €</strong>
+<strong>10 €</strong>
 <span>Sans ouverture interne</span>
-</div>
-
-<div class="quick">
-<b>Check-up sécurité</b>
-<strong>9,99 €</strong>
-<span>Contrôle visuel rapide</span>
 </div>
 
 </div>
 
 <div class="note">
-💶 ElectroRide cherche à proposer des tarifs parmi les plus accessibles,
-tout en gardant un montage sérieux et des pièces compatibles sélectionnées.
+Les tarifs affichés correspondent aux interventions les plus fréquentes.
+Le prix exact dépend du modèle et du type de montage.
 </div>
 
 </section>
@@ -626,49 +606,57 @@ Avant / après réel.
 
 <h3>Tarifs détaillés</h3>
 
-<details open>
+<details>
 
-<summary>Option A — Vous apportez votre pièce</summary>
+<summary>Voir les tarifs pneus</summary>
 
 <div class="priceGrid">
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
-<div class="name">Chambre à air — roue simple</div>
-<div class="hint">Pose uniquement</div>
+<div class="name">Pose chambre à air</div>
+<div class="hint">
+Client apporte la pièce
 </div>
-<div class="price">19,99 €</div>
 </div>
-</div>
-
-<div class="priceCard">
-<div class="priceTop">
-<div>
-<div class="name">Chambre à air — roue moteur</div>
-<div class="hint">Pose uniquement</div>
-</div>
-<div class="price">24,99 €</div>
+<div class="price">20 €</div>
 </div>
 </div>
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
-<div class="name">Tubeless — roue simple</div>
-<div class="hint">Pose uniquement</div>
+<div class="name">Roue moteur</div>
+<div class="hint">
+Montage plus complexe
 </div>
-<div class="price">24,99 €</div>
+</div>
+<div class="price">25 €</div>
 </div>
 </div>
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
-<div class="name">Tubeless — roue moteur</div>
-<div class="hint">Pose uniquement</div>
+<div class="name">Tubeless</div>
+<div class="hint">
+Selon taille et modèle
 </div>
-<div class="price">34,99 €</div>
+</div>
+<div class="price">dès 49 €</div>
+</div>
+</div>
+
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">Pneu plein</div>
+<div class="hint">
+Selon compatibilité
+</div>
+</div>
+<div class="price">dès 54 €</div>
 </div>
 </div>
 
@@ -678,149 +666,43 @@ Avant / après réel.
 
 <details>
 
-<summary>Option B — Pièce compatible + pose</summary>
+<summary>Voir les tarifs freins & entretien</summary>
 
 <div class="priceGrid">
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
-<div class="name">Chambre à air 8.5x2</div>
+<div class="name">Freins standard</div>
 <div class="hint">
-Xiaomi M365, 1S, Essential, Pro 2…
+Xiaomi, Ninebot, Kugoo…
 </div>
 </div>
-<div class="price">29,99 €</div>
+<div class="price">20 €</div>
 </div>
 </div>
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
-<div class="name">Chambre à air 10x2.125</div>
+<div class="name">Gros modèles</div>
 <div class="hint">
-Ninebot F20 / F30 / F40…
+Dualtron, Kaabo, Nami…
 </div>
 </div>
-<div class="price">29,99 €</div>
+<div class="price">dès 25 €</div>
 </div>
 </div>
 
 <div class="priceCard">
 <div class="priceTop">
 <div>
-<div class="name">Pneu + chambre 10x2.125</div>
+<div class="name">Réglage frein</div>
 <div class="hint">
-Pneu compatible + chambre + pose
+Réglage mécanique simple
 </div>
 </div>
-<div class="price">44,99 €</div>
-</div>
-</div>
-
-<div class="priceCard">
-<div class="priceTop">
-<div>
-<div class="name">Tubeless 60/70-6.5</div>
-<div class="hint">
-Exemple fréquent : Ninebot Max G30
-</div>
-</div>
-<div class="price">49,99 €</div>
-</div>
-</div>
-
-<div class="priceCard">
-<div class="priceTop">
-<div>
-<div class="name">Pneu plein 8.5x2</div>
-<div class="hint">
-Selon compatibilité
-</div>
-</div>
-<div class="price">49,99 €</div>
-</div>
-</div>
-
-<div class="priceCard">
-<div class="priceTop">
-<div>
-<div class="name">Pneu plein 10x2.125</div>
-<div class="hint">
-Selon compatibilité
-</div>
-</div>
-<div class="price">54,99 €</div>
-</div>
-</div>
-
-</div>
-
-</details>
-
-<details>
-
-<summary>Freins, nettoyage & check-up</summary>
-
-<div class="priceGrid">
-
-<div class="priceCard">
-<div class="priceTop">
-<div>
-<div class="name">Plaquettes — pose seule</div>
-<div class="hint">
-Le client apporte les plaquettes
-</div>
-</div>
-<div class="price">14,99 €</div>
-</div>
-</div>
-
-<div class="priceCard">
-<div class="priceTop">
-<div>
-<div class="name">Plaquettes standard + pose</div>
-<div class="hint">
-Xiaomi, Ninebot, Kugoo, Vsett légères…
-</div>
-</div>
-<div class="price">19,99 €</div>
-</div>
-</div>
-
-<div class="priceCard">
-<div class="priceTop">
-<div>
-<div class="name">Plaquettes gros modèle + pose</div>
-<div class="hint">
-Dualtron, Kaabo, Nami, gros étriers…
-</div>
-</div>
-<div class="price">24,99 €</div>
-</div>
-</div>
-
-<div class="priceCard">
-<div class="priceTop">
-<div>
-<div class="name">Réglage frein mécanique</div>
-<div class="hint">
-Réglage simple uniquement
-</div>
-</div>
-<div class="price">9,99 €</div>
-</div>
-</div>
-
-<div class="priceCard">
-<div class="priceTop">
-<div>
-<div class="name">Nettoyage extérieur</div>
-<div class="hint">
-Sans ouverture interne
-</div>
-</div>
-<div class="price">9,99 €</div>
+<div class="price">10 €</div>
 </div>
 </div>
 
@@ -829,10 +711,10 @@ Sans ouverture interne
 <div>
 <div class="name">Check-up sécurité</div>
 <div class="hint">
-Pneus, freins, vis visibles…
+Contrôle visuel rapide
 </div>
 </div>
-<div class="price">9,99 €</div>
+<div class="price">9 €</div>
 </div>
 </div>
 
@@ -840,11 +722,10 @@ Pneus, freins, vis visibles…
 
 <div class="warning">
 
-⚠️ Freinage simple uniquement :
-remplacement de plaquettes et réglage mécanique de base.
-<br><br>
-Purge hydraulique, réparation hydraulique,
-électronique et câblage interne non réalisés.
+⚠️ Remplacement de plaquettes et réglage mécanique uniquement.<br><br>
+
+Purge hydraulique, électronique, contrôleurs
+et câblage interne non réalisés.
 
 </div>
 
@@ -852,32 +733,44 @@ Purge hydraulique, réparation hydraulique,
 
 <details>
 
-<summary>Option C — CST, PMT ou premium</summary>
+<summary>Voir les pneus CST / premium</summary>
 
 <div class="priceGrid">
 
 <div class="priceCard">
+
 <div class="priceTop">
 <div>
-<div class="name">CST ou marque reconnue</div>
+<div class="name">CST ou marque précise</div>
 <div class="hint">
 Selon taille et disponibilité
 </div>
 </div>
-<div class="price blue">Sur devis</div>
+
+<div class="price blue">
+Sur devis
 </div>
+
+</div>
+
 </div>
 
 <div class="priceCard">
+
 <div class="priceTop">
 <div>
-<div class="name">PMT ou premium</div>
+<div class="name">PMT / premium</div>
 <div class="hint">
 Pneu performance
 </div>
 </div>
-<div class="price gold">Sur devis</div>
+
+<div class="price gold">
+Sur devis
 </div>
+
+</div>
+
 </div>
 
 </div>
