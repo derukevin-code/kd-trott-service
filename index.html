@@ -25,10 +25,8 @@
 --shadow:0 18px 45px rgba(0,0,0,.35);
 --max:920px;
 }
-
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-
 body{
 margin:0;
 font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
@@ -38,187 +36,90 @@ radial-gradient(circle at top left,rgba(67,228,125,.15),transparent 32%),
 radial-gradient(circle at top right,rgba(98,168,255,.10),transparent 30%),
 linear-gradient(180deg,var(--bg),var(--bg2));
 }
-
 a{color:inherit;text-decoration:none}
-
 .wrap{max-width:var(--max);margin:auto;padding:14px}
 .hero{text-align:center;padding-top:18px}
-
 .logo{
 width:82px;height:82px;margin:auto;margin-bottom:14px;padding:7px;
 border-radius:22px;background:rgba(255,255,255,.04);
 border:1px solid var(--line);box-shadow:var(--shadow);
 }
-
-.brand{
-margin:0;font-size:44px;font-weight:950;
-letter-spacing:-1px;color:var(--green);
-}
-
-.hero h2{
-font-size:30px;line-height:1.14;
-margin:14px auto 10px;max-width:720px;
-}
-
-.hero p{
-max-width:760px;margin:auto;color:var(--muted);
-font-size:16px;line-height:1.6;
-}
-
+.brand{margin:0;font-size:44px;font-weight:950;letter-spacing:-1px;color:var(--green)}
+.hero h2{font-size:30px;line-height:1.14;margin:14px auto 10px;max-width:720px}
+.hero p{max-width:760px;margin:auto;color:var(--muted);font-size:16px;line-height:1.6}
 .highlight{color:var(--green)}
-
-.priceStrip,.badges{
-display:flex;justify-content:center;flex-wrap:wrap;
-gap:10px;margin-top:14px;
-}
-
+.priceStrip,.badges{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:14px}
 .priceChip,.badge{
-padding:10px 14px;border-radius:999px;
-background:rgba(255,255,255,.045);
-border:1px solid var(--line);
-font-size:14px;font-weight:800;
+padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.045);
+border:1px solid var(--line);font-size:14px;font-weight:800;
 }
-
 .priceChip strong{color:var(--green)}
-
 .sticky{
-position:sticky;top:10px;z-index:100;
-display:flex;justify-content:center;gap:10px;flex-wrap:wrap;
-margin:18px auto 0;padding:10px;max-width:620px;
-border-radius:999px;background:rgba(7,17,31,.88);
-backdrop-filter:blur(10px);border:1px solid var(--line);
+position:sticky;top:10px;z-index:100;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;
+margin:18px auto 0;padding:10px;max-width:620px;border-radius:999px;
+background:rgba(7,17,31,.88);backdrop-filter:blur(10px);border:1px solid var(--line);
 }
-
 .btn{
-display:flex;align-items:center;justify-content:center;
-padding:14px 20px;border-radius:999px;font-weight:900;
-border:1px solid var(--line);background:rgba(255,255,255,.05);
+display:flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:999px;
+font-weight:900;border:1px solid var(--line);background:rgba(255,255,255,.05);
 min-width:170px;transition:.2s;
 }
-
 .btn:hover{transform:translateY(-1px)}
-
-.btn.green{
-background:linear-gradient(135deg,rgba(67,228,125,.22),rgba(67,228,125,.10));
-border-color:rgba(67,228,125,.35);
-}
-
-.btn.gold{
-background:rgba(248,197,66,.10);
-border-color:rgba(248,197,66,.26);
-}
-
+.btn.green{background:linear-gradient(135deg,rgba(67,228,125,.22),rgba(67,228,125,.10));border-color:rgba(67,228,125,.35)}
+.btn.gold{background:rgba(248,197,66,.10);border-color:rgba(248,197,66,.26)}
 .section{margin-top:16px}
-
 .card{
 padding:18px;border-radius:var(--radius);
 background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.03));
 border:1px solid var(--line);box-shadow:var(--shadow);
 }
-
 .card h3{margin:0 0 10px;font-size:24px;color:var(--green)}
 .sub{color:var(--muted);line-height:1.6;font-size:15px}
-
-.quickGrid,.grid2,.priceGrid{
-display:grid;grid-template-columns:1fr 1fr;gap:12px;
-}
-
-.grid3{
-display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
-}
-
+.quickGrid,.grid2,.priceGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .quick{
-padding:16px;border-radius:20px;
-background:rgba(67,228,125,.07);
+padding:16px;border-radius:20px;background:rgba(67,228,125,.07);
 border:1px solid rgba(67,228,125,.22);
 }
-
 .quick b{display:block;margin-bottom:5px;font-size:15px}
 .quick strong{display:block;font-size:24px;color:var(--green)}
-
-.quick span,.hint{
-display:block;margin-top:5px;font-size:13px;
-line-height:1.45;color:var(--muted);
-}
-
+.quick span,.hint{display:block;margin-top:5px;font-size:13px;line-height:1.45;color:var(--muted)}
 .mini,.priceCard{
-padding:15px;border-radius:18px;
-background:rgba(255,255,255,.035);
+padding:15px;border-radius:18px;background:rgba(255,255,255,.035);
 border:1px solid var(--line);
 }
-
 .mini{line-height:1.55;font-size:14.5px}
 .mini b{display:block;margin-bottom:6px;color:#fff}
-
-.photo{
-overflow:hidden;border-radius:22px;
-border:1px solid var(--line);
-background:rgba(255,255,255,.03);
-}
-
+.photo{overflow:hidden;border-radius:22px;border:1px solid var(--line);background:rgba(255,255,255,.03)}
 .photo img{width:100%;height:240px;object-fit:cover;display:block}
 .caption{padding:10px 12px;font-size:13px;color:var(--muted)}
-
 details{
 margin-top:12px;padding:13px;border-radius:18px;
-background:rgba(255,255,255,.035);
-border:1px solid var(--line);
+background:rgba(255,255,255,.035);border:1px solid var(--line);
 }
-
 summary{cursor:pointer;font-weight:900;color:var(--gold)}
 .priceTop{display:flex;justify-content:space-between;gap:10px}
 .name{font-weight:900;font-size:15px;line-height:1.3}
-
-.price{
-font-size:20px;font-weight:950;
-color:var(--green);white-space:nowrap;
-}
-
+.price{font-size:20px;font-weight:950;color:var(--green);white-space:nowrap}
 .price.blue{color:var(--blue)}
 .price.gold{color:var(--gold)}
-
 .note,.warning,.guarantee{
-margin-top:12px;padding:13px;border-radius:16px;
-font-size:14px;line-height:1.55;
+margin-top:12px;padding:13px;border-radius:16px;font-size:14px;line-height:1.55;
 }
-
-.note{
-background:rgba(248,197,66,.08);
-border:1px solid rgba(248,197,66,.22);
-}
-
-.warning{
-background:rgba(255,255,255,.04);
-border:1px solid var(--line);
-}
-
-.guarantee{
-background:rgba(67,228,125,.08);
-border:1px solid rgba(67,228,125,.24);
-}
-
+.note{background:rgba(248,197,66,.08);border:1px solid rgba(248,197,66,.22)}
+.warning{background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.guarantee{background:rgba(67,228,125,.08);border:1px solid rgba(67,228,125,.24)}
 .contactLine{
-display:flex;justify-content:space-between;gap:12px;
-padding:13px;border-radius:16px;
-background:rgba(255,255,255,.04);
-border:1px solid var(--line);
-margin-top:10px;
+display:flex;justify-content:space-between;gap:12px;padding:13px;border-radius:16px;
+background:rgba(255,255,255,.04);border:1px solid var(--line);margin-top:10px;
 }
-
 .contactLine span{color:var(--muted)}
-
 .footer{
-margin-top:20px;padding-bottom:25px;text-align:center;
-font-size:12.5px;line-height:1.7;
-color:rgba(255,255,255,.75);
+margin-top:20px;padding-bottom:25px;text-align:center;font-size:12.5px;
+line-height:1.7;color:rgba(255,255,255,.75);
 }
-
 .footer a{color:var(--gold);font-weight:900}
-
-@media(max-width:850px){
-.quickGrid,.grid3,.grid2,.priceGrid{grid-template-columns:1fr}
-}
-
+@media(max-width:850px){.quickGrid,.grid3,.grid2,.priceGrid{grid-template-columns:1fr}}
 @media(max-width:520px){
 .brand{font-size:38px}
 .hero h2{font-size:26px}
@@ -230,11 +131,9 @@ color:rgba(255,255,255,.75);
 </head>
 
 <body>
-
 <main class="wrap">
 
 <header class="hero">
-
 <img src="file_00000000e988720a9d6597291676d817.png?v=9" class="logo" alt="Logo ElectroRide">
 
 <h1 class="brand">ElectroRide</h1>
@@ -264,15 +163,12 @@ Prix clair avant intervention.
 <a class="btn green" href="#contact">✉️ Rendez-vous</a>
 <a class="btn" href="tel:+32495656186">📞 Appeler</a>
 </nav>
-
 </header>
 
 <section class="section card">
-
 <h3>Prix rapides</h3>
 
 <div class="quickGrid">
-
 <div class="quick">
 <b>Chambre à air + pose</b>
 <strong>dès 30 €</strong>
@@ -296,21 +192,17 @@ Prix clair avant intervention.
 <strong>dès 55 €</strong>
 <span>Selon taille et modèle</span>
 </div>
-
 </div>
 
 <div class="note">
 Les tarifs affichés correspondent aux interventions courantes avec pièce fournie + montage. Le prix final est confirmé selon la taille, le modèle et la disponibilité des pièces.
 </div>
-
 </section>
 
 <section class="section card">
-
 <h3>Comment ça se passe ?</h3>
 
 <div class="grid3">
-
 <div class="mini">
 <b>1. Envoyez une photo</b>
 Photo du pneu + taille inscrite + modèle.
@@ -325,13 +217,10 @@ Le tarif est validé avant intervention.
 <b>3. Dépôt sur rendez-vous</b>
 Vous déposez la trottinette au créneau prévu.
 </div>
-
 </div>
-
 </section>
 
 <section class="section grid2">
-
 <article class="photo">
 <img src="20260223_150017.jpg" alt="Réparation trottinette">
 <div class="caption">Exemple d’intervention mécanique.</div>
@@ -341,11 +230,9 @@ Vous déposez la trottinette au créneau prévu.
 <img src="file_00000000b5bc720ab49a3aaf47abc831.png?v=9" alt="Avant après">
 <div class="caption">Avant / après réel.</div>
 </article>
-
 </section>
 
 <section class="section card">
-
 <h3>Tarifs détaillés</h3>
 
 <details open>
@@ -400,16 +287,6 @@ Vous déposez la trottinette au créneau prévu.
 <div class="hint">Segway, Mantis</div>
 </div>
 <div class="price">50 €</div>
-</div>
-</div>
-
-<div class="priceCard">
-<div class="priceTop">
-<div>
-<div class="name">Pneu seul 11”+</div>
-<div class="hint">Dualtron, Kaabo</div>
-</div>
-<div class="price blue">Sur devis</div>
 </div>
 </div>
 
@@ -522,7 +399,7 @@ Pneu seul : quand seule l’enveloppe est remplacée.<br>
 Pneu + chambre : remplacement complet.<br><br>
 Roue moteur arrière : supplément de 5 €.<br>
 Pneu plein 11”+ : non proposé.<br>
-Pneu PMT haut de gamme : toujours sur devis.
+Pneu PMT haut de gamme : uniquement sur devis.
 </div>
 
 </details>
@@ -597,17 +474,13 @@ Pneu PMT haut de gamme : toujours sur devis.
 <div class="warning">
 Freinage simple uniquement : plaquettes et réglage mécanique. Pas de purge hydraulique, contrôleur ou électronique interne.
 </div>
-
 </details>
-
 </section>
 
 <section class="section card">
-
 <h3>À retenir</h3>
 
 <div class="grid3">
-
 <div class="mini">
 <b>Demander marque + modèle</b>
 Toujours envoyer la marque, le modèle et une photo du pneu.
@@ -622,13 +495,10 @@ Chambre seule, pneu seul ou pneu + chambre : le tarif dépend de ce qui est rée
 <b>Roue moteur arrière</b>
 Supplément de 5 € sur les interventions concernées.
 </div>
-
 </div>
-
 </section>
 
 <section class="section card">
-
 <h3>Garantie montage</h3>
 
 <div class="guarantee">
@@ -638,11 +508,9 @@ Garantie 7 jours sur le montage chambre à air en cas de pincement lié au monta
 <div class="warning">
 Ne couvre pas les crevaisons externes, objets pointus, sous-gonflage ou dégâts après intervention.
 </div>
-
 </section>
 
 <section class="section card" id="contact">
-
 <h3>Contact</h3>
 
 <p class="sub">
@@ -670,17 +538,13 @@ Envoyez : marque + modèle + photo du pneu + service souhaité.
 </div>
 
 <div class="grid3" style="margin-top:12px;">
-
 <a class="btn green" href="mailto:service.electroride@gmail.com">✉️ Écrire</a>
 <a class="btn" href="tel:+32495656186">📞 Appeler</a>
 <a class="btn gold" href="https://g.page/r/CQYENGk_6sdoEAE/review" target="_blank">⭐ Avis Google</a>
-
 </div>
-
 </section>
 
 <footer class="footer">
-
 ElectroRide • Theux<br>
 Sur rendez-vous uniquement<br>
 Paiement espèces ou Payconiq QR code<br>
@@ -690,10 +554,8 @@ TVA non applicable — régime de franchise<br>
 <a href="https://g.page/r/CQYENGk_6sdoEAE/review" target="_blank">
 ⭐ Laisser un avis Google
 </a>
-
 </footer>
 
 </main>
-
 </body>
 </html>
