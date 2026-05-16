@@ -40,108 +40,62 @@ radial-gradient(circle at top right,rgba(98,168,255,.10),transparent 30%),
 linear-gradient(180deg,var(--bg),var(--bg2));
 }
 
-a{
-color:inherit;
-text-decoration:none;
-}
+a{color:inherit;text-decoration:none}
 
-.wrap{
-max-width:var(--max);
-margin:auto;
-padding:14px;
-}
+.wrap{max-width:var(--max);margin:auto;padding:14px}
 
-.hero{
-text-align:center;
-padding-top:18px;
-}
+.hero{text-align:center;padding-top:18px}
 
 .logo{
-width:82px;
-height:82px;
-margin:auto;
-margin-bottom:14px;
-padding:7px;
-border-radius:22px;
-background:rgba(255,255,255,.04);
-border:1px solid var(--line);
-box-shadow:var(--shadow);
+width:82px;height:82px;margin:auto;margin-bottom:14px;padding:7px;
+border-radius:22px;background:rgba(255,255,255,.04);
+border:1px solid var(--line);box-shadow:var(--shadow);
 }
 
 .brand{
-margin:0;
-font-size:44px;
-font-weight:950;
-letter-spacing:-1px;
-color:var(--green);
+margin:0;font-size:44px;font-weight:950;
+letter-spacing:-1px;color:var(--green);
 }
 
 .hero h2{
-font-size:30px;
-line-height:1.14;
-margin:14px auto 10px;
-max-width:720px;
+font-size:30px;line-height:1.14;
+margin:14px auto 10px;max-width:720px;
 }
 
 .hero p{
-max-width:760px;
-margin:auto;
-color:var(--muted);
-font-size:16px;
-line-height:1.6;
+max-width:760px;margin:auto;color:var(--muted);
+font-size:16px;line-height:1.6;
 }
 
 .highlight{color:var(--green)}
 
-.priceStrip,
-.badges{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:10px;
-margin-top:14px;
+.priceStrip,.badges{
+display:flex;justify-content:center;flex-wrap:wrap;
+gap:10px;margin-top:14px;
 }
 
-.priceChip,
-.badge{
-padding:10px 14px;
-border-radius:999px;
+.priceChip,.badge{
+padding:10px 14px;border-radius:999px;
 background:rgba(255,255,255,.045);
 border:1px solid var(--line);
-font-size:14px;
-font-weight:800;
+font-size:14px;font-weight:800;
 }
 
 .priceChip strong{color:var(--green)}
 
 .sticky{
-position:sticky;
-top:10px;
-z-index:100;
-display:flex;
-justify-content:center;
-gap:10px;
-flex-wrap:wrap;
-margin:18px auto 0;
-padding:10px;
-max-width:620px;
-border-radius:999px;
-background:rgba(7,17,31,.88);
-backdrop-filter:blur(10px);
-border:1px solid var(--line);
+position:sticky;top:10px;z-index:100;
+display:flex;justify-content:center;gap:10px;flex-wrap:wrap;
+margin:18px auto 0;padding:10px;max-width:620px;
+border-radius:999px;background:rgba(7,17,31,.88);
+backdrop-filter:blur(10px);border:1px solid var(--line);
 }
 
 .btn{
-display:flex;
-align-items:center;
-justify-content:center;
-padding:14px 20px;
-border-radius:999px;
-font-weight:900;
-border:1px solid var(--line);
-background:rgba(255,255,255,.05);
-min-width:170px;
-transition:.2s;
+display:flex;align-items:center;justify-content:center;
+padding:14px 20px;border-radius:999px;font-weight:900;
+border:1px solid var(--line);background:rgba(255,255,255,.05);
+min-width:170px;transition:.2s;
 }
 
 .btn:hover{transform:translateY(-1px)}
@@ -159,150 +113,79 @@ border-color:rgba(248,197,66,.26);
 .section{margin-top:16px}
 
 .card{
-padding:18px;
-border-radius:var(--radius);
+padding:18px;border-radius:var(--radius);
 background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.03));
-border:1px solid var(--line);
-box-shadow:var(--shadow);
+border:1px solid var(--line);box-shadow:var(--shadow);
 }
 
-.card h3{
-margin:0 0 10px;
-font-size:24px;
-color:var(--green);
-}
+.card h3{margin:0 0 10px;font-size:24px;color:var(--green)}
 
-.sub{
-color:var(--muted);
-line-height:1.6;
-font-size:15px;
-}
+.sub{color:var(--muted);line-height:1.6;font-size:15px}
 
-.quickGrid,
-.grid2,
-.priceGrid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px;
+.quickGrid,.grid2,.priceGrid{
+display:grid;grid-template-columns:1fr 1fr;gap:12px;
 }
 
 .grid3{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:12px;
+display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
 }
 
 .quick{
-padding:16px;
-border-radius:20px;
+padding:16px;border-radius:20px;
 background:rgba(67,228,125,.07);
 border:1px solid rgba(67,228,125,.22);
 }
 
-.quick b{
-display:block;
-margin-bottom:5px;
-font-size:15px;
+.quick b{display:block;margin-bottom:5px;font-size:15px}
+.quick strong{display:block;font-size:24px;color:var(--green)}
+
+.quick span,.hint{
+display:block;margin-top:5px;font-size:13px;
+line-height:1.45;color:var(--muted);
 }
 
-.quick strong{
-display:block;
-font-size:24px;
-color:var(--green);
-}
-
-.quick span,
-.hint{
-display:block;
-margin-top:5px;
-font-size:13px;
-line-height:1.45;
-color:var(--muted);
-}
-
-.mini,
-.priceCard{
-padding:15px;
-border-radius:18px;
+.mini,.priceCard{
+padding:15px;border-radius:18px;
 background:rgba(255,255,255,.035);
 border:1px solid var(--line);
 }
 
-.mini{
-line-height:1.55;
-font-size:14.5px;
-}
-
-.mini b{
-display:block;
-margin-bottom:6px;
-color:#fff;
-}
+.mini{line-height:1.55;font-size:14.5px}
+.mini b{display:block;margin-bottom:6px;color:#fff}
 
 .photo{
-overflow:hidden;
-border-radius:22px;
+overflow:hidden;border-radius:22px;
 border:1px solid var(--line);
 background:rgba(255,255,255,.03);
 }
 
-.photo img{
-width:100%;
-height:240px;
-object-fit:cover;
-display:block;
-}
+.photo img{width:100%;height:240px;object-fit:cover;display:block}
 
-.caption{
-padding:10px 12px;
-font-size:13px;
-color:var(--muted);
-}
+.caption{padding:10px 12px;font-size:13px;color:var(--muted)}
 
 details{
-margin-top:12px;
-padding:13px;
-border-radius:18px;
+margin-top:12px;padding:13px;border-radius:18px;
 background:rgba(255,255,255,.035);
 border:1px solid var(--line);
 }
 
-summary{
-cursor:pointer;
-font-weight:900;
-color:var(--gold);
-}
+summary{cursor:pointer;font-weight:900;color:var(--gold)}
 
-.priceTop{
-display:flex;
-justify-content:space-between;
-gap:10px;
-}
+.priceTop{display:flex;justify-content:space-between;gap:10px}
 
-.name{
-font-weight:900;
-font-size:15px;
-line-height:1.3;
-}
+.name{font-weight:900;font-size:15px;line-height:1.3}
 
 .price{
-font-size:20px;
-font-weight:950;
-color:var(--green);
-white-space:nowrap;
+font-size:20px;font-weight:950;
+color:var(--green);white-space:nowrap;
 }
 
 .price.blue{color:var(--blue)}
 .price.gold{color:var(--gold)}
 
-.note,
-.warning,
-.guarantee{
-margin-top:12px;
-padding:13px;
-border-radius:16px;
-font-size:14px;
-line-height:1.55;
+.note,.warning,.guarantee{
+margin-top:12px;padding:13px;border-radius:16px;
+font-size:14px;line-height:1.55;
 }
 
 .note{
@@ -321,11 +204,8 @@ border:1px solid rgba(67,228,125,.24);
 }
 
 .contactLine{
-display:flex;
-justify-content:space-between;
-gap:12px;
-padding:13px;
-border-radius:16px;
+display:flex;justify-content:space-between;gap:12px;
+padding:13px;border-radius:16px;
 background:rgba(255,255,255,.04);
 border:1px solid var(--line);
 margin-top:10px;
@@ -334,26 +214,15 @@ margin-top:10px;
 .contactLine span{color:var(--muted)}
 
 .footer{
-margin-top:20px;
-padding-bottom:25px;
-text-align:center;
-font-size:12.5px;
-line-height:1.7;
+margin-top:20px;padding-bottom:25px;text-align:center;
+font-size:12.5px;line-height:1.7;
 color:rgba(255,255,255,.75);
 }
 
-.footer a{
-color:var(--gold);
-font-weight:900;
-}
+.footer a{color:var(--gold);font-weight:900}
 
 @media(max-width:850px){
-.quickGrid,
-.grid3,
-.grid2,
-.priceGrid{
-grid-template-columns:1fr;
-}
+.quickGrid,.grid3,.grid2,.priceGrid{grid-template-columns:1fr}
 }
 
 @media(max-width:520px){
@@ -376,9 +245,7 @@ grid-template-columns:1fr;
 
 <h1 class="brand">ElectroRide</h1>
 
-<h2>
-Réparation de <span class="highlight">trottinettes électriques</span> à Theux
-</h2>
+<h2>Réparation de <span class="highlight">trottinettes électriques</span> à Theux</h2>
 
 <p>
 Pneus, chambres à air, tubeless, freins, nettoyage extérieur et check-up sécurité.
@@ -414,13 +281,13 @@ Prix clair avant intervention.
 <div class="quick">
 <b>Chambre à air + pose</b>
 <strong>dès 30 €</strong>
-<span>8” / 8.5” Xiaomi, Ninebot</span>
+<span>Pièce fournie + montage</span>
 </div>
 
 <div class="quick">
 <b>Pneu + chambre + pose</b>
 <strong>dès 50 €</strong>
-<span>Pièce compatible + montage</span>
+<span>Pièce fournie + montage</span>
 </div>
 
 <div class="quick">
@@ -438,7 +305,7 @@ Prix clair avant intervention.
 </div>
 
 <div class="note">
-Les tarifs affichés correspondent aux interventions courantes. Les gros pneus, doubles moteurs ou modèles complexes sont confirmés sur devis.
+Les tarifs affichés correspondent aux interventions courantes avec pièce fournie + montage. Les gros pneus, doubles moteurs ou modèles complexes sont confirmés avant intervention.
 </div>
 
 </section>
@@ -486,7 +353,7 @@ Vous déposez la trottinette au créneau prévu.
 
 <h3>Tarifs détaillés</h3>
 
-<details>
+<details open>
 <summary>Prix tout compris — pièce fournie + montage</summary>
 
 <div class="priceGrid">
@@ -634,90 +501,16 @@ Vous déposez la trottinette au créneau prévu.
 </div>
 
 <div class="warning">
-Les tarifs incluent la pièce compatible + la pose.<br><br>
+Les prix comprennent la pièce fournie + le montage.<br><br>
 Roue moteur arrière : supplément de 5 €.<br><br>
-Pneu PMT haut de gamme ou marque précise : toujours sur devis.<br><br>
+Pneu PMT haut de gamme : toujours sur devis.<br><br>
 Pièces fournies selon stock disponible et compatibilité du modèle.
 </div>
 
 </details>
 
 <details>
-<summary>Client apporte la pièce — main-d’œuvre uniquement</summary>
-
-<div class="priceGrid">
-
-<div class="priceCard">
-<div class="priceTop">
-<div>
-<div class="name">Chambre à air</div>
-<div class="hint">Montage uniquement</div>
-</div>
-<div class="price">25 €</div>
-</div>
-</div>
-
-<div class="priceCard">
-<div class="priceTop">
-<div>
-<div class="name">Pneu + chambre</div>
-<div class="hint">Montage uniquement</div>
-</div>
-<div class="price">35 €</div>
-</div>
-</div>
-
-<div class="priceCard">
-<div class="priceTop">
-<div>
-<div class="name">Tubeless</div>
-<div class="hint">Montage uniquement</div>
-</div>
-<div class="price">30 €</div>
-</div>
-</div>
-
-<div class="priceCard">
-<div class="priceTop">
-<div>
-<div class="name">Pneu plein</div>
-<div class="hint">Montage uniquement</div>
-</div>
-<div class="price">40 €</div>
-</div>
-</div>
-
-<div class="priceCard">
-<div class="priceTop">
-<div>
-<div class="name">Valve / obus</div>
-<div class="hint">Remplacement simple</div>
-</div>
-<div class="price">dès 5 €</div>
-</div>
-</div>
-
-</div>
-
-<div class="note">
-Supplément possible sur roue moteur, double moteur ou modèle complexe. Prix confirmé avant intervention.
-</div>
-
-</details>
-
-<details>
-<summary>Gros pneus / modèles complexes</summary>
-
-<div class="warning">
-Pour Dualtron, Kaabo, Nami, gros pneus, doubles moteurs ou pneus coûtant déjà cher à l’achat : prix sur devis.
-<br><br>
-Principe : prix de la pièce + marge raisonnable + main-d’œuvre confirmée avant intervention.
-</div>
-
-</details>
-
-<details>
-<summary>Freins, nettoyage & check-up</summary>
+<summary>Autres prestations</summary>
 
 <div class="priceGrid">
 
@@ -798,8 +591,8 @@ Freinage simple uniquement : plaquettes et réglage mécanique. Pas de purge hyd
 <div class="grid3">
 
 <div class="mini">
-<b>Photo obligatoire</b>
-Toujours envoyer une photo du pneu et de la taille inscrite dessus.
+<b>Demander marque + modèle</b>
+Toujours envoyer la marque, le modèle et une photo du pneu.
 </div>
 
 <div class="mini">
