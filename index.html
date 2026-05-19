@@ -6,52 +6,68 @@
 
 <title>ElectroRide — Réparation trottinette électrique à Theux</title>
 
-<meta name="description" content="ElectroRide à Theux : réparation pneus de trottinettes électriques, chambres à air, tubeless, pneus pleins, freins, nettoyage extérieur et check-up sécurité. Prix clairs avant intervention.">
+<meta name="description" content="Atelier spécialisé en réparation de trottinettes électriques à Theux : pneus, chambres à air, tubeless, freins, nettoyage extérieur et check-up sécurité. Prix clairs avant intervention.">
 
 <meta name="theme-color" content="#07111f">
 
 <style>
+
 :root{
 --bg:#07111f;
 --bg2:#0d1c34;
---card:rgba(255,255,255,.065);
---line:rgba(255,255,255,.13);
+--card:rgba(255,255,255,.055);
+--line:rgba(255,255,255,.11);
 --text:#eef4ff;
---muted:#bfc9df;
---green:#43e47d;
---orange:#ff7a18;
---gold:#f8c542;
---blue:#63a7ff;
+--muted:#bcc7dd;
+
+--green:#42e37b;
+--orange:#ff7b1d;
 --red:#ff5d5d;
+--gold:#f8c542;
+
 --radius:24px;
---shadow:0 18px 45px rgba(0,0,0,.38);
---max:960px;
+--shadow:0 18px 45px rgba(0,0,0,.35);
+--max:980px;
 }
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
 
 body{
 margin:0;
 font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 color:var(--text);
+
 background:
-radial-gradient(circle at top left,rgba(67,228,125,.18),transparent 34%),
-radial-gradient(circle at top right,rgba(255,122,24,.16),transparent 32%),
+radial-gradient(circle at top left,rgba(255,123,29,.14),transparent 28%),
+radial-gradient(circle at top right,rgba(66,227,123,.12),transparent 30%),
 linear-gradient(180deg,var(--bg),var(--bg2));
 }
 
-a{color:inherit;text-decoration:none}
-.wrap{max-width:var(--max);margin:auto;padding:14px}
+a{
+color:inherit;
+text-decoration:none;
+}
+
+.wrap{
+max-width:var(--max);
+margin:auto;
+padding:14px;
+}
 
 .hero{
+padding-top:18px;
 text-align:center;
-padding-top:20px;
 }
 
 .logo{
-width:82px;
-height:82px;
+width:84px;
+height:84px;
 margin:auto;
 margin-bottom:14px;
 padding:7px;
@@ -66,86 +82,68 @@ margin:0;
 font-size:46px;
 font-weight:950;
 letter-spacing:-1px;
-color:var(--green);
+color:#fff;
+}
+
+.brand span{
+color:var(--orange);
 }
 
 .hero h2{
-font-size:31px;
-line-height:1.12;
 margin:14px auto 10px;
-max-width:780px;
+max-width:760px;
+font-size:34px;
+line-height:1.12;
+}
+
+.orange{
+color:var(--orange);
 }
 
 .hero p{
-max-width:790px;
+max-width:760px;
 margin:auto;
 color:var(--muted);
 font-size:16px;
 line-height:1.6;
 }
 
-.highlight{color:var(--green)}
-.orange{color:var(--orange)}
-
 .badges{
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
 gap:10px;
-margin-top:16px;
+margin-top:18px;
 }
 
 .badge{
-padding:10px 14px;
+padding:11px 14px;
 border-radius:999px;
-background:rgba(255,255,255,.055);
+background:rgba(255,255,255,.045);
 border:1px solid var(--line);
 font-size:14px;
-font-weight:850;
-}
-
-.trust{
-margin-top:16px;
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:10px;
-}
-
-.trustBox{
-padding:14px;
-border-radius:20px;
-background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.035));
-border:1px solid var(--line);
-box-shadow:0 12px 32px rgba(0,0,0,.22);
-}
-
-.trustBox strong{
-display:block;
-font-size:15px;
-color:#fff;
-margin-bottom:4px;
-}
-
-.trustBox span{
-font-size:12.8px;
-color:var(--muted);
-line-height:1.4;
+font-weight:800;
 }
 
 .sticky{
 position:sticky;
 top:10px;
 z-index:100;
+
 display:flex;
 justify-content:center;
 gap:10px;
 flex-wrap:wrap;
+
 margin:18px auto 0;
 padding:10px;
-max-width:640px;
+
+max-width:650px;
+
 border-radius:999px;
 background:rgba(7,17,31,.88);
-backdrop-filter:blur(10px);
+backdrop-filter:blur(12px);
+
 border:1px solid var(--line);
 }
 
@@ -153,89 +151,181 @@ border:1px solid var(--line);
 display:flex;
 align-items:center;
 justify-content:center;
+
 padding:14px 20px;
+
 border-radius:999px;
-font-weight:950;
+font-weight:900;
+
 border:1px solid var(--line);
-background:rgba(255,255,255,.06);
-min-width:170px;
+
+background:rgba(255,255,255,.05);
+
+min-width:180px;
+
 transition:.2s;
 }
 
-.btn:hover{transform:translateY(-1px)}
+.btn:hover{
+transform:translateY(-1px);
+}
 
 .btn.green{
-background:linear-gradient(135deg,rgba(67,228,125,.24),rgba(67,228,125,.11));
-border-color:rgba(67,228,125,.38);
+background:linear-gradient(135deg,rgba(66,227,123,.25),rgba(66,227,123,.10));
+border-color:rgba(66,227,123,.35);
 }
 
-.btn.gold{
-background:rgba(248,197,66,.12);
-border-color:rgba(248,197,66,.28);
+.btn.orange{
+background:linear-gradient(135deg,rgba(255,123,29,.22),rgba(255,123,29,.08));
+border-color:rgba(255,123,29,.35);
 }
 
-.section{margin-top:16px}
+.section{
+margin-top:16px;
+}
 
 .card{
 padding:18px;
 border-radius:var(--radius);
-background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.032));
+
+background:
+linear-gradient(180deg,
+rgba(255,255,255,.055),
+rgba(255,255,255,.03));
+
 border:1px solid var(--line);
+
 box-shadow:var(--shadow);
 }
 
 .card h3{
-margin:0 0 10px;
-font-size:24px;
-color:var(--green);
+margin:0 0 12px;
+font-size:28px;
+color:#fff;
+}
+
+.card h3 span{
+color:var(--orange);
 }
 
 .sub{
 color:var(--muted);
-line-height:1.6;
 font-size:15px;
+line-height:1.6;
 }
 
-.grid2,.priceGrid{
+.quickGrid,
+.grid2,
+.priceGrid{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:12px;
 }
 
-.grid3{
+.grid4{
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(4,1fr);
 gap:12px;
 }
 
-.mini,.priceCard{
+.quick{
+padding:18px;
+border-radius:22px;
+border:1px solid var(--line);
+
+background:
+linear-gradient(180deg,
+rgba(255,255,255,.04),
+rgba(255,255,255,.025));
+}
+
+.quick.green{
+border-color:rgba(66,227,123,.30);
+}
+
+.quick.orange{
+border-color:rgba(255,123,29,.30);
+}
+
+.quick.red{
+border-color:rgba(255,93,93,.30);
+}
+
+.quick.gold{
+border-color:rgba(248,197,66,.30);
+}
+
+.quick b{
+display:block;
+font-size:18px;
+margin-bottom:10px;
+}
+
+.quick strong{
+display:block;
+font-size:42px;
+font-weight:950;
+}
+
+.quick.green strong{
+color:var(--green);
+}
+
+.quick.orange strong{
+color:var(--orange);
+}
+
+.quick.red strong{
+color:var(--red);
+}
+
+.quick.gold strong{
+color:var(--gold);
+}
+
+.quick span{
+display:block;
+margin-top:10px;
+font-size:14px;
+line-height:1.5;
+color:var(--muted);
+}
+
+.step,
+.priceCard,
+.mini{
 padding:15px;
 border-radius:18px;
-background:rgba(255,255,255,.04);
+
+background:rgba(255,255,255,.035);
+
 border:1px solid var(--line);
 }
 
-.mini{
-line-height:1.55;
-font-size:14.5px;
-}
-
+.step b,
 .mini b{
 display:block;
 margin-bottom:6px;
-color:#fff;
+font-size:16px;
+}
+
+.step{
+line-height:1.6;
 }
 
 .photo{
 overflow:hidden;
+
 border-radius:22px;
+
 border:1px solid var(--line);
+
 background:rgba(255,255,255,.03);
 }
 
 .photo img{
 width:100%;
-height:250px;
+height:260px;
 object-fit:cover;
 display:block;
 }
@@ -248,16 +338,21 @@ color:var(--muted);
 
 details{
 margin-top:12px;
+
 padding:13px;
+
 border-radius:18px;
+
 background:rgba(255,255,255,.035);
+
 border:1px solid var(--line);
 }
 
 summary{
 cursor:pointer;
-font-weight:950;
-color:var(--gold);
+font-weight:900;
+font-size:18px;
+color:var(--orange);
 }
 
 .priceTop{
@@ -267,73 +362,87 @@ gap:10px;
 }
 
 .name{
-font-weight:950;
+font-weight:900;
 font-size:15px;
-line-height:1.3;
+line-height:1.35;
 }
 
 .price{
-font-size:21px;
+font-size:22px;
 font-weight:950;
-color:var(--green);
 white-space:nowrap;
 }
 
-.price.orange{color:var(--orange)}
-.price.red{color:var(--red)}
-.price.gold{color:var(--gold)}
-.price.blue{color:var(--blue)}
+.greenText{color:var(--green)}
+.orangeText{color:var(--orange)}
+.redText{color:var(--red)}
+.goldText{color:var(--gold)}
 
 .hint{
 display:block;
 margin-top:5px;
 font-size:13px;
-line-height:1.45;
+line-height:1.5;
 color:var(--muted);
 }
 
-.note,.warning,.guarantee{
+.note,
+.warning,
+.guarantee{
 margin-top:12px;
-padding:13px;
-border-radius:16px;
+
+padding:14px;
+
+border-radius:18px;
+
 font-size:14px;
-line-height:1.55;
+line-height:1.6;
 }
 
 .note{
-background:rgba(248,197,66,.09);
+background:rgba(248,197,66,.08);
 border:1px solid rgba(248,197,66,.24);
 }
 
 .warning{
-background:rgba(255,255,255,.045);
+background:rgba(255,255,255,.04);
 border:1px solid var(--line);
 }
 
 .guarantee{
-background:rgba(67,228,125,.09);
-border:1px solid rgba(67,228,125,.26);
+background:rgba(66,227,123,.08);
+border:1px solid rgba(66,227,123,.24);
 }
 
 .contactLine{
 display:flex;
 justify-content:space-between;
 gap:12px;
+
 padding:13px;
+
 border-radius:16px;
-background:rgba(255,255,255,.045);
+
+background:rgba(255,255,255,.04);
+
 border:1px solid var(--line);
+
 margin-top:10px;
 }
 
-.contactLine span{color:var(--muted)}
+.contactLine span{
+color:var(--muted);
+}
 
 .footer{
 margin-top:20px;
 padding-bottom:25px;
+
 text-align:center;
+
 font-size:12.5px;
 line-height:1.7;
+
 color:rgba(255,255,255,.75);
 }
 
@@ -342,20 +451,45 @@ color:var(--gold);
 font-weight:900;
 }
 
-@media(max-width:850px){
-.trust,.grid3,.grid2,.priceGrid{
+@media(max-width:900px){
+
+.quickGrid,
+.grid2,
+.grid4,
+.priceGrid{
 grid-template-columns:1fr;
 }
+
 }
 
 @media(max-width:520px){
-.brand{font-size:38px}
-.hero h2{font-size:26px}
-.btn{width:100%}
-.sticky{border-radius:24px}
-.contactLine{flex-direction:column}
-.photo img{height:230px}
+
+.brand{
+font-size:38px;
 }
+
+.hero h2{
+font-size:28px;
+}
+
+.btn{
+width:100%;
+}
+
+.sticky{
+border-radius:24px;
+}
+
+.contactLine{
+flex-direction:column;
+}
+
+.quick strong{
+font-size:36px;
+}
+
+}
+
 </style>
 </head>
 
@@ -365,79 +499,163 @@ grid-template-columns:1fr;
 
 <header class="hero">
 
-<img src="file_00000000e988720a9d6597291676d817.png?v=9" class="logo" alt="Logo ElectroRide">
+<img src="file_00000000e988720a9d6597291676d817.png?v=9"
+class="logo"
+alt="Logo ElectroRide">
 
-<h1 class="brand">ElectroRide</h1>
+<h1 class="brand">
+Electro<span>Ride</span>
+</h1>
 
-<h2>Atelier spécialisé en <span class="highlight">réparation de trottinettes électriques</span> à Theux</h2>
+<h2>
+Réparation de <span class="orange">trottinettes électriques</span> à Theux
+</h2>
 
 <p>
 Pneus, chambres à air, tubeless, pneus pleins, freins, nettoyage extérieur et check-up sécurité.
-Un service clair, soigné et rapide, uniquement sur rendez-vous.
+Travail propre, prix clairs et intervention sur rendez-vous.
 </p>
 
 <div class="badges">
-<div class="badge">📍 Theux</div>
-<div class="badge">🕒 Sur rendez-vous</div>
-<div class="badge">🛞 Pneus & mécanique simple</div>
-<div class="badge">💬 Prix confirmé avant intervention</div>
+
+<div class="badge">
+📍 Theux
 </div>
 
-<div class="trust">
-<div class="trustBox">
-<strong>Travail soigné</strong>
-<span>Montage propre et contrôle visuel.</span>
+<div class="badge">
+🕒 Sur rendez-vous
 </div>
-<div class="trustBox">
-<strong>Prix clairs</strong>
-<span>Pas de surprise avant intervention.</span>
+
+<div class="badge">
+⚙️ Pneus & mécanique simple
 </div>
-<div class="trustBox">
-<strong>Stock courant</strong>
-<span>Tailles fréquentes selon disponibilité.</span>
+
+<div class="badge">
+💬 Prix confirmé avant intervention
 </div>
-<div class="trustBox">
-<strong>Conseils utiles</strong>
-<span>Solution adaptée à votre trottinette.</span>
-</div>
+
 </div>
 
 <nav class="sticky">
-<a class="btn green" href="#contact">✉️ Rendez-vous</a>
-<a class="btn" href="tel:+32495656186">📞 Appeler</a>
+
+<a class="btn green" href="#contact">
+✉️ Prendre rendez-vous
+</a>
+
+<a class="btn orange" href="tel:+32495656186">
+📞 0495 65 61 86
+</a>
+
 </nav>
 
 </header>
 
 <section class="section card">
 
-<h3>Service tout compris</h3>
+<h3>
+Service <span>tout compris</span>
+</h3>
 
 <p class="sub">
-Les prix affichés plus bas comprennent la pièce fournie et le montage. Le tarif dépend de la taille du pneu, du type de réparation et de la présence éventuelle d’une roue moteur.
+Un prix clair qui comprend la pièce fournie et le montage.
+Le tarif dépend de la taille du pneu, du type de réparation et de la présence éventuelle d’une roue moteur.
 </p>
 
-<div class="grid3">
+<div class="grid4">
 
-<div class="mini">
-<b>1. Envoyez une photo</b>
-Photo du pneu, taille inscrite et modèle de la trottinette.
+<div class="quick green">
+
+<b>8” / 8.5”</b>
+
+<strong>
+dès 30 €
+</strong>
+
+<span>
+Chambre à air, pneu, tubeless ou pneu plein selon le besoin.
+</span>
+
 </div>
 
-<div class="mini">
-<b>2. Prix confirmé</b>
-Le prix est validé avant toute intervention.
+<div class="quick orange">
+
+<b>10”</b>
+
+<strong>
+dès 35 €
+</strong>
+
+<span>
+Pour les modèles courants en 10 pouces.
+</span>
+
 </div>
 
-<div class="mini">
-<b>3. Dépôt sur rendez-vous</b>
-La trottinette est déposée au créneau prévu.
+<div class="quick red">
+
+<b>11”+</b>
+
+<strong>
+dès 48 €
+</strong>
+
+<span>
+Pour modèles plus puissants ou grandes roues.
+</span>
+
+</div>
+
+<div class="quick gold">
+
+<b>Roue moteur</b>
+
+<strong>
++5 €
+</strong>
+
+<span>
+Supplément si la roue avant ou arrière est motorisée.
+</span>
+
 </div>
 
 </div>
 
 <div class="note">
-La taille inscrite sur le pneu reste prioritaire. Une photo peut être demandée avant confirmation du prix.
+La taille inscrite sur le pneu reste prioritaire.
+Une photo peut être demandée avant confirmation du prix.
+</div>
+
+</section>
+
+<section class="section card">
+
+<h3>
+Comment <span>ça se passe ?</span>
+</h3>
+
+<div class="grid4">
+
+<div class="step">
+<b>1. Envoyez une photo</b>
+Photo du pneu, taille inscrite et modèle de la trottinette.
+</div>
+
+<div class="step">
+<b>2. Prix confirmé</b>
+Le prix est validé avant toute intervention.
+</div>
+
+<div class="step">
+<b>3. Dépôt sur rendez-vous</b>
+La trottinette est déposée au créneau prévu.
+</div>
+
+<div class="step">
+<b>4. Intervention</b>
+Travail soigné avec contrôle visuel avant restitution.
+</div>
+
 </div>
 
 </section>
@@ -445,90 +663,445 @@ La taille inscrite sur le pneu reste prioritaire. Une photo peut être demandée
 <section class="section grid2">
 
 <article class="photo">
-<img src="20260223_150017.jpg" alt="Réparation trottinette électrique">
-<div class="caption">Intervention mécanique simple sur trottinette électrique.</div>
+
+<img src="20260223_150017.jpg"
+alt="Réparation trottinette">
+
+<div class="caption">
+Intervention mécanique simple sur trottinette électrique.
+</div>
+
 </article>
 
 <article class="photo">
-<img src="file_00000000b5bc720ab49a3aaf47abc831.png?v=9" alt="Réparation ElectroRide">
-<div class="caption">Travail propre, contrôle visuel et conseils adaptés.</div>
+
+<img src="file_00000000b5bc720ab49a3aaf47abc831.png?v=9"
+alt="Avant après">
+
+<div class="caption">
+Travail propre, contrôle visuel et conseils adaptés.
+</div>
+
 </article>
 
 </section>
 
 <section class="section card">
 
-<h3>Tarifs détaillés</h3>
+<h3>
+Tarifs <span>détaillés</span>
+</h3>
 
 <details open>
-<summary>Prix tout compris — pièce fournie + montage</summary>
+
+<summary>
+Prix tout compris — pièce fournie + montage
+</summary>
 
 <div class="priceGrid">
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Chambre à air 8” / 8.5”</div><div class="hint">Quand le pneu est encore bon</div></div><div class="price">30 €</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Chambre à air 8” / 8.5”
+</div>
+<div class="hint">
+Quand le pneu est encore bon
+</div>
+</div>
+<div class="price greenText">
+30 €
+</div>
+</div>
+</div>
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Pneu seul 8” / 8.5”</div><div class="hint">Remplacement de l’enveloppe</div></div><div class="price">40 €</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Pneu seul 8” / 8.5”
+</div>
+<div class="hint">
+Remplacement de l’enveloppe
+</div>
+</div>
+<div class="price greenText">
+40 €
+</div>
+</div>
+</div>
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Pneu + chambre 8” / 8.5”</div><div class="hint">Remplacement complet</div></div><div class="price">50 €</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Pneu + chambre 8” / 8.5”
+</div>
+<div class="hint">
+Remplacement complet
+</div>
+</div>
+<div class="price greenText">
+50 €
+</div>
+</div>
+</div>
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Tubeless 8” / 8.5”</div><div class="hint">Selon compatibilité</div></div><div class="price">55 €</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Tubeless 8” / 8.5”
+</div>
+<div class="hint">
+Selon compatibilité
+</div>
+</div>
+<div class="price greenText">
+55 €
+</div>
+</div>
+</div>
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Pneu plein 8” / 8.5”</div><div class="hint">Selon compatibilité</div></div><div class="price">45 €</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Pneu plein 8” / 8.5”
+</div>
+<div class="hint">
+Selon compatibilité
+</div>
+</div>
+<div class="price greenText">
+45 €
+</div>
+</div>
+</div>
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Chambre à air 10”</div><div class="hint">Modèles courants 10 pouces</div></div><div class="price orange">35 €</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Chambre à air 10”
+</div>
+<div class="hint">
+Modèles courants
+</div>
+</div>
+<div class="price orangeText">
+35 €
+</div>
+</div>
+</div>
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Pneu seul 10”</div><div class="hint">Remplacement de l’enveloppe</div></div><div class="price orange">50 €</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Pneu seul 10”
+</div>
+<div class="hint">
+Remplacement de l’enveloppe
+</div>
+</div>
+<div class="price orangeText">
+50 €
+</div>
+</div>
+</div>
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Pneu + chambre 10”</div><div class="hint">Remplacement complet</div></div><div class="price orange">60 €</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Pneu + chambre 10”
+</div>
+<div class="hint">
+Remplacement complet
+</div>
+</div>
+<div class="price orangeText">
+60 €
+</div>
+</div>
+</div>
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Tubeless 10”</div><div class="hint">Selon compatibilité</div></div><div class="price orange">65 €</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Tubeless 10”
+</div>
+<div class="hint">
+Selon compatibilité
+</div>
+</div>
+<div class="price orangeText">
+65 €
+</div>
+</div>
+</div>
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Pneu plein 10”</div><div class="hint">Selon compatibilité</div></div><div class="price orange">55 €</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Pneu plein 10”
+</div>
+<div class="hint">
+Selon compatibilité
+</div>
+</div>
+<div class="price orangeText">
+55 €
+</div>
+</div>
+</div>
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Chambre à air 11”+</div><div class="hint">Grandes roues / modèles puissants</div></div><div class="price red">48 €</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Chambre à air 11”+
+</div>
+<div class="hint">
+Grandes roues
+</div>
+</div>
+<div class="price redText">
+48 €
+</div>
+</div>
+</div>
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Pneu seul 11”+</div><div class="hint">Remplacement de l’enveloppe</div></div><div class="price red">65 €</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Pneu seul 11”+
+</div>
+<div class="hint">
+Remplacement de l’enveloppe
+</div>
+</div>
+<div class="price redText">
+65 €
+</div>
+</div>
+</div>
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Pneu + chambre 11”+</div><div class="hint">Remplacement complet</div></div><div class="price red">75 €</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Pneu + chambre 11”+
+</div>
+<div class="hint">
+Remplacement complet
+</div>
+</div>
+<div class="price redText">
+75 €
+</div>
+</div>
+</div>
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Tubeless 11”+</div><div class="hint">Selon modèle et difficulté</div></div><div class="price red">85 €</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Tubeless 11”+
+</div>
+<div class="hint">
+Selon difficulté
+</div>
+</div>
+<div class="price redText">
+85 €
+</div>
+</div>
+</div>
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Roue moteur avant ou arrière</div><div class="hint">Supplément toutes tailles</div></div><div class="price gold">+5 €</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Roue moteur avant ou arrière
+</div>
+<div class="hint">
+Supplément toutes tailles
+</div>
+</div>
+<div class="price goldText">
++5 €
+</div>
+</div>
+</div>
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Pneu PMT haut de gamme</div><div class="hint">Pour les plus exigeants</div></div><div class="price blue">Sur devis</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Pneu PMT haut de gamme
+</div>
+<div class="hint">
+Pour les plus exigeants
+</div>
+</div>
+<div class="price goldText">
+Sur devis
+</div>
+</div>
+</div>
 
 </div>
 
 <div class="warning">
-Les prix comprennent la pièce fournie et le montage.<br><br>
-Certains pneus complexes, modèles très abîmés ou interventions non standard peuvent nécessiter un devis avant intervention.
+
+Les prix comprennent la pièce fournie et le montage.
+<br><br>
+
+Certains modèles complexes, pneus fortement abîmés ou réparations particulières peuvent nécessiter un devis avant intervention.
+
 </div>
 
 </details>
 
 <details>
-<summary>Services complémentaires</summary>
+
+<summary>
+Services complémentaires
+</summary>
 
 <div class="priceGrid">
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Valve / obus</div><div class="hint">Remplacement simple</div></div><div class="price">dès 5 €</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Valve / obus
+</div>
+<div class="hint">
+Remplacement simple
+</div>
+</div>
+<div class="price">
+dès 5 €
+</div>
+</div>
+</div>
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Réglage frein mécanique</div><div class="hint">Réglage simple</div></div><div class="price">8 €</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Réglage frein mécanique
+</div>
+<div class="hint">
+Réglage simple
+</div>
+</div>
+<div class="price">
+8 €
+</div>
+</div>
+</div>
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Check-up sécurité</div><div class="hint">Contrôle rapide</div></div><div class="price">10 €</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Check-up sécurité
+</div>
+<div class="hint">
+Contrôle rapide
+</div>
+</div>
+<div class="price">
+10 €
+</div>
+</div>
+</div>
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Nettoyage extérieur</div><div class="hint">Sans ouverture interne</div></div><div class="price">15 €</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Nettoyage extérieur
+</div>
+<div class="hint">
+Sans ouverture interne
+</div>
+</div>
+<div class="price">
+15 €
+</div>
+</div>
+</div>
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Nettoyage + check-up</div><div class="hint">Pack entretien simple</div></div><div class="price">20 €</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Nettoyage + check-up
+</div>
+<div class="hint">
+Pack entretien simple
+</div>
+</div>
+<div class="price">
+20 €
+</div>
+</div>
+</div>
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Plaquettes mécaniques</div><div class="hint">Pièces + montage</div></div><div class="price">19,99 €</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Plaquettes mécaniques
+</div>
+<div class="hint">
+Pièces + montage
+</div>
+</div>
+<div class="price">
+19,99 €
+</div>
+</div>
+</div>
 
-<div class="priceCard"><div class="priceTop"><div><div class="name">Plaquettes hydrauliques</div><div class="hint">Pièces + montage</div></div><div class="price">24,99 €</div></div></div>
+<div class="priceCard">
+<div class="priceTop">
+<div>
+<div class="name">
+Plaquettes hydrauliques
+</div>
+<div class="hint">
+Pièces + montage uniquement
+</div>
+</div>
+<div class="price">
+24,99 €
+</div>
+</div>
+</div>
 
 </div>
 
 <div class="warning">
-Freinage simple uniquement : plaquettes et réglage mécanique. Pas de réparation électronique complexe, contrôleur, batterie interne ou scooter thermique.
+
+Freinage simple uniquement :
+plaquettes et réglage mécanique.
+<br><br>
+
+Pas de purge de frein hydraulique,
+pas de réparation électronique complexe,
+pas de contrôleur,
+pas de batterie interne.
+
 </div>
 
 </details>
@@ -537,75 +1110,94 @@ Freinage simple uniquement : plaquettes et réglage mécanique. Pas de réparati
 
 <section class="section card">
 
-<h3>Pourquoi choisir ElectroRide ?</h3>
-
-<div class="grid3">
-
-<div class="mini">
-<b>Prix clair avant intervention</b>
-Aucun supplément sans accord.
-</div>
-
-<div class="mini">
-<b>Service local à Theux</b>
-Atelier accessible uniquement sur rendez-vous.
-</div>
-
-<div class="mini">
-<b>Réparation ciblée</b>
-Pneus, freins simples, nettoyage et contrôle de sécurité.
-</div>
-
-</div>
-
-</section>
-
-<section class="section card">
-
-<h3>Garantie montage</h3>
+<h3>
+Garantie <span>intervention</span>
+</h3>
 
 <div class="guarantee">
-Garantie 7 jours sur le montage chambre à air en cas de pincement lié à l’intervention.
+
+Garantie 7 jours uniquement sur le montage d’une chambre à air,
+en cas de fuite liée à un pincement ou à une erreur de montage constatée après l’intervention.
+
 </div>
 
 <div class="warning">
-Ne couvre pas les crevaisons externes, objets pointus, sous-gonflage, choc, usure du pneu ou dégâts apparus après intervention. Les pneus tubeless et pneus pleins ne sont pas couverts par cette garantie chambre à air.
+
+La garantie ne couvre pas les crevaisons causées par un objet extérieur,
+un pneu usé ou abîmé,
+une jante déformée,
+un sous-gonflage,
+un choc,
+une mauvaise utilisation
+ou un démontage après intervention.
+<br><br>
+
+Les pneus tubeless,
+pneus pleins
+et pneus déjà endommagés
+ne sont pas couverts par cette garantie.
+
 </div>
 
 </section>
 
 <section class="section card" id="contact">
 
-<h3>Contact</h3>
+<h3>
+Contact
+</h3>
 
 <p class="sub">
-Envoyez la marque, le modèle, une photo du pneu et le service souhaité.
+Envoyez la marque,
+le modèle,
+une photo du pneu
+et le service souhaité.
 </p>
 
 <div class="contactLine">
 <span>Email</span>
-<b><a href="mailto:service.electroride@gmail.com">service.electroride@gmail.com</a></b>
+<b>
+<a href="mailto:service.electroride@gmail.com">
+service.electroride@gmail.com
+</a>
+</b>
 </div>
 
 <div class="contactLine">
 <span>Téléphone</span>
-<b><a href="tel:+32495656186">0495 65 61 86</a></b>
+<b>
+<a href="tel:+32495656186">
+0495 65 61 86
+</a>
+</b>
 </div>
 
 <div class="contactLine">
 <span>N° d’entreprise</span>
-<b>BE 1035.368.201</b>
+<b>
+BE 1035.368.201
+</b>
 </div>
 
 <div class="contactLine">
 <span>TVA</span>
-<b>TVA non applicable — régime de franchise de la taxe pour petites entreprises</b>
+<b>
+TVA non applicable — régime de franchise de la taxe pour petites entreprises
+</b>
 </div>
 
-<div class="grid3" style="margin-top:12px;">
-<a class="btn green" href="mailto:service.electroride@gmail.com">✉️ Écrire</a>
-<a class="btn" href="tel:+32495656186">📞 Appeler</a>
-<a class="btn gold" href="https://g.page/r/CQYENGk_6sdoEAE/review" target="_blank">⭐ Avis Google</a>
+<div class="grid2" style="margin-top:12px;">
+
+<a class="btn green"
+href="mailto:service.electroride@gmail.com">
+✉️ Écrire par email
+</a>
+
+<a class="btn orange"
+href="tel:+32495656186">
+📞 Appeler maintenant
+</a>
+
 </div>
 
 </section>
@@ -613,14 +1205,17 @@ Envoyez la marque, le modèle, une photo du pneu et le service souhaité.
 <footer class="footer">
 
 ElectroRide • Theux<br>
-Atelier sur rendez-vous uniquement<br>
-Paiement espèces, Payconiq ou virement bancaire<br>
-Stock selon disponibilité<br>
-TVA non applicable — régime de franchise de la taxe pour petites entreprises<br>
 
-<a href="https://g.page/r/CQYENGk_6sdoEAE/review" target="_blank">
-⭐ Laisser un avis Google
-</a>
+Atelier spécialisé en réparation de trottinettes électriques<br>
+
+Sur rendez-vous uniquement<br>
+
+Paiement :
+espèces,
+Payconiq
+ou virement bancaire<br>
+
+TVA non applicable — régime de franchise de la taxe pour petites entreprises
 
 </footer>
 
